@@ -1,0 +1,43 @@
+{
+    "name": "better-css",
+    "displayName": "Better css",
+    "version": "0.0.1",
+    "description": "Better syntax highlighting for CSS",
+    "publisher": "radium-v",
+    "categories": [
+        "Programming Languages"
+    ],
+    "keywords": [
+        "language",
+        "grammar",
+        "css",
+        "syntax"
+    ],
+    "repository": "https://github.com/radium-v/better-css",
+    "license": "MIT",
+    "engines": {
+        "vscode": "^1.12.0"
+    },
+    "contributes": {
+        "languages": [
+            {
+                "id": "css",
+                "aliases": [
+                    "Better CSS",
+                    "CSS"
+                ],
+                "extensions": [
+                    ".css"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "css",
+                "scopeName": "source.css",
+                "path": "./Syntaxes/Better CSS.tmLanguage"
+            }
+        ]
+    }
+}

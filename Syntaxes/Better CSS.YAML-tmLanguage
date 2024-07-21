@@ -1,0 +1,45 @@
+# [PackageDev] target_format: plist, ext: tmLanguage
+name: Better CSS
+scopeName: source.css
+fileTypes:
+- css
+uuid: 5E1320A0-3857-4AB6-8F5F-F7459F347CCF
+
+patterns:
+- include: '#comment-block'
+
+- include: '#at-charset'
+
+- include: '#property-list'
+
+- include: '#selector'
+
+repository:
+  at-charset:
+    comment: '@charset'
+    name: meta.at-rule.charset.css
+    begin: (@)(charset)\s
+    beginCaptures:
+      '1': {name: punctuation.definition.keyword.css}
+      '2': {name: keyword.control.at-rule.css}
+    end: ;
+    endCaptures:
+      '0': {name: punctuation.terminator.statement.css}
+    patterns:
+    - name: string.quoted.double.css
+      match: (")[-_+:.0-9a-zA-Z]*(")
+      captures:
+        '1': {name: punctuation.definition.string.begin.css}
+        '2': {name: punctuation.definition.string.end.css}
+    - name: invalid.illegal.bad-charset.css
+      match: '[^"].*?'
+
+  comment-block:
+    name: comment.block.css
+    begin: /\*
+    end: \*/
+    captures:
+      '0': {name: punctuation.definition.comment.css}
+foldingStartMarker: /\*\*(?!\*)|\{\s*($|/\*(?!.*?\*/.*\S))
+foldingStopMarker: (?<!\*)\*\*/|^\s*\}
+keyEquivalent: ^~L
