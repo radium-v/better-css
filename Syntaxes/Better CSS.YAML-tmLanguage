@@ -310,6 +310,22 @@ repository:
         '1': {name: punctuation.definition.string.begin.css}
         '2': {name: punctuation.definition.string.end.css}
 
+  supports-condition:
+    patterns:
+    - name: meta.parens.support-condition.css
+      begin: \(
+      beginCaptures:
+        '0': {name: punctuation.definition.group.begin.css}
+      end: \)
+      endCaptures:
+        '0': {name: punctuation.definition.group.end.css}
+      patterns:
+      - include: $self
+    - name: meta.supports-condition.css
+      match: \b(and|or|not)\b
+      captures:
+        '0': {name: keyword.operator.logical.css}
+
 foldingStartMarker: /\*\*(?!\*)|\{\s*($|/\*(?!.*?\*/.*\S))
 foldingStopMarker: (?<!\*)\*\*/|^\s*\}
 keyEquivalent: ^~L
