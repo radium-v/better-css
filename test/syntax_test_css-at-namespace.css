@@ -1,0 +1,75 @@
+/* SYNTAX TEST "Packages/better-css/Syntaxes/Better CSS.tmLanguage" */
+
+  @namespace url("url");
+/*^^^^^^^^^^^^^^^^^^^^^^ meta.at-rule.namespace.css */
+/*^ punctuation.definition.keyword.css */
+/* ^^^^^^^^^ keyword.control.at-rule.css */
+/*           ^^^^^^^^^^ meta.function-call.url.css */
+/*           ^^^ support.function.url.css */
+/*              ^ punctuation.definition.group.begin.css */
+/*               ^^^^^ string.quoted.double.css */
+/*               ^ punctuation.definition.string.begin.css */
+/*                   ^ punctuation.definition.string.end.css */
+/*                    ^ punctuation.definition.group.end.css */
+/*                     ^ punctuation.terminator.statement.css */
+  
+  @namespace src("url");
+/*^^^^^^^^^^^^^^^^^^^^^^ meta.at-rule.namespace.css */
+/*^ punctuation.definition.keyword.css */
+/* ^^^^^^^^^ keyword.control.at-rule.css */
+/*           ^^^^^^^^^^ meta.function-call.src.css */
+/*           ^^^ support.function.src.css */
+/*              ^ punctuation.definition.group.begin.css */
+/*               ^^^^^ string.quoted.double.css */
+/*               ^ punctuation.definition.string.begin.css */
+/*                   ^ punctuation.definition.string.end.css */
+/*                    ^ punctuation.definition.group.end.css */
+/*                     ^ punctuation.terminator.statement.css */
+
+  @namespace prefix url("url");
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.at-rule.namespace.css */
+/*^ punctuation.definition.keyword.css */
+/* ^^^^^^^^^ keyword.control.at-rule.css */
+/*           ^^^^^^ variable.parameter.namespace-prefix.css */
+/*                  ^^^^^^^^^^ meta.function-call.url.css */
+/*                  ^^^ support.function.url.css */
+/*                     ^ punctuation.definition.group.begin.css */
+/*                      ^^^^^ string.quoted.double.css */
+/*                      ^ punctuation.definition.string.begin.css */
+/*                          ^ punctuation.definition.string.end.css */
+/*                           ^ punctuation.definition.group.end.css */
+/*                            ^ punctuation.terminator.statement.css */
+  
+  @namespace prefix src("url");
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.at-rule.namespace.css */
+/*^ punctuation.definition.keyword.css */
+/* ^^^^^^^^^ keyword.control.at-rule.css */
+/*           ^^^^^^ variable.parameter.namespace-prefix.css */
+/*                  ^^^^^^^^^^ meta.function-call.src.css */
+/*                  ^^^ support.function.src.css */
+/*                     ^ punctuation.definition.group.begin.css */
+/*                      ^^^^^ string.quoted.double.css */
+/*                      ^ punctuation.definition.string.begin.css */
+/*                          ^ punctuation.definition.string.end.css */
+/*                           ^ punctuation.definition.group.end.css */
+/*                            ^ punctuation.terminator.statement.css */
+
+  @namespace "url";
+/*^^^^^^^^^^^^^^^^^ meta.at-rule.namespace.css */
+/*^ punctuation.definition.keyword.css */
+/* ^^^^^^^^^ keyword.control.at-rule.css */
+/*           ^^^^^ string.quoted.double.css */
+/*           ^ punctuation.definition.string.begin.css */
+/*               ^ punctuation.definition.string.end.css */
+/*                ^ punctuation.terminator.statement.css */
+  
+  @namespace prefix "url";
+/*^^^^^^^^^^^^^^^^^^^^^^^^ meta.at-rule.namespace.css */
+/*^ punctuation.definition.keyword.css */
+/* ^^^^^^^^^ keyword.control.at-rule.css */
+/*           ^^^^^^ variable.parameter.namespace-prefix.css */
+/*                  ^^^^^ string.quoted.double.css */
+/*                  ^ punctuation.definition.string.begin.css */
+/*                      ^ punctuation.definition.string.end.css */
+/*                       ^ punctuation.terminator.statement.css */
+  

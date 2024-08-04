@@ -1,0 +1,35 @@
+/* SYNTAX TEST "Packages/better-css/Syntaxes/Better CSS.tmLanguage" */
+
+  @keyframes test {}
+/*^^^^^^^^^^^^^^^^^^ meta.at-rule.counter-style.css */
+/*^^^^^^^^^^ keyword.control.at-rule.counter-style.css */
+/*^ punctuation.definition.keyword.css */
+/*           ^^^^ variable.parameter.animation-name.css */
+/*                ^ punctuation.definition.block.begin.css */
+/*                 ^ punctuation.definition.block.end.css */
+  @keyframes "test" {}
+/*^^^^^^^^^^^^^^^^^^^^ meta.at-rule.counter-style.css */
+/*^^^^^^^^^^ keyword.control.at-rule.counter-style.css */
+/*^ punctuation.definition.keyword.css */
+/*           ^^^^^^ string.quoted.double.css */
+/*           ^ punctuation.definition.string.begin.css */
+/*                ^ punctuation.definition.string.end.css */
+/*                  ^ punctuation.definition.block.begin.css */
+/*                   ^ punctuation.definition.block.end.css */
+
+  @keyframes /* comment */ animation-name /* comment */ {}
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.at-rule.counter-style.css */
+/*^^^^^^^^^^ keyword.control.at-rule.counter-style.css */
+/*^ punctuation.definition.keyword.css */
+/*           ^^^^^^^^^^^^^ comment.block.css */
+/*                         ^^^^^^^^^^^^^^ variable.parameter.animation-name.css */
+/*                                        ^^^^^^^^^^^^^ comment.block.css */
+/*                                                      ^ punctuation.definition.block.begin.css */
+/*                                                       ^ punctuation.definition.block.end.css */
+
+@keyframes asdf {
+  from {}
+  to {}
+
+  0%, 10%, 20%, 30%, 40%, 50%, 60%, 70%, 80%, 90%, 100% {}
+}
