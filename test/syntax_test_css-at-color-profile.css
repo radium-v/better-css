@@ -1,0 +1,17 @@
+/* SYNTAX TEST "Packages/better-css/Syntaxes/Better CSS.tmLanguage" */
+
+  @color-profile device-cmyk {}
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.at-rule.color-profile.css */
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.at-rule.color-profile.css */
+/*^^^^^^^^^^^^^^ keyword.control.at-rule.color-profile.css */
+/*^ punctuation.definition.keyword.css */
+/*               ^^^^^^^^^^^ support.constant.color-profile.css */
+/*                            ^ punctuation.definition.block.end.css */
+  @color-profile --device-cmyk {}
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.at-rule.color-profile.css */
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.at-rule.color-profile.css */
+/*^^^^^^^^^^^^^^ keyword.control.at-rule.color-profile.css */
+/*^ punctuation.definition.keyword.css */
+/*               ^^^^^^^^^^^^^ variable.other.constant.color-profile.css */
+/*                             ^ punctuation.definition.block.begin.less */
+/*                              ^ punctuation.definition.block.end.css */
