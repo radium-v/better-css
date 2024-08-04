@@ -182,6 +182,20 @@ repository:
     end: \*/
     captures:
       '0': {name: punctuation.definition.comment.css}
+
+  dimension:
+    patterns:
+    - include: '#length-type'
+    - include: '#percentage-type'
+
+  length-type:
+    patterns:
+    - name: constant.numeric.css
+      match: ({{number_token}})(ex|cap|ch|i[cn]|r?em|r?lh|[sld]?v(?:[whib]|min|max)|[cm]m|Q|p[ctx])
+      captures:
+        '1': {name: constant.numeric.css}
+        '2': {name: keyword.other.unit.length.css}
+
   percentage-type:
     name: constant.numeric.css
     match: '{{number_token}}(%)'
