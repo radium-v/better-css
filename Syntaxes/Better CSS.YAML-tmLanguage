@@ -18,6 +18,8 @@ patterns:
 
 - include: '#at-keyframes'
 
+- include: '#at-namespace'
+
 - include: '#property-list'
 
 - include: '#selector'
@@ -157,6 +159,23 @@ repository:
 
   ident-token:
     match: '{{ident_token}}'
+
+  at-namespace:
+    name: meta.at-rule.namespace.css
+    begin: (@)(namespace)
+    beginCaptures:
+      '1': {name: punctuation.definition.keyword.css}
+      '2': {name: keyword.control.at-rule.css}
+    end: ;
+    endCaptures:
+      '0': {name: punctuation.terminator.statement.css}
+    patterns:
+    - include: '#string'
+    - include: '#function-url'
+    - include: '#function-src'
+    - match: '{{ident_token}}'
+      name: variable.parameter.namespace-prefix.css
+
   comment-block:
     name: comment.block.css
     begin: /\*
