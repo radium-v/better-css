@@ -257,6 +257,12 @@ repository:
         '4': {name: string.unquoted.url.css}
         '6': {name: punctuation.definition.group.end.css}
 
+  important:
+    name: keyword.other.important.css
+    match: (\!)\s*important
+    captures:
+      '1': {name: punctuation.separator.css}
+
   integer-type:
     name: constant.numeric.css
     match: (?:[-+]?\d+)
@@ -288,6 +294,38 @@ repository:
       patterns:
       - name: constant.numeric.media-feature.css
         match: '{{number_token}}'
+
+  property-list:
+    patterns:
+    - begin: (?=(?=[^;]*)\{)
+      end: \}
+      endCaptures:
+        '0': {name: punctuation.definition.block.end.css}
+      patterns:
+      - include: '#comment-block'
+      - include: '#rule-list'
+
+  property-value:
+    patterns:
+    # - match: (((\+_?)?):)(.*)(?=\s*(;)|(?=\}))
+    #   captures:
+    #     '1': {name: punctuation.separator.key-value.css}
+    #     '4': {name: meta.property-value.css}
+    - include: '#comment-block'
+    - include: '#important'
+
+  rule-list:
+    patterns:
+    - name: meta.property-list.css
+      begin: \{
+      beginCaptures:
+        '0': {name: punctuation.definition.block.begin.css}
+      end: (?=\s*\})
+      patterns:
+      - match: \s*(;)|(?=[})])
+        captures:
+          '1': {name: punctuation.terminator.rule.css}
+      - include: '#rule-list-body'
 
   rule-list-body:
     patterns:
