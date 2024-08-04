@@ -16,6 +16,8 @@ patterns:
 
 - include: '#at-import'
 
+- include: '#at-keyframes'
+
 - include: '#property-list'
 
 - include: '#selector'
@@ -30,9 +32,15 @@ variables:
   dashed_ident: --(?:(?:[a-zA-Z_\d-]|{{non_ascii}})|{{escape}})*
   string_unquoted: (?:(?:[^"'\(\)]|\S|[^\x{0000}-\x{0008}\x{000B}\x{000E}-\x{001F}\x{007F}])|{{escape}})*?
   number_token: (?:[-+]?(?:\d+\.\d+|\d+|\.\d+)(?:[eE][-+]?\d+)?)
+  vendor_prefix: '-(?:moz|ms|o|webkit)-'
+
 repository:
+  arbitrary-repetition:
+    match: \s*(?:(,))
+    captures:
+      '1': {name: punctuation.definition.arbitrary-repetition.css}
+
   at-charset:
-    comment: '@charset'
     name: meta.at-rule.charset.css
     begin: (@)(charset)\s
     beginCaptures:
@@ -114,12 +122,53 @@ repository:
       name: keyword.context.resource.css
     - include: '#media-condition'
 
+  at-keyframes:
+    name: meta.at-rule.keyframes.css
+    begin: (@)({{vendor_prefix}})?(keyframes)
+    beginCaptures:
+      '0': {name: keyword.control.at-rule.keyframe.css}
+      '1': {name: punctuation.definition.keyword.css}
+      '2': {name: support.type.property-vendor.css}
+      '3': {name: keyword.control.at-rule.keyframe.css}
+    end: \s*(\})
+    endCaptures:
+      '1': {name: punctuation.definition.block.end.css}
+    patterns:
+    - begin: \s*(\{)
+      beginCaptures:
+        '1': {name: punctuation.definition.block.begin.css}
+      end: (?=\})
+      patterns:
+      - name: entity.other.keyframe-offset.css
+        match: \b(?:from|to)\b
+        captures:
+          '0': {name: keyword.other.keyframe-selector.css}
+      - name: entity.other.keyframe-offset.percentage.css
+        include: '#percentage-type'
+      - include: '#arbitrary-repetition'
+      - include: $self
+    - begin: (?=[^{;])
+      end: (?=\{)
+      patterns:
+      - name: variable.parameter.animation-name.css
+        include: '#ident-token'
+      - include: '#string'
+      - include: '#comment-block'
+
+  ident-token:
+    match: '{{ident_token}}'
   comment-block:
     name: comment.block.css
     begin: /\*
     end: \*/
     captures:
       '0': {name: punctuation.definition.comment.css}
+  percentage-type:
+    name: constant.numeric.css
+    match: '{{number_token}}(%)'
+    captures:
+      '1': {name: keyword.other.unit.percentage.css}
+
   function-layer:
     comment: 'layer()'
     name: meta.function-call.layer.css
