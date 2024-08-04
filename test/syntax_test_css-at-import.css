@@ -1,0 +1,129 @@
+/* SYNTAX TEST "Packages/better-css/Syntaxes/Better CSS.tmLanguage" */
+
+  @import url("landscape.css");
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.at-rule.import.css */
+/*^ punctuation.definition.keyword.css */
+/* ^^^^^^ keyword.control.at-rule.css */
+/*        ^^^^^^^^^^^^^^^^^^^^ meta.function-call.url.css */
+/*        ^^^ support.function.url.css */
+/*           ^ punctuation.definition.group.begin.css */
+/*            ^^^^^^^^^^^^^^^ string.quoted.double.css */
+/*            ^ punctuation.definition.string.begin.css */
+/*                          ^ punctuation.definition.string.end.css */
+/*                           ^ punctuation.definition.group.end.css */
+/*                            ^ punctuation.terminator.statement.css */
+
+  @import url("landscape.css" resource);
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.at-rule.import.css */
+/*^ punctuation.definition.keyword.css */
+/* ^^^^^^ keyword.control.at-rule.css */
+/*        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.function-call.url.css */
+/*        ^^^ support.function.url.css */
+/*           ^ punctuation.definition.group.begin.css */
+/*            ^^^^^^^^^^^^^^^ string.quoted.double.css */
+/*            ^ punctuation.definition.string.begin.css */
+/*                          ^ punctuation.definition.string.end.css */
+/*                            ^^^^^^^^ variable.parameter.url-modifier.css */
+/*                                    ^ punctuation.definition.group.end.css */
+/*                                     ^ punctuation.terminator.statement.css */
+
+  @import url("tabs.css") layer;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.at-rule.import.css */
+/*^ punctuation.definition.keyword.css */
+/* ^^^^^^ keyword.control.at-rule.css */
+/*        ^^^^^^^^^^^^^^^ meta.function-call.url.css */
+/*        ^^^ support.function.url.css */
+/*           ^ punctuation.definition.group.begin.css */
+/*            ^^^^^^^^^^ string.quoted.double.css */
+/*            ^ punctuation.definition.string.begin.css */
+/*                     ^ punctuation.definition.string.end.css */
+/*                      ^ punctuation.definition.group.end.css */
+/*                        ^^^^^ keyword.context.resource.css */
+/*                             ^ punctuation.terminator.statement.css */
+
+  @import url("tabs.css") layer(framework);
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.at-rule.import.css */
+/*^ punctuation.definition.keyword.css */
+/* ^^^^^^ keyword.control.at-rule.css */
+/*        ^^^^^^^^^^^^^^^ meta.function-call.url.css */
+/*        ^^^ support.function.url.css */
+/*           ^ punctuation.definition.group.begin.css */
+/*            ^^^^^^^^^^ string.quoted.double.css */
+/*            ^ punctuation.definition.string.begin.css */
+/*                     ^ punctuation.definition.string.end.css */
+/*                      ^ punctuation.definition.group.end.css */
+/*                        ^^^^^^^^^^^^^^^^ meta.function-call.layer.css */
+/*                        ^^^^^ support.function.layer.css */
+/*                             ^ punctuation.definition.group.begin.css */
+/*                              ^^^^^^^^^ support.constant.layer-name.css */
+/*                                       ^ punctuation.definition.group.end.css */
+/*                                        ^ punctuation.terminator.statement.css */
+
+  @import url("tabs.css") layer(framework.component);
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.at-rule.import.css */
+/*^ punctuation.definition.keyword.css */
+/* ^^^^^^ keyword.control.at-rule.css */
+/*        ^^^^^^^^^^^^^^^ meta.function-call.url.css */
+/*        ^^^ support.function.url.css */
+/*           ^ punctuation.definition.group.begin.css */
+/*            ^^^^^^^^^^ string.quoted.double.css */
+/*            ^ punctuation.definition.string.begin.css */
+/*                     ^ punctuation.definition.string.end.css */
+/*                      ^ punctuation.definition.group.end.css */
+/*                        ^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.function-call.layer.css */
+/*                        ^^^^^ support.function.layer.css */
+/*                             ^ punctuation.definition.group.begin.css */
+/*                              ^^^^^^^^^^^^^^^^^^^ support.constant.layer-name.css */
+/*                                       ^ punctuation.accessor.dot.css */
+/*                                                 ^ punctuation.definition.group.end.css */
+/*                                                  ^ punctuation.terminator.statement.css */
+
+  @import "portrait.css";
+/*^^^^^^^^^^^^^^^^^^^^^^^ meta.at-rule.import.css */
+/*^ punctuation.definition.keyword.css */
+/* ^^^^^^ keyword.control.at-rule.css */
+/*        ^^^^^^^^^^^^^^ string.quoted.double.css */
+/*        ^ punctuation.definition.string.begin.css */
+/*                     ^ punctuation.definition.string.end.css */
+/*                      ^ punctuation.terminator.statement.css */
+
+  @import "tabs.css" layer;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^ meta.at-rule.import.css */
+/*^ punctuation.definition.keyword.css */
+/* ^^^^^^ keyword.control.at-rule.css */
+/*        ^^^^^^^^^^ string.quoted.double.css */
+/*        ^ punctuation.definition.string.begin.css */
+/*                 ^ punctuation.definition.string.end.css */
+/*                   ^^^^^ keyword.context.resource.css */
+/*                        ^ punctuation.terminator.statement.css */
+
+  @import "tabs.css" layer(framework);
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.at-rule.import.css */
+/*^ punctuation.definition.keyword.css */
+/* ^^^^^^ keyword.control.at-rule.css */
+/*        ^^^^^^^^^^ string.quoted.double.css */
+/*        ^ punctuation.definition.string.begin.css */
+/*                 ^ punctuation.definition.string.end.css */
+/*                   ^^^^^^^^^^^^^^^^ meta.function-call.layer.css */
+/*                   ^^^^^ support.function.layer.css */
+/*                        ^ punctuation.definition.group.begin.css */
+/*                         ^^^^^^^^^ support.constant.layer-name.css */
+/*                                  ^ punctuation.definition.group.end.css */
+/*                                   ^ punctuation.terminator.statement.css */
+
+  @import "tabs.css" layer(framework.component);
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.at-rule.import.css */
+/*^ punctuation.definition.keyword.css */
+/* ^^^^^^ keyword.control.at-rule.css */
+/*        ^^^^^^^^^^ string.quoted.double.css */
+/*        ^ punctuation.definition.string.begin.css */
+/*                 ^ punctuation.definition.string.end.css */
+/*                   ^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.function-call.layer.css */
+/*                   ^^^^^ support.function.layer.css */
+/*                        ^ punctuation.definition.group.begin.css */
+/*                         ^^^^^^^^^^^^^^^^^^^ support.constant.layer-name.css */
+/*                                  ^ punctuation.accessor.dot.css */
+/*                                            ^ punctuation.definition.group.end.css */
+/*                                             ^ punctuation.terminator.statement.css */
+
+  @import "tabs.css" supports(not (color: green) and (color: red) or (color: blue));
