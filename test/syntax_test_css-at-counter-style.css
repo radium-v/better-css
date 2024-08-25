@@ -13,7 +13,8 @@
 /*^^^^^^^^^^^^^^ keyword.control.at-rule.counter-style.css */
 /*^ punctuation.definition.keyword.css */
 /*               ^^^^^^^^^^^^^^^^^^^^^^ variable.parameter.style-name.css */
-/*                                      ^^ punctuation.definition.block.begin.css */
+/*                                      ^ punctuation.definition.block.begin.css */
+/*                                       ^ punctuation.definition.block.end.css */
 
 
   @counter-style disclosure-closed {}
@@ -21,37 +22,43 @@
 /*^^^^^^^^^^^^^^ keyword.control.at-rule.counter-style.css */
 /*^ punctuation.definition.keyword.css */
 /*               ^^^^^^^^^^^^^^^^^ invalid.illegal.counter-style-name.css */
-/*                                 ^^ punctuation.definition.block.begin.css */
+/*                                 ^ punctuation.definition.block.begin.css */
+/*                                  ^ punctuation.definition.block.end.css */
   @counter-style disclosure-open {}
 /*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.at-rule.counter-style.css */
 /*^^^^^^^^^^^^^^ keyword.control.at-rule.counter-style.css */
 /*^ punctuation.definition.keyword.css */
 /*               ^^^^^^^^^^^^^^^ invalid.illegal.counter-style-name.css */
-/*                               ^^ punctuation.definition.block.begin.css */
+/*                               ^ punctuation.definition.block.begin.css */
+/*                                ^ punctuation.definition.block.end.css */
   @counter-style disc {}
 /*^^^^^^^^^^^^^^^^^^^^^^ meta.at-rule.counter-style.css */
 /*^^^^^^^^^^^^^^ keyword.control.at-rule.counter-style.css */
 /*^ punctuation.definition.keyword.css */
 /*               ^^^^ invalid.illegal.counter-style-name.css */
-/*                    ^^ punctuation.definition.block.begin.css */
+/*                    ^ punctuation.definition.block.begin.css */
+/*                     ^ punctuation.definition.block.end.css */
   @counter-style decimal {}
 /*^^^^^^^^^^^^^^^^^^^^^^^^^ meta.at-rule.counter-style.css */
 /*^^^^^^^^^^^^^^ keyword.control.at-rule.counter-style.css */
 /*^ punctuation.definition.keyword.css */
 /*               ^^^^^^^ invalid.illegal.counter-style-name.css */
-/*                       ^^ punctuation.definition.block.begin.css */
+/*                       ^ punctuation.definition.block.begin.css */
+/*                        ^ punctuation.definition.block.end.css */
   @counter-style square {}
 /*^^^^^^^^^^^^^^^^^^^^^^^^ meta.at-rule.counter-style.css */
 /*^^^^^^^^^^^^^^ keyword.control.at-rule.counter-style.css */
 /*^ punctuation.definition.keyword.css */
 /*               ^^^^^^ invalid.illegal.counter-style-name.css */
-/*                      ^^ punctuation.definition.block.begin.css */
+/*                      ^ punctuation.definition.block.begin.css */
+/*                       ^ punctuation.definition.block.end.css */
   @counter-style circle {}
 /*^^^^^^^^^^^^^^^^^^^^^^^^ meta.at-rule.counter-style.css */
 /*^^^^^^^^^^^^^^ keyword.control.at-rule.counter-style.css */
 /*^ punctuation.definition.keyword.css */
 /*               ^^^^^^ invalid.illegal.counter-style-name.css */
-/*                      ^^ punctuation.definition.block.begin.css */
+/*                      ^ punctuation.definition.block.begin.css */
+/*                       ^ punctuation.definition.block.end.css */
 
 @counter-style system-test {
     system: cyclic;
@@ -122,4 +129,4 @@
 
   }
 /*^ meta.at-rule.counter-style.css */
-/*^ punctuation.definition.block.begin.css */
+/*^ punctuation.definition.block.end.css */
