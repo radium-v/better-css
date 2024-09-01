@@ -2,16 +2,78 @@
 
   @color-profile device-cmyk {}
 /*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.at-rule.color-profile.css */
-/*^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.at-rule.color-profile.css */
 /*^^^^^^^^^^^^^^ keyword.control.at-rule.color-profile.css */
 /*^ punctuation.definition.keyword.css */
 /*               ^^^^^^^^^^^ support.constant.color-profile.css */
+/*                           ^ punctuation.definition.block.begin.css */
 /*                            ^ punctuation.definition.block.end.css */
-  @color-profile --device-cmyk {}
-/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.at-rule.color-profile.css */
-/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.at-rule.color-profile.css */
+  @color-profile --device-cmyk {
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.at-rule.color-profile.css */
 /*^^^^^^^^^^^^^^ keyword.control.at-rule.color-profile.css */
 /*^ punctuation.definition.keyword.css */
-/*               ^^^^^^^^^^^^^ variable.other.constant.color-profile.css */
+/*               ^^^^^^^^^^^^^ variable.parameter.custom-property-name.css */
 /*                             ^ punctuation.definition.block.begin.css */
-/*                              ^ punctuation.definition.block.end.css */
+    rendering-intent: auto;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^ meta.at-rule.color-profile.css */
+/*  ^^^^^^^^^^^^^^^^ support.type.property-name.css */
+/*                  ^ punctuation.separator.key-value.css */
+/*                   ^^^^^ meta.property-value.css */
+/*                    ^^^^ support.constant.property-value.css */
+/*                        ^ punctuation.terminator.rule.css */
+    rendering-intent: perceptual;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.at-rule.color-profile.css */
+/*  ^^^^^^^^^^^^^^^^ support.type.property-name.css */
+/*                  ^ punctuation.separator.key-value.css */
+/*                   ^^^^^^^^^^^ meta.property-value.css */
+/*                    ^^^^^^^^^^ support.constant.property-value.css */
+/*                              ^ punctuation.terminator.rule.css */
+    rendering-intent: relative-colorimetric;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.at-rule.color-profile.css */
+/*  ^^^^^^^^^^^^^^^^ support.type.property-name.css */
+/*                  ^ punctuation.separator.key-value.css */
+/*                   ^^^^^^^^^^^^^^^^^^^^^^ meta.property-value.css */
+/*                    ^^^^^^^^^^^^^^^^^^^^^ support.constant.property-value.css */
+/*                                         ^ punctuation.terminator.rule.css */
+    rendering-intent: saturation;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.at-rule.color-profile.css */
+/*  ^^^^^^^^^^^^^^^^ support.type.property-name.css */
+/*                  ^ punctuation.separator.key-value.css */
+/*                   ^^^^^^^^^^^ meta.property-value.css */
+/*                    ^^^^^^^^^^ support.constant.property-value.css */
+/*                              ^ punctuation.terminator.rule.css */
+    rendering-intent: absolute-colorimetric;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.at-rule.color-profile.css */
+/*  ^^^^^^^^^^^^^^^^ support.type.property-name.css */
+/*                  ^ punctuation.separator.key-value.css */
+/*                   ^^^^^^^^^^^^^^^^^^^^^^ meta.property-value.css */
+/*                    ^^^^^^^^^^^^^^^^^^^^^ support.constant.property-value.css */
+/*                                         ^ punctuation.terminator.rule.css */
+    src: url("foo.icc");
+/*^^^^^^^^^^^^^^^^^^^^^^ meta.at-rule.color-profile.css */
+/*  ^^^ support.type.property-name.css */
+/*     ^ punctuation.separator.key-value.css */
+/*      ^^^^^^^^^^^^^^^ meta.property-value.css */
+/*       ^^^^^^^^^^^^^^ meta.function-call.url.css */
+/*       ^^^ support.function.url.css */
+/*          ^ punctuation.definition.group.begin.css */
+/*           ^^^^^^^^^ string.quoted.double.css */
+/*           ^ punctuation.definition.string.begin.css */
+/*                   ^ punctuation.definition.string.end.css */
+/*                    ^ punctuation.definition.group.end.css */
+/*                     ^ punctuation.terminator.rule.css */
+    src: src("foo.icc");
+/*^^^^^^^^^^^^^^^^^^^^^^ meta.at-rule.color-profile.css */
+/*  ^^^ support.type.property-name.css */
+/*     ^ punctuation.separator.key-value.css */
+/*      ^^^^^^^^^^^^^^^ meta.property-value.css */
+/*       ^^^^^^^^^^^^^^ meta.function-call.src.css */
+/*       ^^^ support.function.src.css */
+/*          ^ punctuation.definition.group.begin.css */
+/*           ^^^^^^^^^ string.quoted.double.css */
+/*           ^ punctuation.definition.string.begin.css */
+/*                   ^ punctuation.definition.string.end.css */
+/*                    ^ punctuation.definition.group.end.css */
+/*                     ^ punctuation.terminator.rule.css */
+  }
+/*^ meta.at-rule.color-profile.css */
+/*^ punctuation.definition.block.end.css */

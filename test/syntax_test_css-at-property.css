@@ -1,0 +1,67 @@
+/* SYNTAX TEST "Packages/better-css/Syntaxes/Better CSS.tmLanguage" */
+
+  @property --foo {
+/*^^^^^^^^^^^^^^^^^ meta.at-rule.property.css */
+/*^^^^^^^^^ keyword.control.at-rule.css */
+/*^ punctuation.definition.keyword.css */
+/*          ^^^^^ variable.parameter.property-name.css */
+/*                ^ punctuation.definition.block.begin.css */
+    inherits: true;
+/*^^^^^^^^^^^^^^^^^ meta.at-rule.property.css */
+/*  ^^^^^^^^ support.type.property-name.css */
+/*          ^ punctuation.separator.key-value.css */
+/*           ^^^^^ meta.property-value.css */
+/*            ^^^^ support.constant.property-value.css */
+/*                ^ punctuation.terminator.rule.css */
+    inherits: false;
+/*^^^^^^^^^^^^^^^^^^ meta.at-rule.property.css */
+/*  ^^^^^^^^ support.type.property-name.css */
+/*          ^ punctuation.separator.key-value.css */
+/*           ^^^^^^ meta.property-value.css */
+/*            ^^^^^ support.constant.property-value.css */
+/*                 ^ punctuation.terminator.rule.css */
+    syntax: "<integer>";
+/*^^^^^^^^^^^^^^^^^^^^^^ meta.at-rule.property.css */
+/*  ^^^^^^ support.type.property-name.css */
+/*        ^ punctuation.separator.key-value.css */
+/*         ^^^^^^^^^^^^ meta.property-value.css */
+/*          ^^^^^^^^^^^ string.quoted.double.css */
+/*          ^ punctuation.definition.string.begin.css */
+/*                    ^ punctuation.definition.string.end.css */
+/*                     ^ punctuation.terminator.rule.css */
+    initial-value: inherit;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^ meta.at-rule.property.css */
+/*  ^^^^^^^^^^^^^ support.type.property-name.css */
+/*               ^ punctuation.separator.key-value.css */
+/*                ^^^^^^^^ meta.property-value.css */
+/*                 ^^^^^^^ support.constant.property-value.css */
+/*                        ^ punctuation.terminator.rule.css */
+    initial-value: initial;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^ meta.at-rule.property.css */
+/*  ^^^^^^^^^^^^^ support.type.property-name.css */
+/*               ^ punctuation.separator.key-value.css */
+/*                ^^^^^^^^ meta.property-value.css */
+/*                 ^^^^^^^ support.constant.property-value.css */
+/*                        ^ punctuation.terminator.rule.css */
+    initial-value: revert-layer;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.at-rule.property.css */
+/*  ^^^^^^^^^^^^^ support.type.property-name.css */
+/*               ^ punctuation.separator.key-value.css */
+/*                ^^^^^^^^^^^^^ meta.property-value.css */
+/*                 ^^^^^^^^^^^^ support.constant.property-value.css */
+/*                             ^ punctuation.terminator.rule.css */
+    initial-value: revert;
+/*^^^^^^^^^^^^^^^^^^^^^^^^ meta.at-rule.property.css */
+/*  ^^^^^^^^^^^^^ support.type.property-name.css */
+/*               ^ punctuation.separator.key-value.css */
+/*                ^^^^^^^ meta.property-value.css */
+/*                 ^^^^^^ support.constant.property-value.css */
+/*                       ^ punctuation.terminator.rule.css */
+    initial-value: unset;
+/*^^^^^^^^^^^^^^^^^^^^^^^ meta.at-rule.property.css */
+/*  ^^^^^^^^^^^^^ support.type.property-name.css */
+/*               ^ punctuation.separator.key-value.css */
+/*                ^^^^^^ meta.property-value.css */
+/*                 ^^^^^ support.constant.property-value.css */
+/*                      ^ punctuation.terminator.rule.css */
+}
