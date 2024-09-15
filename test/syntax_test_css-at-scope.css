@@ -1,0 +1,59 @@
+/* SYNTAX TEST "Packages/better-css/Syntaxes/Better CSS.tmLanguage" */
+
+  @scope {}
+/*^^^^^^^^^ meta.at-rule.scope.css */
+/*^^^^^^ keyword.control.at-rule.css */
+/*^ punctuation.definition.keyword.css */
+/*       ^ punctuation.definition.block.begin.css */
+/*        ^ punctuation.definition.block.end.css */
+  @scope (html) {}
+/*^^^^^^^^^^^^^^^^ meta.at-rule.scope.css */
+/*^^^^^^ keyword.control.at-rule.css */
+/*^ punctuation.definition.keyword.css */
+/*       ^^^^^ meta.group.scope.css */
+/*       ^ punctuation.definition.group.begin.css */
+/*        ^^^^ entity.name.tag.css */
+/*            ^ punctuation.definition.group.end.css */
+/*              ^ punctuation.definition.block.begin.css */
+/*               ^ punctuation.definition.block.end.css */
+  @scope (*|h1) {}
+/*^^^^^^^^^^^^^^^^ meta.at-rule.scope.css */
+/*^^^^^^ keyword.control.at-rule.css */
+/*^ punctuation.definition.keyword.css */
+/*       ^^^^^ meta.group.scope.css */
+/*       ^ punctuation.definition.group.begin.css */
+/*        ^^ entity.name.tag.namespace.css */
+/*         ^ punctuation.separator.namespace.css */
+/*          ^^ entity.name.tag.css */
+/*            ^ punctuation.definition.group.end.css */
+/*              ^ punctuation.definition.block.begin.css */
+/*               ^ punctuation.definition.block.end.css */
+
+  @scope (.feature) {}
+/*^^^^^^^^^^^^^^^^^^^^ meta.at-rule.scope.css */
+/*^^^^^^ keyword.control.at-rule.css */
+/*^ punctuation.definition.keyword.css */
+/*       ^^^^^^^^^ meta.group.scope.css */
+/*       ^ punctuation.definition.group.begin.css */
+/*        ^^^^^^^^ entity.other.attribute-name.class.css */
+/*        ^ punctuation.definition.entity.css */
+/*                ^ punctuation.definition.group.end.css */
+/*                  ^ punctuation.definition.block.begin.css */
+/*                   ^ punctuation.definition.block.end.css */
+
+  @scope (.feature) to (figure) {}
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.at-rule.scope.css */
+/*^^^^^^ keyword.control.at-rule.css */
+/*^ punctuation.definition.keyword.css */
+/*       ^^^^^^^^^ meta.group.scope.css */
+/*       ^ punctuation.definition.group.begin.css */
+/*        ^^^^^^^^ entity.other.attribute-name.class.css */
+/*        ^ punctuation.definition.entity.css */
+/*                ^ punctuation.definition.group.end.css */
+/*                  ^^ keyword.operator.logical.css */
+/*                     ^^^^^^^ meta.group.scope.css */
+/*                     ^ punctuation.definition.group.begin.css */
+/*                      ^^^^^^ entity.name.tag.css */
+/*                            ^ punctuation.definition.group.end.css */
+/*                              ^ punctuation.definition.block.begin.css */
+/*                               ^ punctuation.definition.block.end.css */

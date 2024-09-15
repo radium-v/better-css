@@ -1,0 +1,1169 @@
+/* SYNTAX TEST "Packages/better-css/Syntaxes/Better CSS.tmLanguage" */
+
+  * {}
+/*^ entity.name.tag.universal.css */
+/*  ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*   ^ punctuation.definition.block.end.css */
+  a {}
+/*^ entity.name.tag.css */
+/*  ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*   ^ punctuation.definition.block.end.css */
+  abbr {}
+/*^^^^ entity.name.tag.css */
+/*     ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*      ^ punctuation.definition.block.end.css */
+  address {}
+/*^^^^^^^ entity.name.tag.css */
+/*        ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*         ^ punctuation.definition.block.end.css */
+  area {}
+/*^^^^ entity.name.tag.css */
+/*     ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*      ^ punctuation.definition.block.end.css */
+  article {}
+/*^^^^^^^ entity.name.tag.css */
+/*        ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*         ^ punctuation.definition.block.end.css */
+  aside {}
+/*^^^^^ entity.name.tag.css */
+/*      ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*       ^ punctuation.definition.block.end.css */
+  audio {}
+/*^^^^^ entity.name.tag.css */
+/*      ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*       ^ punctuation.definition.block.end.css */
+  b {}
+/*^ entity.name.tag.css */
+/*  ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*   ^ punctuation.definition.block.end.css */
+  base {}
+/*^^^^ entity.name.tag.css */
+/*     ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*      ^ punctuation.definition.block.end.css */
+  bdi {}
+/*^^^ entity.name.tag.css */
+/*    ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*     ^ punctuation.definition.block.end.css */
+  bdo {}
+/*^^^ entity.name.tag.css */
+/*    ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*     ^ punctuation.definition.block.end.css */
+  blockquote {}
+/*^^^^^^^^^^ entity.name.tag.css */
+/*           ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*            ^ punctuation.definition.block.end.css */
+  body {}
+/*^^^^ entity.name.tag.css */
+/*     ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*      ^ punctuation.definition.block.end.css */
+  br {}
+/*^^ entity.name.tag.css */
+/*   ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*    ^ punctuation.definition.block.end.css */
+  button {}
+/*^^^^^^ entity.name.tag.css */
+/*       ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*        ^ punctuation.definition.block.end.css */
+  canvas {}
+/*^^^^^^ entity.name.tag.css */
+/*       ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*        ^ punctuation.definition.block.end.css */
+  caption {}
+/*^^^^^^^ entity.name.tag.css */
+/*        ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*         ^ punctuation.definition.block.end.css */
+  cite {}
+/*^^^^ entity.name.tag.css */
+/*     ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*      ^ punctuation.definition.block.end.css */
+  code {}
+/*^^^^ entity.name.tag.css */
+/*     ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*      ^ punctuation.definition.block.end.css */
+  col {}
+/*^^^ entity.name.tag.css */
+/*    ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*     ^ punctuation.definition.block.end.css */
+  colgroup {}
+/*^^^^^^^^ entity.name.tag.css */
+/*         ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*          ^ punctuation.definition.block.end.css */
+  data {}
+/*^^^^ entity.name.tag.css */
+/*     ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*      ^ punctuation.definition.block.end.css */
+  datalist {}
+/*^^^^^^^^ entity.name.tag.css */
+/*         ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*          ^ punctuation.definition.block.end.css */
+  dd {}
+/*^^ entity.name.tag.css */
+/*   ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*    ^ punctuation.definition.block.end.css */
+  del {}
+/*^^^ entity.name.tag.css */
+/*    ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*     ^ punctuation.definition.block.end.css */
+  details {}
+/*^^^^^^^ entity.name.tag.css */
+/*        ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*         ^ punctuation.definition.block.end.css */
+  dfn {}
+/*^^^ entity.name.tag.css */
+/*    ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*     ^ punctuation.definition.block.end.css */
+  dialog {}
+/*^^^^^^ entity.name.tag.css */
+/*       ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*        ^ punctuation.definition.block.end.css */
+  div {}
+/*^^^ entity.name.tag.css */
+/*    ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*     ^ punctuation.definition.block.end.css */
+  dl {}
+/*^^ entity.name.tag.css */
+/*   ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*    ^ punctuation.definition.block.end.css */
+  dt {}
+/*^^ entity.name.tag.css */
+/*   ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*    ^ punctuation.definition.block.end.css */
+  em {}
+/*^^ entity.name.tag.css */
+/*   ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*    ^ punctuation.definition.block.end.css */
+  embed {}
+/*^^^^^ entity.name.tag.css */
+/*      ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*       ^ punctuation.definition.block.end.css */
+  fencedframe {}
+/*^^^^^^^^^^^ entity.name.tag.css */
+/*            ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*             ^ punctuation.definition.block.end.css */
+  fieldset {}
+/*^^^^^^^^ entity.name.tag.css */
+/*         ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*          ^ punctuation.definition.block.end.css */
+  figcaption {}
+/*^^^^^^^^^^ entity.name.tag.css */
+/*           ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*            ^ punctuation.definition.block.end.css */
+  figure {}
+/*^^^^^^ entity.name.tag.css */
+/*       ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*        ^ punctuation.definition.block.end.css */
+  footer {}
+/*^^^^^^ entity.name.tag.css */
+/*       ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*        ^ punctuation.definition.block.end.css */
+  form {}
+/*^^^^ entity.name.tag.css */
+/*     ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*      ^ punctuation.definition.block.end.css */
+  h1 {}
+/*^^ entity.name.tag.css */
+/*   ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*    ^ punctuation.definition.block.end.css */
+  head {}
+/*^^^^ entity.name.tag.css */
+/*     ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*      ^ punctuation.definition.block.end.css */
+  header {}
+/*^^^^^^ entity.name.tag.css */
+/*       ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*        ^ punctuation.definition.block.end.css */
+  hgroup {}
+/*^^^^^^ entity.name.tag.css */
+/*       ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*        ^ punctuation.definition.block.end.css */
+  hr {}
+/*^^ entity.name.tag.css */
+/*   ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*    ^ punctuation.definition.block.end.css */
+  html {}
+/*^^^^ entity.name.tag.css */
+/*     ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*      ^ punctuation.definition.block.end.css */
+  i {}
+/*^ entity.name.tag.css */
+/*  ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*   ^ punctuation.definition.block.end.css */
+  iframe {}
+/*^^^^^^ entity.name.tag.css */
+/*       ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*        ^ punctuation.definition.block.end.css */
+  img {}
+/*^^^ entity.name.tag.css */
+/*    ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*     ^ punctuation.definition.block.end.css */
+  input {}
+/*^^^^^ entity.name.tag.css */
+/*      ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*       ^ punctuation.definition.block.end.css */
+  ins {}
+/*^^^ entity.name.tag.css */
+/*    ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*     ^ punctuation.definition.block.end.css */
+  kbd {}
+/*^^^ entity.name.tag.css */
+/*    ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*     ^ punctuation.definition.block.end.css */
+  label {}
+/*^^^^^ entity.name.tag.css */
+/*      ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*       ^ punctuation.definition.block.end.css */
+  legend {}
+/*^^^^^^ entity.name.tag.css */
+/*       ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*        ^ punctuation.definition.block.end.css */
+  li {}
+/*^^ entity.name.tag.css */
+/*   ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*    ^ punctuation.definition.block.end.css */
+  link {}
+/*^^^^ entity.name.tag.css */
+/*     ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*      ^ punctuation.definition.block.end.css */
+  main {}
+/*^^^^ entity.name.tag.css */
+/*     ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*      ^ punctuation.definition.block.end.css */
+  map {}
+/*^^^ entity.name.tag.css */
+/*    ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*     ^ punctuation.definition.block.end.css */
+  mark {}
+/*^^^^ entity.name.tag.css */
+/*     ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*      ^ punctuation.definition.block.end.css */
+  menu {}
+/*^^^^ entity.name.tag.css */
+/*     ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*      ^ punctuation.definition.block.end.css */
+  meta {}
+/*^^^^ entity.name.tag.css */
+/*     ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*      ^ punctuation.definition.block.end.css */
+  meter {}
+/*^^^^^ entity.name.tag.css */
+/*      ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*       ^ punctuation.definition.block.end.css */
+  nav {}
+/*^^^ entity.name.tag.css */
+/*    ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*     ^ punctuation.definition.block.end.css */
+  noscript {}
+/*^^^^^^^^ entity.name.tag.css */
+/*         ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*          ^ punctuation.definition.block.end.css */
+  object {}
+/*^^^^^^ entity.name.tag.css */
+/*       ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*        ^ punctuation.definition.block.end.css */
+  ol {}
+/*^^ entity.name.tag.css */
+/*   ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*    ^ punctuation.definition.block.end.css */
+  optgroup {}
+/*^^^^^^^^ entity.name.tag.css */
+/*         ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*          ^ punctuation.definition.block.end.css */
+  option {}
+/*^^^^^^ entity.name.tag.css */
+/*       ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*        ^ punctuation.definition.block.end.css */
+  output {}
+/*^^^^^^ entity.name.tag.css */
+/*       ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*        ^ punctuation.definition.block.end.css */
+  p {}
+/*^ entity.name.tag.css */
+/*  ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*   ^ punctuation.definition.block.end.css */
+  picture {}
+/*^^^^^^^ entity.name.tag.css */
+/*        ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*         ^ punctuation.definition.block.end.css */
+  portal {}
+/*^^^^^^ entity.name.tag.css */
+/*       ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*        ^ punctuation.definition.block.end.css */
+  pre {}
+/*^^^ entity.name.tag.css */
+/*    ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*     ^ punctuation.definition.block.end.css */
+  progress {}
+/*^^^^^^^^ entity.name.tag.css */
+/*         ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*          ^ punctuation.definition.block.end.css */
+  q {}
+/*^ entity.name.tag.css */
+/*  ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*   ^ punctuation.definition.block.end.css */
+  rp {}
+/*^^ entity.name.tag.css */
+/*   ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*    ^ punctuation.definition.block.end.css */
+  rt {}
+/*^^ entity.name.tag.css */
+/*   ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*    ^ punctuation.definition.block.end.css */
+  ruby {}
+/*^^^^ entity.name.tag.css */
+/*     ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*      ^ punctuation.definition.block.end.css */
+  s {}
+/*^ entity.name.tag.css */
+/*  ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*   ^ punctuation.definition.block.end.css */
+  samp {}
+/*^^^^ entity.name.tag.css */
+/*     ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*      ^ punctuation.definition.block.end.css */
+  script {}
+/*^^^^^^ entity.name.tag.css */
+/*       ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*        ^ punctuation.definition.block.end.css */
+  search {}
+/*^^^^^^ entity.name.tag.css */
+/*       ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*        ^ punctuation.definition.block.end.css */
+  section {}
+/*^^^^^^^ entity.name.tag.css */
+/*        ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*         ^ punctuation.definition.block.end.css */
+  select {}
+/*^^^^^^ entity.name.tag.css */
+/*       ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*        ^ punctuation.definition.block.end.css */
+  slot {}
+/*^^^^ entity.name.tag.css */
+/*     ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*      ^ punctuation.definition.block.end.css */
+  small {}
+/*^^^^^ entity.name.tag.css */
+/*      ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*       ^ punctuation.definition.block.end.css */
+  source {}
+/*^^^^^^ entity.name.tag.css */
+/*       ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*        ^ punctuation.definition.block.end.css */
+  span {}
+/*^^^^ entity.name.tag.css */
+/*     ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*      ^ punctuation.definition.block.end.css */
+  strong {}
+/*^^^^^^ entity.name.tag.css */
+/*       ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*        ^ punctuation.definition.block.end.css */
+  style {}
+/*^^^^^ entity.name.tag.css */
+/*      ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*       ^ punctuation.definition.block.end.css */
+  sub {}
+/*^^^ entity.name.tag.css */
+/*    ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*     ^ punctuation.definition.block.end.css */
+  summary {}
+/*^^^^^^^ entity.name.tag.css */
+/*        ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*         ^ punctuation.definition.block.end.css */
+  sup {}
+/*^^^ entity.name.tag.css */
+/*    ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*     ^ punctuation.definition.block.end.css */
+  table {}
+/*^^^^^ entity.name.tag.css */
+/*      ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*       ^ punctuation.definition.block.end.css */
+  tbody {}
+/*^^^^^ entity.name.tag.css */
+/*      ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*       ^ punctuation.definition.block.end.css */
+  td {}
+/*^^ entity.name.tag.css */
+/*   ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*    ^ punctuation.definition.block.end.css */
+  template {}
+/*^^^^^^^^ entity.name.tag.css */
+/*         ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*          ^ punctuation.definition.block.end.css */
+  textarea {}
+/*^^^^^^^^ entity.name.tag.css */
+/*         ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*          ^ punctuation.definition.block.end.css */
+  tfoot {}
+/*^^^^^ entity.name.tag.css */
+/*      ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*       ^ punctuation.definition.block.end.css */
+  th {}
+/*^^ entity.name.tag.css */
+/*   ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*    ^ punctuation.definition.block.end.css */
+  thead {}
+/*^^^^^ entity.name.tag.css */
+/*      ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*       ^ punctuation.definition.block.end.css */
+  time {}
+/*^^^^ entity.name.tag.css */
+/*     ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*      ^ punctuation.definition.block.end.css */
+  title {}
+/*^^^^^ entity.name.tag.css */
+/*      ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*       ^ punctuation.definition.block.end.css */
+  tr {}
+/*^^ entity.name.tag.css */
+/*   ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*    ^ punctuation.definition.block.end.css */
+  track {}
+/*^^^^^ entity.name.tag.css */
+/*      ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*       ^ punctuation.definition.block.end.css */
+  u {}
+/*^ entity.name.tag.css */
+/*  ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*   ^ punctuation.definition.block.end.css */
+  ul {}
+/*^^ entity.name.tag.css */
+/*   ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*    ^ punctuation.definition.block.end.css */
+  var {}
+/*^^^ entity.name.tag.css */
+/*    ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*     ^ punctuation.definition.block.end.css */
+  video {}
+/*^^^^^ entity.name.tag.css */
+/*      ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*       ^ punctuation.definition.block.end.css */
+  wbr {}
+/*^^^ entity.name.tag.css */
+/*    ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*     ^ punctuation.definition.block.end.css */
+  acronym {}
+/*^^^^^^^ entity.name.tag.css invalid.deprecated.css */
+/*        ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*         ^ punctuation.definition.block.end.css */
+  big {}
+/*^^^ entity.name.tag.css invalid.deprecated.css */
+/*    ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*     ^ punctuation.definition.block.end.css */
+  center {}
+/*^^^^^^ entity.name.tag.css invalid.deprecated.css */
+/*       ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*        ^ punctuation.definition.block.end.css */
+  dir {}
+/*^^^ entity.name.tag.css invalid.deprecated.css */
+/*    ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*     ^ punctuation.definition.block.end.css */
+  font {}
+/*^^^^ entity.name.tag.css invalid.deprecated.css */
+/*     ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*      ^ punctuation.definition.block.end.css */
+  frame {}
+/*^^^^^ entity.name.tag.css invalid.deprecated.css */
+/*      ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*       ^ punctuation.definition.block.end.css */
+  frameset {}
+/*^^^^^^^^ entity.name.tag.css invalid.deprecated.css */
+/*         ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*          ^ punctuation.definition.block.end.css */
+  marquee {}
+/*^^^^^^^ entity.name.tag.css invalid.deprecated.css */
+/*        ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*         ^ punctuation.definition.block.end.css */
+  nobr {}
+/*^^^^ entity.name.tag.css invalid.deprecated.css */
+/*     ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*      ^ punctuation.definition.block.end.css */
+  noembed {}
+/*^^^^^^^ entity.name.tag.css invalid.deprecated.css */
+/*        ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*         ^ punctuation.definition.block.end.css */
+  noframes {}
+/*^^^^^^^^ entity.name.tag.css invalid.deprecated.css */
+/*         ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*          ^ punctuation.definition.block.end.css */
+  param {}
+/*^^^^^ entity.name.tag.css invalid.deprecated.css */
+/*      ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*       ^ punctuation.definition.block.end.css */
+  plaintext {}
+/*^^^^^^^^^ entity.name.tag.css invalid.deprecated.css */
+/*          ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*           ^ punctuation.definition.block.end.css */
+  rb {}
+/*^^ entity.name.tag.css invalid.deprecated.css */
+/*   ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*    ^ punctuation.definition.block.end.css */
+  rtc {}
+/*^^^ entity.name.tag.css invalid.deprecated.css */
+/*    ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*     ^ punctuation.definition.block.end.css */
+  strike {}
+/*^^^^^^ entity.name.tag.css invalid.deprecated.css */
+/*       ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*        ^ punctuation.definition.block.end.css */
+  tt {}
+/*^^ entity.name.tag.css invalid.deprecated.css */
+/*   ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*    ^ punctuation.definition.block.end.css */
+  xmp {}
+/*^^^ entity.name.tag.css invalid.deprecated.css */
+/*    ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*     ^ punctuation.definition.block.end.css */
+  .class {}
+/*^^^^^^ entity.other.attribute-name.class.css */
+/*^ punctuation.definition.entity.css */
+/*       ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*        ^ punctuation.definition.block.end.css */
+  #id {}
+/*^^^ entity.other.attribute-name.id.css */
+/*^ punctuation.definition.entity.css */
+/*    ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*     ^ punctuation.definition.block.end.css */
+  [attr] {}
+/*^^^^^^ meta.attribute-selector.css */
+/*^ punctuation.definition.attribute-selector.begin.css */
+/* ^^^^ entity.other.attribute-name.attribute.css */
+/*     ^ punctuation.definition.attribute-selector.end.css */
+/*       ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*        ^ punctuation.definition.block.end.css */
+  foo|h1 {}
+/*^^^^ entity.name.tag.namespace.css */
+/*   ^ punctuation.separator.namespace.css */
+/*    ^^ entity.name.tag.css */
+/*       ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*        ^ punctuation.definition.block.end.css */
+  |h1 {}
+/*^ entity.name.tag.namespace.css punctuation.separator.namespace.css */
+/* ^^ entity.name.tag.css */
+/*    ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*     ^ punctuation.definition.block.end.css */
+  *|h1 {}
+/*^^ entity.name.tag.namespace.css */
+/* ^ punctuation.separator.namespace.css */
+/*  ^^ entity.name.tag.css */
+/*     ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*      ^ punctuation.definition.block.end.css */
+  [attr=value] {}
+/*^^^^^^^^^^^^ meta.attribute-selector.css */
+/*^ punctuation.definition.attribute-selector.begin.css */
+/* ^^^^ entity.other.attribute-name.attribute.css */
+/*     ^ keyword.operator.attribute-match.css */
+/*      ^^^^^ string.unquoted.attribute-value.css */
+/*           ^ punctuation.definition.attribute-selector.end.css */
+/*             ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*              ^ punctuation.definition.block.end.css */
+  [attr~=value] {}
+/*^^^^^^^^^^^^^ meta.attribute-selector.css */
+/*^ punctuation.definition.attribute-selector.begin.css */
+/* ^^^^ entity.other.attribute-name.attribute.css */
+/*     ^^ keyword.operator.attribute-match.css */
+/*       ^^^^^ string.unquoted.attribute-value.css */
+/*            ^ punctuation.definition.attribute-selector.end.css */
+/*              ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*               ^ punctuation.definition.block.end.css */
+  [attr|=value] {}
+/*^^^^^^^^^^^^^ meta.attribute-selector.css */
+/*^ punctuation.definition.attribute-selector.begin.css */
+/* ^^^^ entity.other.attribute-name.attribute.css */
+/*     ^^ keyword.operator.attribute-match.css */
+/*       ^^^^^ string.unquoted.attribute-value.css */
+/*            ^ punctuation.definition.attribute-selector.end.css */
+/*              ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*               ^ punctuation.definition.block.end.css */
+  [attr^=value] {}
+/*^^^^^^^^^^^^^ meta.attribute-selector.css */
+/*^ punctuation.definition.attribute-selector.begin.css */
+/* ^^^^ entity.other.attribute-name.attribute.css */
+/*     ^^ keyword.operator.attribute-match.css */
+/*       ^^^^^ string.unquoted.attribute-value.css */
+/*            ^ punctuation.definition.attribute-selector.end.css */
+/*              ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*               ^ punctuation.definition.block.end.css */
+  [attr$=value] {}
+/*^^^^^^^^^^^^^ meta.attribute-selector.css */
+/*^ punctuation.definition.attribute-selector.begin.css */
+/* ^^^^ entity.other.attribute-name.attribute.css */
+/*     ^^ keyword.operator.attribute-match.css */
+/*       ^^^^^ string.unquoted.attribute-value.css */
+/*            ^ punctuation.definition.attribute-selector.end.css */
+/*              ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*               ^ punctuation.definition.block.end.css */
+  [attr*=value] {}
+/*^^^^^^^^^^^^^ meta.attribute-selector.css */
+/*^ punctuation.definition.attribute-selector.begin.css */
+/* ^^^^ entity.other.attribute-name.attribute.css */
+/*     ^^ keyword.operator.attribute-match.css */
+/*       ^^^^^ string.unquoted.attribute-value.css */
+/*            ^ punctuation.definition.attribute-selector.end.css */
+/*              ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*               ^ punctuation.definition.block.end.css */
+  [attr=value i] {}
+/*^^^^^^^^^^^^^^ meta.attribute-selector.css */
+/*^ punctuation.definition.attribute-selector.begin.css */
+/* ^^^^ entity.other.attribute-name.attribute.css */
+/*     ^ keyword.operator.attribute-match.css */
+/*      ^^^^^^ string.unquoted.attribute-value.css */
+/*            ^ support.constant.attribute-case-sensitivity.css */
+/*             ^ punctuation.definition.attribute-selector.end.css */
+/*               ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*                ^ punctuation.definition.block.end.css */
+  [attr~=value i] {}
+/*^^^^^^^^^^^^^^^ meta.attribute-selector.css */
+/*^ punctuation.definition.attribute-selector.begin.css */
+/* ^^^^ entity.other.attribute-name.attribute.css */
+/*     ^^ keyword.operator.attribute-match.css */
+/*       ^^^^^^ string.unquoted.attribute-value.css */
+/*             ^ support.constant.attribute-case-sensitivity.css */
+/*              ^ punctuation.definition.attribute-selector.end.css */
+/*                ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*                 ^ punctuation.definition.block.end.css */
+  [attr|=value i] {}
+/*^^^^^^^^^^^^^^^ meta.attribute-selector.css */
+/*^ punctuation.definition.attribute-selector.begin.css */
+/* ^^^^ entity.other.attribute-name.attribute.css */
+/*     ^^ keyword.operator.attribute-match.css */
+/*       ^^^^^^ string.unquoted.attribute-value.css */
+/*             ^ support.constant.attribute-case-sensitivity.css */
+/*              ^ punctuation.definition.attribute-selector.end.css */
+/*                ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*                 ^ punctuation.definition.block.end.css */
+  [attr=value i] {}
+/*^^^^^^^^^^^^^^ meta.attribute-selector.css */
+/*^ punctuation.definition.attribute-selector.begin.css */
+/* ^^^^ entity.other.attribute-name.attribute.css */
+/*     ^ keyword.operator.attribute-match.css */
+/*      ^^^^^^ string.unquoted.attribute-value.css */
+/*            ^ support.constant.attribute-case-sensitivity.css */
+/*             ^ punctuation.definition.attribute-selector.end.css */
+/*               ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*                ^ punctuation.definition.block.end.css */
+  [attr^=value i] {}
+/*^^^^^^^^^^^^^^^ meta.attribute-selector.css */
+/*^ punctuation.definition.attribute-selector.begin.css */
+/* ^^^^ entity.other.attribute-name.attribute.css */
+/*     ^^ keyword.operator.attribute-match.css */
+/*       ^^^^^^ string.unquoted.attribute-value.css */
+/*             ^ support.constant.attribute-case-sensitivity.css */
+/*              ^ punctuation.definition.attribute-selector.end.css */
+/*                ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*                 ^ punctuation.definition.block.end.css */
+  [attr$=value i] {}
+/*^^^^^^^^^^^^^^^ meta.attribute-selector.css */
+/*^ punctuation.definition.attribute-selector.begin.css */
+/* ^^^^ entity.other.attribute-name.attribute.css */
+/*     ^^ keyword.operator.attribute-match.css */
+/*       ^^^^^^ string.unquoted.attribute-value.css */
+/*             ^ support.constant.attribute-case-sensitivity.css */
+/*              ^ punctuation.definition.attribute-selector.end.css */
+/*                ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*                 ^ punctuation.definition.block.end.css */
+  [attr*=value i] {}
+/*^^^^^^^^^^^^^^^ meta.attribute-selector.css */
+/*^ punctuation.definition.attribute-selector.begin.css */
+/* ^^^^ entity.other.attribute-name.attribute.css */
+/*     ^^ keyword.operator.attribute-match.css */
+/*       ^^^^^^ string.unquoted.attribute-value.css */
+/*             ^ support.constant.attribute-case-sensitivity.css */
+/*              ^ punctuation.definition.attribute-selector.end.css */
+/*                ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*                 ^ punctuation.definition.block.end.css */
+  [attr=value s] {}
+/*^^^^^^^^^^^^^^ meta.attribute-selector.css */
+/*^ punctuation.definition.attribute-selector.begin.css */
+/* ^^^^ entity.other.attribute-name.attribute.css */
+/*     ^ keyword.operator.attribute-match.css */
+/*      ^^^^^^ string.unquoted.attribute-value.css */
+/*            ^ support.constant.attribute-case-sensitivity.css */
+/*             ^ punctuation.definition.attribute-selector.end.css */
+/*               ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*                ^ punctuation.definition.block.end.css */
+  [attr~=value s] {}
+/*^^^^^^^^^^^^^^^ meta.attribute-selector.css */
+/*^ punctuation.definition.attribute-selector.begin.css */
+/* ^^^^ entity.other.attribute-name.attribute.css */
+/*     ^^ keyword.operator.attribute-match.css */
+/*       ^^^^^^ string.unquoted.attribute-value.css */
+/*             ^ support.constant.attribute-case-sensitivity.css */
+/*              ^ punctuation.definition.attribute-selector.end.css */
+/*                ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*                 ^ punctuation.definition.block.end.css */
+  [attr|=value s] {}
+/*^^^^^^^^^^^^^^^ meta.attribute-selector.css */
+/*^ punctuation.definition.attribute-selector.begin.css */
+/* ^^^^ entity.other.attribute-name.attribute.css */
+/*     ^^ keyword.operator.attribute-match.css */
+/*       ^^^^^^ string.unquoted.attribute-value.css */
+/*             ^ support.constant.attribute-case-sensitivity.css */
+/*              ^ punctuation.definition.attribute-selector.end.css */
+/*                ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*                 ^ punctuation.definition.block.end.css */
+  [attr=value s] {}
+/*^^^^^^^^^^^^^^ meta.attribute-selector.css */
+/*^ punctuation.definition.attribute-selector.begin.css */
+/* ^^^^ entity.other.attribute-name.attribute.css */
+/*     ^ keyword.operator.attribute-match.css */
+/*      ^^^^^^ string.unquoted.attribute-value.css */
+/*            ^ support.constant.attribute-case-sensitivity.css */
+/*             ^ punctuation.definition.attribute-selector.end.css */
+/*               ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*                ^ punctuation.definition.block.end.css */
+  [attr^=value s] {}
+/*^^^^^^^^^^^^^^^ meta.attribute-selector.css */
+/*^ punctuation.definition.attribute-selector.begin.css */
+/* ^^^^ entity.other.attribute-name.attribute.css */
+/*     ^^ keyword.operator.attribute-match.css */
+/*       ^^^^^^ string.unquoted.attribute-value.css */
+/*             ^ support.constant.attribute-case-sensitivity.css */
+/*              ^ punctuation.definition.attribute-selector.end.css */
+/*                ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*                 ^ punctuation.definition.block.end.css */
+  [attr$=value s] {}
+/*^^^^^^^^^^^^^^^ meta.attribute-selector.css */
+/*^ punctuation.definition.attribute-selector.begin.css */
+/* ^^^^ entity.other.attribute-name.attribute.css */
+/*     ^^ keyword.operator.attribute-match.css */
+/*       ^^^^^^ string.unquoted.attribute-value.css */
+/*             ^ support.constant.attribute-case-sensitivity.css */
+/*              ^ punctuation.definition.attribute-selector.end.css */
+/*                ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*                 ^ punctuation.definition.block.end.css */
+  [attr*=value s] {}
+/*^^^^^^^^^^^^^^^ meta.attribute-selector.css */
+/*^ punctuation.definition.attribute-selector.begin.css */
+/* ^^^^ entity.other.attribute-name.attribute.css */
+/*     ^^ keyword.operator.attribute-match.css */
+/*       ^^^^^^ string.unquoted.attribute-value.css */
+/*             ^ support.constant.attribute-case-sensitivity.css */
+/*              ^ punctuation.definition.attribute-selector.end.css */
+/*                ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*                 ^ punctuation.definition.block.end.css */
+  [attr="value"] {}
+/*^^^^^^^^^^^^^^ meta.attribute-selector.css */
+/*^ punctuation.definition.attribute-selector.begin.css */
+/* ^^^^ entity.other.attribute-name.attribute.css */
+/*     ^ keyword.operator.attribute-match.css */
+/*      ^^^^^^^ string.quoted.double.css */
+/*      ^ punctuation.definition.string.begin.css */
+/*            ^ punctuation.definition.string.end.css */
+/*             ^ punctuation.definition.attribute-selector.end.css */
+/*               ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*                ^ punctuation.definition.block.end.css */
+  [attr~="value"] {}
+/*^^^^^^^^^^^^^^^ meta.attribute-selector.css */
+/*^ punctuation.definition.attribute-selector.begin.css */
+/* ^^^^ entity.other.attribute-name.attribute.css */
+/*     ^^ keyword.operator.attribute-match.css */
+/*       ^^^^^^^ string.quoted.double.css */
+/*       ^ punctuation.definition.string.begin.css */
+/*             ^ punctuation.definition.string.end.css */
+/*              ^ punctuation.definition.attribute-selector.end.css */
+/*                ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*                 ^ punctuation.definition.block.end.css */
+  [attr|="value"] {}
+/*^^^^^^^^^^^^^^^ meta.attribute-selector.css */
+/*^ punctuation.definition.attribute-selector.begin.css */
+/* ^^^^ entity.other.attribute-name.attribute.css */
+/*     ^^ keyword.operator.attribute-match.css */
+/*       ^^^^^^^ string.quoted.double.css */
+/*       ^ punctuation.definition.string.begin.css */
+/*             ^ punctuation.definition.string.end.css */
+/*              ^ punctuation.definition.attribute-selector.end.css */
+/*                ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*                 ^ punctuation.definition.block.end.css */
+  [attr^="value"] {}
+/*^^^^^^^^^^^^^^^ meta.attribute-selector.css */
+/*^ punctuation.definition.attribute-selector.begin.css */
+/* ^^^^ entity.other.attribute-name.attribute.css */
+/*     ^^ keyword.operator.attribute-match.css */
+/*       ^^^^^^^ string.quoted.double.css */
+/*       ^ punctuation.definition.string.begin.css */
+/*             ^ punctuation.definition.string.end.css */
+/*              ^ punctuation.definition.attribute-selector.end.css */
+/*                ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*                 ^ punctuation.definition.block.end.css */
+  [attr$="value"] {}
+/*^^^^^^^^^^^^^^^ meta.attribute-selector.css */
+/*^ punctuation.definition.attribute-selector.begin.css */
+/* ^^^^ entity.other.attribute-name.attribute.css */
+/*     ^^ keyword.operator.attribute-match.css */
+/*       ^^^^^^^ string.quoted.double.css */
+/*       ^ punctuation.definition.string.begin.css */
+/*             ^ punctuation.definition.string.end.css */
+/*              ^ punctuation.definition.attribute-selector.end.css */
+/*                ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*                 ^ punctuation.definition.block.end.css */
+  [attr*="value"] {}
+/*^^^^^^^^^^^^^^^ meta.attribute-selector.css */
+/*^ punctuation.definition.attribute-selector.begin.css */
+/* ^^^^ entity.other.attribute-name.attribute.css */
+/*     ^^ keyword.operator.attribute-match.css */
+/*       ^^^^^^^ string.quoted.double.css */
+/*       ^ punctuation.definition.string.begin.css */
+/*             ^ punctuation.definition.string.end.css */
+/*              ^ punctuation.definition.attribute-selector.end.css */
+/*                ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*                 ^ punctuation.definition.block.end.css */
+  [attr="value" i] {}
+/*^^^^^^^^^^^^^^^^ meta.attribute-selector.css */
+/*^ punctuation.definition.attribute-selector.begin.css */
+/* ^^^^ entity.other.attribute-name.attribute.css */
+/*     ^ keyword.operator.attribute-match.css */
+/*      ^^^^^^^ string.quoted.double.css */
+/*      ^ punctuation.definition.string.begin.css */
+/*            ^ punctuation.definition.string.end.css */
+/*             ^ string.unquoted.attribute-value.css */
+/*              ^ support.constant.attribute-case-sensitivity.css */
+/*               ^ punctuation.definition.attribute-selector.end.css */
+/*                 ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*                  ^ punctuation.definition.block.end.css */
+  [attr~="value" i] {}
+/*^^^^^^^^^^^^^^^^^ meta.attribute-selector.css */
+/*^ punctuation.definition.attribute-selector.begin.css */
+/* ^^^^ entity.other.attribute-name.attribute.css */
+/*     ^^ keyword.operator.attribute-match.css */
+/*       ^^^^^^^ string.quoted.double.css */
+/*       ^ punctuation.definition.string.begin.css */
+/*             ^ punctuation.definition.string.end.css */
+/*              ^ string.unquoted.attribute-value.css */
+/*               ^ support.constant.attribute-case-sensitivity.css */
+/*                ^ punctuation.definition.attribute-selector.end.css */
+/*                  ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*                   ^ punctuation.definition.block.end.css */
+  [attr|="value" i] {}
+/*^^^^^^^^^^^^^^^^^ meta.attribute-selector.css */
+/*^ punctuation.definition.attribute-selector.begin.css */
+/* ^^^^ entity.other.attribute-name.attribute.css */
+/*     ^^ keyword.operator.attribute-match.css */
+/*       ^^^^^^^ string.quoted.double.css */
+/*       ^ punctuation.definition.string.begin.css */
+/*             ^ punctuation.definition.string.end.css */
+/*              ^ string.unquoted.attribute-value.css */
+/*               ^ support.constant.attribute-case-sensitivity.css */
+/*                ^ punctuation.definition.attribute-selector.end.css */
+/*                  ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*                   ^ punctuation.definition.block.end.css */
+  [attr="value" i] {}
+/*^^^^^^^^^^^^^^^^ meta.attribute-selector.css */
+/*^ punctuation.definition.attribute-selector.begin.css */
+/* ^^^^ entity.other.attribute-name.attribute.css */
+/*     ^ keyword.operator.attribute-match.css */
+/*      ^^^^^^^ string.quoted.double.css */
+/*      ^ punctuation.definition.string.begin.css */
+/*            ^ punctuation.definition.string.end.css */
+/*             ^ string.unquoted.attribute-value.css */
+/*              ^ support.constant.attribute-case-sensitivity.css */
+/*               ^ punctuation.definition.attribute-selector.end.css */
+/*                 ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*                  ^ punctuation.definition.block.end.css */
+  [attr^="value" i] {}
+/*^^^^^^^^^^^^^^^^^ meta.attribute-selector.css */
+/*^ punctuation.definition.attribute-selector.begin.css */
+/* ^^^^ entity.other.attribute-name.attribute.css */
+/*     ^^ keyword.operator.attribute-match.css */
+/*       ^^^^^^^ string.quoted.double.css */
+/*       ^ punctuation.definition.string.begin.css */
+/*             ^ punctuation.definition.string.end.css */
+/*              ^ string.unquoted.attribute-value.css */
+/*               ^ support.constant.attribute-case-sensitivity.css */
+/*                ^ punctuation.definition.attribute-selector.end.css */
+/*                  ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*                   ^ punctuation.definition.block.end.css */
+  [attr$="value" i] {}
+/*^^^^^^^^^^^^^^^^^ meta.attribute-selector.css */
+/*^ punctuation.definition.attribute-selector.begin.css */
+/* ^^^^ entity.other.attribute-name.attribute.css */
+/*     ^^ keyword.operator.attribute-match.css */
+/*       ^^^^^^^ string.quoted.double.css */
+/*       ^ punctuation.definition.string.begin.css */
+/*             ^ punctuation.definition.string.end.css */
+/*              ^ string.unquoted.attribute-value.css */
+/*               ^ support.constant.attribute-case-sensitivity.css */
+/*                ^ punctuation.definition.attribute-selector.end.css */
+/*                  ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*                   ^ punctuation.definition.block.end.css */
+  [attr*="value" i] {}
+/*^^^^^^^^^^^^^^^^^ meta.attribute-selector.css */
+/*^ punctuation.definition.attribute-selector.begin.css */
+/* ^^^^ entity.other.attribute-name.attribute.css */
+/*     ^^ keyword.operator.attribute-match.css */
+/*       ^^^^^^^ string.quoted.double.css */
+/*       ^ punctuation.definition.string.begin.css */
+/*             ^ punctuation.definition.string.end.css */
+/*              ^ string.unquoted.attribute-value.css */
+/*               ^ support.constant.attribute-case-sensitivity.css */
+/*                ^ punctuation.definition.attribute-selector.end.css */
+/*                  ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*                   ^ punctuation.definition.block.end.css */
+  [attr="value" s] {}
+/*^^^^^^^^^^^^^^^^ meta.attribute-selector.css */
+/*^ punctuation.definition.attribute-selector.begin.css */
+/* ^^^^ entity.other.attribute-name.attribute.css */
+/*     ^ keyword.operator.attribute-match.css */
+/*      ^^^^^^^ string.quoted.double.css */
+/*      ^ punctuation.definition.string.begin.css */
+/*            ^ punctuation.definition.string.end.css */
+/*             ^ string.unquoted.attribute-value.css */
+/*              ^ support.constant.attribute-case-sensitivity.css */
+/*               ^ punctuation.definition.attribute-selector.end.css */
+/*                 ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*                  ^ punctuation.definition.block.end.css */
+  [attr~="value" s] {}
+/*^^^^^^^^^^^^^^^^^ meta.attribute-selector.css */
+/*^ punctuation.definition.attribute-selector.begin.css */
+/* ^^^^ entity.other.attribute-name.attribute.css */
+/*     ^^ keyword.operator.attribute-match.css */
+/*       ^^^^^^^ string.quoted.double.css */
+/*       ^ punctuation.definition.string.begin.css */
+/*             ^ punctuation.definition.string.end.css */
+/*              ^ string.unquoted.attribute-value.css */
+/*               ^ support.constant.attribute-case-sensitivity.css */
+/*                ^ punctuation.definition.attribute-selector.end.css */
+/*                  ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*                   ^ punctuation.definition.block.end.css */
+  [attr|="value" s] {}
+/*^^^^^^^^^^^^^^^^^ meta.attribute-selector.css */
+/*^ punctuation.definition.attribute-selector.begin.css */
+/* ^^^^ entity.other.attribute-name.attribute.css */
+/*     ^^ keyword.operator.attribute-match.css */
+/*       ^^^^^^^ string.quoted.double.css */
+/*       ^ punctuation.definition.string.begin.css */
+/*             ^ punctuation.definition.string.end.css */
+/*              ^ string.unquoted.attribute-value.css */
+/*               ^ support.constant.attribute-case-sensitivity.css */
+/*                ^ punctuation.definition.attribute-selector.end.css */
+/*                  ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*                   ^ punctuation.definition.block.end.css */
+  [attr="value" s] {}
+/*^^^^^^^^^^^^^^^^ meta.attribute-selector.css */
+/*^ punctuation.definition.attribute-selector.begin.css */
+/* ^^^^ entity.other.attribute-name.attribute.css */
+/*     ^ keyword.operator.attribute-match.css */
+/*      ^^^^^^^ string.quoted.double.css */
+/*      ^ punctuation.definition.string.begin.css */
+/*            ^ punctuation.definition.string.end.css */
+/*             ^ string.unquoted.attribute-value.css */
+/*              ^ support.constant.attribute-case-sensitivity.css */
+/*               ^ punctuation.definition.attribute-selector.end.css */
+/*                 ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*                  ^ punctuation.definition.block.end.css */
+  [attr^="value" s] {}
+/*^^^^^^^^^^^^^^^^^ meta.attribute-selector.css */
+/*^ punctuation.definition.attribute-selector.begin.css */
+/* ^^^^ entity.other.attribute-name.attribute.css */
+/*     ^^ keyword.operator.attribute-match.css */
+/*       ^^^^^^^ string.quoted.double.css */
+/*       ^ punctuation.definition.string.begin.css */
+/*             ^ punctuation.definition.string.end.css */
+/*              ^ string.unquoted.attribute-value.css */
+/*               ^ support.constant.attribute-case-sensitivity.css */
+/*                ^ punctuation.definition.attribute-selector.end.css */
+/*                  ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*                   ^ punctuation.definition.block.end.css */
+  [attr$="value" s] {}
+/*^^^^^^^^^^^^^^^^^ meta.attribute-selector.css */
+/*^ punctuation.definition.attribute-selector.begin.css */
+/* ^^^^ entity.other.attribute-name.attribute.css */
+/*     ^^ keyword.operator.attribute-match.css */
+/*       ^^^^^^^ string.quoted.double.css */
+/*       ^ punctuation.definition.string.begin.css */
+/*             ^ punctuation.definition.string.end.css */
+/*              ^ string.unquoted.attribute-value.css */
+/*               ^ support.constant.attribute-case-sensitivity.css */
+/*                ^ punctuation.definition.attribute-selector.end.css */
+/*                  ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*                   ^ punctuation.definition.block.end.css */
+  [attr*="value" s] {}
+/*^^^^^^^^^^^^^^^^^ meta.attribute-selector.css */
+/*^ punctuation.definition.attribute-selector.begin.css */
+/* ^^^^ entity.other.attribute-name.attribute.css */
+/*     ^^ keyword.operator.attribute-match.css */
+/*       ^^^^^^^ string.quoted.double.css */
+/*       ^ punctuation.definition.string.begin.css */
+/*             ^ punctuation.definition.string.end.css */
+/*              ^ string.unquoted.attribute-value.css */
+/*               ^ support.constant.attribute-case-sensitivity.css */
+/*                ^ punctuation.definition.attribute-selector.end.css */
+/*                  ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*                   ^ punctuation.definition.block.end.css */
+
+*,
+a,
+abbr,
+address,
+area,
+article,
+aside,
+audio,
+b,
+base,
+bdi,
+bdo,
+blockquote,
+body,
+br,
+button,
+canvas,
+caption,
+cite,
+code,
+col,
+colgroup,
+data,
+datalist,
+dd,
+del,
+details,
+dfn,
+dialog,
+div,
+dl,
+dt,
+em,
+embed,
+fencedframe,
+fieldset,
+figcaption,
+figure,
+footer,
+form,
+h1,
+head,
+header,
+hgroup,
+hr,
+html,
+i,
+iframe,
+img,
+input,
+ins,
+kbd,
+label,
+legend,
+li,
+link,
+main,
+map,
+mark,
+menu,
+meta,
+meter,
+nav,
+noscript,
+object,
+ol,
+optgroup,
+option,
+output,
+p,
+picture,
+portal,
+pre,
+progress,
+q,
+rp,
+rt,
+ruby,
+s,
+samp,
+script,
+search,
+section,
+select,
+slot,
+small,
+source,
+span,
+strong,
+style,
+sub,
+summary,
+sup,
+table,
+tbody,
+td,
+template,
+textarea,
+tfoot,
+th,
+thead,
+time,
+title,
+tr,
+track,
+u,
+ul,
+var,
+video,
+wbr,
+acronym,
+big,
+center,
+dir,
+font,
+frame,
+frameset,
+marquee,
+nobr,
+noembed,
+noframes,
+param,
+plaintext,
+rb,
+rtc,
+strike,
+tt,
+xmp,
+.class,
+#id,
+[attr],
+foo|h1,
+|h1,
+*|h1,
+[attr=value],
+[attr~=value],
+[attr|=value],
+[attr^=value],
+[attr$=value],
+[attr*=value],
+[attr=value i],
+[attr~=value i],
+[attr|=value i],
+[attr=value i],
+[attr^=value i],
+[attr$=value i],
+[attr*=value i],
+[attr=value s],
+[attr~=value s],
+[attr|=value s],
+[attr=value s],
+[attr^=value s],
+[attr$=value s],
+[attr*=value s],
+[attr="value"],
+[attr~="value"],
+[attr|="value"],
+[attr^="value"],
+[attr$="value"],
+[attr*="value"],
+[attr="value" i],
+[attr~="value" i],
+[attr|="value" i],
+[attr="value" i],
+[attr^="value" i],
+[attr$="value" i],
+[attr*="value" i],
+[attr="value" s],
+[attr~="value" s],
+[attr|="value" s],
+[attr="value" s],
+[attr^="value" s],
+[attr$="value" s],
+[attr*="value" s] {
+    color: #F0F;
+  a {
+  }
+}
