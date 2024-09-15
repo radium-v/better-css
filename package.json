@@ -41,8 +41,8 @@
         ]
     },
     "scripts": {
-        "build:scripts": "tsc -b build",
-        "build:grammar": "node build/build.js",
+        "build:scripts": "tsc -b scripts",
+        "build:grammar": "node scripts/build.js",
         "build": "npm run build:scripts && npm run build:grammar",
         "watch": "nodemon -w *.YAML-tmLanguage scripts/build.js"
     },
