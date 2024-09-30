@@ -594,7 +594,7 @@
           <key>0</key>
           <dict>
             <key>name</key>
-            <string>keyword.control.at-rule.keyframe.css</string>
+            <string>keyword.control.at-rule.keyframes.css</string>
           </dict>
           <key>1</key>
           <dict>

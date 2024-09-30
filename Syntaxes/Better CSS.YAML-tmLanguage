@@ -187,7 +187,7 @@ repository:
     name: meta.at-rule.keyframes.css
     begin: (@)keyframes
     beginCaptures:
-      '0': {name: keyword.control.at-rule.keyframe.css}
+      '0': {name: keyword.control.at-rule.keyframes.css}
       '1': {name: punctuation.definition.keyword.css}
     end: \s*(\})
     endCaptures:

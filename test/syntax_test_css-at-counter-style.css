@@ -7,6 +7,8 @@
 /*               ^^^^^^^^^^^^^ variable.parameter.style-name.css */
 /*                             ^ punctuation.definition.block.begin.css */
   }
+/*^ meta.at-rule.counter-style.css */
+/*^ punctuation.definition.block.end.css */
 
   @counter-style disclosure-closed-asdf {}
 /*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.at-rule.counter-style.css */
