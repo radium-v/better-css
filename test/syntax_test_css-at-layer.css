@@ -1,0 +1,20 @@
+/* SYNTAX TEST "Packages/better-css/Syntaxes/Better CSS.tmLanguage" */
+
+@layer module, state;
+
+@layer state {
+	.alert {
+		background-color: brown;
+	}
+	p {
+		border: medium solid limegreen;
+	}
+}
+
+@layer module {
+	.alert {
+		border: medium solid violet;
+		background-color: yellow;
+		color: white;
+	}
+}
