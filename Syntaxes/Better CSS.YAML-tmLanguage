@@ -8,25 +8,91 @@ uuid: 5E1320A0-3857-4AB6-8F5F-F7459F347CCF
 patterns:
 - include: '#comment-block'
 
-- include: '#at-charset'
-
-- include: '#at-color-profile'
-
-- include: '#at-counter-style'
-
-- include: '#at-import'
-
-- include: '#at-keyframes'
-
-- include: '#at-namespace'
-
-- include: '#at-property'
+- include: '#at-rules'
 
 - include: '#property-list'
 
-- include: '#selector'
+- include: '#selectors-group'
 
 repository:
+  accent-color-property:
+    name: support.type.property-name.css
+    begin: \baccent-color(?=\s*?:)
+    end: \s*(;)|(?=[})])
+    endCaptures:
+      '1': {name: punctuation.terminator.rule.css}
+    patterns:
+    - contentName: meta.property-value.css
+      begin: (((\+_?)?):)(?=[\s\t]*)
+      beginCaptures:
+        '1': {name: punctuation.separator.key-value.css}
+      end: (?=\s*(;)|(?=[})]))
+      patterns:
+      - include: '#color-type'
+      - include: '#global-property-values'
+      - include: '#property-values'
+
+  align-content-property:
+    name: support.type.property-name.css
+    begin: \balign-content(?=\s*?:)
+    end: \s*(;)|(?=[})])
+    endCaptures:
+      '1': {name: punctuation.terminator.rule.css}
+    patterns:
+    - contentName: meta.property-value.css
+      begin: (((\+_?)?):)(?=[\s\t]*)
+      beginCaptures:
+        '1': {name: punctuation.separator.key-value.css}
+      end: (?=\s*(;)|(?=[})]))
+      patterns:
+      - include: '#global-property-values'
+      - include: '#custom-property-name'
+      - include: '#property-values'
+
+  animation-properties:
+    patterns:
+    - begin: \banimation-timeline\b
+      beginCaptures:
+        '0': {name: support.type.property-name.css}
+      end: \s*(;)|(?=[})])
+      endCaptures:
+        '1': {name: punctuation.terminator.rule.css}
+      patterns:
+      - contentName: meta.property-value.css
+        begin: (((\+_?)?):)(?=[\s\t]*)
+        beginCaptures:
+          '1': {name: punctuation.separator.key-value.css}
+        end: (?=\s*(;)|(?=[})]))
+        patterns:
+        - include: '#comment-block'
+        - include: '#custom-property-name'
+        - include: '#scroll-function'
+        - include: '#view-function'
+        - include: '#property-values'
+        - include: '#arbitrary-repetition'
+        - include: '#important'
+    - begin: \banimation(?:-name)?(?=(?:\+_?)?:)\b
+      beginCaptures:
+        '0': {name: support.type.property-name.css}
+      end: \s*(;)|(?=[})])
+      endCaptures:
+        '1': {name: punctuation.terminator.rule.css}
+      patterns:
+      - contentName: meta.property-value.css
+        begin: (((\+_?)?):)(?=[\s\t]*)
+        beginCaptures:
+          '1': {name: punctuation.separator.key-value.css}
+        end: (?=\s*(;)|(?=[})]))
+        patterns:
+        - include: '#comment-block'
+        - include: '#builtin-functions'
+        - include: '#numeric-values'
+        - include: '#property-value-constants'
+        - name: variable.other.constant.animation-name.css string.unquoted.css
+          match: '{{string_unquoted}}'
+        - include: '#arbitrary-repetition'
+        - include: '#important'
+
   arbitrary-repetition:
     match: \s*(?:(,))
     captures:
@@ -121,7 +187,7 @@ repository:
     name: meta.at-rule.keyframes.css
     begin: (@)keyframes
     beginCaptures:
-      '0': {name: keyword.control.at-rule.keyframe.css}
+      '0': {name: keyword.control.at-rule.keyframes.css}
       '1': {name: punctuation.definition.keyword.css}
     end: \s*(\})
     endCaptures:
@@ -147,8 +213,54 @@ repository:
       patterns:
       - include: '#comment-block'
       - name: variable.parameter.animation-name.css
-        include: '#ident-token'
+        match: '{{ident_token}}'
       - include: '#string'
+
+  at-layer:
+    patterns:
+    - name: meta.at-rule.layer.css
+      begin: (@)(layer)\b(?=.*?;)
+      beginCaptures:
+        '1': {name: punctuation.definition.keyword.css}
+        '2': {name: keyword.control.at-rule.layer.css}
+      end: ;
+      endCaptures:
+        '0': {name: punctuation.terminator.statement.css}
+      patterns:
+      - include: '#comment-block'
+      - name: support.constant.layer-name.css
+        match: (?'ident'{{ident_token}})(?:(\.)\g'ident')*
+        captures:
+          '2': {name: punctuation.accessor.dot.css}
+      - name: punctuation.separator.css
+        match: ','
+    - name: meta.at-rule.layer.css
+      begin: (?=@layer\b)
+      end: \s*(\})
+      endCaptures:
+        '1': {name: punctuation.terminator.statement.css}
+      patterns:
+      - begin: \s*((@)layer)
+        beginCaptures:
+          '1': {name: keyword.control.at-rule.layer.css}
+          '2': {name: punctuation.definition.keyword.css}
+        end: \s*(?=\{)
+        patterns:
+        - include: '#comment-block'
+        - name: support.constant.layer-name.css
+          match: (?'ident'{{ident_token}})(?:(\.)\g'ident')*
+          captures:
+            '2': {name: punctuation.accessor.dot.css}
+        - name: punctuation.separator.css
+          match: ','
+      - begin: \s*(\{)
+        beginCaptures:
+          '1': {name: punctuation.definition.block.begin.css}
+        end: (?=\})
+        patterns:
+        - include: '#comment-block'
+        - include: '#property-list'
+        - include: '#selectors-group'
 
   at-namespace:
     name: meta.at-rule.namespace.css
@@ -190,12 +302,160 @@ repository:
       - include: '#initial-value-descriptor'
       - include: '#syntax-descriptor'
 
+  at-rules:
+    patterns:
+    - include: '#at-charset'
+    - include: '#at-color-profile'
+    - include: '#at-counter-style'
+    - include: '#at-import'
+    - include: '#at-keyframes'
+    - include: '#at-layer'
+    - include: '#at-namespace'
+    - include: '#at-property'
+    - include: '#at-scope'
+
+  at-scope:
+    name: meta.at-rule.scope.css
+    begin: (@)scope
+    beginCaptures:
+      '0': {name: keyword.control.at-rule.css}
+      '1': {name: punctuation.definition.keyword.css}
+    end: \s*(\})
+    endCaptures:
+      '1': {name: punctuation.definition.block.end.css}
+    patterns:
+    - include: '#comment-block'
+    - name: meta.group.scope.css
+      begin: \(
+      beginCaptures:
+        '0': {name: punctuation.definition.group.begin.css}
+      end: (?=\))
+      patterns:
+      - include: '#comment-block'
+      - include: '#selectors-group'
+    - name: punctuation.definition.group.end.css
+      match: \)
+    - name: keyword.operator.logical.css
+      match: \b(to)\b
+    - begin: \s*(\{)
+      beginCaptures:
+        '1': {name: punctuation.definition.block.begin.css}
+      end: (?=\})
+      patterns:
+      - include: '#comment-block'
+      - include: '#property-list'
+
+  attribute-selector:
+    name: meta.attribute-selector.css
+    begin: \[
+    beginCaptures:
+      '0': {name: punctuation.definition.attribute-selector.begin.css}
+    end: \]
+    endCaptures:
+      '0': {name: punctuation.definition.attribute-selector.end.css}
+    patterns:
+    - include: '#comment-block'
+    - include: '#namespace-prefix'
+    - name: entity.other.attribute-name.attribute.css
+      match: '{{ident_token}}'
+    - begin: \s*?([|\^\$*~]?\=)\s*?
+      beginCaptures:
+        '1': {name: keyword.operator.attribute-match.css}
+      end: (?=\])
+      patterns:
+      - include: '#comment-block'
+      - name: support.constant.attribute-case-sensitivity.css
+        match: \b[is]\s*(?=\])
+      - include: '#string'
+      - name: string.unquoted.attribute-value.css
+        match: '{{string_unquoted}}'
+
+  backdrop-filter-property:
+    name: meta.property-name.css
+    begin: \bbackdrop-filter\b
+    beginCaptures:
+      '0': {name: support.type.property-name.css}
+    end: \s*(;)|(?=[})])
+    endCaptures:
+      '1': {name: punctuation.terminator.rule.css}
+    patterns:
+    - match: (((\+_?)?):)([\s\t]*)
+      captures:
+        '1': {name: punctuation.separator.key-value.css}
+        '4': {name: meta.property-value.css}
+    - name: meta.property-value.css
+      match: \b(inherit|initial|unset|none)\b
+    - include: '#filter-functions'
+
+  border-properties:
+    begin: \b(border((-(bottom|top)-(left|right))|((-(start|end)){2}))?-radius|(border-image(?!-)))\b
+    beginCaptures:
+      '0': {name: support.type.property-name.css}
+    end: \s*(;)|(?=[})])
+    endCaptures:
+      '1': {name: punctuation.terminator.rule.css}
+    patterns:
+    - contentName: meta.property-value.css
+      begin: (((\+_?)?):)(?=[\s\t]*)
+      beginCaptures:
+        '1': {name: punctuation.separator.key-value.css}
+      end: (?=\s*(;)|(?=[})]))
+      patterns:
+      - include: '#value-separator'
+      - include: '#property-values'
+
+  class-selector:
+    name: entity.other.attribute-name.class.css
+    match: (\.)(?:{{ident_token}})
+    captures:
+      '1': {name: punctuation.definition.entity.css}
+
   comment-block:
     name: comment.block.css
     begin: /\*
     end: \*/
     captures:
       '0': {name: punctuation.definition.comment.css}
+
+  container-name-property:
+    name: support.type.property-name.css
+    begin: \bcontainer(?:-name)?(?=\s*?:)
+    end: \s*(;)|(?=[})])
+    endCaptures:
+      '1': {name: punctuation.terminator.rule.css}
+    patterns:
+    - contentName: meta.property-value.css
+      begin: (((\+_?)?):)(?=[\s\t]*)
+      beginCaptures:
+        '1': {name: punctuation.separator.key-value.css}
+      end: (?=\s*(;)|(?=[})]))
+      patterns:
+      - name: invalid.illegal.property-value.css
+        match: \bdefault\b
+      - include: '#global-property-values'
+      - include: '#custom-property-name'
+      - name: support.constant.property-value.css variable.other.constant.container-name.css
+        match: '{{dashed_ident}}'
+      - include: '#property-values'
+
+  counter-properties:
+    name: meta.property-name.css
+    begin: \bcounter-(increment|(re)?set)\b
+    beginCaptures:
+      '0': {name: support.type.property-name.css}
+    end: \s*(;)|(?=[})])
+    endCaptures:
+      '1': {name: punctuation.terminator.rule.css}
+    patterns:
+    - match: (((\+_?)?):)([\s\t]*)
+      captures:
+        '1': {name: punctuation.separator.key-value.css}
+        '4': {name: meta.property-value.css}
+    - name: entity.name.constant.counter-name.css
+      match: '{{ident_token}}'
+    - include: '#integer-type'
+    - name: invalid.illegal.property-value.css
+      match: unset|initial|inherit|auto
 
   custom-property-name:
     name: variable.parameter.custom-property-name.css
@@ -205,6 +465,63 @@ repository:
     patterns:
     - include: '#length-type'
     - include: '#percentage-type'
+
+  element-name:
+    patterns:
+    - name: entity.name.tag.css
+      match: (?x)\b( acronym | big | center | dir | font | frameset | frame | marquee
+        | nobr | noembed | noframes | param | plaintext | rb | rtc | strike | tt |
+        xmp )\b | \b( abbr | address | area | article | aside | audio | a | base |
+        bdi | bdo | blockquote | body | br | button | b | canvas | caption | cite
+        | code | colgroup | col | datalist | data | dd | del | details | dfn | dialog
+        | div | dl | dt | embed | em | fencedframe | fieldset | figcaption | figure
+        | footer | form | h1 | h2 | h3 | h4 | h5 | h6 | header | head | hgroup | hr
+        | html | iframe | img | input | ins | i | kbd | label | legend | link | li
+        | main | map | mark | menu | meta | meter | nav | noscript | object | ol |
+        optgroup | option | output | picture | portal | pre | progress | p | q | rp
+        | rt | ruby | samp | script | search | section | select | slot | small | source
+        | span | strong | style | sub | summary | sup | s | table | tbody | td | template
+        | textarea | tfoot | thead | th | time | title | track | tr | ul | u | var
+        | video | wbr )\b
+      captures:
+        '1': {name: invalid.deprecated.css}
+
+  filter-property:
+    name: meta.property-name.css
+    begin: \bfilter\b
+    beginCaptures:
+      '0': {name: support.type.property-name.css}
+    end: \s*(;)|(?=[})])
+    endCaptures:
+      '1': {name: punctuation.terminator.rule.css}
+    patterns:
+    - captures:
+        '1': {name: punctuation.separator.key-value.css}
+        '4': {name: meta.property-value.css}
+      match: (((\+_?)?):)([\s\t]*)
+    - match: \b(inherit|initial|unset|none)\b
+      name: meta.property-value.css
+    - include: '#filter-functions'
+
+  font-properties:
+    patterns:
+    - name: meta.property-name.css
+      begin: \bfont(-family)?(?!-)\b
+      beginCaptures:
+        '0': {name: support.type.property-name.css}
+      end: \s*(;)|(?=[})])
+      endCaptures:
+        '1': {name: punctuation.terminator.rule.css}
+      patterns:
+      - match: (((\+_?)?):)([\s\t]*)
+        captures:
+          '1': {name: punctuation.separator.key-value.css}
+          '4': {name: meta.property-value.css}
+      - include: '#property-values'
+      - name: string.unquoted.css
+        match: '{{string_unquoted}}'
+      - name: punctuation.separator.css
+        match: ','
 
   function-layer:
     comment: layer()
@@ -278,8 +595,11 @@ repository:
         '4': {name: string.unquoted.url.css}
         '6': {name: punctuation.definition.group.end.css}
 
-  ident-token:
-    match: '{{ident_token}}'
+  id-selector:
+    name: entity.other.attribute-name.id.css
+    match: (#)(?:{{ident_token}})
+    captures:
+      '1': {name: punctuation.definition.entity.css}
 
   important:
     name: keyword.other.important.css
@@ -323,6 +643,25 @@ repository:
       patterns:
       - include: '#property-value'
 
+  color-type:
+    patterns:
+    - include: '#color-base'
+    - include: '#system-color'
+    - include: '#color-rgb'
+    - include: '#color-hsl'
+    - include: '#color-hwb'
+    - include: '#color-lab'
+    - include: '#color-lch'
+    - include: '#color-xyz'
+
+  color-base:
+    patterns:
+    - include: '#hex-color'
+    - include: '#color-functions'
+    - include: '#named-colors'
+    - match: \btransparent\b
+      name: constant.other.color.transparent.css
+
   integer-type:
     name: constant.numeric.css
     match: (?:[-+]?\d+)
@@ -364,6 +703,14 @@ repository:
       - name: constant.numeric.media-feature.css
         match: '{{number_token}}'
 
+  namespace-prefix:
+    patterns:
+    - name: entity.name.tag.namespace.css
+      match: (?:\*|(?:{{ident_token}}))?(\|(?!=))
+      captures:
+        '1': {name: punctuation.separator.namespace.css}
+    - include: '#element-name'
+
   percentage-type:
     name: constant.numeric.css
     match: '{{number_token}}(%)'
@@ -383,14 +730,15 @@ repository:
   property-value:
     patterns:
     - include: '#string'
-    - comment: global values
-      name: support.constant.property-value.css
-      match: \b(?:inherit|initial|revert-layer|revert|unset)\b
     - comment: common values
       name: support.constant.property-value.css
       match: \b(?:auto|none|normal)\b
     - include: '#comment-block'
     - include: '#important'
+
+  global-property-values:
+    name: support.constant.property-value.css
+    match: \b(?:inherit|initial|revert-layer|revert|unset)\b
 
   rendering-intent-descriptor:
     begin: \brendering-intent\b
@@ -425,8 +773,52 @@ repository:
           '1': {name: punctuation.terminator.rule.css}
       - include: '#rule-list-body'
 
-  # rule-list-body:
-  #   patterns:
+  rule-list-body:
+    patterns:
+    - include: '#comment-block'
+    - begin: (?=[-a-z])
+      end: $|(?![-a-z])
+      patterns:
+      - include: '#custom-property-name'
+      - include: '#vendor-prefixed-property'
+      - include: '#accent-color-property'
+      - include: '#animation-properties'
+      - include: '#backdrop-filter-property'
+      - include: '#border-properties'
+      - include: '#container-name-property'
+      - include: '#counter-properties'
+      - include: '#filter-property'
+      - include: '#font-properties'
+      - include: '#transition-properties'
+      - include: '#will-change-property'
+      - include: $self
+    - contentName: meta.property-value.css
+      begin: \b(:)(?:[\s\t]*)
+      beginCaptures:
+        '1': {name: punctuation.separator.key-value.css}
+        '2': {name: meta.property-value.css}
+      end: \s*(;)|(?=[})])
+      endCaptures:
+        '1': {name: punctuation.terminator.rule.css}
+      captures:
+        '1': {name: punctuation.separator.key-value.css}
+        '4': {name: meta.property-value.css}
+      patterns:
+      - include: '#property-values'
+    - include: $self
+
+  selectors-group:
+    patterns:
+    - include: '#namespace-prefix'
+    - include: '#element-name'
+    - include: '#id-selector'
+    - include: '#class-selector'
+    - include: '#universal-selector'
+    - include: '#attribute-selector'
+    - name: keyword.operator.combinator.css
+      match: '[+>~]'
+    - name: punctuation.separator.selector.css
+      match: ','
 
   src-descriptor:
     begin: \bsrc\b
@@ -518,6 +910,75 @@ repository:
         match: cyclic|numeric|alphabetic|symbolic|additive|fixed|extends
       - name: variable.parameter.style-name.css
         match: '{{ident_token}}'
+
+  transition-properties:
+    patterns:
+    - begin: \b(transition(-(property|duration|delay|timing-function))?)\b
+      beginCaptures:
+        '1': {name: support.type.property-name.css}
+      end: \s*(;)|(?=[})])
+      endCaptures:
+        '1': {name: punctuation.terminator.rule.css}
+      patterns:
+      - contentName: meta.property-value.css
+        begin: (((\+_?)?):)(?=[\s\t]*)
+        beginCaptures:
+          '1': {name: punctuation.separator.key-value.css}
+        end: (?=\s*(;)|(?=[})]))
+        patterns:
+        - include: '#time-type'
+        - include: '#property-values'
+        - include: '#cubic-bezier-function'
+        - include: '#steps-function'
+        - include: '#arbitrary-repetition'
+
+  universal-selector:
+    name: entity.name.tag.universal.css
+    match: \*
+
+  value-separator:
+    match: \s*(/)\s*
+    captures:
+      '1': {name: punctuation.separator.css}
+
+  vendor-prefixed-property:
+    begin: (-[\w-]+?-)((?:-?(?:(?:[a-zA-Z_]|{{non_ascii}})|{{escape}}))(?:(?:[-\da-zA-Z_]|{{non_ascii}})|{{escape}})*)\b
+    beginCaptures:
+      '0': {name: support.type.property-name.css}
+      '1': {name: meta.namespace.vendor-prefix.css}
+    end: \s*(;)|(?=[})])
+    endCaptures:
+      '1': {name: punctuation.terminator.rule.css}
+    patterns:
+    - contentName: meta.property-value.css
+      begin: (((\+_?)?):)(?=[\s\t]*)
+      beginCaptures:
+        '1': {name: punctuation.separator.key-value.css}
+      end: (?=\s*(;)|(?=[})]))
+      patterns:
+      - include: '#property-values'
+      - name: support.constant.property-value.css
+        match: '[\w-]+'
+
+  will-change-property:
+    patterns:
+    - name: meta.property-name.css
+      begin: \bwill-change\b
+      beginCaptures:
+        '0': {name: support.type.property-name.css}
+      end: \s*(;)|(?=[})])
+      endCaptures:
+        '1': {name: punctuation.terminator.rule.css}
+      patterns:
+      - match: (((\+_?)?):)([\s\t]*)
+        captures:
+          '1': {name: punctuation.separator.key-value.css}
+          '4': {name: meta.property-value.css}
+      - name: invalid.illegal.property-value.css
+        match: unset|initial|inherit|will-change|auto|scroll-position|contents
+      - name: support.constant.property-value.css
+        match: '{{dashed_ident}}'
+      - include: '#arbitrary-repetition'
 foldingStartMarker: /\*\*(?!\*)|\{\s*($|/\*(?!.*?\*/.*\S))
 foldingStopMarker: (?<!\*)\*\*/|^\s*\}
 keyEquivalent: ^~L

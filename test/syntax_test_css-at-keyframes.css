@@ -1,15 +1,15 @@
 /* SYNTAX TEST "Packages/better-css/Syntaxes/Better CSS.tmLanguage" */
 
   @keyframes test {}
-/*^^^^^^^^^^^^^^^^^^ meta.at-rule.counter-style.css */
-/*^^^^^^^^^^ keyword.control.at-rule.counter-style.css */
+/*^^^^^^^^^^^^^^^^^^ meta.at-rule.keyframes.css */
+/*^^^^^^^^^^ keyword.control.at-rule.keyframe.css */
 /*^ punctuation.definition.keyword.css */
 /*           ^^^^ variable.parameter.animation-name.css */
 /*                ^ punctuation.definition.block.begin.css */
 /*                 ^ punctuation.definition.block.end.css */
   @keyframes "test" {}
-/*^^^^^^^^^^^^^^^^^^^^ meta.at-rule.counter-style.css */
-/*^^^^^^^^^^ keyword.control.at-rule.counter-style.css */
+/*^^^^^^^^^^^^^^^^^^^^ meta.at-rule.keyframes.css */
+/*^^^^^^^^^^ keyword.control.at-rule.keyframe.css */
 /*^ punctuation.definition.keyword.css */
 /*           ^^^^^^ string.quoted.double.css */
 /*           ^ punctuation.definition.string.begin.css */
@@ -18,8 +18,8 @@
 /*                   ^ punctuation.definition.block.end.css */
 
   @keyframes /* comment */ animation-name /* comment */ {}
-/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.at-rule.counter-style.css */
-/*^^^^^^^^^^ keyword.control.at-rule.counter-style.css */
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.at-rule.keyframes.css */
+/*^^^^^^^^^^ keyword.control.at-rule.keyframe.css */
 /*^ punctuation.definition.keyword.css */
 /*           ^^^^^^^^^^^^^ comment.block.css */
 /*                         ^^^^^^^^^^^^^^ variable.parameter.animation-name.css */
@@ -28,8 +28,57 @@
 /*                                                       ^ punctuation.definition.block.end.css */
 
 @keyframes asdf {
+/*^^^^^^^^^^^^^^^ meta.at-rule.keyframes.css */
+/*^^^^^^^^ keyword.control.at-rule.keyframe.css */
+/*         ^^^^ variable.parameter.animation-name.css */
+/*              ^ punctuation.definition.block.begin.css */
   from {}
+/*^^^^^^^ meta.at-rule.keyframes.css */
+/*^^^^ entity.other.keyframe-offset.css keyword.other.keyframe-selector.css */
+/*     ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*      ^ punctuation.definition.block.end.css */
   to {}
+/*^^^^^ meta.at-rule.keyframes.css */
+/*^^ entity.other.keyframe-offset.css keyword.other.keyframe-selector.css */
+/*   ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*    ^ punctuation.definition.block.end.css */
 
   0%, 10%, 20%, 30%, 40%, 50%, 60%, 70%, 80%, 90%, 100% {}
-}
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.at-rule.keyframes.css */
+/*^^ constant.numeric.css */
+/* ^ keyword.other.unit.percentage.css */
+/*  ^ punctuation.definition.arbitrary-repetition.css */
+/*    ^^^ constant.numeric.css */
+/*      ^ keyword.other.unit.percentage.css */
+/*       ^ punctuation.definition.arbitrary-repetition.css */
+/*         ^^^ constant.numeric.css */
+/*           ^ keyword.other.unit.percentage.css */
+/*            ^ punctuation.definition.arbitrary-repetition.css */
+/*              ^^^ constant.numeric.css */
+/*                ^ keyword.other.unit.percentage.css */
+/*                 ^ punctuation.definition.arbitrary-repetition.css */
+/*                   ^^^ constant.numeric.css */
+/*                     ^ keyword.other.unit.percentage.css */
+/*                      ^ punctuation.definition.arbitrary-repetition.css */
+/*                        ^^^ constant.numeric.css */
+/*                          ^ keyword.other.unit.percentage.css */
+/*                           ^ punctuation.definition.arbitrary-repetition.css */
+/*                             ^^^ constant.numeric.css */
+/*                               ^ keyword.other.unit.percentage.css */
+/*                                ^ punctuation.definition.arbitrary-repetition.css */
+/*                                  ^^^ constant.numeric.css */
+/*                                    ^ keyword.other.unit.percentage.css */
+/*                                     ^ punctuation.definition.arbitrary-repetition.css */
+/*                                       ^^^ constant.numeric.css */
+/*                                         ^ keyword.other.unit.percentage.css */
+/*                                          ^ punctuation.definition.arbitrary-repetition.css */
+/*                                            ^^^ constant.numeric.css */
+/*                                              ^ keyword.other.unit.percentage.css */
+/*                                               ^ punctuation.definition.arbitrary-repetition.css */
+/*                                                 ^^^^ constant.numeric.css */
+/*                                                    ^ keyword.other.unit.percentage.css */
+/*                                                      ^ meta.property-list.css punctuation.definition.block.begin.css */
+/*                                                       ^ punctuation.definition.block.end.css */
+  }
+/*^ meta.at-rule.keyframes.css */
+/*^ punctuation.definition.block.end.css */

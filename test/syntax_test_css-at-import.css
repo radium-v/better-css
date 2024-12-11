@@ -3,7 +3,7 @@
   @import url("landscape.css");
 /*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.at-rule.import.css */
 /*^ punctuation.definition.keyword.css */
-/* ^^^^^^ keyword.control.at-rule.css */
+/* ^^^^^^ keyword.control.at-rule.import.css */
 /*        ^^^^^^^^^^^^^^^^^^^^ meta.function-call.url.css */
 /*        ^^^ support.function.url.css */
 /*           ^ punctuation.definition.group.begin.css */
@@ -16,7 +16,7 @@
   @import url("landscape.css" resource);
 /*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.at-rule.import.css */
 /*^ punctuation.definition.keyword.css */
-/* ^^^^^^ keyword.control.at-rule.css */
+/* ^^^^^^ keyword.control.at-rule.import.css */
 /*        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.function-call.url.css */
 /*        ^^^ support.function.url.css */
 /*           ^ punctuation.definition.group.begin.css */
@@ -30,7 +30,7 @@
   @import url("tabs.css") layer;
 /*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.at-rule.import.css */
 /*^ punctuation.definition.keyword.css */
-/* ^^^^^^ keyword.control.at-rule.css */
+/* ^^^^^^ keyword.control.at-rule.import.css */
 /*        ^^^^^^^^^^^^^^^ meta.function-call.url.css */
 /*        ^^^ support.function.url.css */
 /*           ^ punctuation.definition.group.begin.css */
@@ -44,7 +44,7 @@
   @import url("tabs.css") layer(framework);
 /*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.at-rule.import.css */
 /*^ punctuation.definition.keyword.css */
-/* ^^^^^^ keyword.control.at-rule.css */
+/* ^^^^^^ keyword.control.at-rule.import.css */
 /*        ^^^^^^^^^^^^^^^ meta.function-call.url.css */
 /*        ^^^ support.function.url.css */
 /*           ^ punctuation.definition.group.begin.css */
@@ -62,7 +62,7 @@
   @import url("tabs.css") layer(framework.component);
 /*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.at-rule.import.css */
 /*^ punctuation.definition.keyword.css */
-/* ^^^^^^ keyword.control.at-rule.css */
+/* ^^^^^^ keyword.control.at-rule.import.css */
 /*        ^^^^^^^^^^^^^^^ meta.function-call.url.css */
 /*        ^^^ support.function.url.css */
 /*           ^ punctuation.definition.group.begin.css */
@@ -81,7 +81,7 @@
   @import "portrait.css";
 /*^^^^^^^^^^^^^^^^^^^^^^^ meta.at-rule.import.css */
 /*^ punctuation.definition.keyword.css */
-/* ^^^^^^ keyword.control.at-rule.css */
+/* ^^^^^^ keyword.control.at-rule.import.css */
 /*        ^^^^^^^^^^^^^^ string.quoted.double.css */
 /*        ^ punctuation.definition.string.begin.css */
 /*                     ^ punctuation.definition.string.end.css */
@@ -90,7 +90,7 @@
   @import "tabs.css" layer;
 /*^^^^^^^^^^^^^^^^^^^^^^^^^ meta.at-rule.import.css */
 /*^ punctuation.definition.keyword.css */
-/* ^^^^^^ keyword.control.at-rule.css */
+/* ^^^^^^ keyword.control.at-rule.import.css */
 /*        ^^^^^^^^^^ string.quoted.double.css */
 /*        ^ punctuation.definition.string.begin.css */
 /*                 ^ punctuation.definition.string.end.css */
@@ -100,7 +100,7 @@
   @import "tabs.css" layer(framework);
 /*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.at-rule.import.css */
 /*^ punctuation.definition.keyword.css */
-/* ^^^^^^ keyword.control.at-rule.css */
+/* ^^^^^^ keyword.control.at-rule.import.css */
 /*        ^^^^^^^^^^ string.quoted.double.css */
 /*        ^ punctuation.definition.string.begin.css */
 /*                 ^ punctuation.definition.string.end.css */
@@ -114,7 +114,7 @@
   @import "tabs.css" layer(framework.component);
 /*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.at-rule.import.css */
 /*^ punctuation.definition.keyword.css */
-/* ^^^^^^ keyword.control.at-rule.css */
+/* ^^^^^^ keyword.control.at-rule.import.css */
 /*        ^^^^^^^^^^ string.quoted.double.css */
 /*        ^ punctuation.definition.string.begin.css */
 /*                 ^ punctuation.definition.string.end.css */
