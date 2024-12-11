@@ -271,7 +271,7 @@
                     <key>name</key>
                     <string>variable.other.constant.animation-name.css string.unquoted.css</string>
                     <key>match</key>
-                    <string>-?(?:[_a-zA-Z]|[^\x{00}-\x{7F}]|(?:(:?\\[0-9a-f]{1,6}(\r\n|[\s\t\r\n\f])?)|\\[^\r\n\f0-9a-f]))(?:[-_a-zA-Z0-9]|[^\x{00}-\x{7F}]|(?:(:?\\[0-9a-f]{1,6}(\r\n|[\t\r\n\f])?)|\\[^\r\n\f0-9a-f]))*</string>
+                    <string>(?:(?:[^"'\(\)]|\S|[^\x{0000}-\x{0008}\x{000B}\x{000E}-\x{001F}\x{007F}])|(?:\\(?:\N|[[:^xdigit:]]|[[:xdigit:]]{1,6}[\s\R])))*?</string>
                   </dict>
                   <dict>
                     <key>include</key>
@@ -1451,7 +1451,7 @@
             <key>name</key>
             <string>entity.name.constant.counter-name.css</string>
             <key>match</key>
-            <string>-?(?:[[-\w][^\x{00}-\x{9f}]]|(?:\\\h{1,6}[\s\t\n\f]?|\\[^\n\f\h]))(?:[[_a-zA-Z][^\x{00}-\x{9f}]]|(?:\\\h{1,6}[\s\t\n\f]?|\\[^\n\f\h]))*</string>
+            <string>--|(?:-?(?:(?:[a-zA-Z_]|[\x{00B7}\x{00C0}-\x{00D6}\x{00D8}-\x{00F6}\x{00F8}-\x{037D}\x{037F}-\x{1FFF}\x{200C}\x{200D}\x{203F}\x{2040}\x{2070}-\x{218F}\x{2C00}-\x{2FEF}\x{3001}-\x{D7FF}\x{F900}-\x{FDCF}\x{FDF0}-\x{FFFD}\x{10000}-\x{EFFFF}])|(?:\\(?:\N|[[:^xdigit:]]|[[:xdigit:]]{1,6}[\s\R]))))(?:(?:[-\da-zA-Z_]|[\x{00B7}\x{00C0}-\x{00D6}\x{00D8}-\x{00F6}\x{00F8}-\x{037D}\x{037F}-\x{1FFF}\x{200C}\x{200D}\x{203F}\x{2040}\x{2070}-\x{218F}\x{2C00}-\x{2FEF}\x{3001}-\x{D7FF}\x{F900}-\x{FDCF}\x{FDF0}-\x{FFFD}\x{10000}-\x{EFFFF}])|(?:\\(?:\N|[[:^xdigit:]]|[[:xdigit:]]{1,6}[\s\R])))*</string>
           </dict>
           <dict>
             <key>include</key>
@@ -1615,7 +1615,7 @@
                 <key>name</key>
                 <string>string.unquoted.css</string>
                 <key>match</key>
-                <string>-?(?:[[_a-zA-Z][^\x{00}-\x{9f}]]|(?:\\\h{1,6}[\s\t\n\f]?|\\[^\n\f\h]))(?:[[-\w][^\x{00}-\x{9f}]]|(?:\\\h{1,6}[\s\t\n\f]?|\\[^\n\f\h]))*(\s+-?(?:[[_a-zA-Z][^\x{00}-\x{9f}]]|(?:\\\h{1,6}[\s\t\n\f]?|\\[^\n\f\h]))(?:[[-\w][^\x{00}-\x{9f}]]|(?:\\\h{1,6}[\s\t\n\f]?|\\[^\n\f\h]))*)*</string>
+                <string>(?:(?:[^"'\(\)]|\S|[^\x{0000}-\x{0008}\x{000B}\x{000E}-\x{001F}\x{007F}])|(?:\\(?:\N|[[:^xdigit:]]|[[:xdigit:]]{1,6}[\s\R])))*?</string>
               </dict>
               <dict>
                 <key>name</key>
@@ -2940,7 +2940,7 @@
       <key>vendor-prefixed-property</key>
       <dict>
         <key>begin</key>
-        <string>(-[\w-]+?-)((?:(?:[a-zA-Z_]|[\x{00B7}\x{00C0}-\x{00D6}\x{00D8}-\x{00F6}\x{00F8}-\x{037D}\x{037F}-\x{1FFF}\x{200C}\x{200D}\x{203F}\x{2040}\x{2070}-\x{218F}\x{2C00}-\x{2FEF}\x{3001}-\x{D7FF}\x{F900}-\x{FDCF}\x{FDF0}-\x{FFFD}\x{10000}-\x{EFFFF}])|(?:\\(?:\N|[[:^xdigit:]]|[[:xdigit:]]{1,6}[\s\R])))(?:(?:[-\da-zA-Z_]|[\x{00B7}\x{00C0}-\x{00D6}\x{00D8}-\x{00F6}\x{00F8}-\x{037D}\x{037F}-\x{1FFF}\x{200C}\x{200D}\x{203F}\x{2040}\x{2070}-\x{218F}\x{2C00}-\x{2FEF}\x{3001}-\x{D7FF}\x{F900}-\x{FDCF}\x{FDF0}-\x{FFFD}\x{10000}-\x{EFFFF}])|(?:\\(?:\N|[[:^xdigit:]]|[[:xdigit:]]{1,6}[\s\R])))*)\b</string>
+        <string>(-[\w-]+?-)((?:-?(?:(?:[a-zA-Z_]|[\x{00B7}\x{00C0}-\x{00D6}\x{00D8}-\x{00F6}\x{00F8}-\x{037D}\x{037F}-\x{1FFF}\x{200C}\x{200D}\x{203F}\x{2040}\x{2070}-\x{218F}\x{2C00}-\x{2FEF}\x{3001}-\x{D7FF}\x{F900}-\x{FDCF}\x{FDF0}-\x{FFFD}\x{10000}-\x{EFFFF}])|(?:\\(?:\N|[[:^xdigit:]]|[[:xdigit:]]{1,6}[\s\R]))))(?:(?:[-\da-zA-Z_]|[\x{00B7}\x{00C0}-\x{00D6}\x{00D8}-\x{00F6}\x{00F8}-\x{037D}\x{037F}-\x{1FFF}\x{200C}\x{200D}\x{203F}\x{2040}\x{2070}-\x{218F}\x{2C00}-\x{2FEF}\x{3001}-\x{D7FF}\x{F900}-\x{FDCF}\x{FDF0}-\x{FFFD}\x{10000}-\x{EFFFF}])|(?:\\(?:\N|[[:^xdigit:]]|[[:xdigit:]]{1,6}[\s\R])))*)\b</string>
         <key>beginCaptures</key>
         <dict>
           <key>0</key>

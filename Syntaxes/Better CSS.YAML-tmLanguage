@@ -89,7 +89,7 @@ repository:
         - include: '#numeric-values'
         - include: '#property-value-constants'
         - name: variable.other.constant.animation-name.css string.unquoted.css
-          match: -?(?:[_a-zA-Z]|[^\x{00}-\x{7F}]|(?:(:?\\[0-9a-f]{1,6}(\r\n|[\s\t\r\n\f])?)|\\[^\r\n\f0-9a-f]))(?:[-_a-zA-Z0-9]|[^\x{00}-\x{7F}]|(?:(:?\\[0-9a-f]{1,6}(\r\n|[\t\r\n\f])?)|\\[^\r\n\f0-9a-f]))*
+          match: '{{string_unquoted}}'
         - include: '#arbitrary-repetition'
         - include: '#important'
 
@@ -452,7 +452,7 @@ repository:
         '1': {name: punctuation.separator.key-value.css}
         '4': {name: meta.property-value.css}
     - name: entity.name.constant.counter-name.css
-      match: -?(?:[[-\w][^\x{00}-\x{9f}]]|(?:\\\h{1,6}[\s\t\n\f]?|\\[^\n\f\h]))(?:[[_a-zA-Z][^\x{00}-\x{9f}]]|(?:\\\h{1,6}[\s\t\n\f]?|\\[^\n\f\h]))*
+      match: '{{ident_token}}'
     - include: '#integer-type'
     - name: invalid.illegal.property-value.css
       match: unset|initial|inherit|auto
@@ -519,7 +519,7 @@ repository:
           '4': {name: meta.property-value.css}
       - include: '#property-values'
       - name: string.unquoted.css
-        match: -?(?:[[_a-zA-Z][^\x{00}-\x{9f}]]|(?:\\\h{1,6}[\s\t\n\f]?|\\[^\n\f\h]))(?:[[-\w][^\x{00}-\x{9f}]]|(?:\\\h{1,6}[\s\t\n\f]?|\\[^\n\f\h]))*(\s+-?(?:[[_a-zA-Z][^\x{00}-\x{9f}]]|(?:\\\h{1,6}[\s\t\n\f]?|\\[^\n\f\h]))(?:[[-\w][^\x{00}-\x{9f}]]|(?:\\\h{1,6}[\s\t\n\f]?|\\[^\n\f\h]))*)*
+        match: '{{string_unquoted}}'
       - name: punctuation.separator.css
         match: ','
 
@@ -942,7 +942,7 @@ repository:
       '1': {name: punctuation.separator.css}
 
   vendor-prefixed-property:
-    begin: (-[\w-]+?-)((?:(?:[a-zA-Z_]|[\x{00B7}\x{00C0}-\x{00D6}\x{00D8}-\x{00F6}\x{00F8}-\x{037D}\x{037F}-\x{1FFF}\x{200C}\x{200D}\x{203F}\x{2040}\x{2070}-\x{218F}\x{2C00}-\x{2FEF}\x{3001}-\x{D7FF}\x{F900}-\x{FDCF}\x{FDF0}-\x{FFFD}\x{10000}-\x{EFFFF}])|(?:\\(?:\N|[[:^xdigit:]]|[[:xdigit:]]{1,6}[\s\R])))(?:(?:[-\da-zA-Z_]|[\x{00B7}\x{00C0}-\x{00D6}\x{00D8}-\x{00F6}\x{00F8}-\x{037D}\x{037F}-\x{1FFF}\x{200C}\x{200D}\x{203F}\x{2040}\x{2070}-\x{218F}\x{2C00}-\x{2FEF}\x{3001}-\x{D7FF}\x{F900}-\x{FDCF}\x{FDF0}-\x{FFFD}\x{10000}-\x{EFFFF}])|(?:\\(?:\N|[[:^xdigit:]]|[[:xdigit:]]{1,6}[\s\R])))*)\b
+    begin: (-[\w-]+?-)((?:-?(?:(?:[a-zA-Z_]|{{non_ascii}})|{{escape}}))(?:(?:[-\da-zA-Z_]|{{non_ascii}})|{{escape}})*)\b
     beginCaptures:
       '0': {name: support.type.property-name.css}
       '1': {name: meta.namespace.vendor-prefix.css}
