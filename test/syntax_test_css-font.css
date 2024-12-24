@@ -1,0 +1,138 @@
+/* SYNTAX TEST "Packages/better-css/Syntaxes/Better CSS.tmLanguage" */
+
+.a {
+  font-size: xx-small;
+/*^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*         ^ punctuation.separator.key-value.css */
+/*          ^^^^^^^^^ meta.property-value.css */
+/*           ^^^^^^^^ support.constant.property-value.css */
+/*                   ^ punctuation.terminator.rule.css */
+  font-size: x-small;
+/*^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*         ^ punctuation.separator.key-value.css */
+/*          ^^^^^^^^ meta.property-value.css */
+/*           ^^^^^^^ support.constant.property-value.css */
+/*                  ^ punctuation.terminator.rule.css */
+  font-size: small;
+/*^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*         ^ punctuation.separator.key-value.css */
+/*          ^^^^^^ meta.property-value.css */
+/*           ^^^^^ support.constant.property-value.css */
+/*                ^ punctuation.terminator.rule.css */
+  font-size: medium;
+/*^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*         ^ punctuation.separator.key-value.css */
+/*          ^^^^^^^ meta.property-value.css */
+/*           ^^^^^^ support.constant.property-value.css */
+/*                 ^ punctuation.terminator.rule.css */
+  font-size: large;
+/*^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*         ^ punctuation.separator.key-value.css */
+/*          ^^^^^^ meta.property-value.css */
+/*           ^^^^^ support.constant.property-value.css */
+/*                ^ punctuation.terminator.rule.css */
+  font-size: x-large;
+/*^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*         ^ punctuation.separator.key-value.css */
+/*          ^^^^^^^^ meta.property-value.css */
+/*           ^^^^^^^ support.constant.property-value.css */
+/*                  ^ punctuation.terminator.rule.css */
+  font-size: xx-large;
+/*^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*         ^ punctuation.separator.key-value.css */
+/*          ^^^^^^^^^ meta.property-value.css */
+/*           ^^^^^^^^ support.constant.property-value.css */
+/*                   ^ punctuation.terminator.rule.css */
+}
+
+.a {
+  font-size-adjust: none;
+/*^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*^^^^^^^^^^^^^^^^^^^^^^^ meta.property-name.css */
+/*^^^^^^^^^^^^^^^^ support.type.property-name.css */
+/*                ^ punctuation.separator.key-value.css */
+/*                 ^^^^^ meta.property-value.css */
+/*                  ^^^^ support.constant.property-value.css */
+/*                      ^ punctuation.terminator.rule.css */
+  font-size-adjust: 0.5;
+/*^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*^^^^^^^^^^^^^^^^^^^^^^ meta.property-name.css */
+/*^^^^^^^^^^^^^^^^ support.type.property-name.css */
+/*                ^ punctuation.separator.key-value.css */
+/*                 ^^^^ meta.property-value.css */
+/*                  ^^^ constant.numeric.css */
+/*                     ^ punctuation.terminator.rule.css */
+  font-size-adjust: from-font;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-name.css */
+/*^^^^^^^^^^^^^^^^ support.type.property-name.css */
+/*                ^ punctuation.separator.key-value.css */
+/*                 ^^^^^^^^^^ meta.property-value.css */
+/*                  ^^^^^^^^^ support.constant.property-value.css */
+/*                           ^ punctuation.terminator.rule.css */
+  font-size-adjust: ex-height 0.5;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-name.css */
+/*^^^^^^^^^^^^^^^^ support.type.property-name.css */
+/*                ^ punctuation.separator.key-value.css */
+/*                 ^^^^^^^^^^^^^^ meta.property-value.css */
+/*                  ^^^^^^^^^ support.constant.property-value.css */
+/*                            ^^^ constant.numeric.css */
+/*                               ^ punctuation.terminator.rule.css */
+  font-size-adjust: ch-width from-font;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-name.css */
+/*^^^^^^^^^^^^^^^^ support.type.property-name.css */
+/*                ^ punctuation.separator.key-value.css */
+/*                 ^^^^^^^^^^^^^^^^^^^ meta.property-value.css */
+/*                  ^^^^^^^^ support.constant.property-value.css */
+/*                           ^^^^^^^^^ support.constant.property-value.css */
+/*                                    ^ punctuation.terminator.rule.css */
+  font-size-adjust: inherit;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-name.css */
+/*^^^^^^^^^^^^^^^^ support.type.property-name.css */
+/*                ^ punctuation.separator.key-value.css */
+/*                 ^^^^^^^^ meta.property-value.css */
+/*                  ^^^^^^^ support.constant.property-value.css */
+/*                         ^ punctuation.terminator.rule.css */
+  font-size-adjust: initial;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-name.css */
+/*^^^^^^^^^^^^^^^^ support.type.property-name.css */
+/*                ^ punctuation.separator.key-value.css */
+/*                 ^^^^^^^^ meta.property-value.css */
+/*                  ^^^^^^^ support.constant.property-value.css */
+/*                         ^ punctuation.terminator.rule.css */
+  font-size-adjust: revert;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-name.css */
+/*^^^^^^^^^^^^^^^^ support.type.property-name.css */
+/*                ^ punctuation.separator.key-value.css */
+/*                 ^^^^^^^ meta.property-value.css */
+/*                  ^^^^^^ support.constant.property-value.css */
+/*                        ^ punctuation.terminator.rule.css */
+  font-size-adjust: revert-layer;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-name.css */
+/*^^^^^^^^^^^^^^^^ support.type.property-name.css */
+/*                ^ punctuation.separator.key-value.css */
+/*                 ^^^^^^^^^^^^^ meta.property-value.css */
+/*                  ^^^^^^^^^^^^ support.constant.property-value.css */
+/*                              ^ punctuation.terminator.rule.css */
+  font-size-adjust: unset;
+/*^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-name.css */
+/*^^^^^^^^^^^^^^^^ support.type.property-name.css */
+/*                ^ punctuation.separator.key-value.css */
+/*                 ^^^^^^ meta.property-value.css */
+/*                  ^^^^^ support.constant.property-value.css */
+/*                       ^ punctuation.terminator.rule.css */
+}

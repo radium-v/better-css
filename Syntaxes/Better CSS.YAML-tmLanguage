@@ -15,6 +15,11 @@ patterns:
 - include: '#selectors-group'
 
 repository:
+  absolute-size-type:
+    match: \b(xx-small|x-small|small|medium|large|x-large|xx-large)\b
+    name: support.constant.property-value.css
+
+
   accent-color-property:
     name: support.type.property-name.css
     begin: \baccent-color(?=\s*?:)
@@ -505,23 +510,70 @@ repository:
 
   font-properties:
     patterns:
-    - name: meta.property-name.css
-      begin: \bfont(-family)?(?!-)\b
+    - include: '#font-family-property'
+    - include: '#font-size-adjust-property'
+    - include: '#font-size-property'
+
+  font-family-property:
+    name: meta.property-name.css
+    begin: \bfont(-family)?(?!-)\b
+    beginCaptures:
+      '0': {name: support.type.property-name.css}
+    end: '{{property_value_terminator}}'
+    endCaptures:
+      '1': {name: punctuation.terminator.rule.css}
+    patterns:
+    - match: (((\+_?)?):)([\s\t]*)
+      captures:
+        '1': {name: punctuation.separator.key-value.css}
+        '4': {name: meta.property-value.css}
+    - include: '#property-values'
+    - name: string.unquoted.css
+      match: '{{string_unquoted}}'
+    - name: punctuation.separator.css
+      match: ','
+
+  font-size-adjust-property:
+    name: meta.property-name.css
+    begin: \bfont-size-adjust\b
+    beginCaptures:
+      '0': {name: support.type.property-name.css}
+    end: '{{property_value_terminator}}'
+    endCaptures:
+      '1': {name: punctuation.terminator.rule.css}
+    patterns:
+    - begin: (:)(?=\s*)
       beginCaptures:
-        '0': {name: support.type.property-name.css}
-      end: '{{property_value_terminator}}'
-      endCaptures:
-        '1': {name: punctuation.terminator.rule.css}
+        '1': {name: punctuation.separator.key-value.css}
+      end: (?={{property_value_terminator}})
+      contentName: meta.property-value.css
       patterns:
-      - match: (((\+_?)?):)([\s\t]*)
-        captures:
-          '1': {name: punctuation.separator.key-value.css}
-          '4': {name: meta.property-value.css}
-      - include: '#property-values'
-      - name: string.unquoted.css
-        match: '{{string_unquoted}}'
-      - name: punctuation.separator.css
-        match: ','
+      - match: \b(none|ex-height|cap-height|ch-width|ic-width|ic-height|from-font)\s*?\b
+        name: support.constant.property-value.css
+      - include: '#number-type'
+      - include: '#var-function'
+      - include: '#global-property-values'
+
+  font-size-property:
+    begin: \b(font-size)\b
+    beginCaptures:
+      '0': {name: meta.property-name.css}
+      '1': {name: support.type.property-name.css}
+    end: '{{property_value_terminator}}'
+    endCaptures:
+      '1': {name: punctuation.terminator.rule.css}
+    patterns:
+    - begin: (:)(?=\s*)
+      beginCaptures:
+        '1': {name: punctuation.separator.key-value.css}
+      end: (?={{property_value_terminator}})
+      contentName: meta.property-value.css
+      patterns:
+      - include: '#absolute-size-type'
+      - include: '#relative-size-type'
+      - include: '#length-percentage-type'
+      - include: '#var-function'
+      - include: '#global-property-values'
 
   function-layer:
     comment: layer()
@@ -667,12 +719,69 @@ repository:
     match: (?:[-+]?\d+)
 
   length-type:
+    name: meta.number.integer.decimal.css
+    match: (?x)({{number_token}})(?:(cap) | (ch) | (em) | (ex) | (ic) | (lh) | (rcap)
+      | (rch)| (rem) | (rex) | (ric) | (rlh) | (svh) | (svw) | (svmax) | (svmin)
+      | (svb) | (svi) | (lvh) | (lvw) | (lvmax) | (lvmin) | (lvb) | (lvi) | (dvh)
+      | (dvw) | (dvmax) | (dvmin) | (dvb) | (dvi) |(vh) | (vw) | (vmax) | (vmin)
+      | (vb) | (vi) | (cqw) | (cqh) | (cqi) | (cqb) | (cqmin) | (cqmax) | (px) | (cm)
+      | (mm) | (Q) | (in) | (pc) | (pt) )?
+    captures:
+      '1': {name: constant.numeric.css}
+      '2': {name: keyword.other.unit.length.cap.css}
+      '3': {name: keyword.other.unit.length.ch.css}
+      '4': {name: keyword.other.unit.length.em.css}
+      '5': {name: keyword.other.unit.length.ex.css}
+      '6': {name: keyword.other.unit.length.ic.css}
+      '7': {name: keyword.other.unit.length.lh.css}
+      '8': {name: keyword.other.unit.length.rcap.css}
+      '9': {name: keyword.other.unit.length.rch.css}
+      '10': {name: keyword.other.unit.length.rem.css}
+      '11': {name: keyword.other.unit.length.rex.css}
+      '12': {name: keyword.other.unit.length.ric.css}
+      '13': {name: keyword.other.unit.length.rlh.css}
+      '14': {name: keyword.other.unit.length.svh.css}
+      '15': {name: keyword.other.unit.length.svw.css}
+      '16': {name: keyword.other.unit.length.svmax.css}
+      '17': {name: keyword.other.unit.length.svmin.css}
+      '18': {name: keyword.other.unit.length.svb.css}
+      '19': {name: keyword.other.unit.length.svi.css}
+      '20': {name: keyword.other.unit.length.lvh.css}
+      '21': {name: keyword.other.unit.length.lvw.css}
+      '22': {name: keyword.other.unit.length.lvmax.css}
+      '23': {name: keyword.other.unit.length.lvmin.css}
+      '24': {name: keyword.other.unit.length.lvb.css}
+      '25': {name: keyword.other.unit.length.lvi.css}
+      '26': {name: keyword.other.unit.length.dvh.css}
+      '27': {name: keyword.other.unit.length.dvw.css}
+      '28': {name: keyword.other.unit.length.dvmax.css}
+      '29': {name: keyword.other.unit.length.dvmin.css}
+      '30': {name: keyword.other.unit.length.dvb.css}
+      '31': {name: keyword.other.unit.length.dvi.css}
+      '32': {name: keyword.other.unit.length.vh.css}
+      '33': {name: keyword.other.unit.length.vw.css}
+      '34': {name: keyword.other.unit.length.vmax.css}
+      '35': {name: keyword.other.unit.length.vmin.css}
+      '36': {name: keyword.other.unit.length.vb.css}
+      '37': {name: keyword.other.unit.length.vi.css}
+      '38': {name: keyword.other.unit.length.cqw.css}
+      '39': {name: keyword.other.unit.length.cqh.css}
+      '40': {name: keyword.other.unit.length.cqi.css}
+      '41': {name: keyword.other.unit.length.cqb.css}
+      '42': {name: keyword.other.unit.length.cqmin.css}
+      '43': {name: keyword.other.unit.length.cqmax.css}
+      '44': {name: keyword.other.unit.length.px.css}
+      '45': {name: keyword.other.unit.length.cm.css}
+      '46': {name: keyword.other.unit.length.mm.css}
+      '47': {name: keyword.other.unit.length.Q.css}
+      '48': {name: keyword.other.unit.length.in.css}
+      '49': {name: keyword.other.unit.length.pc.css}
+      '50': {name: keyword.other.unit.length.pt.css}
+
+  length-percentage-type:
     patterns:
-    - name: constant.numeric.css
-      match: ({{number_token}})(ex|cap|ch|i[cn]|r?em|r?lh|[sld]?v(?:[whib]|min|max)|[cm]m|Q|p[ctx])
-      captures:
-        '1': {name: constant.numeric.css}
-        '2': {name: keyword.other.unit.length.css}
+    - include: '#length-type'
+    - include: '#percentage-type'
 
   media-condition:
     patterns:
@@ -711,6 +820,10 @@ repository:
         '1': {name: punctuation.separator.namespace.css}
     - include: '#element-name'
 
+  number-type:
+    name: constant.numeric.css
+    match: '{{number_token}}'
+
   percentage-type:
     name: constant.numeric.css
     match: '{{number_token}}(%)'
@@ -740,6 +853,10 @@ repository:
     name: support.constant.property-value.css
     match: \b(?:inherit|initial|revert-layer|revert|unset)\b
 
+  relative-size-type:
+    match: \b(?:larger|smaller)\b
+    name: constant.other.relative-size.css
+
   rendering-intent-descriptor:
     begin: \brendering-intent\b
     beginCaptures:
@@ -766,6 +883,7 @@ repository:
       beginCaptures:
         '0': {name: punctuation.definition.block.begin.css}
       end: (?=\s*\})
+      contentName: meta.block.css
       patterns:
       - include: '#comment-block'
       - match: '{{property_value_terminator}}'

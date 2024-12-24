@@ -33,6 +33,13 @@
     </array>
     <key>repository</key>
     <dict>
+      <key>absolute-size-type</key>
+      <dict>
+        <key>match</key>
+        <string>\b(xx-small|x-small|small|medium|large|x-large|xx-large)\b</string>
+        <key>name</key>
+        <string>support.constant.property-value.css</string>
+      </dict>
       <key>accent-color-property</key>
       <dict>
         <key>name</key>
@@ -1566,62 +1573,210 @@
         <key>patterns</key>
         <array>
           <dict>
+            <key>include</key>
+            <string>#font-family-property</string>
+          </dict>
+          <dict>
+            <key>include</key>
+            <string>#font-size-adjust-property</string>
+          </dict>
+          <dict>
+            <key>include</key>
+            <string>#font-size-property</string>
+          </dict>
+        </array>
+      </dict>
+      <key>font-family-property</key>
+      <dict>
+        <key>name</key>
+        <string>meta.property-name.css</string>
+        <key>begin</key>
+        <string>\bfont(-family)?(?!-)\b</string>
+        <key>beginCaptures</key>
+        <dict>
+          <key>0</key>
+          <dict>
             <key>name</key>
-            <string>meta.property-name.css</string>
-            <key>begin</key>
-            <string>\bfont(-family)?(?!-)\b</string>
-            <key>beginCaptures</key>
-            <dict>
-              <key>0</key>
-              <dict>
-                <key>name</key>
-                <string>support.type.property-name.css</string>
-              </dict>
-            </dict>
-            <key>end</key>
-            <string>\s*(;)|(?=[})])</string>
-            <key>endCaptures</key>
+            <string>support.type.property-name.css</string>
+          </dict>
+        </dict>
+        <key>end</key>
+        <string>\s*(;)|(?=[})])</string>
+        <key>endCaptures</key>
+        <dict>
+          <key>1</key>
+          <dict>
+            <key>name</key>
+            <string>punctuation.terminator.rule.css</string>
+          </dict>
+        </dict>
+        <key>patterns</key>
+        <array>
+          <dict>
+            <key>match</key>
+            <string>(((\+_?)?):)([\s\t]*)</string>
+            <key>captures</key>
             <dict>
               <key>1</key>
               <dict>
                 <key>name</key>
-                <string>punctuation.terminator.rule.css</string>
+                <string>punctuation.separator.key-value.css</string>
+              </dict>
+              <key>4</key>
+              <dict>
+                <key>name</key>
+                <string>meta.property-value.css</string>
               </dict>
             </dict>
+          </dict>
+          <dict>
+            <key>include</key>
+            <string>#property-values</string>
+          </dict>
+          <dict>
+            <key>name</key>
+            <string>string.unquoted.css</string>
+            <key>match</key>
+            <string>(?:(?:[^"'\(\)]|\S|[^\x{0000}-\x{0008}\x{000B}\x{000E}-\x{001F}\x{007F}])|(?:\\(?:\N|[[:^xdigit:]]|[[:xdigit:]]{1,6}[\s\R])))*?</string>
+          </dict>
+          <dict>
+            <key>name</key>
+            <string>punctuation.separator.css</string>
+            <key>match</key>
+            <string>,</string>
+          </dict>
+        </array>
+      </dict>
+      <key>font-size-adjust-property</key>
+      <dict>
+        <key>name</key>
+        <string>meta.property-name.css</string>
+        <key>begin</key>
+        <string>\bfont-size-adjust\b</string>
+        <key>beginCaptures</key>
+        <dict>
+          <key>0</key>
+          <dict>
+            <key>name</key>
+            <string>support.type.property-name.css</string>
+          </dict>
+        </dict>
+        <key>end</key>
+        <string>\s*(;)|(?=[})])</string>
+        <key>endCaptures</key>
+        <dict>
+          <key>1</key>
+          <dict>
+            <key>name</key>
+            <string>punctuation.terminator.rule.css</string>
+          </dict>
+        </dict>
+        <key>patterns</key>
+        <array>
+          <dict>
+            <key>begin</key>
+            <string>(:)(?=\s*)</string>
+            <key>beginCaptures</key>
+            <dict>
+              <key>1</key>
+              <dict>
+                <key>name</key>
+                <string>punctuation.separator.key-value.css</string>
+              </dict>
+            </dict>
+            <key>end</key>
+            <string>(?=\s*(;)|(?=[})]))</string>
+            <key>contentName</key>
+            <string>meta.property-value.css</string>
             <key>patterns</key>
             <array>
               <dict>
                 <key>match</key>
-                <string>(((\+_?)?):)([\s\t]*)</string>
-                <key>captures</key>
-                <dict>
-                  <key>1</key>
-                  <dict>
-                    <key>name</key>
-                    <string>punctuation.separator.key-value.css</string>
-                  </dict>
-                  <key>4</key>
-                  <dict>
-                    <key>name</key>
-                    <string>meta.property-value.css</string>
-                  </dict>
-                </dict>
+                <string>\b(none|ex-height|cap-height|ch-width|ic-width|ic-height|from-font)\s*?\b</string>
+                <key>name</key>
+                <string>support.constant.property-value.css</string>
               </dict>
               <dict>
                 <key>include</key>
-                <string>#property-values</string>
+                <string>#number-type</string>
               </dict>
               <dict>
-                <key>name</key>
-                <string>string.unquoted.css</string>
-                <key>match</key>
-                <string>(?:(?:[^"'\(\)]|\S|[^\x{0000}-\x{0008}\x{000B}\x{000E}-\x{001F}\x{007F}])|(?:\\(?:\N|[[:^xdigit:]]|[[:xdigit:]]{1,6}[\s\R])))*?</string>
+                <key>include</key>
+                <string>#var-function</string>
               </dict>
               <dict>
+                <key>include</key>
+                <string>#global-property-values</string>
+              </dict>
+            </array>
+          </dict>
+        </array>
+      </dict>
+      <key>font-size-property</key>
+      <dict>
+        <key>begin</key>
+        <string>\b(font-size)\b</string>
+        <key>beginCaptures</key>
+        <dict>
+          <key>0</key>
+          <dict>
+            <key>name</key>
+            <string>meta.property-name.css</string>
+          </dict>
+          <key>1</key>
+          <dict>
+            <key>name</key>
+            <string>support.type.property-name.css</string>
+          </dict>
+        </dict>
+        <key>end</key>
+        <string>\s*(;)|(?=[})])</string>
+        <key>endCaptures</key>
+        <dict>
+          <key>1</key>
+          <dict>
+            <key>name</key>
+            <string>punctuation.terminator.rule.css</string>
+          </dict>
+        </dict>
+        <key>patterns</key>
+        <array>
+          <dict>
+            <key>begin</key>
+            <string>(:)(?=\s*)</string>
+            <key>beginCaptures</key>
+            <dict>
+              <key>1</key>
+              <dict>
                 <key>name</key>
-                <string>punctuation.separator.css</string>
-                <key>match</key>
-                <string>,</string>
+                <string>punctuation.separator.key-value.css</string>
+              </dict>
+            </dict>
+            <key>end</key>
+            <string>(?=\s*(;)|(?=[})]))</string>
+            <key>contentName</key>
+            <string>meta.property-value.css</string>
+            <key>patterns</key>
+            <array>
+              <dict>
+                <key>include</key>
+                <string>#absolute-size-type</string>
+              </dict>
+              <dict>
+                <key>include</key>
+                <string>#relative-size-type</string>
+              </dict>
+              <dict>
+                <key>include</key>
+                <string>#length-percentage-type</string>
+              </dict>
+              <dict>
+                <key>include</key>
+                <string>#var-function</string>
+              </dict>
+              <dict>
+                <key>include</key>
+                <string>#global-property-values</string>
               </dict>
             </array>
           </dict>
@@ -2070,26 +2225,275 @@
       </dict>
       <key>length-type</key>
       <dict>
-        <key>patterns</key>
-        <array>
+        <key>name</key>
+        <string>meta.number.integer.decimal.css</string>
+        <key>match</key>
+        <string>(?x)((?:[-+]?(?:\d+\.\d+|\d+|\.\d+)(?:[eE][-+]?\d+)?))(?:(cap) | (ch) | (em) | (ex) | (ic) | (lh) | (rcap) | (rch)| (rem) | (rex) | (ric) | (rlh) | (svh) | (svw) | (svmax) | (svmin) | (svb) | (svi) | (lvh) | (lvw) | (lvmax) | (lvmin) | (lvb) | (lvi) | (dvh) | (dvw) | (dvmax) | (dvmin) | (dvb) | (dvi) |(vh) | (vw) | (vmax) | (vmin) | (vb) | (vi) | (cqw) | (cqh) | (cqi) | (cqb) | (cqmin) | (cqmax) | (px) | (cm) | (mm) | (Q) | (in) | (pc) | (pt) )?</string>
+        <key>captures</key>
+        <dict>
+          <key>1</key>
           <dict>
             <key>name</key>
             <string>constant.numeric.css</string>
-            <key>match</key>
-            <string>((?:[-+]?(?:\d+\.\d+|\d+|\.\d+)(?:[eE][-+]?\d+)?))(ex|cap|ch|i[cn]|r?em|r?lh|[sld]?v(?:[whib]|min|max)|[cm]m|Q|p[ctx])</string>
-            <key>captures</key>
-            <dict>
-              <key>1</key>
-              <dict>
-                <key>name</key>
-                <string>constant.numeric.css</string>
-              </dict>
-              <key>2</key>
-              <dict>
-                <key>name</key>
-                <string>keyword.other.unit.length.css</string>
-              </dict>
-            </dict>
+          </dict>
+          <key>2</key>
+          <dict>
+            <key>name</key>
+            <string>keyword.other.unit.length.cap.css</string>
+          </dict>
+          <key>3</key>
+          <dict>
+            <key>name</key>
+            <string>keyword.other.unit.length.ch.css</string>
+          </dict>
+          <key>4</key>
+          <dict>
+            <key>name</key>
+            <string>keyword.other.unit.length.em.css</string>
+          </dict>
+          <key>5</key>
+          <dict>
+            <key>name</key>
+            <string>keyword.other.unit.length.ex.css</string>
+          </dict>
+          <key>6</key>
+          <dict>
+            <key>name</key>
+            <string>keyword.other.unit.length.ic.css</string>
+          </dict>
+          <key>7</key>
+          <dict>
+            <key>name</key>
+            <string>keyword.other.unit.length.lh.css</string>
+          </dict>
+          <key>8</key>
+          <dict>
+            <key>name</key>
+            <string>keyword.other.unit.length.rcap.css</string>
+          </dict>
+          <key>9</key>
+          <dict>
+            <key>name</key>
+            <string>keyword.other.unit.length.rch.css</string>
+          </dict>
+          <key>10</key>
+          <dict>
+            <key>name</key>
+            <string>keyword.other.unit.length.rem.css</string>
+          </dict>
+          <key>11</key>
+          <dict>
+            <key>name</key>
+            <string>keyword.other.unit.length.rex.css</string>
+          </dict>
+          <key>12</key>
+          <dict>
+            <key>name</key>
+            <string>keyword.other.unit.length.ric.css</string>
+          </dict>
+          <key>13</key>
+          <dict>
+            <key>name</key>
+            <string>keyword.other.unit.length.rlh.css</string>
+          </dict>
+          <key>14</key>
+          <dict>
+            <key>name</key>
+            <string>keyword.other.unit.length.svh.css</string>
+          </dict>
+          <key>15</key>
+          <dict>
+            <key>name</key>
+            <string>keyword.other.unit.length.svw.css</string>
+          </dict>
+          <key>16</key>
+          <dict>
+            <key>name</key>
+            <string>keyword.other.unit.length.svmax.css</string>
+          </dict>
+          <key>17</key>
+          <dict>
+            <key>name</key>
+            <string>keyword.other.unit.length.svmin.css</string>
+          </dict>
+          <key>18</key>
+          <dict>
+            <key>name</key>
+            <string>keyword.other.unit.length.svb.css</string>
+          </dict>
+          <key>19</key>
+          <dict>
+            <key>name</key>
+            <string>keyword.other.unit.length.svi.css</string>
+          </dict>
+          <key>20</key>
+          <dict>
+            <key>name</key>
+            <string>keyword.other.unit.length.lvh.css</string>
+          </dict>
+          <key>21</key>
+          <dict>
+            <key>name</key>
+            <string>keyword.other.unit.length.lvw.css</string>
+          </dict>
+          <key>22</key>
+          <dict>
+            <key>name</key>
+            <string>keyword.other.unit.length.lvmax.css</string>
+          </dict>
+          <key>23</key>
+          <dict>
+            <key>name</key>
+            <string>keyword.other.unit.length.lvmin.css</string>
+          </dict>
+          <key>24</key>
+          <dict>
+            <key>name</key>
+            <string>keyword.other.unit.length.lvb.css</string>
+          </dict>
+          <key>25</key>
+          <dict>
+            <key>name</key>
+            <string>keyword.other.unit.length.lvi.css</string>
+          </dict>
+          <key>26</key>
+          <dict>
+            <key>name</key>
+            <string>keyword.other.unit.length.dvh.css</string>
+          </dict>
+          <key>27</key>
+          <dict>
+            <key>name</key>
+            <string>keyword.other.unit.length.dvw.css</string>
+          </dict>
+          <key>28</key>
+          <dict>
+            <key>name</key>
+            <string>keyword.other.unit.length.dvmax.css</string>
+          </dict>
+          <key>29</key>
+          <dict>
+            <key>name</key>
+            <string>keyword.other.unit.length.dvmin.css</string>
+          </dict>
+          <key>30</key>
+          <dict>
+            <key>name</key>
+            <string>keyword.other.unit.length.dvb.css</string>
+          </dict>
+          <key>31</key>
+          <dict>
+            <key>name</key>
+            <string>keyword.other.unit.length.dvi.css</string>
+          </dict>
+          <key>32</key>
+          <dict>
+            <key>name</key>
+            <string>keyword.other.unit.length.vh.css</string>
+          </dict>
+          <key>33</key>
+          <dict>
+            <key>name</key>
+            <string>keyword.other.unit.length.vw.css</string>
+          </dict>
+          <key>34</key>
+          <dict>
+            <key>name</key>
+            <string>keyword.other.unit.length.vmax.css</string>
+          </dict>
+          <key>35</key>
+          <dict>
+            <key>name</key>
+            <string>keyword.other.unit.length.vmin.css</string>
+          </dict>
+          <key>36</key>
+          <dict>
+            <key>name</key>
+            <string>keyword.other.unit.length.vb.css</string>
+          </dict>
+          <key>37</key>
+          <dict>
+            <key>name</key>
+            <string>keyword.other.unit.length.vi.css</string>
+          </dict>
+          <key>38</key>
+          <dict>
+            <key>name</key>
+            <string>keyword.other.unit.length.cqw.css</string>
+          </dict>
+          <key>39</key>
+          <dict>
+            <key>name</key>
+            <string>keyword.other.unit.length.cqh.css</string>
+          </dict>
+          <key>40</key>
+          <dict>
+            <key>name</key>
+            <string>keyword.other.unit.length.cqi.css</string>
+          </dict>
+          <key>41</key>
+          <dict>
+            <key>name</key>
+            <string>keyword.other.unit.length.cqb.css</string>
+          </dict>
+          <key>42</key>
+          <dict>
+            <key>name</key>
+            <string>keyword.other.unit.length.cqmin.css</string>
+          </dict>
+          <key>43</key>
+          <dict>
+            <key>name</key>
+            <string>keyword.other.unit.length.cqmax.css</string>
+          </dict>
+          <key>44</key>
+          <dict>
+            <key>name</key>
+            <string>keyword.other.unit.length.px.css</string>
+          </dict>
+          <key>45</key>
+          <dict>
+            <key>name</key>
+            <string>keyword.other.unit.length.cm.css</string>
+          </dict>
+          <key>46</key>
+          <dict>
+            <key>name</key>
+            <string>keyword.other.unit.length.mm.css</string>
+          </dict>
+          <key>47</key>
+          <dict>
+            <key>name</key>
+            <string>keyword.other.unit.length.Q.css</string>
+          </dict>
+          <key>48</key>
+          <dict>
+            <key>name</key>
+            <string>keyword.other.unit.length.in.css</string>
+          </dict>
+          <key>49</key>
+          <dict>
+            <key>name</key>
+            <string>keyword.other.unit.length.pc.css</string>
+          </dict>
+          <key>50</key>
+          <dict>
+            <key>name</key>
+            <string>keyword.other.unit.length.pt.css</string>
+          </dict>
+        </dict>
+      </dict>
+      <key>length-percentage-type</key>
+      <dict>
+        <key>patterns</key>
+        <array>
+          <dict>
+            <key>include</key>
+            <string>#length-type</string>
+          </dict>
+          <dict>
+            <key>include</key>
+            <string>#percentage-type</string>
           </dict>
         </array>
       </dict>
@@ -2208,6 +2612,13 @@
           </dict>
         </array>
       </dict>
+      <key>number-type</key>
+      <dict>
+        <key>name</key>
+        <string>constant.numeric.css</string>
+        <key>match</key>
+        <string>(?:[-+]?(?:\d+\.\d+|\d+|\.\d+)(?:[eE][-+]?\d+)?)</string>
+      </dict>
       <key>percentage-type</key>
       <dict>
         <key>name</key>
@@ -2287,6 +2698,13 @@
         <key>match</key>
         <string>\b(?:inherit|initial|revert-layer|revert|unset)\b</string>
       </dict>
+      <key>relative-size-type</key>
+      <dict>
+        <key>match</key>
+        <string>\b(?:larger|smaller)\b</string>
+        <key>name</key>
+        <string>constant.other.relative-size.css</string>
+      </dict>
       <key>rendering-intent-descriptor</key>
       <dict>
         <key>begin</key>
@@ -2365,6 +2783,8 @@
             </dict>
             <key>end</key>
             <string>(?=\s*\})</string>
+            <key>contentName</key>
+            <string>meta.block.css</string>
             <key>patterns</key>
             <array>
               <dict>
