@@ -16,9 +16,8 @@ patterns:
 
 repository:
   absolute-size-type:
-    match: \b(xx-small|x-small|small|medium|large|x-large|xx-large)\b
     name: support.constant.property-value.css
-
+    match: \b(xx-small|x-small|small|medium|large|x-large|xx-large)\b
 
   accent-color-property:
     name: support.type.property-name.css
@@ -31,7 +30,7 @@ repository:
       begin: (((\+_?)?):)(?=[\s\t]*)
       beginCaptures:
         '1': {name: punctuation.separator.key-value.css}
-      end: '(?={{property_value_terminator}})'
+      end: (?={{property_value_terminator}})
       patterns:
       - include: '#color-type'
       - include: '#global-property-values'
@@ -48,7 +47,7 @@ repository:
       begin: (((\+_?)?):)(?=[\s\t]*)
       beginCaptures:
         '1': {name: punctuation.separator.key-value.css}
-      end: '(?={{property_value_terminator}})'
+      end: (?={{property_value_terminator}})
       patterns:
       - include: '#global-property-values'
       - include: '#custom-property-name'
@@ -252,12 +251,12 @@ repository:
         end: \s*(?=\{)
         patterns:
         - include: '#comment-block'
-        - name: support.constant.layer-name.css
-          match: (?'ident'{{ident_token}})(?:(\.)\g'ident')*
-          captures:
+        - captures:
             '2': {name: punctuation.accessor.dot.css}
-        - name: punctuation.separator.css
-          match: ','
+          match: (?'ident'{{ident_token}})(?:(\.)\g'ident')*
+          name: support.constant.layer-name.css
+        - match: ','
+          name: punctuation.separator.css
       - begin: \s*(\{)
         beginCaptures:
           '1': {name: punctuation.definition.block.begin.css}
@@ -415,6 +414,25 @@ repository:
     captures:
       '1': {name: punctuation.definition.entity.css}
 
+  color-base:
+    patterns:
+    - include: '#hex-color'
+    - include: '#color-functions'
+    - include: '#named-colors'
+    - name: constant.other.color.transparent.css
+      match: \btransparent\b
+
+  color-type:
+    patterns:
+    - include: '#color-base'
+    - include: '#system-color'
+    - include: '#color-rgb'
+    - include: '#color-hsl'
+    - include: '#color-hwb'
+    - include: '#color-lab'
+    - include: '#color-lch'
+    - include: '#color-xyz'
+
   comment-block:
     name: comment.block.css
     begin: /\*
@@ -474,7 +492,8 @@ repository:
   element-name:
     patterns:
     - name: entity.name.tag.css
-      match: (?x)\b( acronym | big | center | dir | font | frameset | frame | marquee
+      match: |-
+        (?x)\b( acronym | big | center | dir | font | frameset | frame | marquee
         | nobr | noembed | noframes | param | plaintext | rb | rtc | strike | tt |
         xmp )\b | \b( abbr | address | area | article | aside | audio | a | base |
         bdi | bdo | blockquote | body | br | button | b | canvas | caption | cite
@@ -500,12 +519,12 @@ repository:
     endCaptures:
       '1': {name: punctuation.terminator.rule.css}
     patterns:
-    - captures:
+    - match: (((\+_?)?):)([\s\t]*)
+      captures:
         '1': {name: punctuation.separator.key-value.css}
         '4': {name: meta.property-value.css}
-      match: (((\+_?)?):)([\s\t]*)
-    - match: \b(inherit|initial|unset|none)\b
-      name: meta.property-value.css
+    - name: meta.property-value.css
+      match: \b(inherit|initial|unset|none)\b
     - include: '#filter-functions'
 
   font-properties:
@@ -533,6 +552,12 @@ repository:
     - name: punctuation.separator.css
       match: ','
 
+  font-properties:
+    patterns:
+    - include: '#font-family-property'
+    - include: '#font-size-adjust-property'
+    - include: '#font-size-property'
+
   font-size-adjust-property:
     name: meta.property-name.css
     begin: \bfont-size-adjust\b
@@ -542,14 +567,14 @@ repository:
     endCaptures:
       '1': {name: punctuation.terminator.rule.css}
     patterns:
-    - begin: (:)(?=\s*)
+    - contentName: meta.property-value.css
+      begin: (:)(?=\s*)
       beginCaptures:
         '1': {name: punctuation.separator.key-value.css}
       end: (?={{property_value_terminator}})
-      contentName: meta.property-value.css
       patterns:
-      - match: \b(none|ex-height|cap-height|ch-width|ic-width|ic-height|from-font)\s*?\b
-        name: support.constant.property-value.css
+      - name: support.constant.property-value.css
+        match: \b(none|ex-height|cap-height|ch-width|ic-width|ic-height|from-font)\s*?\b
       - include: '#number-type'
       - include: '#var-function'
       - include: '#global-property-values'
@@ -563,11 +588,11 @@ repository:
     endCaptures:
       '1': {name: punctuation.terminator.rule.css}
     patterns:
-    - begin: (:)(?=\s*)
+    - contentName: meta.property-value.css
+      begin: (:)(?=\s*)
       beginCaptures:
         '1': {name: punctuation.separator.key-value.css}
       end: (?={{property_value_terminator}})
-      contentName: meta.property-value.css
       patterns:
       - include: '#absolute-size-type'
       - include: '#relative-size-type'
@@ -695,25 +720,6 @@ repository:
       patterns:
       - include: '#property-value'
 
-  color-type:
-    patterns:
-    - include: '#color-base'
-    - include: '#system-color'
-    - include: '#color-rgb'
-    - include: '#color-hsl'
-    - include: '#color-hwb'
-    - include: '#color-lab'
-    - include: '#color-lch'
-    - include: '#color-xyz'
-
-  color-base:
-    patterns:
-    - include: '#hex-color'
-    - include: '#color-functions'
-    - include: '#named-colors'
-    - match: \btransparent\b
-      name: constant.other.color.transparent.css
-
   integer-type:
     name: constant.numeric.css
     match: (?:[-+]?\d+)
@@ -721,11 +727,11 @@ repository:
   length-type:
     name: meta.number.integer.decimal.css
     match: (?x)({{number_token}})(?:(cap) | (ch) | (em) | (ex) | (ic) | (lh) | (rcap)
-      | (rch)| (rem) | (rex) | (ric) | (rlh) | (svh) | (svw) | (svmax) | (svmin)
-      | (svb) | (svi) | (lvh) | (lvw) | (lvmax) | (lvmin) | (lvb) | (lvi) | (dvh)
-      | (dvw) | (dvmax) | (dvmin) | (dvb) | (dvi) |(vh) | (vw) | (vmax) | (vmin)
-      | (vb) | (vi) | (cqw) | (cqh) | (cqi) | (cqb) | (cqmin) | (cqmax) | (px) | (cm)
-      | (mm) | (Q) | (in) | (pc) | (pt) )?
+      | (rch)| (rem) | (rex) | (ric) | (rlh) | (svh) | (svw) | (svmax) | (svmin) |
+      (svb) | (svi) | (lvh) | (lvw) | (lvmax) | (lvmin) | (lvb) | (lvi) | (dvh) |
+      (dvw) | (dvmax) | (dvmin) | (dvb) | (dvi) |(vh) | (vw) | (vmax) | (vmin) | (vb)
+      | (vi) | (cqw) | (cqh) | (cqi) | (cqb) | (cqmin) | (cqmax) | (px) | (cm) | (mm)
+      | (Q) | (in) | (pc) | (pt) )?
     captures:
       '1': {name: constant.numeric.css}
       '2': {name: keyword.other.unit.length.cap.css}
@@ -879,11 +885,11 @@ repository:
   rule-list:
     patterns:
     - name: meta.property-list.css
+      contentName: meta.block.css
       begin: \{
       beginCaptures:
         '0': {name: punctuation.definition.block.begin.css}
       end: (?=\s*\})
-      contentName: meta.block.css
       patterns:
       - include: '#comment-block'
       - match: '{{property_value_terminator}}'
@@ -965,7 +971,7 @@ repository:
       captures:
         '1': {name: punctuation.definition.string.begin.css}
         '2': {name: punctuation.definition.string.end.css}
-    - comment: "'single quoted string'"
+    - comment: '''single quoted string'''
       name: string.quoted.single.css
       match: (')(?:(?:[^"\\]|\N)|{{escape}}|\\\n)*?(\1)
       captures:
@@ -1101,14 +1107,14 @@ foldingStartMarker: /\*\*(?!\*)|\{\s*($|/\*(?!.*?\*/.*\S))
 foldingStopMarker: (?<!\*)\*\*/|^\s*\}
 keyEquivalent: ^~L
 variables:
-  dashed_ident: '--(?:(?:[a-zA-Z_\d-]|{{non_ascii}})|{{escape}})*'
-  escape: '(?:\\(?:\N|[[:^xdigit:]]|[[:xdigit:]]{1,6}{{whitespace}}))'
-  ident_token: '--|(?:-?(?:(?:[a-zA-Z_]|{{non_ascii}})|{{escape}}))(?:(?:[-\da-zA-Z_]|{{non_ascii}})|{{escape}})*'
+  dashed_ident: --(?:(?:[a-zA-Z_\d-]|{{non_ascii}})|{{escape}})*
+  escape: (?:\\(?:\N|[[:^xdigit:]]|[[:xdigit:]]{1,6}{{whitespace}}))
+  ident_token: --|(?:-?(?:(?:[a-zA-Z_]|{{non_ascii}})|{{escape}}))(?:(?:[-\da-zA-Z_]|{{non_ascii}})|{{escape}})*
   non_ascii: '[\x{00B7}\x{00C0}-\x{00D6}\x{00D8}-\x{00F6}\x{00F8}-\x{037D}\x{037F}-\x{1FFF}\x{200C}\x{200D}\x{203F}\x{2040}\x{2070}-\x{218F}\x{2C00}-\x{2FEF}\x{3001}-\x{D7FF}\x{F900}-\x{FDCF}\x{FDF0}-\x{FFFD}\x{10000}-\x{EFFFF}]'
-  number_token: '(?:[-+]?(?:\d+\.\d+|\d+|\.\d+)(?:[eE][-+]?\d+)?)'
-  property_value_terminator: '\s*(;)|(?=[})])'
+  number_token: (?:[-+]?(?:\d+\.\d+|\d+|\.\d+)(?:[eE][-+]?\d+)?)
+  property_value_terminator: \s*(;)|(?=[})])
   string_unquoted: (?:(?:[^"'\(\)]|\S|[^\x{0000}-\x{0008}\x{000B}\x{000E}-\x{001F}\x{007F}])|{{escape}})*?
   vendor_prefix: -(?:moz|ms|o|webkit)-
   whitespace: '[\s\R]'
-  whitespace_token: '(?:{{whitespace}}+)'
-  ws: '(?:{{whitespace_token}}*?)'
+  whitespace_token: (?:{{whitespace}}+)
+  ws: (?:{{whitespace_token}}*?)
