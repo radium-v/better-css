@@ -1,0 +1,16 @@
+/* SYNTAX TEST "Packages/better-css/Syntaxes/Better CSS.tmLanguage" */
+
+  @container container-name (aspect-ratio > 1 / 2) {}
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.at-rule.container.css */
+/*^^^^^^^^^^ keyword.control.at-rule.container.css */
+/*^ punctuation.definition.keyword.css */
+/*           ^^^^^^^^^^^^^^ variable.parameter.container-name.css */
+/*                          ^^^^^^^^^^^^^^^^^^^^^^ meta.parens.support-condition.css */
+/*                          ^ punctuation.definition.group.begin.css */
+/*                           ^^^^^^^^^^^^ support.type.property-name.css */
+/*                                        ^ keyword.operator.comparison.css */
+/*                                          ^^^^^ constant.numeric.value.css */
+/*                                            ^ punctuation.separator.css */
+/*                                               ^ punctuation.definition.group.end.css */
+/*                                                 ^ punctuation.definition.block.begin.css */
+/*                                                  ^ punctuation.definition.block.end.css */

@@ -151,6 +151,63 @@ repository:
       - include: '#rendering-intent-descriptor'
       - include: '#src-descriptor'
 
+  at-container:
+    name: meta.at-rule.container.css
+    begin: (@)container\b
+    beginCaptures:
+      '0': {name: keyword.control.at-rule.container.css}
+      '1': {name: punctuation.definition.keyword.css}
+    end: \s*(\})
+    endCaptures:
+      '0': {name: punctuation.definition.block.end.css}
+    patterns:
+    - include: '#comment-block'
+    - begin: (?=[^{;])
+      end: (?=\{)
+      patterns:
+      - include: '#comment-block'
+      - name: meta.parens.support-condition.css
+        begin: \(
+        beginCaptures:
+          '0': {name: punctuation.definition.group.begin.css}
+        end: \)
+        endCaptures:
+          '0': {name: punctuation.definition.group.end.css}
+        patterns:
+        - begin: \baspect-ratio\b
+          beginCaptures:
+            '0': {name: support.type.property-name.css}
+          end: (?=\))
+          patterns:
+          - include: '#comment-block'
+          - include: '#comparison-operator'
+          - include: '#ratio-type'
+        - begin: \bblock-size|height\b
+          beginCaptures:
+            '0': {name: support.type.property-name.css}
+          end: (?=\))
+          patterns:
+          - include: '#comment-block'
+          - include: '#comparison-operator'
+          - include: '#dimension-type'
+        - name: support.type.property-name.css
+          match: \b(block-size|height|inline-size|orientation|width)\b
+        - name: keyword.operator.comparison.css
+          match: <=?|>=?|=
+        - include: '#comment-block'
+        - include: '#dimension-type'
+        - include: '#rule-list-body'
+      - name: keyword.operator.logical.css
+        match: \b(and|or|not)\b
+      - name: variable.parameter.container-name.css
+        match: '{{ident_token}}'
+    - begin: \s*(\{)
+      beginCaptures:
+        '1': {name: punctuation.definition.block.begin.css}
+      end: (?=\})
+      patterns:
+      - include: $self
+
   at-counter-style:
     name: meta.at-rule.counter-style.css
     begin: ((@)counter-style)\s+(?:(disclosure-open|disclosure-closed|disc|decimal|square|circle)|({{ident_token}}))\s*(?=\{|$)
@@ -314,6 +371,7 @@ repository:
     patterns:
     - include: '#at-charset'
     - include: '#at-color-profile'
+    - include: '#at-container'
     - include: '#at-counter-style'
     - include: '#at-import'
     - include: '#at-keyframes'
@@ -444,6 +502,10 @@ repository:
     captures:
       '0': {name: punctuation.definition.comment.css}
 
+  comparison-operator:
+    name: keyword.operator.comparison.css
+    match: <=?|>=?|=
+
   container-name-property:
     name: support.type.property-name.css
     begin: \bcontainer(?:-name)?(?=\s*?:)
@@ -488,7 +550,7 @@ repository:
     name: variable.parameter.custom-property-name.css
     match: '{{dashed_ident}}'
 
-  dimension:
+  dimension-type:
     patterns:
     - include: '#length-type'
     - include: '#percentage-type'
@@ -859,13 +921,16 @@ repository:
     - include: '#comment-block'
     - include: '#important'
 
-  global-property-values:
-    name: support.constant.property-value.css
-    match: \b(?:inherit|initial|revert-layer|revert|unset)\b
+  ratio-type:
+    name: constant.numeric.value.css
+    match: '{{number_token}}\s*(/)\s*({{number_token}})?'
+    captures:
+      '1': {name: punctuation.separator.css}
+      '3': {name: constant.numeric.value.css}
 
   relative-size-type:
-    match: \b(?:larger|smaller)\b
     name: constant.other.relative-size.css
+    match: \b(?:larger|smaller)\b
 
   rendering-intent-descriptor:
     begin: \brendering-intent\b
@@ -921,7 +986,7 @@ repository:
       - include: '#will-change-property'
       - include: $self
     - contentName: meta.property-value.css
-      begin: \b(:)(?:[\s\t]*)
+      begin: \b(:)(?:{{ws}}*)
       beginCaptures:
         '1': {name: punctuation.separator.key-value.css}
         '2': {name: meta.property-value.css}
