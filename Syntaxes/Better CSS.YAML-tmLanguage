@@ -20,21 +20,25 @@ repository:
     match: \b(xx-small|x-small|small|medium|large|x-large|xx-large)\b
 
   accent-color-property:
-    name: support.type.property-name.css
-    begin: \baccent-color(?=\s*?:)
+    begin: \b(accent-color)(?=\s*?:)
+    beginCaptures:
+      '0': {name: meta.property-name.css}
+      '1': {name: support.type.property-name.css}
     end: '{{property_value_terminator}}'
     endCaptures:
       '1': {name: punctuation.terminator.rule.css}
     patterns:
     - contentName: meta.property-value.css
-      begin: (((\+_?)?):)(?=[\s\t]*)
+      begin: (:)(?={{ws}}*)
       beginCaptures:
         '1': {name: punctuation.separator.key-value.css}
       end: (?={{property_value_terminator}})
       patterns:
       - include: '#color-type'
+      - name: support.constant.property-value.css
+        match: auto
       - include: '#global-property-values'
-      - include: '#property-values'
+      - include: '#var-function'
 
   align-content-property:
     name: support.type.property-name.css
