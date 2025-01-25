@@ -57,6 +57,28 @@ repository:
       - include: '#custom-property-name'
       - include: '#property-values'
 
+  alpha-value-type:
+    patterns:
+    - name: constant.numeric.alpha.css
+      match: \b(?:0|0?(?:\.\d+([eE][+-]?\d+)?)|1(?:\.0+)?)\b
+    - include: '#percentage-type'
+
+  angle-percentage-type:
+    patterns:
+    - include: '#angle-type'
+    - include: '#percentage-type'
+
+  angle-type:
+    patterns:
+    - name: constant.numeric.angle.css
+      match: \b({{number_token}})(deg)|(grad)|(rad)|(turn)\b
+      captures:
+        '1': {name: constant.numeric.css}
+        '2': {name: keyword.other.unit.angle.deg.css}
+        '3': {name: keyword.other.unit.angle.grad.css}
+        '4': {name: keyword.other.unit.angle.rad.css}
+        '5': {name: keyword.other.unit.angle.turn.css}
+
   animation-properties:
     patterns:
     - begin: \banimation-timeline\b
@@ -373,12 +395,21 @@ repository:
     - include: '#at-color-profile'
     - include: '#at-container'
     - include: '#at-counter-style'
+    - include: '#at-font-face'
+    - include: '#at-font-feature-values'
+    - include: '#at-font-palette-values'
     - include: '#at-import'
     - include: '#at-keyframes'
     - include: '#at-layer'
+    - include: '#at-media'
     - include: '#at-namespace'
+    - include: '#at-page'
+    - include: '#at-position-try'
     - include: '#at-property'
     - include: '#at-scope'
+    - include: '#at-starting-style'
+    - include: '#at-supports'
+    - include: '#at-view-transition'
 
   at-scope:
     name: meta.at-rule.scope.css
@@ -453,6 +484,11 @@ repository:
       match: \b(inherit|initial|unset|none)\b
     - include: '#filter-functions'
 
+  blend-mode-type:
+    patterns:
+    - name: support.constant.blend-mode.css
+      match: \b(?:normal|multiply|screen|overlay|darken|lighten|color-dodge|color-burn|hard-light|soft-light|difference|exclusion|hue|saturation|color|luminosity)\b
+
   border-properties:
     begin: \b(border((-(bottom|top)-(left|right))|((-(start|end)){2}))?-radius|(border-image(?!-)))\b
     beginCaptures:
@@ -470,25 +506,84 @@ repository:
       - include: '#value-separator'
       - include: '#property-values'
 
+  box-edge-type:
+    patterns:
+    - include: '#visual-box-type'
+    - include: '#layout-box-type'
+    - include: '#paint-box-type'
+    - include: '#coord-box-type'
+    - include: '#geometry-box-type'
+
+  calc-keyword-type:
+    name: constant.numeric.calc.css
+    match: \b(e|pi|-?infinity|NaN)\b
+
+  calc-product-type:
+    patterns:
+    - name: keyword.operator.calc.css
+      match: '[*/]'
+    - include: '#calc-value-type'
+
+  calc-sum-type:
+    patterns:
+    - name: keyword.operator.calc.css
+      match: '[+-]'
+    - include: '#calc-product-type'
+
+  calc-value-type:
+    patterns:
+    - include: '#number-type'
+    - include: '#dimension-type'
+    - include: '#percentage-type'
+    - include: '#calc-keyword-type'
+    - begin: \(
+      beginCaptures:
+        '0': {name: punctuation.definition.group.begin.css}
+      end: \)
+      endCaptures:
+        '0': {name: punctuation.definition.group.end.css}
+      patterns:
+      - include: '#calc-sum-type'
+
   class-selector:
     name: entity.other.attribute-name.class.css
     match: (\.)(?:{{ident_token}})
     captures:
       '1': {name: punctuation.definition.entity.css}
 
-  color-base:
+  color-base-type:
     patterns:
-    - include: '#hex-color'
-    - include: '#color-functions'
+    - include: '#color-hex-type'
+    - include: '#color-function-type'
     - include: '#named-colors'
     - name: constant.other.color.transparent.css
       match: \btransparent\b
 
+  color-function-type:
+    patterns:
+    - include: '#rgb-function'
+    - include: '#hsl-function'
+    - include: '#hsla-function'
+    - include: '#hwb-function'
+    - include: '#lab-function'
+    - include: '#lch-function'
+    - include: '#oklab-function'
+    - include: '#oklch-function'
+    - include: '#color-function'
+
+  color-hex-type:
+    match: (\#)(?:[0-9a-fA-F]{8}|[0-9a-fA-F]{6}|[0-9a-fA-F]{3,4})
+    captures:
+      '0': {name: constant.other.color.rgb-value.css}
+      '1': {name: punctuation.definition.constant.css}
+
   color-type:
     patterns:
-    - include: '#color-base'
-    - include: '#system-color'
-    - include: '#color-rgb'
+    - include: '#color-base-type'
+    - name: support.constant.property-value.css
+      match: \b(currentcolor)\b
+    - include: '#system-color-type'
+    - include: '#rgb-function'
     - include: '#color-hsl'
     - include: '#color-hwb'
     - include: '#color-lab'
@@ -526,6 +621,14 @@ repository:
       - name: support.constant.property-value.css variable.other.constant.container-name.css
         match: '{{dashed_ident}}'
       - include: '#property-values'
+
+  coord-box-type:
+    patterns:
+    - include: '#visual-box-type'
+    - name: meta.property-value.css
+      match: \b(?:(?:fill|stroke|view)-box)\b
+      captures:
+        '1': {name: support.constant.property-value.css}
 
   counter-properties:
     name: meta.property-name.css
@@ -585,19 +688,13 @@ repository:
     endCaptures:
       '1': {name: punctuation.terminator.rule.css}
     patterns:
-    - match: (((\+_?)?):)([\s\t]*)
-      captures:
+    - captures:
         '1': {name: punctuation.separator.key-value.css}
         '4': {name: meta.property-value.css}
-    - name: meta.property-value.css
-      match: \b(inherit|initial|unset|none)\b
+      match: (((\+_?)?):)([\s\t]*)
+    - match: \b(inherit|initial|unset|none)\b
+      name: meta.property-value.css
     - include: '#filter-functions'
-
-  font-properties:
-    patterns:
-    - include: '#font-family-property'
-    - include: '#font-size-adjust-property'
-    - include: '#font-size-property'
 
   font-family-property:
     name: meta.property-name.css
@@ -738,6 +835,45 @@ repository:
         '4': {name: string.unquoted.url.css}
         '6': {name: punctuation.definition.group.end.css}
 
+  geometry-box-type:
+    patterns:
+    - include: '#shape-box-type'
+    - name: meta.property-value.css
+      match: \b(?:(?:fill|stroke|view)-box)\b
+      captures:
+        '1': {name: support.constant.property-value.css}
+
+  global-property-values:
+    name: support.constant.property-value.css
+    match: \b(?:inherit|initial|revert-layer|revert|unset)\b
+
+  hsl-function:
+    patterns:
+    - name: meta.function-call.hsl.css
+      contentName: meta.function-call.arguments.css meta.group.css
+      begin: \b(hsla?)(\()
+      beginCaptures:
+        '1': {name: support.function.hsl.css}
+        '2': {name: punctuation.definition.group.begin.css}
+      end: \)
+      endCaptures:
+        '0': {name: punctuation.definition.group.end.css}
+      patterns:
+        - include: '#comment-block'
+        - match: '/'
+          name: punctuation.separator.css
+        - name: constant.other.color.rgb-value.css
+          match: \bnone\b
+        - include: '#hue-type'
+        - include: '#percentage-type'
+        - include: '#comma-separator'
+        - include: '#alpha-value-type'
+
+  hue-type:
+    patterns:
+    - include: '#number-type'
+    - include: '#angle-type'
+
   id-selector:
     name: entity.other.attribute-name.id.css
     match: (#)(?:{{ident_token}})
@@ -789,6 +925,19 @@ repository:
   integer-type:
     name: constant.numeric.css
     match: (?:[-+]?\d+)
+
+  layout-box-type:
+    patterns:
+    - include: '#visual-box-type'
+    - name: meta.property-value.css
+      match: \b(?:margin-box)\b
+      captures:
+        '1': {name: support.constant.property-value.css}
+
+  length-percentage-type:
+    patterns:
+    - include: '#length-type'
+    - include: '#percentage-type'
 
   length-type:
     name: meta.number.integer.decimal.css
@@ -850,11 +999,6 @@ repository:
       '49': {name: keyword.other.unit.length.pc.css}
       '50': {name: keyword.other.unit.length.pt.css}
 
-  length-percentage-type:
-    patterns:
-    - include: '#length-type'
-    - include: '#percentage-type'
-
   media-condition:
     patterns:
     - name: meta.parens.support-condition.css
@@ -895,6 +1039,14 @@ repository:
   number-type:
     name: constant.numeric.css
     match: '{{number_token}}'
+
+  paint-box-type:
+    patterns:
+    - include: '#visual-box-type'
+    - name: meta.property-value.css
+      match: \b(?:(?:fill|stroke)-box)\b
+      captures:
+        '1': {name: support.constant.property-value.css}
 
   percentage-type:
     name: constant.numeric.css
@@ -950,6 +1102,28 @@ repository:
       - include: '#comment-block'
       - name: support.constant.property-value.css
         match: auto|perceptual|relative-colorimetric|saturation|absolute-colorimetric
+
+  rgb-function:
+    patterns:
+    - name: meta.function-call.rgb.css
+      contentName: meta.function-call.arguments.css meta.group.css
+      begin: \b(rgba?)(\()
+      beginCaptures:
+        '1': {name: support.function.rgb.css}
+        '2': {name: punctuation.definition.group.begin.css}
+      end: \)
+      endCaptures:
+        '0': {name: punctuation.definition.group.end.css}
+      patterns:
+      - include: '#comment-block'
+      - match: '/'
+        name: punctuation.separator.css
+      - name: constant.other.color.rgb-value.css
+        match: \bnone\b
+      - include: '#percentage-type'
+      - include: '#number-type'
+      - include: '#comma-separator'
+      - include: '#alpha-value-type'
 
   rule-list:
     patterns:
@@ -1012,6 +1186,9 @@ repository:
       match: '[+>~]'
     - name: punctuation.separator.selector.css
       match: ','
+
+  shape-box-type:
+    include: '#layout-box-type'
 
   src-descriptor:
     begin: \bsrc\b
@@ -1080,6 +1257,15 @@ repository:
       patterns:
       - include: '#comment-block'
       - include: '#string'
+
+  system-color-type:
+    patterns:
+    - name: support.constant.property-value.css
+      match: \b(?:AccentColor|Canvas|Field|Highlight|Mark|SelectedItem)(?:Text)?\b
+    - name: support.constant.property-value.css
+      match: \b(?:Active|Button|Gray|Link|Visited)Text\b
+    - name: support.constant.property-value.css
+      match: \b(?:Button(?:Border|Face))\b
 
   system-descriptor:
     begin: \bsystem\b
@@ -1152,6 +1338,31 @@ repository:
       - include: '#property-values'
       - name: support.constant.property-value.css
         match: '[\w-]+'
+
+  visual-box-type:
+    name: meta.property-value.css
+    match: \b((?:content|padding|border)-box)\b
+    captures:
+      '1': {name: support.constant.property-value.css}
+
+  width-properties:
+    patterns:
+    - name: meta.property-name.css
+      begin: \bwill-change\b
+      beginCaptures:
+        '0': {name: support.type.property-name.css}
+      end: '{{property_value_terminator}}'
+      endCaptures:
+        '1': {name: punctuation.terminator.rule.css}
+      patterns:
+      - match: (((\+_?)?):)([\s\t]*)
+        captures:
+          '1': {name: punctuation.separator.key-value.css}
+          '4': {name: meta.property-value.css}
+      - name: invalid.illegal.property-value.css
+        match: auto|min-content|max-content|fit-content
+      - name: support.constant.property-value.css
+        match: '{{dashed_ident}}'
 
   will-change-property:
     patterns:
