@@ -35,17 +35,28 @@
     <dict>
       <key>absolute-size-type</key>
       <dict>
-        <key>match</key>
-        <string>\b(xx-small|x-small|small|medium|large|x-large|xx-large)\b</string>
         <key>name</key>
         <string>support.constant.property-value.css</string>
+        <key>match</key>
+        <string>\b(xx-small|x-small|small|medium|large|x-large|xx-large)\b</string>
       </dict>
       <key>accent-color-property</key>
       <dict>
-        <key>name</key>
-        <string>support.type.property-name.css</string>
         <key>begin</key>
-        <string>\baccent-color(?=\s*?:)</string>
+        <string>\b(accent-color)(?=\s*?:)</string>
+        <key>beginCaptures</key>
+        <dict>
+          <key>0</key>
+          <dict>
+            <key>name</key>
+            <string>meta.property-name.css</string>
+          </dict>
+          <key>1</key>
+          <dict>
+            <key>name</key>
+            <string>support.type.property-name.css</string>
+          </dict>
+        </dict>
         <key>end</key>
         <string>\s*(;)|(?=[})])</string>
         <key>endCaptures</key>
@@ -62,7 +73,7 @@
             <key>contentName</key>
             <string>meta.property-value.css</string>
             <key>begin</key>
-            <string>(((\+_?)?):)(?=[\s\t]*)</string>
+            <string>(:)(?=(?:(?:[\s\R]+)*?)*)</string>
             <key>beginCaptures</key>
             <dict>
               <key>1</key>
@@ -80,12 +91,18 @@
                 <string>#color-type</string>
               </dict>
               <dict>
+                <key>name</key>
+                <string>support.constant.property-value.css</string>
+                <key>match</key>
+                <string>auto</string>
+              </dict>
+              <dict>
                 <key>include</key>
                 <string>#global-property-values</string>
               </dict>
               <dict>
                 <key>include</key>
-                <string>#property-values</string>
+                <string>#var-function</string>
               </dict>
             </array>
           </dict>
@@ -139,6 +156,76 @@
                 <string>#property-values</string>
               </dict>
             </array>
+          </dict>
+        </array>
+      </dict>
+      <key>alpha-value-type</key>
+      <dict>
+        <key>patterns</key>
+        <array>
+          <dict>
+            <key>name</key>
+            <string>constant.numeric.alpha.css</string>
+            <key>match</key>
+            <string>\b(?:0|0?(?:\.\d+([eE][+-]?\d+)?)|1(?:\.0+)?)\b</string>
+          </dict>
+          <dict>
+            <key>include</key>
+            <string>#percentage-type</string>
+          </dict>
+        </array>
+      </dict>
+      <key>angle-percentage-type</key>
+      <dict>
+        <key>patterns</key>
+        <array>
+          <dict>
+            <key>include</key>
+            <string>#angle-type</string>
+          </dict>
+          <dict>
+            <key>include</key>
+            <string>#percentage-type</string>
+          </dict>
+        </array>
+      </dict>
+      <key>angle-type</key>
+      <dict>
+        <key>patterns</key>
+        <array>
+          <dict>
+            <key>name</key>
+            <string>constant.numeric.angle.css</string>
+            <key>match</key>
+            <string>\b((?:[-+]?(?:\d+\.\d+|\d+|\.\d+)(?:[eE][-+]?\d+)?))(deg)|(grad)|(rad)|(turn)\b</string>
+            <key>captures</key>
+            <dict>
+              <key>1</key>
+              <dict>
+                <key>name</key>
+                <string>constant.numeric.css</string>
+              </dict>
+              <key>2</key>
+              <dict>
+                <key>name</key>
+                <string>keyword.other.unit.angle.deg.css</string>
+              </dict>
+              <key>3</key>
+              <dict>
+                <key>name</key>
+                <string>keyword.other.unit.angle.grad.css</string>
+              </dict>
+              <key>4</key>
+              <dict>
+                <key>name</key>
+                <string>keyword.other.unit.angle.rad.css</string>
+              </dict>
+              <key>5</key>
+              <dict>
+                <key>name</key>
+                <string>keyword.other.unit.angle.turn.css</string>
+              </dict>
+            </dict>
           </dict>
         </array>
       </dict>
@@ -450,6 +537,198 @@
               <dict>
                 <key>include</key>
                 <string>#src-descriptor</string>
+              </dict>
+            </array>
+          </dict>
+        </array>
+      </dict>
+      <key>at-container</key>
+      <dict>
+        <key>name</key>
+        <string>meta.at-rule.container.css</string>
+        <key>begin</key>
+        <string>(@)container\b</string>
+        <key>beginCaptures</key>
+        <dict>
+          <key>0</key>
+          <dict>
+            <key>name</key>
+            <string>keyword.control.at-rule.container.css</string>
+          </dict>
+          <key>1</key>
+          <dict>
+            <key>name</key>
+            <string>punctuation.definition.keyword.css</string>
+          </dict>
+        </dict>
+        <key>end</key>
+        <string>\s*(\})</string>
+        <key>endCaptures</key>
+        <dict>
+          <key>0</key>
+          <dict>
+            <key>name</key>
+            <string>punctuation.definition.block.end.css</string>
+          </dict>
+        </dict>
+        <key>patterns</key>
+        <array>
+          <dict>
+            <key>include</key>
+            <string>#comment-block</string>
+          </dict>
+          <dict>
+            <key>begin</key>
+            <string>(?=[^{;])</string>
+            <key>end</key>
+            <string>(?=\{)</string>
+            <key>patterns</key>
+            <array>
+              <dict>
+                <key>include</key>
+                <string>#comment-block</string>
+              </dict>
+              <dict>
+                <key>name</key>
+                <string>meta.parens.support-condition.css</string>
+                <key>begin</key>
+                <string>\(</string>
+                <key>beginCaptures</key>
+                <dict>
+                  <key>0</key>
+                  <dict>
+                    <key>name</key>
+                    <string>punctuation.definition.group.begin.css</string>
+                  </dict>
+                </dict>
+                <key>end</key>
+                <string>\)</string>
+                <key>endCaptures</key>
+                <dict>
+                  <key>0</key>
+                  <dict>
+                    <key>name</key>
+                    <string>punctuation.definition.group.end.css</string>
+                  </dict>
+                </dict>
+                <key>patterns</key>
+                <array>
+                  <dict>
+                    <key>begin</key>
+                    <string>\baspect-ratio\b</string>
+                    <key>beginCaptures</key>
+                    <dict>
+                      <key>0</key>
+                      <dict>
+                        <key>name</key>
+                        <string>support.type.property-name.css</string>
+                      </dict>
+                    </dict>
+                    <key>end</key>
+                    <string>(?=\))</string>
+                    <key>patterns</key>
+                    <array>
+                      <dict>
+                        <key>include</key>
+                        <string>#comment-block</string>
+                      </dict>
+                      <dict>
+                        <key>include</key>
+                        <string>#comparison-operator</string>
+                      </dict>
+                      <dict>
+                        <key>include</key>
+                        <string>#ratio-type</string>
+                      </dict>
+                    </array>
+                  </dict>
+                  <dict>
+                    <key>begin</key>
+                    <string>\bblock-size|height\b</string>
+                    <key>beginCaptures</key>
+                    <dict>
+                      <key>0</key>
+                      <dict>
+                        <key>name</key>
+                        <string>support.type.property-name.css</string>
+                      </dict>
+                    </dict>
+                    <key>end</key>
+                    <string>(?=\))</string>
+                    <key>patterns</key>
+                    <array>
+                      <dict>
+                        <key>include</key>
+                        <string>#comment-block</string>
+                      </dict>
+                      <dict>
+                        <key>include</key>
+                        <string>#comparison-operator</string>
+                      </dict>
+                      <dict>
+                        <key>include</key>
+                        <string>#dimension-type</string>
+                      </dict>
+                    </array>
+                  </dict>
+                  <dict>
+                    <key>name</key>
+                    <string>support.type.property-name.css</string>
+                    <key>match</key>
+                    <string>\b(block-size|height|inline-size|orientation|width)\b</string>
+                  </dict>
+                  <dict>
+                    <key>name</key>
+                    <string>keyword.operator.comparison.css</string>
+                    <key>match</key>
+                    <string>&lt;=?|&gt;=?|=</string>
+                  </dict>
+                  <dict>
+                    <key>include</key>
+                    <string>#comment-block</string>
+                  </dict>
+                  <dict>
+                    <key>include</key>
+                    <string>#dimension-type</string>
+                  </dict>
+                  <dict>
+                    <key>include</key>
+                    <string>#rule-list-body</string>
+                  </dict>
+                </array>
+              </dict>
+              <dict>
+                <key>name</key>
+                <string>keyword.operator.logical.css</string>
+                <key>match</key>
+                <string>\b(and|or|not)\b</string>
+              </dict>
+              <dict>
+                <key>name</key>
+                <string>variable.parameter.container-name.css</string>
+                <key>match</key>
+                <string>--|(?:-?(?:(?:[a-zA-Z_]|[\x{00B7}\x{00C0}-\x{00D6}\x{00D8}-\x{00F6}\x{00F8}-\x{037D}\x{037F}-\x{1FFF}\x{200C}\x{200D}\x{203F}\x{2040}\x{2070}-\x{218F}\x{2C00}-\x{2FEF}\x{3001}-\x{D7FF}\x{F900}-\x{FDCF}\x{FDF0}-\x{FFFD}\x{10000}-\x{EFFFF}])|(?:\\(?:\N|[[:^xdigit:]]|[[:xdigit:]]{1,6}[\s\R]))))(?:(?:[-\da-zA-Z_]|[\x{00B7}\x{00C0}-\x{00D6}\x{00D8}-\x{00F6}\x{00F8}-\x{037D}\x{037F}-\x{1FFF}\x{200C}\x{200D}\x{203F}\x{2040}\x{2070}-\x{218F}\x{2C00}-\x{2FEF}\x{3001}-\x{D7FF}\x{F900}-\x{FDCF}\x{FDF0}-\x{FFFD}\x{10000}-\x{EFFFF}])|(?:\\(?:\N|[[:^xdigit:]]|[[:xdigit:]]{1,6}[\s\R])))*</string>
+              </dict>
+            </array>
+          </dict>
+          <dict>
+            <key>begin</key>
+            <string>\s*(\{)</string>
+            <key>beginCaptures</key>
+            <dict>
+              <key>1</key>
+              <dict>
+                <key>name</key>
+                <string>punctuation.definition.block.begin.css</string>
+              </dict>
+            </dict>
+            <key>end</key>
+            <string>(?=\})</string>
+            <key>patterns</key>
+            <array>
+              <dict>
+                <key>include</key>
+                <string>$self</string>
               </dict>
             </array>
           </dict>
@@ -801,10 +1080,6 @@
                     <string>#comment-block</string>
                   </dict>
                   <dict>
-                    <key>name</key>
-                    <string>support.constant.layer-name.css</string>
-                    <key>match</key>
-                    <string>(?'ident'--|(?:-?(?:(?:[a-zA-Z_]|[\x{00B7}\x{00C0}-\x{00D6}\x{00D8}-\x{00F6}\x{00F8}-\x{037D}\x{037F}-\x{1FFF}\x{200C}\x{200D}\x{203F}\x{2040}\x{2070}-\x{218F}\x{2C00}-\x{2FEF}\x{3001}-\x{D7FF}\x{F900}-\x{FDCF}\x{FDF0}-\x{FFFD}\x{10000}-\x{EFFFF}])|(?:\\(?:\N|[[:^xdigit:]]|[[:xdigit:]]{1,6}[\s\R]))))(?:(?:[-\da-zA-Z_]|[\x{00B7}\x{00C0}-\x{00D6}\x{00D8}-\x{00F6}\x{00F8}-\x{037D}\x{037F}-\x{1FFF}\x{200C}\x{200D}\x{203F}\x{2040}\x{2070}-\x{218F}\x{2C00}-\x{2FEF}\x{3001}-\x{D7FF}\x{F900}-\x{FDCF}\x{FDF0}-\x{FFFD}\x{10000}-\x{EFFFF}])|(?:\\(?:\N|[[:^xdigit:]]|[[:xdigit:]]{1,6}[\s\R])))*)(?:(\.)\g'ident')*</string>
                     <key>captures</key>
                     <dict>
                       <key>2</key>
@@ -813,12 +1088,16 @@
                         <string>punctuation.accessor.dot.css</string>
                       </dict>
                     </dict>
+                    <key>match</key>
+                    <string>(?'ident'--|(?:-?(?:(?:[a-zA-Z_]|[\x{00B7}\x{00C0}-\x{00D6}\x{00D8}-\x{00F6}\x{00F8}-\x{037D}\x{037F}-\x{1FFF}\x{200C}\x{200D}\x{203F}\x{2040}\x{2070}-\x{218F}\x{2C00}-\x{2FEF}\x{3001}-\x{D7FF}\x{F900}-\x{FDCF}\x{FDF0}-\x{FFFD}\x{10000}-\x{EFFFF}])|(?:\\(?:\N|[[:^xdigit:]]|[[:xdigit:]]{1,6}[\s\R]))))(?:(?:[-\da-zA-Z_]|[\x{00B7}\x{00C0}-\x{00D6}\x{00D8}-\x{00F6}\x{00F8}-\x{037D}\x{037F}-\x{1FFF}\x{200C}\x{200D}\x{203F}\x{2040}\x{2070}-\x{218F}\x{2C00}-\x{2FEF}\x{3001}-\x{D7FF}\x{F900}-\x{FDCF}\x{FDF0}-\x{FFFD}\x{10000}-\x{EFFFF}])|(?:\\(?:\N|[[:^xdigit:]]|[[:xdigit:]]{1,6}[\s\R])))*)(?:(\.)\g'ident')*</string>
+                    <key>name</key>
+                    <string>support.constant.layer-name.css</string>
                   </dict>
                   <dict>
-                    <key>name</key>
-                    <string>punctuation.separator.css</string>
                     <key>match</key>
                     <string>,</string>
+                    <key>name</key>
+                    <string>punctuation.separator.css</string>
                   </dict>
                 </array>
               </dict>
@@ -1000,7 +1279,23 @@
           </dict>
           <dict>
             <key>include</key>
+            <string>#at-container</string>
+          </dict>
+          <dict>
+            <key>include</key>
             <string>#at-counter-style</string>
+          </dict>
+          <dict>
+            <key>include</key>
+            <string>#at-font-face</string>
+          </dict>
+          <dict>
+            <key>include</key>
+            <string>#at-font-feature-values</string>
+          </dict>
+          <dict>
+            <key>include</key>
+            <string>#at-font-palette-values</string>
           </dict>
           <dict>
             <key>include</key>
@@ -1016,7 +1311,19 @@
           </dict>
           <dict>
             <key>include</key>
+            <string>#at-media</string>
+          </dict>
+          <dict>
+            <key>include</key>
             <string>#at-namespace</string>
+          </dict>
+          <dict>
+            <key>include</key>
+            <string>#at-page</string>
+          </dict>
+          <dict>
+            <key>include</key>
+            <string>#at-position-try</string>
           </dict>
           <dict>
             <key>include</key>
@@ -1025,6 +1332,18 @@
           <dict>
             <key>include</key>
             <string>#at-scope</string>
+          </dict>
+          <dict>
+            <key>include</key>
+            <string>#at-starting-style</string>
+          </dict>
+          <dict>
+            <key>include</key>
+            <string>#at-supports</string>
+          </dict>
+          <dict>
+            <key>include</key>
+            <string>#at-view-transition</string>
           </dict>
         </array>
       </dict>
@@ -1263,6 +1582,18 @@
           </dict>
         </array>
       </dict>
+      <key>blend-mode-type</key>
+      <dict>
+        <key>patterns</key>
+        <array>
+          <dict>
+            <key>name</key>
+            <string>support.constant.blend-mode.css</string>
+            <key>match</key>
+            <string>\b(?:normal|multiply|screen|overlay|darken|lighten|color-dodge|color-burn|hard-light|soft-light|difference|exclusion|hue|saturation|color|luminosity)\b</string>
+          </dict>
+        </array>
+      </dict>
       <key>border-properties</key>
       <dict>
         <key>begin</key>
@@ -1316,6 +1647,122 @@
           </dict>
         </array>
       </dict>
+      <key>box-edge-type</key>
+      <dict>
+        <key>patterns</key>
+        <array>
+          <dict>
+            <key>include</key>
+            <string>#visual-box-type</string>
+          </dict>
+          <dict>
+            <key>include</key>
+            <string>#layout-box-type</string>
+          </dict>
+          <dict>
+            <key>include</key>
+            <string>#paint-box-type</string>
+          </dict>
+          <dict>
+            <key>include</key>
+            <string>#coord-box-type</string>
+          </dict>
+          <dict>
+            <key>include</key>
+            <string>#geometry-box-type</string>
+          </dict>
+        </array>
+      </dict>
+      <key>calc-keyword-type</key>
+      <dict>
+        <key>name</key>
+        <string>constant.numeric.calc.css</string>
+        <key>match</key>
+        <string>\b(e|pi|-?infinity|NaN)\b</string>
+      </dict>
+      <key>calc-product-type</key>
+      <dict>
+        <key>patterns</key>
+        <array>
+          <dict>
+            <key>name</key>
+            <string>keyword.operator.calc.css</string>
+            <key>match</key>
+            <string>[*/]</string>
+          </dict>
+          <dict>
+            <key>include</key>
+            <string>#calc-value-type</string>
+          </dict>
+        </array>
+      </dict>
+      <key>calc-sum-type</key>
+      <dict>
+        <key>patterns</key>
+        <array>
+          <dict>
+            <key>name</key>
+            <string>keyword.operator.calc.css</string>
+            <key>match</key>
+            <string>[+-]</string>
+          </dict>
+          <dict>
+            <key>include</key>
+            <string>#calc-product-type</string>
+          </dict>
+        </array>
+      </dict>
+      <key>calc-value-type</key>
+      <dict>
+        <key>patterns</key>
+        <array>
+          <dict>
+            <key>include</key>
+            <string>#number-type</string>
+          </dict>
+          <dict>
+            <key>include</key>
+            <string>#dimension-type</string>
+          </dict>
+          <dict>
+            <key>include</key>
+            <string>#percentage-type</string>
+          </dict>
+          <dict>
+            <key>include</key>
+            <string>#calc-keyword-type</string>
+          </dict>
+          <dict>
+            <key>begin</key>
+            <string>\(</string>
+            <key>beginCaptures</key>
+            <dict>
+              <key>0</key>
+              <dict>
+                <key>name</key>
+                <string>punctuation.definition.group.begin.css</string>
+              </dict>
+            </dict>
+            <key>end</key>
+            <string>\)</string>
+            <key>endCaptures</key>
+            <dict>
+              <key>0</key>
+              <dict>
+                <key>name</key>
+                <string>punctuation.definition.group.end.css</string>
+              </dict>
+            </dict>
+            <key>patterns</key>
+            <array>
+              <dict>
+                <key>include</key>
+                <string>#calc-sum-type</string>
+              </dict>
+            </array>
+          </dict>
+        </array>
+      </dict>
       <key>class-selector</key>
       <dict>
         <key>name</key>
@@ -1330,6 +1777,134 @@
             <string>punctuation.definition.entity.css</string>
           </dict>
         </dict>
+      </dict>
+      <key>color-base-type</key>
+      <dict>
+        <key>patterns</key>
+        <array>
+          <dict>
+            <key>include</key>
+            <string>#color-hex-type</string>
+          </dict>
+          <dict>
+            <key>include</key>
+            <string>#color-function-type</string>
+          </dict>
+          <dict>
+            <key>include</key>
+            <string>#named-colors</string>
+          </dict>
+          <dict>
+            <key>name</key>
+            <string>constant.other.color.transparent.css</string>
+            <key>match</key>
+            <string>\btransparent\b</string>
+          </dict>
+        </array>
+      </dict>
+      <key>color-function-type</key>
+      <dict>
+        <key>patterns</key>
+        <array>
+          <dict>
+            <key>include</key>
+            <string>#rgb-function</string>
+          </dict>
+          <dict>
+            <key>include</key>
+            <string>#hsl-function</string>
+          </dict>
+          <dict>
+            <key>include</key>
+            <string>#hsla-function</string>
+          </dict>
+          <dict>
+            <key>include</key>
+            <string>#hwb-function</string>
+          </dict>
+          <dict>
+            <key>include</key>
+            <string>#lab-function</string>
+          </dict>
+          <dict>
+            <key>include</key>
+            <string>#lch-function</string>
+          </dict>
+          <dict>
+            <key>include</key>
+            <string>#oklab-function</string>
+          </dict>
+          <dict>
+            <key>include</key>
+            <string>#oklch-function</string>
+          </dict>
+          <dict>
+            <key>include</key>
+            <string>#color-function</string>
+          </dict>
+        </array>
+      </dict>
+      <key>color-hex-type</key>
+      <dict>
+        <key>match</key>
+        <string>(\#)(?:[0-9a-fA-F]{8}|[0-9a-fA-F]{6}|[0-9a-fA-F]{3,4})</string>
+        <key>captures</key>
+        <dict>
+          <key>0</key>
+          <dict>
+            <key>name</key>
+            <string>constant.other.color.rgb-value.css</string>
+          </dict>
+          <key>1</key>
+          <dict>
+            <key>name</key>
+            <string>punctuation.definition.constant.css</string>
+          </dict>
+        </dict>
+      </dict>
+      <key>color-type</key>
+      <dict>
+        <key>patterns</key>
+        <array>
+          <dict>
+            <key>include</key>
+            <string>#color-base-type</string>
+          </dict>
+          <dict>
+            <key>name</key>
+            <string>support.constant.property-value.css</string>
+            <key>match</key>
+            <string>\b(currentcolor)\b</string>
+          </dict>
+          <dict>
+            <key>include</key>
+            <string>#system-color-type</string>
+          </dict>
+          <dict>
+            <key>include</key>
+            <string>#rgb-function</string>
+          </dict>
+          <dict>
+            <key>include</key>
+            <string>#color-hsl</string>
+          </dict>
+          <dict>
+            <key>include</key>
+            <string>#color-hwb</string>
+          </dict>
+          <dict>
+            <key>include</key>
+            <string>#color-lab</string>
+          </dict>
+          <dict>
+            <key>include</key>
+            <string>#color-lch</string>
+          </dict>
+          <dict>
+            <key>include</key>
+            <string>#color-xyz</string>
+          </dict>
+        </array>
       </dict>
       <key>comment-block</key>
       <dict>
@@ -1347,6 +1922,13 @@
             <string>punctuation.definition.comment.css</string>
           </dict>
         </dict>
+      </dict>
+      <key>comparison-operator</key>
+      <dict>
+        <key>name</key>
+        <string>keyword.operator.comparison.css</string>
+        <key>match</key>
+        <string>&lt;=?|&gt;=?|=</string>
       </dict>
       <key>container-name-property</key>
       <dict>
@@ -1408,6 +1990,30 @@
                 <string>#property-values</string>
               </dict>
             </array>
+          </dict>
+        </array>
+      </dict>
+      <key>coord-box-type</key>
+      <dict>
+        <key>patterns</key>
+        <array>
+          <dict>
+            <key>include</key>
+            <string>#visual-box-type</string>
+          </dict>
+          <dict>
+            <key>name</key>
+            <string>meta.property-value.css</string>
+            <key>match</key>
+            <string>\b(?:(?:fill|stroke|view)-box)\b</string>
+            <key>captures</key>
+            <dict>
+              <key>1</key>
+              <dict>
+                <key>name</key>
+                <string>support.constant.property-value.css</string>
+              </dict>
+            </dict>
           </dict>
         </array>
       </dict>
@@ -1479,7 +2085,7 @@
         <key>match</key>
         <string>--(?:(?:[a-zA-Z_\d-]|[\x{00B7}\x{00C0}-\x{00D6}\x{00D8}-\x{00F6}\x{00F8}-\x{037D}\x{037F}-\x{1FFF}\x{200C}\x{200D}\x{203F}\x{2040}\x{2070}-\x{218F}\x{2C00}-\x{2FEF}\x{3001}-\x{D7FF}\x{F900}-\x{FDCF}\x{FDF0}-\x{FFFD}\x{10000}-\x{EFFFF}])|(?:\\(?:\N|[[:^xdigit:]]|[[:xdigit:]]{1,6}[\s\R])))*</string>
       </dict>
-      <key>dimension</key>
+      <key>dimension-type</key>
       <dict>
         <key>patterns</key>
         <array>
@@ -1501,7 +2107,20 @@
             <key>name</key>
             <string>entity.name.tag.css</string>
             <key>match</key>
-            <string>(?x)\b( acronym | big | center | dir | font | frameset | frame | marquee | nobr | noembed | noframes | param | plaintext | rb | rtc | strike | tt | xmp )\b | \b( abbr | address | area | article | aside | audio | a | base | bdi | bdo | blockquote | body | br | button | b | canvas | caption | cite | code | colgroup | col | datalist | data | dd | del | details | dfn | dialog | div | dl | dt | embed | em | fencedframe | fieldset | figcaption | figure | footer | form | h1 | h2 | h3 | h4 | h5 | h6 | header | head | hgroup | hr | html | iframe | img | input | ins | i | kbd | label | legend | link | li | main | map | mark | menu | meta | meter | nav | noscript | object | ol | optgroup | option | output | picture | portal | pre | progress | p | q | rp | rt | ruby | samp | script | search | section | select | slot | small | source | span | strong | style | sub | summary | sup | s | table | tbody | td | template | textarea | tfoot | thead | th | time | title | track | tr | ul | u | var | video | wbr )\b</string>
+            <string>(?x)\b( acronym | big | center | dir | font | frameset | frame | marquee
+| nobr | noembed | noframes | param | plaintext | rb | rtc | strike | tt |
+xmp )\b | \b( abbr | address | area | article | aside | audio | a | base |
+bdi | bdo | blockquote | body | br | button | b | canvas | caption | cite
+| code | colgroup | col | datalist | data | dd | del | details | dfn | dialog
+| div | dl | dt | embed | em | fencedframe | fieldset | figcaption | figure
+| footer | form | h1 | h2 | h3 | h4 | h5 | h6 | header | head | hgroup | hr
+| html | iframe | img | input | ins | i | kbd | label | legend | link | li
+| main | map | mark | menu | meta | meter | nav | noscript | object | ol |
+optgroup | option | output | picture | portal | pre | progress | p | q | rp
+| rt | ruby | samp | script | search | section | select | slot | small | source
+| span | strong | style | sub | summary | sup | s | table | tbody | td | template
+| textarea | tfoot | thead | th | time | title | track | tr | ul | u | var
+| video | wbr )\b</string>
             <key>captures</key>
             <dict>
               <key>1</key>
@@ -1568,24 +2187,6 @@
           </dict>
         </array>
       </dict>
-      <key>font-properties</key>
-      <dict>
-        <key>patterns</key>
-        <array>
-          <dict>
-            <key>include</key>
-            <string>#font-family-property</string>
-          </dict>
-          <dict>
-            <key>include</key>
-            <string>#font-size-adjust-property</string>
-          </dict>
-          <dict>
-            <key>include</key>
-            <string>#font-size-property</string>
-          </dict>
-        </array>
-      </dict>
       <key>font-family-property</key>
       <dict>
         <key>name</key>
@@ -1647,6 +2248,24 @@
           </dict>
         </array>
       </dict>
+      <key>font-properties</key>
+      <dict>
+        <key>patterns</key>
+        <array>
+          <dict>
+            <key>include</key>
+            <string>#font-family-property</string>
+          </dict>
+          <dict>
+            <key>include</key>
+            <string>#font-size-adjust-property</string>
+          </dict>
+          <dict>
+            <key>include</key>
+            <string>#font-size-property</string>
+          </dict>
+        </array>
+      </dict>
       <key>font-size-adjust-property</key>
       <dict>
         <key>name</key>
@@ -1674,6 +2293,8 @@
         <key>patterns</key>
         <array>
           <dict>
+            <key>contentName</key>
+            <string>meta.property-value.css</string>
             <key>begin</key>
             <string>(:)(?=\s*)</string>
             <key>beginCaptures</key>
@@ -1686,15 +2307,13 @@
             </dict>
             <key>end</key>
             <string>(?=\s*(;)|(?=[})]))</string>
-            <key>contentName</key>
-            <string>meta.property-value.css</string>
             <key>patterns</key>
             <array>
               <dict>
-                <key>match</key>
-                <string>\b(none|ex-height|cap-height|ch-width|ic-width|ic-height|from-font)\s*?\b</string>
                 <key>name</key>
                 <string>support.constant.property-value.css</string>
+                <key>match</key>
+                <string>\b(none|ex-height|cap-height|ch-width|ic-width|ic-height|from-font)\s*?\b</string>
               </dict>
               <dict>
                 <key>include</key>
@@ -1742,6 +2361,8 @@
         <key>patterns</key>
         <array>
           <dict>
+            <key>contentName</key>
+            <string>meta.property-value.css</string>
             <key>begin</key>
             <string>(:)(?=\s*)</string>
             <key>beginCaptures</key>
@@ -1754,8 +2375,6 @@
             </dict>
             <key>end</key>
             <string>(?=\s*(;)|(?=[})]))</string>
-            <key>contentName</key>
-            <string>meta.property-value.css</string>
             <key>patterns</key>
             <array>
               <dict>
@@ -2012,6 +2631,123 @@
           </dict>
         </array>
       </dict>
+      <key>geometry-box-type</key>
+      <dict>
+        <key>patterns</key>
+        <array>
+          <dict>
+            <key>include</key>
+            <string>#shape-box-type</string>
+          </dict>
+          <dict>
+            <key>name</key>
+            <string>meta.property-value.css</string>
+            <key>match</key>
+            <string>\b(?:(?:fill|stroke|view)-box)\b</string>
+            <key>captures</key>
+            <dict>
+              <key>1</key>
+              <dict>
+                <key>name</key>
+                <string>support.constant.property-value.css</string>
+              </dict>
+            </dict>
+          </dict>
+        </array>
+      </dict>
+      <key>global-property-values</key>
+      <dict>
+        <key>name</key>
+        <string>support.constant.property-value.css</string>
+        <key>match</key>
+        <string>\b(?:inherit|initial|revert-layer|revert|unset)\b</string>
+      </dict>
+      <key>hsl-function</key>
+      <dict>
+        <key>patterns</key>
+        <array>
+          <dict>
+            <key>name</key>
+            <string>meta.function-call.hsl.css</string>
+            <key>contentName</key>
+            <string>meta.function-call.arguments.css meta.group.css</string>
+            <key>begin</key>
+            <string>\b(hsla?)(\()</string>
+            <key>beginCaptures</key>
+            <dict>
+              <key>1</key>
+              <dict>
+                <key>name</key>
+                <string>support.function.hsl.css</string>
+              </dict>
+              <key>2</key>
+              <dict>
+                <key>name</key>
+                <string>punctuation.definition.group.begin.css</string>
+              </dict>
+            </dict>
+            <key>end</key>
+            <string>\)</string>
+            <key>endCaptures</key>
+            <dict>
+              <key>0</key>
+              <dict>
+                <key>name</key>
+                <string>punctuation.definition.group.end.css</string>
+              </dict>
+            </dict>
+            <key>patterns</key>
+            <array>
+              <dict>
+                <key>include</key>
+                <string>#comment-block</string>
+              </dict>
+              <dict>
+                <key>match</key>
+                <string>/</string>
+                <key>name</key>
+                <string>punctuation.separator.css</string>
+              </dict>
+              <dict>
+                <key>name</key>
+                <string>constant.other.color.rgb-value.css</string>
+                <key>match</key>
+                <string>\bnone\b</string>
+              </dict>
+              <dict>
+                <key>include</key>
+                <string>#hue-type</string>
+              </dict>
+              <dict>
+                <key>include</key>
+                <string>#percentage-type</string>
+              </dict>
+              <dict>
+                <key>include</key>
+                <string>#comma-separator</string>
+              </dict>
+              <dict>
+                <key>include</key>
+                <string>#alpha-value-type</string>
+              </dict>
+            </array>
+          </dict>
+        </array>
+      </dict>
+      <key>hue-type</key>
+      <dict>
+        <key>patterns</key>
+        <array>
+          <dict>
+            <key>include</key>
+            <string>#number-type</string>
+          </dict>
+          <dict>
+            <key>include</key>
+            <string>#angle-type</string>
+          </dict>
+        </array>
+      </dict>
       <key>id-selector</key>
       <dict>
         <key>name</key>
@@ -2154,74 +2890,50 @@
           </dict>
         </array>
       </dict>
-      <key>color-type</key>
-      <dict>
-        <key>patterns</key>
-        <array>
-          <dict>
-            <key>include</key>
-            <string>#color-base</string>
-          </dict>
-          <dict>
-            <key>include</key>
-            <string>#system-color</string>
-          </dict>
-          <dict>
-            <key>include</key>
-            <string>#color-rgb</string>
-          </dict>
-          <dict>
-            <key>include</key>
-            <string>#color-hsl</string>
-          </dict>
-          <dict>
-            <key>include</key>
-            <string>#color-hwb</string>
-          </dict>
-          <dict>
-            <key>include</key>
-            <string>#color-lab</string>
-          </dict>
-          <dict>
-            <key>include</key>
-            <string>#color-lch</string>
-          </dict>
-          <dict>
-            <key>include</key>
-            <string>#color-xyz</string>
-          </dict>
-        </array>
-      </dict>
-      <key>color-base</key>
-      <dict>
-        <key>patterns</key>
-        <array>
-          <dict>
-            <key>include</key>
-            <string>#hex-color</string>
-          </dict>
-          <dict>
-            <key>include</key>
-            <string>#color-functions</string>
-          </dict>
-          <dict>
-            <key>include</key>
-            <string>#named-colors</string>
-          </dict>
-          <dict>
-            <key>match</key>
-            <string>\btransparent\b</string>
-            <key>name</key>
-            <string>constant.other.color.transparent.css</string>
-          </dict>
-        </array>
-      </dict>
       <key>integer-type</key>
       <dict>
         <key>name</key>
         <string>constant.numeric.css</string>
         <key>match</key>
         <string>(?:[-+]?\d+)</string>
+      </dict>
+      <key>layout-box-type</key>
+      <dict>
+        <key>patterns</key>
+        <array>
+          <dict>
+            <key>include</key>
+            <string>#visual-box-type</string>
+          </dict>
+          <dict>
+            <key>name</key>
+            <string>meta.property-value.css</string>
+            <key>match</key>
+            <string>\b(?:margin-box)\b</string>
+            <key>captures</key>
+            <dict>
+              <key>1</key>
+              <dict>
+                <key>name</key>
+                <string>support.constant.property-value.css</string>
+              </dict>
+            </dict>
+          </dict>
+        </array>
+      </dict>
+      <key>length-percentage-type</key>
+      <dict>
+        <key>patterns</key>
+        <array>
+          <dict>
+            <key>include</key>
+            <string>#length-type</string>
+          </dict>
+          <dict>
+            <key>include</key>
+            <string>#percentage-type</string>
+          </dict>
+        </array>
       </dict>
       <key>length-type</key>
       <dict>
@@ -2483,20 +3195,6 @@
           </dict>
         </dict>
       </dict>
-      <key>length-percentage-type</key>
-      <dict>
-        <key>patterns</key>
-        <array>
-          <dict>
-            <key>include</key>
-            <string>#length-type</string>
-          </dict>
-          <dict>
-            <key>include</key>
-            <string>#percentage-type</string>
-          </dict>
-        </array>
-      </dict>
       <key>media-condition</key>
       <dict>
         <key>patterns</key>
@@ -2619,6 +3317,30 @@
         <key>match</key>
         <string>(?:[-+]?(?:\d+\.\d+|\d+|\.\d+)(?:[eE][-+]?\d+)?)</string>
       </dict>
+      <key>paint-box-type</key>
+      <dict>
+        <key>patterns</key>
+        <array>
+          <dict>
+            <key>include</key>
+            <string>#visual-box-type</string>
+          </dict>
+          <dict>
+            <key>name</key>
+            <string>meta.property-value.css</string>
+            <key>match</key>
+            <string>\b(?:(?:fill|stroke)-box)\b</string>
+            <key>captures</key>
+            <dict>
+              <key>1</key>
+              <dict>
+                <key>name</key>
+                <string>support.constant.property-value.css</string>
+              </dict>
+            </dict>
+          </dict>
+        </array>
+      </dict>
       <key>percentage-type</key>
       <dict>
         <key>name</key>
@@ -2691,19 +3413,32 @@
           </dict>
         </array>
       </dict>
-      <key>global-property-values</key>
+      <key>ratio-type</key>
       <dict>
         <key>name</key>
-        <string>support.constant.property-value.css</string>
+        <string>constant.numeric.value.css</string>
         <key>match</key>
-        <string>\b(?:inherit|initial|revert-layer|revert|unset)\b</string>
+        <string>(?:[-+]?(?:\d+\.\d+|\d+|\.\d+)(?:[eE][-+]?\d+)?)\s*(/)\s*((?:[-+]?(?:\d+\.\d+|\d+|\.\d+)(?:[eE][-+]?\d+)?))?</string>
+        <key>captures</key>
+        <dict>
+          <key>1</key>
+          <dict>
+            <key>name</key>
+            <string>punctuation.separator.css</string>
+          </dict>
+          <key>3</key>
+          <dict>
+            <key>name</key>
+            <string>constant.numeric.value.css</string>
+          </dict>
+        </dict>
       </dict>
       <key>relative-size-type</key>
       <dict>
-        <key>match</key>
-        <string>\b(?:larger|smaller)\b</string>
         <key>name</key>
         <string>constant.other.relative-size.css</string>
+        <key>match</key>
+        <string>\b(?:larger|smaller)\b</string>
       </dict>
       <key>rendering-intent-descriptor</key>
       <dict>
@@ -2764,6 +3499,78 @@
           </dict>
         </array>
       </dict>
+      <key>rgb-function</key>
+      <dict>
+        <key>patterns</key>
+        <array>
+          <dict>
+            <key>name</key>
+            <string>meta.function-call.rgb.css</string>
+            <key>contentName</key>
+            <string>meta.function-call.arguments.css meta.group.css</string>
+            <key>begin</key>
+            <string>\b(rgba?)(\()</string>
+            <key>beginCaptures</key>
+            <dict>
+              <key>1</key>
+              <dict>
+                <key>name</key>
+                <string>support.function.rgb.css</string>
+              </dict>
+              <key>2</key>
+              <dict>
+                <key>name</key>
+                <string>punctuation.definition.group.begin.css</string>
+              </dict>
+            </dict>
+            <key>end</key>
+            <string>\)</string>
+            <key>endCaptures</key>
+            <dict>
+              <key>0</key>
+              <dict>
+                <key>name</key>
+                <string>punctuation.definition.group.end.css</string>
+              </dict>
+            </dict>
+            <key>patterns</key>
+            <array>
+              <dict>
+                <key>include</key>
+                <string>#comment-block</string>
+              </dict>
+              <dict>
+                <key>match</key>
+                <string>/</string>
+                <key>name</key>
+                <string>punctuation.separator.css</string>
+              </dict>
+              <dict>
+                <key>name</key>
+                <string>constant.other.color.rgb-value.css</string>
+                <key>match</key>
+                <string>\bnone\b</string>
+              </dict>
+              <dict>
+                <key>include</key>
+                <string>#percentage-type</string>
+              </dict>
+              <dict>
+                <key>include</key>
+                <string>#number-type</string>
+              </dict>
+              <dict>
+                <key>include</key>
+                <string>#comma-separator</string>
+              </dict>
+              <dict>
+                <key>include</key>
+                <string>#alpha-value-type</string>
+              </dict>
+            </array>
+          </dict>
+        </array>
+      </dict>
       <key>rule-list</key>
       <dict>
         <key>patterns</key>
@@ -2771,6 +3578,8 @@
           <dict>
             <key>name</key>
             <string>meta.property-list.css</string>
+            <key>contentName</key>
+            <string>meta.block.css</string>
             <key>begin</key>
             <string>\{</string>
             <key>beginCaptures</key>
@@ -2783,8 +3592,6 @@
             </dict>
             <key>end</key>
             <string>(?=\s*\})</string>
-            <key>contentName</key>
-            <string>meta.block.css</string>
             <key>patterns</key>
             <array>
               <dict>
@@ -2884,7 +3691,7 @@
             <key>contentName</key>
             <string>meta.property-value.css</string>
             <key>begin</key>
-            <string>\b(:)(?:[\s\t]*)</string>
+            <string>\b(:)(?:(?:(?:[\s\R]+)*?)*)</string>
             <key>beginCaptures</key>
             <dict>
               <key>1</key>
@@ -2976,6 +3783,11 @@
             <string>,</string>
           </dict>
         </array>
+      </dict>
+      <key>shape-box-type</key>
+      <dict>
+        <key>include</key>
+        <string>#layout-box-type</string>
       </dict>
       <key>src-descriptor</key>
       <dict>
@@ -3191,6 +4003,30 @@
                 <string>#string</string>
               </dict>
             </array>
+          </dict>
+        </array>
+      </dict>
+      <key>system-color-type</key>
+      <dict>
+        <key>patterns</key>
+        <array>
+          <dict>
+            <key>name</key>
+            <string>support.constant.property-value.css</string>
+            <key>match</key>
+            <string>\b(?:AccentColor|Canvas|Field|Highlight|Mark|SelectedItem)(?:Text)?\b</string>
+          </dict>
+          <dict>
+            <key>name</key>
+            <string>support.constant.property-value.css</string>
+            <key>match</key>
+            <string>\b(?:Active|Button|Gray|Link|Visited)Text\b</string>
+          </dict>
+          <dict>
+            <key>name</key>
+            <string>support.constant.property-value.css</string>
+            <key>match</key>
+            <string>\b(?:Button(?:Border|Face))\b</string>
           </dict>
         </array>
       </dict>
@@ -3412,6 +4248,83 @@
                 <string>support.constant.property-value.css</string>
                 <key>match</key>
                 <string>[\w-]+</string>
+              </dict>
+            </array>
+          </dict>
+        </array>
+      </dict>
+      <key>visual-box-type</key>
+      <dict>
+        <key>name</key>
+        <string>meta.property-value.css</string>
+        <key>match</key>
+        <string>\b((?:content|padding|border)-box)\b</string>
+        <key>captures</key>
+        <dict>
+          <key>1</key>
+          <dict>
+            <key>name</key>
+            <string>support.constant.property-value.css</string>
+          </dict>
+        </dict>
+      </dict>
+      <key>width-properties</key>
+      <dict>
+        <key>patterns</key>
+        <array>
+          <dict>
+            <key>name</key>
+            <string>meta.property-name.css</string>
+            <key>begin</key>
+            <string>\bwill-change\b</string>
+            <key>beginCaptures</key>
+            <dict>
+              <key>0</key>
+              <dict>
+                <key>name</key>
+                <string>support.type.property-name.css</string>
+              </dict>
+            </dict>
+            <key>end</key>
+            <string>\s*(;)|(?=[})])</string>
+            <key>endCaptures</key>
+            <dict>
+              <key>1</key>
+              <dict>
+                <key>name</key>
+                <string>punctuation.terminator.rule.css</string>
+              </dict>
+            </dict>
+            <key>patterns</key>
+            <array>
+              <dict>
+                <key>match</key>
+                <string>(((\+_?)?):)([\s\t]*)</string>
+                <key>captures</key>
+                <dict>
+                  <key>1</key>
+                  <dict>
+                    <key>name</key>
+                    <string>punctuation.separator.key-value.css</string>
+                  </dict>
+                  <key>4</key>
+                  <dict>
+                    <key>name</key>
+                    <string>meta.property-value.css</string>
+                  </dict>
+                </dict>
+              </dict>
+              <dict>
+                <key>name</key>
+                <string>invalid.illegal.property-value.css</string>
+                <key>match</key>
+                <string>auto|min-content|max-content|fit-content</string>
+              </dict>
+              <dict>
+                <key>name</key>
+                <string>support.constant.property-value.css</string>
+                <key>match</key>
+                <string>--(?:(?:[a-zA-Z_\d-]|[\x{00B7}\x{00C0}-\x{00D6}\x{00D8}-\x{00F6}\x{00F8}-\x{037D}\x{037F}-\x{1FFF}\x{200C}\x{200D}\x{203F}\x{2040}\x{2070}-\x{218F}\x{2C00}-\x{2FEF}\x{3001}-\x{D7FF}\x{F900}-\x{FDCF}\x{FDF0}-\x{FFFD}\x{10000}-\x{EFFFF}])|(?:\\(?:\N|[[:^xdigit:]]|[[:xdigit:]]{1,6}[\s\R])))*</string>
               </dict>
             </array>
           </dict>
