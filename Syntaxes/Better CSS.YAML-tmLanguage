@@ -804,6 +804,26 @@ repository:
         match: '{{dashed_ident}}'
       - include: '#property-values'
 
+  content-visibility-property:
+    name: meta.property-name.css
+    begin: \bcontent-visibility\b
+    beginCaptures:
+      '0': {name: support.type.property-name.css}
+    end: '{{property_value_terminator}}'
+    endCaptures:
+      '1': {name: punctuation.terminator.rule.css}
+    patterns:
+    - include: '#comment-block'
+    - contentName: meta.property-value.css
+      begin: '(:)(?={{ws}})'
+      beginCaptures:
+        '1': {name: punctuation.separator.key-value.css}
+      end: (?={{property_value_terminator}})
+      patterns:
+      - name: support.constant.property-value.css
+        match: auto|visible|hidden
+      - include: '#global-property-values'
+
   coord-box-type:
     patterns:
     - include: '#visual-box-type'
@@ -1347,10 +1367,12 @@ repository:
       - include: '#column-span-property'
       - include: '#contain-property'
       - include: '#container-name-property'
+      - include: '#content-visibility-property'
       - include: '#counter-properties'
       - include: '#filter-property'
       - include: '#font-properties'
       - include: '#transition-properties'
+      - include: '#visibility-property'
       - include: '#will-change-property'
       - include: $self
     - contentName: meta.property-value.css
