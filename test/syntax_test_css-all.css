@@ -37,10 +37,3 @@
 /*       ^^^^^^^^^^^^ support.constant.property-value.css*/
 /*                   ^ punctuation.terminator.rule.css*/
 }
-
-    a {}
-/*  ^^ meta.selector.css */
-/*  ^ entity.name.tag.html.css */
-/*    ^^ meta.property-list.css meta.block.css */
-/*    ^ punctuation.section.block.begin.css */
-/*     ^ punctuation.section.block.end.css */

@@ -63,6 +63,25 @@ repository:
       match: \b(?:0|0?(?:\.\d+([eE][+-]?\d+)?)|1(?:\.0+)?)\b
     - include: '#percentage-type'
 
+  all-property:
+    patterns:
+    - begin: \ball\b
+      beginCaptures:
+        '0': {name: support.type.property-name.css}
+      end: '{{property_value_terminator}}'
+      endCaptures:
+        '1': {name: punctuation.terminator.rule.css}
+      patterns:
+      - contentName: meta.property-value.css
+        begin: (((\+_?)?):)(?=[\s\t]*)
+        beginCaptures:
+          '1': {name: punctuation.separator.key-value.css}
+        end: (?={{property_value_terminator}})
+        patterns:
+        - include: '#comment-block'
+        - include: '#global-property-values'
+        - include: '#var-function'
+
   angle-percentage-type:
     patterns:
     - include: '#angle-type'
@@ -1146,6 +1165,7 @@ repository:
     - begin: (?=[-a-z])
       end: $|(?![-a-z])
       patterns:
+      - include: '#all-property'
       - include: '#custom-property-name'
       - include: '#vendor-prefixed-property'
       - include: '#accent-color-property'
