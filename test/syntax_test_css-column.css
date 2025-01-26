@@ -110,3 +110,76 @@
 /*               ^^^^^ support.constant.property-value.css */
 /*                    ^ punctuation.terminator.rule.css */
 }
+
+.column-span {
+    column-span: none;
+/*^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*             ^ punctuation.separator.key-value.css */
+/*              ^^^^^ meta.property-value.css */
+/*               ^^^^ support.constant.property-value.css */
+/*                   ^ punctuation.terminator.rule.css */
+    column-span: all;
+/*^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*             ^ punctuation.separator.key-value.css */
+/*              ^^^^ meta.property-value.css */
+/*               ^^^ support.constant.property-value.css */
+/*                  ^ punctuation.terminator.rule.css */
+    column-span: 1;
+/*^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*             ^ punctuation.separator.key-value.css */
+/*              ^^ meta.property-value.css */
+/*               ^ meta.number.integer.decimal.css constant.numeric.value.css */
+/*                ^ punctuation.terminator.rule.css */
+    column-span: 2;
+/*^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*             ^ punctuation.separator.key-value.css */
+/*              ^^ meta.property-value.css */
+/*               ^ meta.number.integer.decimal.css constant.numeric.value.css */
+/*                ^ punctuation.terminator.rule.css */
+    column-span: 3;
+/*^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*             ^ punctuation.separator.key-value.css */
+/*              ^^ meta.property-value.css */
+/*               ^ meta.number.integer.decimal.css constant.numeric.value.css */
+/*                ^ punctuation.terminator.rule.css */
+    column-span: inherit;
+/*^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*             ^ punctuation.separator.key-value.css */
+/*              ^^^^^^^^ meta.property-value.css */
+/*               ^^^^^^^ support.constant.property-value.css */
+/*                      ^ punctuation.terminator.rule.css */
+    column-span: initial;
+/*^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*             ^ punctuation.separator.key-value.css */
+/*              ^^^^^^^^ meta.property-value.css */
+/*               ^^^^^^^ support.constant.property-value.css */
+/*                      ^ punctuation.terminator.rule.css */
+    column-span: revert;
+/*^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*             ^ punctuation.separator.key-value.css */
+/*              ^^^^^^^ meta.property-value.css */
+/*               ^^^^^^ support.constant.property-value.css */
+/*                     ^ punctuation.terminator.rule.css */
+    column-span: revert-layer;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*             ^ punctuation.separator.key-value.css */
+/*              ^^^^^^^^^^^^^ meta.property-value.css */
+/*               ^^^^^^^^^^^^ support.constant.property-value.css */
+/*                           ^ punctuation.terminator.rule.css */
+    column-span: unset;
+/*^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*             ^ punctuation.separator.key-value.css */
+/*              ^^^^^^ meta.property-value.css */
+/*               ^^^^^ support.constant.property-value.css */
+/*                    ^ punctuation.terminator.rule.css */
+}
