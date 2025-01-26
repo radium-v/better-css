@@ -763,6 +763,26 @@ repository:
     name: keyword.operator.comparison.css
     match: <=?|>=?|=
 
+  contain-property:
+    name: meta.property-name.css
+    begin: \bcontain\b
+    beginCaptures:
+      '0': {name: support.type.property-name.css}
+    end: '{{property_value_terminator}}'
+    endCaptures:
+      '1': {name: punctuation.terminator.rule.css}
+    patterns:
+    - include: '#comment-block'
+    - contentName: meta.property-value.css
+      begin: '(:)(?={{ws}})'
+      beginCaptures:
+        '1': {name: punctuation.separator.key-value.css}
+      end: (?={{property_value_terminator}})
+      patterns:
+      - name: support.constant.property-value.css
+        match: none|strict|content|(?:inline-)?size|layout|style|paint
+      - include: '#global-property-values'
+
   container-name-property:
     name: support.type.property-name.css
     begin: \bcontainer(?:-name)?(?=\s*?:)
@@ -1325,6 +1345,7 @@ repository:
       - include: '#column-count-property'
       - include: '#column-fill-property'
       - include: '#column-span-property'
+      - include: '#contain-property'
       - include: '#container-name-property'
       - include: '#counter-properties'
       - include: '#filter-property'
