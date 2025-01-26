@@ -51,3 +51,62 @@
 /*                ^^^^^ support.constant.property-value.css */
 /*                     ^ punctuation.terminator.rule.css */
 }
+
+.column-fill {
+    column-fill: auto;
+/*^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*             ^ punctuation.separator.key-value.css */
+/*              ^^^^^ meta.property-value.css */
+/*               ^^^^ support.constant.property-value.css */
+/*                   ^ punctuation.terminator.rule.css */
+    column-fill: balance;
+/*^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*             ^ punctuation.separator.key-value.css */
+/*              ^^^^^^^^ meta.property-value.css */
+/*               ^^^^^^^ support.constant.property-value.css */
+/*                      ^ punctuation.terminator.rule.css */
+    column-fill: balance-all;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*             ^ punctuation.separator.key-value.css */
+/*              ^^^^^^^^^^^^ meta.property-value.css */
+/*               ^^^^^^^^^^^ support.constant.property-value.css */
+/*                          ^ punctuation.terminator.rule.css */
+    column-fill: inherit;
+/*^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*             ^ punctuation.separator.key-value.css */
+/*              ^^^^^^^^ meta.property-value.css */
+/*               ^^^^^^^ support.constant.property-value.css */
+/*                      ^ punctuation.terminator.rule.css */
+    column-fill: initial;
+/*^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*             ^ punctuation.separator.key-value.css */
+/*              ^^^^^^^^ meta.property-value.css */
+/*               ^^^^^^^ support.constant.property-value.css */
+/*                      ^ punctuation.terminator.rule.css */
+    column-fill: revert;
+/*^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*             ^ punctuation.separator.key-value.css */
+/*              ^^^^^^^ meta.property-value.css */
+/*               ^^^^^^ support.constant.property-value.css */
+/*                     ^ punctuation.terminator.rule.css */
+    column-fill: revert-layer;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*             ^ punctuation.separator.key-value.css */
+/*              ^^^^^^^^^^^^^ meta.property-value.css */
+/*               ^^^^^^^^^^^^ support.constant.property-value.css */
+/*                           ^ punctuation.terminator.rule.css */
+    column-fill: unset;
+/*^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*             ^ punctuation.separator.key-value.css */
+/*              ^^^^^^ meta.property-value.css */
+/*               ^^^^^ support.constant.property-value.css */
+/*                    ^ punctuation.terminator.rule.css */
+}
