@@ -1376,6 +1376,7 @@ repository:
       - include: '#font-properties'
       - include: '#transition-properties'
       - include: '#visibility-property'
+      - include: '#white-space-collapse-property'
       - include: '#widows-property'
       - include: '#will-change-property'
       - include: '#writing-mode-property'
@@ -1625,6 +1626,26 @@ repository:
       - name: support.constant.property-value.css
         match: '{{dashed_ident}}'
       - include: '#arbitrary-repetition'
+
+  white-space-collapse-property:
+    name: meta.property-name.css
+    begin: \bwhite-space-collapse\b
+    beginCaptures:
+      '0': {name: support.type.property-name.css}
+    end: '{{property_value_terminator}}'
+    endCaptures:
+      '1': {name: punctuation.terminator.rule.css}
+    patterns:
+    - include: '#comment-block'
+    - contentName: meta.property-value.css
+      begin: (:)(?={{ws}})
+      beginCaptures:
+        '1': {name: punctuation.separator.key-value.css}
+      end: (?={{property_value_terminator}})
+      patterns:
+      - name: support.constant.property-value.css
+        match: collapse|discard|preserve-breaks|preserve-spaces|preserve|break-spaces
+      - include: '#global-property-values'
 
   widows-property:
     name: meta.property-name.css
