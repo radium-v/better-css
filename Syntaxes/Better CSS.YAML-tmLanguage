@@ -659,7 +659,7 @@ repository:
 
   color-interpolation-property:
     name: meta.property-name.css
-    begin: \bcolor-interpolation\b
+    begin: \bcolor-interpolation(?:-filters)?\b
     beginCaptures:
       '0': {name: support.type.property-name.css}
     end: '{{property_value_terminator}}'

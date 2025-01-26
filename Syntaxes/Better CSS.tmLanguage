@@ -2114,7 +2114,7 @@
         <key>name</key>
         <string>meta.property-name.css</string>
         <key>begin</key>
-        <string>\bcolor-interpolation\b</string>
+        <string>\bcolor-interpolation(?:-filters)?\b</string>
         <key>beginCaptures</key>
         <dict>
           <key>0</key>
