@@ -593,26 +593,6 @@ repository:
     captures:
       '1': {name: punctuation.definition.entity.css}
 
-  clip-rule-property:
-    name: meta.property-name.css
-    begin: \bclip-rule\b
-    beginCaptures:
-      '0': {name: support.type.property-name.css}
-    end: '{{property_value_terminator}}'
-    endCaptures:
-      '1': {name: punctuation.terminator.rule.css}
-    patterns:
-    - include: '#comment-block'
-    - contentName: meta.property-value.css
-      begin: (:)(?={{ws}})
-      beginCaptures:
-        '1': {name: punctuation.separator.key-value.css}
-      end: (?={{property_value_terminator}})
-      patterns:
-      - name: support.constant.property-value.css
-        match: \b(nonzero|evenodd)\b
-      - include: '#global-property-values'
-
   clear-property:
     name: meta.property-name.css
     begin: \bclear\b
@@ -631,6 +611,26 @@ repository:
       patterns:
       - name: support.constant.property-value.css
         match: \b((inline|block)-(start|end)|left|right|top|bottom|both(-inline|-block)?|none)\b
+      - include: '#global-property-values'
+
+  clip-rule-property:
+    name: meta.property-name.css
+    begin: \bclip-rule\b
+    beginCaptures:
+      '0': {name: support.type.property-name.css}
+    end: '{{property_value_terminator}}'
+    endCaptures:
+      '1': {name: punctuation.terminator.rule.css}
+    patterns:
+    - include: '#comment-block'
+    - contentName: meta.property-value.css
+      begin: (:)(?={{ws}})
+      beginCaptures:
+        '1': {name: punctuation.separator.key-value.css}
+      end: (?={{property_value_terminator}})
+      patterns:
+      - name: support.constant.property-value.css
+        match: \b(nonzero|evenodd)\b
       - include: '#global-property-values'
 
   color-base-type:
@@ -678,6 +678,19 @@ repository:
       - name: support.constant.property-value.css
         match: \b(auto|sRGB|linearRGB)\b
       - include: '#global-property-values'
+
+  color-type:
+    patterns:
+    - include: '#color-base-type'
+    - name: support.constant.property-value.css
+      match: \b(currentcolor)\b
+    - include: '#system-color-type'
+    - include: '#rgb-function'
+    - include: '#color-hsl'
+    - include: '#color-hwb'
+    - include: '#color-lab'
+    - include: '#color-lch'
+    - include: '#color-xyz'
 
   column-count-property:
     name: meta.property-name.css
@@ -740,19 +753,6 @@ repository:
         match: all|none|auto
       - include: '#integer-type'
       - include: '#global-property-values'
-
-  color-type:
-    patterns:
-    - include: '#color-base-type'
-    - name: support.constant.property-value.css
-      match: \b(currentcolor)\b
-    - include: '#system-color-type'
-    - include: '#rgb-function'
-    - include: '#color-hsl'
-    - include: '#color-hwb'
-    - include: '#color-lab'
-    - include: '#color-lch'
-    - include: '#color-xyz'
 
   comment-block:
     name: comment.block.css
@@ -1064,15 +1064,15 @@ repository:
       endCaptures:
         '0': {name: punctuation.definition.group.end.css}
       patterns:
-        - include: '#comment-block'
-        - match: '/'
-          name: punctuation.separator.css
-        - name: constant.other.color.rgb-value.css
-          match: \bnone\b
-        - include: '#hue-type'
-        - include: '#percentage-type'
-        - include: '#comma-separator'
-        - include: '#alpha-value-type'
+      - include: '#comment-block'
+      - name: punctuation.separator.css
+        match: '/'
+      - name: constant.other.color.rgb-value.css
+        match: \bnone\b
+      - include: '#hue-type'
+      - include: '#percentage-type'
+      - include: '#comma-separator'
+      - include: '#alpha-value-type'
 
   hue-type:
     patterns:
@@ -1324,8 +1324,8 @@ repository:
         '0': {name: punctuation.definition.group.end.css}
       patterns:
       - include: '#comment-block'
-      - match: '/'
-        name: punctuation.separator.css
+      - name: punctuation.separator.css
+        match: '/'
       - name: constant.other.color.rgb-value.css
         match: \bnone\b
       - include: '#percentage-type'

@@ -1911,67 +1911,6 @@
           </dict>
         </dict>
       </dict>
-      <key>clip-rule-property</key>
-      <dict>
-        <key>name</key>
-        <string>meta.property-name.css</string>
-        <key>begin</key>
-        <string>\bclip-rule\b</string>
-        <key>beginCaptures</key>
-        <dict>
-          <key>0</key>
-          <dict>
-            <key>name</key>
-            <string>support.type.property-name.css</string>
-          </dict>
-        </dict>
-        <key>end</key>
-        <string>\s*(;)|(?=[})])</string>
-        <key>endCaptures</key>
-        <dict>
-          <key>1</key>
-          <dict>
-            <key>name</key>
-            <string>punctuation.terminator.rule.css</string>
-          </dict>
-        </dict>
-        <key>patterns</key>
-        <array>
-          <dict>
-            <key>include</key>
-            <string>#comment-block</string>
-          </dict>
-          <dict>
-            <key>contentName</key>
-            <string>meta.property-value.css</string>
-            <key>begin</key>
-            <string>(:)(?=(?:(?:[\s\R]+)*?))</string>
-            <key>beginCaptures</key>
-            <dict>
-              <key>1</key>
-              <dict>
-                <key>name</key>
-                <string>punctuation.separator.key-value.css</string>
-              </dict>
-            </dict>
-            <key>end</key>
-            <string>(?=\s*(;)|(?=[})]))</string>
-            <key>patterns</key>
-            <array>
-              <dict>
-                <key>name</key>
-                <string>support.constant.property-value.css</string>
-                <key>match</key>
-                <string>\b(nonzero|evenodd)\b</string>
-              </dict>
-              <dict>
-                <key>include</key>
-                <string>#global-property-values</string>
-              </dict>
-            </array>
-          </dict>
-        </array>
-      </dict>
       <key>clear-property</key>
       <dict>
         <key>name</key>
@@ -2024,6 +1963,67 @@
                 <string>support.constant.property-value.css</string>
                 <key>match</key>
                 <string>\b((inline|block)-(start|end)|left|right|top|bottom|both(-inline|-block)?|none)\b</string>
+              </dict>
+              <dict>
+                <key>include</key>
+                <string>#global-property-values</string>
+              </dict>
+            </array>
+          </dict>
+        </array>
+      </dict>
+      <key>clip-rule-property</key>
+      <dict>
+        <key>name</key>
+        <string>meta.property-name.css</string>
+        <key>begin</key>
+        <string>\bclip-rule\b</string>
+        <key>beginCaptures</key>
+        <dict>
+          <key>0</key>
+          <dict>
+            <key>name</key>
+            <string>support.type.property-name.css</string>
+          </dict>
+        </dict>
+        <key>end</key>
+        <string>\s*(;)|(?=[})])</string>
+        <key>endCaptures</key>
+        <dict>
+          <key>1</key>
+          <dict>
+            <key>name</key>
+            <string>punctuation.terminator.rule.css</string>
+          </dict>
+        </dict>
+        <key>patterns</key>
+        <array>
+          <dict>
+            <key>include</key>
+            <string>#comment-block</string>
+          </dict>
+          <dict>
+            <key>contentName</key>
+            <string>meta.property-value.css</string>
+            <key>begin</key>
+            <string>(:)(?=(?:(?:[\s\R]+)*?))</string>
+            <key>beginCaptures</key>
+            <dict>
+              <key>1</key>
+              <dict>
+                <key>name</key>
+                <string>punctuation.separator.key-value.css</string>
+              </dict>
+            </dict>
+            <key>end</key>
+            <string>(?=\s*(;)|(?=[})]))</string>
+            <key>patterns</key>
+            <array>
+              <dict>
+                <key>name</key>
+                <string>support.constant.property-value.css</string>
+                <key>match</key>
+                <string>\b(nonzero|evenodd)\b</string>
               </dict>
               <dict>
                 <key>include</key>
@@ -2175,6 +2175,50 @@
                 <string>#global-property-values</string>
               </dict>
             </array>
+          </dict>
+        </array>
+      </dict>
+      <key>color-type</key>
+      <dict>
+        <key>patterns</key>
+        <array>
+          <dict>
+            <key>include</key>
+            <string>#color-base-type</string>
+          </dict>
+          <dict>
+            <key>name</key>
+            <string>support.constant.property-value.css</string>
+            <key>match</key>
+            <string>\b(currentcolor)\b</string>
+          </dict>
+          <dict>
+            <key>include</key>
+            <string>#system-color-type</string>
+          </dict>
+          <dict>
+            <key>include</key>
+            <string>#rgb-function</string>
+          </dict>
+          <dict>
+            <key>include</key>
+            <string>#color-hsl</string>
+          </dict>
+          <dict>
+            <key>include</key>
+            <string>#color-hwb</string>
+          </dict>
+          <dict>
+            <key>include</key>
+            <string>#color-lab</string>
+          </dict>
+          <dict>
+            <key>include</key>
+            <string>#color-lch</string>
+          </dict>
+          <dict>
+            <key>include</key>
+            <string>#color-xyz</string>
           </dict>
         </array>
       </dict>
@@ -2366,50 +2410,6 @@
                 <string>#global-property-values</string>
               </dict>
             </array>
-          </dict>
-        </array>
-      </dict>
-      <key>color-type</key>
-      <dict>
-        <key>patterns</key>
-        <array>
-          <dict>
-            <key>include</key>
-            <string>#color-base-type</string>
-          </dict>
-          <dict>
-            <key>name</key>
-            <string>support.constant.property-value.css</string>
-            <key>match</key>
-            <string>\b(currentcolor)\b</string>
-          </dict>
-          <dict>
-            <key>include</key>
-            <string>#system-color-type</string>
-          </dict>
-          <dict>
-            <key>include</key>
-            <string>#rgb-function</string>
-          </dict>
-          <dict>
-            <key>include</key>
-            <string>#color-hsl</string>
-          </dict>
-          <dict>
-            <key>include</key>
-            <string>#color-hwb</string>
-          </dict>
-          <dict>
-            <key>include</key>
-            <string>#color-lab</string>
-          </dict>
-          <dict>
-            <key>include</key>
-            <string>#color-lch</string>
-          </dict>
-          <dict>
-            <key>include</key>
-            <string>#color-xyz</string>
           </dict>
         </array>
       </dict>
@@ -3337,10 +3337,10 @@ optgroup | option | output | picture | portal | pre | progress | p | q | rp
                 <string>#comment-block</string>
               </dict>
               <dict>
-                <key>match</key>
-                <string>/</string>
                 <key>name</key>
                 <string>punctuation.separator.css</string>
+                <key>match</key>
+                <string>/</string>
               </dict>
               <dict>
                 <key>name</key>
@@ -4187,10 +4187,10 @@ optgroup | option | output | picture | portal | pre | progress | p | q | rp
                 <string>#comment-block</string>
               </dict>
               <dict>
-                <key>match</key>
-                <string>/</string>
                 <key>name</key>
                 <string>punctuation.separator.css</string>
+                <key>match</key>
+                <string>/</string>
               </dict>
               <dict>
                 <key>name</key>
