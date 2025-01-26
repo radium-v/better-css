@@ -657,6 +657,26 @@ repository:
       '0': {name: constant.other.color.rgb-value.css}
       '1': {name: punctuation.definition.constant.css}
 
+  color-interpolation-property:
+    name: meta.property-name.css
+    begin: \bcolor-interpolation\b
+    beginCaptures:
+      '0': {name: support.type.property-name.css}
+    end: '{{property_value_terminator}}'
+    endCaptures:
+      '1': {name: punctuation.terminator.rule.css}
+    patterns:
+    - include: '#comment-block'
+    - contentName: meta.property-value.css
+      begin: '(:)(?={{ws}})'
+      beginCaptures:
+        '1': {name: punctuation.separator.key-value.css}
+      end: (?={{property_value_terminator}})
+      patterns:
+      - name: support.constant.property-value.css
+        match: \b(auto|sRGB|linearRGB)\b
+      - include: '#global-property-values'
+
   color-type:
     patterns:
     - include: '#color-base-type'
@@ -1236,6 +1256,7 @@ repository:
       - include: '#border-properties'
       - include: '#clear-property'
       - include: '#clip-rule-property'
+      - include: '#color-interpolation-property'
       - include: '#container-name-property'
       - include: '#counter-properties'
       - include: '#filter-property'

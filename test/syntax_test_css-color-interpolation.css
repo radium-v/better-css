@@ -1,0 +1,60 @@
+/* SYNTAX TEST "Packages/better-css/Syntaxes/Better CSS.tmLanguage" */
+
+.color-interpolation {
+    color-interpolation: auto;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*                     ^ punctuation.separator.key-value.css */
+/*                      ^^^^^ meta.property-value.css */
+/*                       ^^^^ support.constant.property-value.css */
+/*                           ^ punctuation.terminator.rule.css */
+    color-interpolation: sRGB;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*                     ^ punctuation.separator.key-value.css */
+/*                      ^^^^^ meta.property-value.css */
+/*                       ^^^^ support.constant.property-value.css */
+/*                           ^ punctuation.terminator.rule.css */
+    color-interpolation: linearRGB;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*                     ^ punctuation.separator.key-value.css */
+/*                      ^^^^^^^^^^ meta.property-value.css */
+/*                       ^^^^^^^^^ support.constant.property-value.css */
+/*                                ^ punctuation.terminator.rule.css */
+    color-interpolation: inherit;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*                     ^ punctuation.separator.key-value.css */
+/*                      ^^^^^^^^ meta.property-value.css */
+/*                       ^^^^^^^ support.constant.property-value.css */
+/*                              ^ punctuation.terminator.rule.css */
+    color-interpolation: initial;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*                     ^ punctuation.separator.key-value.css */
+/*                      ^^^^^^^^ meta.property-value.css */
+/*                       ^^^^^^^ support.constant.property-value.css */
+/*                              ^ punctuation.terminator.rule.css */
+    color-interpolation: revert;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*                     ^ punctuation.separator.key-value.css */
+/*                      ^^^^^^^ meta.property-value.css */
+/*                       ^^^^^^ support.constant.property-value.css */
+/*                             ^ punctuation.terminator.rule.css */
+    color-interpolation: revert-layer;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*                     ^ punctuation.separator.key-value.css */
+/*                      ^^^^^^^^^^^^^ meta.property-value.css */
+/*                       ^^^^^^^^^^^^ support.constant.property-value.css */
+/*                                   ^ punctuation.terminator.rule.css */
+    color-interpolation: unset;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*                     ^ punctuation.separator.key-value.css */
+/*                      ^^^^^^ meta.property-value.css */
+/*                       ^^^^^ support.constant.property-value.css */
+/*                            ^ punctuation.terminator.rule.css */
+}
