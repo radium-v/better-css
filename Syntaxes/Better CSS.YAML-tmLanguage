@@ -1377,6 +1377,7 @@ repository:
       - include: '#transition-properties'
       - include: '#visibility-property'
       - include: '#will-change-property'
+      - include: '#writing-mode-property'
       - include: $self
     - contentName: meta.property-value.css
       begin: \b(:)(?:{{ws}}*)
@@ -1623,6 +1624,27 @@ repository:
       - name: support.constant.property-value.css
         match: '{{dashed_ident}}'
       - include: '#arbitrary-repetition'
+
+  writing-mode-property:
+    name: meta.property-name.css
+    begin: \bwriting-mode\b
+    beginCaptures:
+      '0': {name: support.type.property-name.css}
+    end: '{{property_value_terminator}}'
+    endCaptures:
+      '1': {name: punctuation.terminator.rule.css}
+    patterns:
+    - include: '#comment-block'
+    - contentName: meta.property-value.css
+      begin: (:)(?={{ws}})
+      beginCaptures:
+        '1': {name: punctuation.separator.key-value.css}
+      end: (?={{property_value_terminator}})
+      patterns:
+      - name: support.constant.property-value.css
+        match: horizontal-tb|vertical-rl|vertical-lr|sideways-rl|sideways-lr
+      - include: '#global-property-values'
+
 foldingStartMarker: /\*\*(?!\*)|\{\s*($|/\*(?!.*?\*/.*\S))
 foldingStopMarker: (?<!\*)\*\*/|^\s*\}
 keyEquivalent: ^~L

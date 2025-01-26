@@ -1,0 +1,74 @@
+/* SYNTAX TEST "Packages/better-css/Syntaxes/Better CSS.tmLanguage" */
+
+.writing-mode {
+    writing-mode: horizontal-tb;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*              ^ punctuation.separator.key-value.css */
+/*               ^^^^^^^^^^^^^^ meta.property-value.css */
+/*                ^^^^^^^^^^^^^ support.constant.property-value.css */
+/*                             ^ punctuation.terminator.rule.css */
+    writing-mode: vertical-rl;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*              ^ punctuation.separator.key-value.css */
+/*               ^^^^^^^^^^^^ meta.property-value.css */
+/*                ^^^^^^^^^^^ support.constant.property-value.css */
+/*                           ^ punctuation.terminator.rule.css */
+    writing-mode: vertical-lr;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*              ^ punctuation.separator.key-value.css */
+/*               ^^^^^^^^^^^^ meta.property-value.css */
+/*                ^^^^^^^^^^^ support.constant.property-value.css */
+/*                           ^ punctuation.terminator.rule.css */
+    writing-mode: sideways-rl;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*              ^ punctuation.separator.key-value.css */
+/*               ^^^^^^^^^^^^ meta.property-value.css */
+/*                ^^^^^^^^^^^ support.constant.property-value.css */
+/*                           ^ punctuation.terminator.rule.css */
+    writing-mode: sideways-lr;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*              ^ punctuation.separator.key-value.css */
+/*               ^^^^^^^^^^^^ meta.property-value.css */
+/*                ^^^^^^^^^^^ support.constant.property-value.css */
+/*                           ^ punctuation.terminator.rule.css */
+    writing-mode: inherit;
+/*^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*              ^ punctuation.separator.key-value.css */
+/*               ^^^^^^^^ meta.property-value.css */
+/*                ^^^^^^^ support.constant.property-value.css */
+/*                       ^ punctuation.terminator.rule.css */
+    writing-mode: initial;
+/*^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*              ^ punctuation.separator.key-value.css */
+/*               ^^^^^^^^ meta.property-value.css */
+/*                ^^^^^^^ support.constant.property-value.css */
+/*                       ^ punctuation.terminator.rule.css */
+    writing-mode: revert;
+/*^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*              ^ punctuation.separator.key-value.css */
+/*               ^^^^^^^ meta.property-value.css */
+/*                ^^^^^^ support.constant.property-value.css */
+/*                      ^ punctuation.terminator.rule.css */
+    writing-mode: revert-layer;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*              ^ punctuation.separator.key-value.css */
+/*               ^^^^^^^^^^^^^ meta.property-value.css */
+/*                ^^^^^^^^^^^^ support.constant.property-value.css */
+/*                            ^ punctuation.terminator.rule.css */
+    writing-mode: unset;
+/*^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*              ^ punctuation.separator.key-value.css */
+/*               ^^^^^^ meta.property-value.css */
+/*                ^^^^^ support.constant.property-value.css */
+/*                     ^ punctuation.terminator.rule.css */
+}
