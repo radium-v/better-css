@@ -443,6 +443,73 @@
           </dict>
         </array>
       </dict>
+      <key>appearance-property</key>
+      <dict>
+        <key>name</key>
+        <string>meta.property-name.css</string>
+        <key>begin</key>
+        <string>\bappearance\b</string>
+        <key>beginCaptures</key>
+        <dict>
+          <key>0</key>
+          <dict>
+            <key>name</key>
+            <string>support.type.property-name.css</string>
+          </dict>
+        </dict>
+        <key>end</key>
+        <string>\s*(;)|(?=[})])</string>
+        <key>endCaptures</key>
+        <dict>
+          <key>1</key>
+          <dict>
+            <key>name</key>
+            <string>punctuation.terminator.rule.css</string>
+          </dict>
+        </dict>
+        <key>patterns</key>
+        <array>
+          <dict>
+            <key>contentName</key>
+            <string>meta.property-value.css</string>
+            <key>begin</key>
+            <string>(:)(?=(?:(?:[\s\R]+)*?))</string>
+            <key>beginCaptures</key>
+            <dict>
+              <key>1</key>
+              <dict>
+                <key>name</key>
+                <string>punctuation.separator.key-value.css</string>
+              </dict>
+            </dict>
+            <key>end</key>
+            <string>(?=\s*(;)|(?=[})]))</string>
+            <key>patterns</key>
+            <array>
+              <dict>
+                <key>name</key>
+                <string>support.constant.property-value.css invalid.deprecated.non-standard.css</string>
+                <key>match</key>
+                <string>(?:-apple-pay-button|(?:borderless-)?attachment|button-bevel|caps-lock-indicator|caret|checkbox-(?:container|label)|checkmenuitem|color-well|(?:continuous|discrete)-capacity-level-indicator|default-button|(?:image-controls|inner-spin|list)-button|listitem|media-(?:(?:controls-(?:(?:(?:dark|light)-bar|fullscreen)-)?background)|current-time-display|(?:enter|exit)-fullscreen-button|fullscreen-volume-slider(?:-thumb)?|(?:mute|(?:overlay-)?play|return-to-realtime|rewind|seek-(?:forward|back))-button|slider(?:thumb)?|time-remaining-display|toggle-closed-captions-button|volume-slider(?:-container|-mute-button|thumb)?)|menulist-text(?:field)?|meterbar|number-input|progress(?:-bar-value|bar(-vertical)?)|range(?:-thumb)?|(?:rating|relevancy)-level-indicator|scale(?:thumb)?(?:-horizontal|-vertical|start|end|tick)|scrollbar(?:thumb|track)-(?:horizontal|vertical)|searchfield-(?:cancel-button|decoration|results-(?:button|decoration))|sheet|slider(?:-vertical|thumb-(?:horizontal|vertical))|snapshotted-plugin-overlay|textfield-multiline)</string>
+              </dict>
+              <dict>
+                <key>name</key>
+                <string>support.constant.property-value.css</string>
+                <key>match</key>
+                <string>auto|base|button|checkbox|listbox|menulist-button|menulist|meter|none|progress-bar|radio|searchfield|textarea|textfield</string>
+              </dict>
+              <dict>
+                <key>include</key>
+                <string>#global-property-values</string>
+              </dict>
+              <dict>
+                <key>include</key>
+                <string>#custom-property-name</string>
+              </dict>
+            </array>
+          </dict>
+        </array>
+      </dict>
       <key>arbitrary-repetition</key>
       <dict>
         <key>match</key>
@@ -3698,6 +3765,10 @@ optgroup | option | output | picture | portal | pre | progress | p | q | rp
               <dict>
                 <key>include</key>
                 <string>#all-property</string>
+              </dict>
+              <dict>
+                <key>include</key>
+                <string>#appearance-property</string>
               </dict>
               <dict>
                 <key>include</key>

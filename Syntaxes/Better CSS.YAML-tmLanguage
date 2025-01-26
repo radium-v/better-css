@@ -142,6 +142,28 @@ repository:
         - include: '#arbitrary-repetition'
         - include: '#important'
 
+  appearance-property:
+    name: meta.property-name.css
+    begin: \bappearance\b
+    beginCaptures:
+      '0': {name: support.type.property-name.css}
+    end: '{{property_value_terminator}}'
+    endCaptures:
+      '1': {name: punctuation.terminator.rule.css}
+    patterns:
+    - contentName: meta.property-value.css
+      begin: '(:)(?={{ws}})'
+      beginCaptures:
+        '1': {name: punctuation.separator.key-value.css}
+      end: (?={{property_value_terminator}})
+      patterns:
+      - name: support.constant.property-value.css invalid.deprecated.non-standard.css
+        match: (?:-apple-pay-button|(?:borderless-)?attachment|button-bevel|caps-lock-indicator|caret|checkbox-(?:container|label)|checkmenuitem|color-well|(?:continuous|discrete)-capacity-level-indicator|default-button|(?:image-controls|inner-spin|list)-button|listitem|media-(?:(?:controls-(?:(?:(?:dark|light)-bar|fullscreen)-)?background)|current-time-display|(?:enter|exit)-fullscreen-button|fullscreen-volume-slider(?:-thumb)?|(?:mute|(?:overlay-)?play|return-to-realtime|rewind|seek-(?:forward|back))-button|slider(?:thumb)?|time-remaining-display|toggle-closed-captions-button|volume-slider(?:-container|-mute-button|thumb)?)|menulist-text(?:field)?|meterbar|number-input|progress(?:-bar-value|bar(-vertical)?)|range(?:-thumb)?|(?:rating|relevancy)-level-indicator|scale(?:thumb)?(?:-horizontal|-vertical|start|end|tick)|scrollbar(?:thumb|track)-(?:horizontal|vertical)|searchfield-(?:cancel-button|decoration|results-(?:button|decoration))|sheet|slider(?:-vertical|thumb-(?:horizontal|vertical))|snapshotted-plugin-overlay|textfield-multiline)
+      - name: support.constant.property-value.css
+        match: auto|base|button|checkbox|listbox|menulist-button|menulist|meter|none|progress-bar|radio|searchfield|textarea|textfield
+      - include: '#global-property-values'
+      - include: '#custom-property-name'
+
   arbitrary-repetition:
     match: \s*(?:(,))
     captures:
@@ -1166,6 +1188,7 @@ repository:
       end: $|(?![-a-z])
       patterns:
       - include: '#all-property'
+      - include: '#appearance-property'
       - include: '#custom-property-name'
       - include: '#vendor-prefixed-property'
       - include: '#accent-color-property'
