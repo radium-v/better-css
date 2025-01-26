@@ -1,0 +1,53 @@
+/* SYNTAX TEST "Packages/better-css/Syntaxes/Better CSS.tmLanguage" */
+
+.clip-rule {
+    clip-rule: nonzero;
+/*^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*           ^ punctuation.separator.key-value.css */
+/*            ^^^^^^^^ meta.property-value.css */
+/*             ^^^^^^^ support.constant.property-value.css */
+/*                    ^ punctuation.terminator.rule.css */
+    clip-rule: evenodd;
+/*^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*           ^ punctuation.separator.key-value.css */
+/*            ^^^^^^^^ meta.property-value.css */
+/*             ^^^^^^^ support.constant.property-value.css */
+/*                    ^ punctuation.terminator.rule.css */
+    clip-rule: inherit;
+/*^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*           ^ punctuation.separator.key-value.css */
+/*            ^^^^^^^^ meta.property-value.css */
+/*             ^^^^^^^ support.constant.property-value.css */
+/*                    ^ punctuation.terminator.rule.css */
+    clip-rule: initial;
+/*^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*           ^ punctuation.separator.key-value.css */
+/*            ^^^^^^^^ meta.property-value.css */
+/*             ^^^^^^^ support.constant.property-value.css */
+/*                    ^ punctuation.terminator.rule.css */
+    clip-rule: revert;
+/*^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*           ^ punctuation.separator.key-value.css */
+/*            ^^^^^^^ meta.property-value.css */
+/*             ^^^^^^ support.constant.property-value.css */
+/*                   ^ punctuation.terminator.rule.css */
+    clip-rule: revert-layer;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*           ^ punctuation.separator.key-value.css */
+/*            ^^^^^^^^^^^^^ meta.property-value.css */
+/*             ^^^^^^^^^^^^ support.constant.property-value.css */
+/*                         ^ punctuation.terminator.rule.css */
+    clip-rule: unset;
+/*^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*           ^ punctuation.separator.key-value.css */
+/*            ^^^^^^ meta.property-value.css */
+/*             ^^^^^ support.constant.property-value.css */
+/*                  ^ punctuation.terminator.rule.css */
+}

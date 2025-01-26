@@ -591,6 +591,26 @@ repository:
     captures:
       '1': {name: punctuation.definition.entity.css}
 
+  clip-rule-property:
+    name: meta.property-name.css
+    begin: \bclip-rule\b
+    beginCaptures:
+      '0': {name: support.type.property-name.css}
+    end: '{{property_value_terminator}}'
+    endCaptures:
+      '1': {name: punctuation.terminator.rule.css}
+    patterns:
+    - include: '#comment-block'
+    - contentName: meta.property-value.css
+      begin: (:)(?={{ws}})
+      beginCaptures:
+        '1': {name: punctuation.separator.key-value.css}
+      end: (?={{property_value_terminator}})
+      patterns:
+      - name: support.constant.property-value.css
+        match: \b(nonzero|evenodd)\b
+      - include: '#global-property-values'
+
   clear-property:
     name: meta.property-name.css
     begin: \bclear\b
@@ -1206,14 +1226,16 @@ repository:
     - begin: (?=[-a-z])
       end: $|(?![-a-z])
       patterns:
-      - include: '#all-property'
-      - include: '#appearance-property'
       - include: '#custom-property-name'
       - include: '#vendor-prefixed-property'
       - include: '#accent-color-property'
+      - include: '#all-property'
       - include: '#animation-properties'
+      - include: '#appearance-property'
       - include: '#backdrop-filter-property'
       - include: '#border-properties'
+      - include: '#clear-property'
+      - include: '#clip-rule-property'
       - include: '#container-name-property'
       - include: '#counter-properties'
       - include: '#filter-property'
