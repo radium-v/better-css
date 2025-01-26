@@ -48,7 +48,7 @@ repository:
       '1': {name: punctuation.terminator.rule.css}
     patterns:
     - contentName: meta.property-value.css
-      begin: (((\+_?)?):)(?=[\s\t]*)
+      begin: '(:)(?={{ws}})'
       beginCaptures:
         '1': {name: punctuation.separator.key-value.css}
       end: (?={{property_value_terminator}})
@@ -73,7 +73,7 @@ repository:
         '1': {name: punctuation.terminator.rule.css}
       patterns:
       - contentName: meta.property-value.css
-        begin: (((\+_?)?):)(?=[\s\t]*)
+        begin: '(:)(?={{ws}})'
         beginCaptures:
           '1': {name: punctuation.separator.key-value.css}
         end: (?={{property_value_terminator}})
@@ -108,7 +108,7 @@ repository:
         '1': {name: punctuation.terminator.rule.css}
       patterns:
       - contentName: meta.property-value.css
-        begin: (((\+_?)?):)(?=[\s\t]*)
+        begin: '(:)(?={{ws}})'
         beginCaptures:
           '1': {name: punctuation.separator.key-value.css}
         end: (?={{property_value_terminator}})
@@ -128,7 +128,7 @@ repository:
         '1': {name: punctuation.terminator.rule.css}
       patterns:
       - contentName: meta.property-value.css
-        begin: (((\+_?)?):)(?=[\s\t]*)
+        begin: '(:)(?={{ws}})'
         beginCaptures:
           '1': {name: punctuation.separator.key-value.css}
         end: (?={{property_value_terminator}})
@@ -517,7 +517,7 @@ repository:
       '1': {name: punctuation.terminator.rule.css}
     patterns:
     - contentName: meta.property-value.css
-      begin: (((\+_?)?):)(?=[\s\t]*)
+      begin: '(:)(?={{ws}})'
       beginCaptures:
         '1': {name: punctuation.separator.key-value.css}
       end: (?={{property_value_terminator}})
@@ -628,7 +628,7 @@ repository:
       '1': {name: punctuation.terminator.rule.css}
     patterns:
     - contentName: meta.property-value.css
-      begin: (((\+_?)?):)(?=[\s\t]*)
+      begin: '(:)(?={{ws}})'
       beginCaptures:
         '1': {name: punctuation.separator.key-value.css}
       end: (?={{property_value_terminator}})
@@ -1320,7 +1320,7 @@ repository:
         '1': {name: punctuation.terminator.rule.css}
       patterns:
       - contentName: meta.property-value.css
-        begin: (((\+_?)?):)(?=[\s\t]*)
+        begin: '(:)(?={{ws}})'
         beginCaptures:
           '1': {name: punctuation.separator.key-value.css}
         end: (?={{property_value_terminator}})
@@ -1350,7 +1350,7 @@ repository:
       '1': {name: punctuation.terminator.rule.css}
     patterns:
     - contentName: meta.property-value.css
-      begin: (((\+_?)?):)(?=[\s\t]*)
+      begin: '(:)(?={{ws}})'
       beginCaptures:
         '1': {name: punctuation.separator.key-value.css}
       end: (?={{property_value_terminator}})

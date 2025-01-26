@@ -130,7 +130,7 @@
             <key>contentName</key>
             <string>meta.property-value.css</string>
             <key>begin</key>
-            <string>(((\+_?)?):)(?=[\s\t]*)</string>
+            <string>(:)(?=(?:(?:[\s\R]+)*?))</string>
             <key>beginCaptures</key>
             <dict>
               <key>1</key>
@@ -206,7 +206,7 @@
                 <key>contentName</key>
                 <string>meta.property-value.css</string>
                 <key>begin</key>
-                <string>(((\+_?)?):)(?=[\s\t]*)</string>
+                <string>(:)(?=(?:(?:[\s\R]+)*?))</string>
                 <key>beginCaptures</key>
                 <dict>
                   <key>1</key>
@@ -322,7 +322,7 @@
                 <key>contentName</key>
                 <string>meta.property-value.css</string>
                 <key>begin</key>
-                <string>(((\+_?)?):)(?=[\s\t]*)</string>
+                <string>(:)(?=(?:(?:[\s\R]+)*?))</string>
                 <key>beginCaptures</key>
                 <dict>
                   <key>1</key>
@@ -394,7 +394,7 @@
                 <key>contentName</key>
                 <string>meta.property-value.css</string>
                 <key>begin</key>
-                <string>(((\+_?)?):)(?=[\s\t]*)</string>
+                <string>(:)(?=(?:(?:[\s\R]+)*?))</string>
                 <key>beginCaptures</key>
                 <dict>
                   <key>1</key>
@@ -1684,7 +1684,7 @@
             <key>contentName</key>
             <string>meta.property-value.css</string>
             <key>begin</key>
-            <string>(((\+_?)?):)(?=[\s\t]*)</string>
+            <string>(:)(?=(?:(?:[\s\R]+)*?))</string>
             <key>beginCaptures</key>
             <dict>
               <key>1</key>
@@ -2014,7 +2014,7 @@
             <key>contentName</key>
             <string>meta.property-value.css</string>
             <key>begin</key>
-            <string>(((\+_?)?):)(?=[\s\t]*)</string>
+            <string>(:)(?=(?:(?:[\s\R]+)*?))</string>
             <key>beginCaptures</key>
             <dict>
               <key>1</key>
@@ -4200,7 +4200,7 @@ optgroup | option | output | picture | portal | pre | progress | p | q | rp
                 <key>contentName</key>
                 <string>meta.property-value.css</string>
                 <key>begin</key>
-                <string>(((\+_?)?):)(?=[\s\t]*)</string>
+                <string>(:)(?=(?:(?:[\s\R]+)*?))</string>
                 <key>beginCaptures</key>
                 <dict>
                   <key>1</key>
@@ -4292,7 +4292,7 @@ optgroup | option | output | picture | portal | pre | progress | p | q | rp
             <key>contentName</key>
             <string>meta.property-value.css</string>
             <key>begin</key>
-            <string>(((\+_?)?):)(?=[\s\t]*)</string>
+            <string>(:)(?=(?:(?:[\s\R]+)*?))</string>
             <key>beginCaptures</key>
             <dict>
               <key>1</key>
