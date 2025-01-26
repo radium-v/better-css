@@ -47,7 +47,7 @@ repository:
       '1': {name: punctuation.terminator.rule.css}
     patterns:
     - contentName: meta.property-value.css
-      begin: '(:)(?={{ws}})'
+      begin: (:)(?={{ws}})
       beginCaptures:
         '1': {name: punctuation.separator.key-value.css}
       end: (?={{property_value_terminator}})
@@ -55,12 +55,6 @@ repository:
       - include: '#global-property-values'
       - include: '#custom-property-name'
       - include: '#property-values'
-
-  alpha-value-type:
-    patterns:
-    - name: constant.numeric.alpha.css
-      match: \b(?:0|0?(?:\.\d+([eE][+-]?\d+)?)|1(?:\.0+)?)\b
-    - include: '#percentage-type'
 
   all-property:
     patterns:
@@ -72,7 +66,7 @@ repository:
         '1': {name: punctuation.terminator.rule.css}
       patterns:
       - contentName: meta.property-value.css
-        begin: '(:)(?={{ws}})'
+        begin: (:)(?={{ws}})
         beginCaptures:
           '1': {name: punctuation.separator.key-value.css}
         end: (?={{property_value_terminator}})
@@ -80,6 +74,12 @@ repository:
         - include: '#comment-block'
         - include: '#global-property-values'
         - include: '#var-function'
+
+  alpha-value-type:
+    patterns:
+    - name: constant.numeric.alpha.css
+      match: \b(?:0|0?(?:\.\d+([eE][+-]?\d+)?)|1(?:\.0+)?)\b
+    - include: '#percentage-type'
 
   angle-percentage-type:
     patterns:
@@ -107,7 +107,7 @@ repository:
         '1': {name: punctuation.terminator.rule.css}
       patterns:
       - contentName: meta.property-value.css
-        begin: '(:)(?={{ws}})'
+        begin: (:)(?={{ws}})
         beginCaptures:
           '1': {name: punctuation.separator.key-value.css}
         end: (?={{property_value_terminator}})
@@ -127,7 +127,7 @@ repository:
         '1': {name: punctuation.terminator.rule.css}
       patterns:
       - contentName: meta.property-value.css
-        begin: '(:)(?={{ws}})'
+        begin: (:)(?={{ws}})
         beginCaptures:
           '1': {name: punctuation.separator.key-value.css}
         end: (?={{property_value_terminator}})
@@ -150,8 +150,9 @@ repository:
     endCaptures:
       '1': {name: punctuation.terminator.rule.css}
     patterns:
+    - include: '#comment-block'
     - contentName: meta.property-value.css
-      begin: '(:)(?={{ws}})'
+      begin: (:)(?={{ws}})
       beginCaptures:
         '1': {name: punctuation.separator.key-value.css}
       end: (?={{property_value_terminator}})
@@ -537,8 +538,9 @@ repository:
     endCaptures:
       '1': {name: punctuation.terminator.rule.css}
     patterns:
+    - include: '#comment-block'
     - contentName: meta.property-value.css
-      begin: '(:)(?={{ws}})'
+      begin: (:)(?={{ws}})
       beginCaptures:
         '1': {name: punctuation.separator.key-value.css}
       end: (?={{property_value_terminator}})
@@ -668,7 +670,7 @@ repository:
     patterns:
     - include: '#comment-block'
     - contentName: meta.property-value.css
-      begin: '(:)(?={{ws}})'
+      begin: (:)(?={{ws}})
       beginCaptures:
         '1': {name: punctuation.separator.key-value.css}
       end: (?={{property_value_terminator}})
@@ -688,7 +690,7 @@ repository:
     patterns:
     - include: '#comment-block'
     - contentName: meta.property-value.css
-      begin: '(:)(?={{ws}})'
+      begin: (:)(?={{ws}})
       beginCaptures:
         '1': {name: punctuation.separator.key-value.css}
       end: (?={{property_value_terminator}})
@@ -709,7 +711,7 @@ repository:
     patterns:
     - include: '#comment-block'
     - contentName: meta.property-value.css
-      begin: '(:)(?={{ws}})'
+      begin: (:)(?={{ws}})
       beginCaptures:
         '1': {name: punctuation.separator.key-value.css}
       end: (?={{property_value_terminator}})
@@ -729,7 +731,7 @@ repository:
     patterns:
     - include: '#comment-block'
     - contentName: meta.property-value.css
-      begin: '(:)(?={{ws}})'
+      begin: (:)(?={{ws}})
       beginCaptures:
         '1': {name: punctuation.separator.key-value.css}
       end: (?={{property_value_terminator}})
@@ -774,7 +776,7 @@ repository:
     patterns:
     - include: '#comment-block'
     - contentName: meta.property-value.css
-      begin: '(:)(?={{ws}})'
+      begin: (:)(?={{ws}})
       beginCaptures:
         '1': {name: punctuation.separator.key-value.css}
       end: (?={{property_value_terminator}})
@@ -790,8 +792,9 @@ repository:
     endCaptures:
       '1': {name: punctuation.terminator.rule.css}
     patterns:
+    - include: '#comment-block'
     - contentName: meta.property-value.css
-      begin: '(:)(?={{ws}})'
+      begin: (:)(?={{ws}})
       beginCaptures:
         '1': {name: punctuation.separator.key-value.css}
       end: (?={{property_value_terminator}})
@@ -815,7 +818,7 @@ repository:
     patterns:
     - include: '#comment-block'
     - contentName: meta.property-value.css
-      begin: '(:)(?={{ws}})'
+      begin: (:)(?={{ws}})
       beginCaptures:
         '1': {name: punctuation.separator.key-value.css}
       end: (?={{property_value_terminator}})
@@ -933,7 +936,7 @@ repository:
       '1': {name: punctuation.terminator.rule.css}
     patterns:
     - contentName: meta.property-value.css
-      begin: (:)(?=\s*)
+      begin: (:)(?={{ws}})
       beginCaptures:
         '1': {name: punctuation.separator.key-value.css}
       end: (?={{property_value_terminator}})
@@ -953,7 +956,7 @@ repository:
       '1': {name: punctuation.terminator.rule.css}
     patterns:
     - contentName: meta.property-value.css
-      begin: (:)(?=\s*)
+      begin: (:)(?={{ws}})
       beginCaptures:
         '1': {name: punctuation.separator.key-value.css}
       end: (?={{property_value_terminator}})
@@ -1516,7 +1519,7 @@ repository:
         '1': {name: punctuation.terminator.rule.css}
       patterns:
       - contentName: meta.property-value.css
-        begin: '(:)(?={{ws}})'
+        begin: (:)(?={{ws}})
         beginCaptures:
           '1': {name: punctuation.separator.key-value.css}
         end: (?={{property_value_terminator}})
@@ -1545,8 +1548,9 @@ repository:
     endCaptures:
       '1': {name: punctuation.terminator.rule.css}
     patterns:
+    - include: '#comment-block'
     - contentName: meta.property-value.css
-      begin: '(:)(?={{ws}})'
+      begin: (:)(?={{ws}})
       beginCaptures:
         '1': {name: punctuation.separator.key-value.css}
       end: (?={{property_value_terminator}})
@@ -1554,6 +1558,26 @@ repository:
       - include: '#property-values'
       - name: support.constant.property-value.css
         match: '[\w-]+'
+
+  visibility-property:
+    name: meta.property-name.css
+    begin: \bvisibility\b
+    beginCaptures:
+      '0': {name: support.type.property-name.css}
+    end: '{{property_value_terminator}}'
+    endCaptures:
+      '1': {name: punctuation.terminator.rule.css}
+    patterns:
+    - include: '#comment-block'
+    - contentName: meta.property-value.css
+      begin: (:)(?={{ws}})
+      beginCaptures:
+        '1': {name: punctuation.separator.key-value.css}
+      end: (?={{property_value_terminator}})
+      patterns:
+      - name: support.constant.property-value.css
+        match: auto|visible|hidden|collapse
+      - include: '#global-property-values'
 
   visual-box-type:
     name: meta.property-value.css

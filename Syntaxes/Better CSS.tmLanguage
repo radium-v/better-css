@@ -155,22 +155,6 @@
           </dict>
         </array>
       </dict>
-      <key>alpha-value-type</key>
-      <dict>
-        <key>patterns</key>
-        <array>
-          <dict>
-            <key>name</key>
-            <string>constant.numeric.alpha.css</string>
-            <key>match</key>
-            <string>\b(?:0|0?(?:\.\d+([eE][+-]?\d+)?)|1(?:\.0+)?)\b</string>
-          </dict>
-          <dict>
-            <key>include</key>
-            <string>#percentage-type</string>
-          </dict>
-        </array>
-      </dict>
       <key>all-property</key>
       <dict>
         <key>patterns</key>
@@ -230,6 +214,22 @@
                 </array>
               </dict>
             </array>
+          </dict>
+        </array>
+      </dict>
+      <key>alpha-value-type</key>
+      <dict>
+        <key>patterns</key>
+        <array>
+          <dict>
+            <key>name</key>
+            <string>constant.numeric.alpha.css</string>
+            <key>match</key>
+            <string>\b(?:0|0?(?:\.\d+([eE][+-]?\d+)?)|1(?:\.0+)?)\b</string>
+          </dict>
+          <dict>
+            <key>include</key>
+            <string>#percentage-type</string>
           </dict>
         </array>
       </dict>
@@ -465,6 +465,10 @@
         </dict>
         <key>patterns</key>
         <array>
+          <dict>
+            <key>include</key>
+            <string>#comment-block</string>
+          </dict>
           <dict>
             <key>contentName</key>
             <string>meta.property-value.css</string>
@@ -1744,6 +1748,10 @@
         <key>patterns</key>
         <array>
           <dict>
+            <key>include</key>
+            <string>#comment-block</string>
+          </dict>
+          <dict>
             <key>contentName</key>
             <string>meta.property-value.css</string>
             <key>begin</key>
@@ -2509,6 +2517,10 @@
         <key>patterns</key>
         <array>
           <dict>
+            <key>include</key>
+            <string>#comment-block</string>
+          </dict>
+          <dict>
             <key>contentName</key>
             <string>meta.property-value.css</string>
             <key>begin</key>
@@ -2917,7 +2929,7 @@ optgroup | option | output | picture | portal | pre | progress | p | q | rp
             <key>contentName</key>
             <string>meta.property-value.css</string>
             <key>begin</key>
-            <string>(:)(?=\s*)</string>
+            <string>(:)(?=(?:(?:[\s\R]+)*?))</string>
             <key>beginCaptures</key>
             <dict>
               <key>1</key>
@@ -2981,7 +2993,7 @@ optgroup | option | output | picture | portal | pre | progress | p | q | rp
             <key>contentName</key>
             <string>meta.property-value.css</string>
             <key>begin</key>
-            <string>(:)(?=\s*)</string>
+            <string>(:)(?=(?:(?:[\s\R]+)*?))</string>
             <key>beginCaptures</key>
             <dict>
               <key>1</key>
@@ -3515,9 +3527,22 @@ optgroup | option | output | picture | portal | pre | progress | p | q | rp
       <key>integer-type</key>
       <dict>
         <key>name</key>
-        <string>constant.numeric.css</string>
+        <string>meta.number.integer.decimal.css</string>
         <key>match</key>
-        <string>(?:[-+]?\d+)</string>
+        <string>([-+])?(\d+)</string>
+        <key>captures</key>
+        <dict>
+          <key>1</key>
+          <dict>
+            <key>name</key>
+            <string>keyword.operator.arithmetic.css</string>
+          </dict>
+          <key>2</key>
+          <dict>
+            <key>name</key>
+            <string>constant.numeric.value.css</string>
+          </dict>
+        </dict>
       </dict>
       <key>layout-box-type</key>
       <dict>
@@ -4889,6 +4914,10 @@ optgroup | option | output | picture | portal | pre | progress | p | q | rp
         <key>patterns</key>
         <array>
           <dict>
+            <key>include</key>
+            <string>#comment-block</string>
+          </dict>
+          <dict>
             <key>contentName</key>
             <string>meta.property-value.css</string>
             <key>begin</key>
@@ -4914,6 +4943,67 @@ optgroup | option | output | picture | portal | pre | progress | p | q | rp
                 <string>support.constant.property-value.css</string>
                 <key>match</key>
                 <string>[\w-]+</string>
+              </dict>
+            </array>
+          </dict>
+        </array>
+      </dict>
+      <key>visibility-property</key>
+      <dict>
+        <key>name</key>
+        <string>meta.property-name.css</string>
+        <key>begin</key>
+        <string>\bvisibility\b</string>
+        <key>beginCaptures</key>
+        <dict>
+          <key>0</key>
+          <dict>
+            <key>name</key>
+            <string>support.type.property-name.css</string>
+          </dict>
+        </dict>
+        <key>end</key>
+        <string>\s*(;)|(?=[})])</string>
+        <key>endCaptures</key>
+        <dict>
+          <key>1</key>
+          <dict>
+            <key>name</key>
+            <string>punctuation.terminator.rule.css</string>
+          </dict>
+        </dict>
+        <key>patterns</key>
+        <array>
+          <dict>
+            <key>include</key>
+            <string>#comment-block</string>
+          </dict>
+          <dict>
+            <key>contentName</key>
+            <string>meta.property-value.css</string>
+            <key>begin</key>
+            <string>(:)(?=(?:(?:[\s\R]+)*?))</string>
+            <key>beginCaptures</key>
+            <dict>
+              <key>1</key>
+              <dict>
+                <key>name</key>
+                <string>punctuation.separator.key-value.css</string>
+              </dict>
+            </dict>
+            <key>end</key>
+            <string>(?=\s*(;)|(?=[})]))</string>
+            <key>patterns</key>
+            <array>
+              <dict>
+                <key>name</key>
+                <string>support.constant.property-value.css</string>
+                <key>match</key>
+                <string>auto|visible|hidden|collapse</string>
+              </dict>
+              <dict>
+                <key>include</key>
+                <string>#global-property-values</string>
               </dict>
             </array>
           </dict>
