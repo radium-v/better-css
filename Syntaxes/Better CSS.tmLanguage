@@ -100,10 +100,6 @@
                 <key>include</key>
                 <string>#global-property-values</string>
               </dict>
-              <dict>
-                <key>include</key>
-                <string>#var-function</string>
-              </dict>
             </array>
           </dict>
         </array>
@@ -2450,10 +2446,6 @@ optgroup | option | output | picture | portal | pre | progress | p | q | rp
               </dict>
               <dict>
                 <key>include</key>
-                <string>#var-function</string>
-              </dict>
-              <dict>
-                <key>include</key>
                 <string>#global-property-values</string>
               </dict>
             </array>
@@ -2517,10 +2509,6 @@ optgroup | option | output | picture | portal | pre | progress | p | q | rp
               <dict>
                 <key>include</key>
                 <string>#length-percentage-type</string>
-              </dict>
-              <dict>
-                <key>include</key>
-                <string>#var-function</string>
               </dict>
               <dict>
                 <key>include</key>
@@ -2786,10 +2774,19 @@ optgroup | option | output | picture | portal | pre | progress | p | q | rp
       </dict>
       <key>global-property-values</key>
       <dict>
-        <key>name</key>
-        <string>support.constant.property-value.css</string>
-        <key>match</key>
-        <string>\b(?:inherit|initial|revert-layer|revert|unset)\b</string>
+        <key>patterns</key>
+        <array>
+          <dict>
+            <key>name</key>
+            <string>support.constant.property-value.css</string>
+            <key>match</key>
+            <string>\b(?:inherit|initial|revert-layer|revert|unset)\b</string>
+          </dict>
+          <dict>
+            <key>include</key>
+            <string>#var-function</string>
+          </dict>
+        </array>
       </dict>
       <key>hsl-function</key>
       <dict>

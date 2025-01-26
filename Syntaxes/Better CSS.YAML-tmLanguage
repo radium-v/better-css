@@ -38,7 +38,6 @@ repository:
       - name: support.constant.property-value.css
         match: auto
       - include: '#global-property-values'
-      - include: '#var-function'
 
   align-content-property:
     name: support.type.property-name.css
@@ -780,7 +779,6 @@ repository:
       - name: support.constant.property-value.css
         match: \b(none|ex-height|cap-height|ch-width|ic-width|ic-height|from-font)\s*?\b
       - include: '#number-type'
-      - include: '#var-function'
       - include: '#global-property-values'
 
   font-size-property:
@@ -801,7 +799,6 @@ repository:
       - include: '#absolute-size-type'
       - include: '#relative-size-type'
       - include: '#length-percentage-type'
-      - include: '#var-function'
       - include: '#global-property-values'
 
   function-layer:
@@ -885,8 +882,10 @@ repository:
         '1': {name: support.constant.property-value.css}
 
   global-property-values:
-    name: support.constant.property-value.css
-    match: \b(?:inherit|initial|revert-layer|revert|unset)\b
+    patterns:
+    - name: support.constant.property-value.css
+      match: \b(?:inherit|initial|revert-layer|revert|unset)\b
+    - include: '#var-function'
 
   hsl-function:
     patterns:
