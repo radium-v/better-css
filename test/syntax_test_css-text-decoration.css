@@ -1,0 +1,106 @@
+/* SYNTAX TEST "Packages/better-css/Syntaxes/Better CSS.tmLanguage" */
+
+.text-underline-position {
+    text-underline-position: auto;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*                         ^ punctuation.separator.key-value.css */
+/*                          ^^^^^ meta.property-value.css */
+/*                           ^^^^ support.constant.property-value.css */
+/*                               ^ punctuation.terminator.rule.css */
+    text-underline-position: from-font;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*                         ^ punctuation.separator.key-value.css */
+/*                          ^^^^^^^^^^ meta.property-value.css */
+/*                           ^^^^^^^^^ support.constant.property-value.css */
+/*                                    ^ punctuation.terminator.rule.css */
+    text-underline-position: under;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*                         ^ punctuation.separator.key-value.css */
+/*                          ^^^^^^ meta.property-value.css */
+/*                           ^^^^^ support.constant.property-value.css */
+/*                                ^ punctuation.terminator.rule.css */
+    text-underline-position: under left;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*                         ^ punctuation.separator.key-value.css */
+/*                          ^^^^^^^^^^^ meta.property-value.css */
+/*                           ^^^^^ support.constant.property-value.css */
+/*                                 ^^^^ support.constant.property-value.css */
+/*                                     ^ punctuation.terminator.rule.css */
+    text-underline-position: under right;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*                         ^ punctuation.separator.key-value.css */
+/*                          ^^^^^^^^^^^^ meta.property-value.css */
+/*                           ^^^^^ support.constant.property-value.css */
+/*                                 ^^^^^ support.constant.property-value.css */
+/*                                      ^ punctuation.terminator.rule.css */
+    text-underline-position: left;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*                         ^ punctuation.separator.key-value.css */
+/*                          ^^^^^ meta.property-value.css */
+/*                           ^^^^ support.constant.property-value.css */
+/*                               ^ punctuation.terminator.rule.css */
+    text-underline-position: left under;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*                         ^ punctuation.separator.key-value.css */
+/*                          ^^^^^^^^^^^ meta.property-value.css */
+/*                           ^^^^ support.constant.property-value.css */
+/*                                ^^^^^ support.constant.property-value.css */
+/*                                     ^ punctuation.terminator.rule.css */
+    text-underline-position: right;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*                         ^ punctuation.separator.key-value.css */
+/*                          ^^^^^^ meta.property-value.css */
+/*                           ^^^^^ support.constant.property-value.css */
+/*                                ^ punctuation.terminator.rule.css */
+    text-underline-position: right under;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*                         ^ punctuation.separator.key-value.css */
+/*                          ^^^^^^^^^^^^ meta.property-value.css */
+/*                           ^^^^^ support.constant.property-value.css */
+/*                                 ^^^^^ support.constant.property-value.css */
+/*                                      ^ punctuation.terminator.rule.css */
+    text-underline-position: inherit;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*                         ^ punctuation.separator.key-value.css */
+/*                          ^^^^^^^^ meta.property-value.css */
+/*                           ^^^^^^^ support.constant.property-value.css */
+/*                                  ^ punctuation.terminator.rule.css */
+    text-underline-position: initial;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*                         ^ punctuation.separator.key-value.css */
+/*                          ^^^^^^^^ meta.property-value.css */
+/*                           ^^^^^^^ support.constant.property-value.css */
+/*                                  ^ punctuation.terminator.rule.css */
+    text-underline-position: revert;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*                         ^ punctuation.separator.key-value.css */
+/*                          ^^^^^^^ meta.property-value.css */
+/*                           ^^^^^^ support.constant.property-value.css */
+/*                                 ^ punctuation.terminator.rule.css */
+    text-underline-position: revert-layer;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*                         ^ punctuation.separator.key-value.css */
+/*                          ^^^^^^^^^^^^^ meta.property-value.css */
+/*                           ^^^^^^^^^^^^ support.constant.property-value.css */
+/*                                       ^ punctuation.terminator.rule.css */
+    text-underline-position: unset;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*                         ^ punctuation.separator.key-value.css */
+/*                          ^^^^^^ meta.property-value.css */
+/*                           ^^^^^ support.constant.property-value.css */
+/*                                ^ punctuation.terminator.rule.css */
+}
