@@ -179,9 +179,10 @@ repository:
     endCaptures:
       '0': {name: punctuation.terminator.statement.css}
     patterns:
-    - name: string.quoted.double.css
+    - name: meta.string.css
       match: (")[-_+:.0-9a-zA-Z]*(")
       captures:
+        '0': {name: string.quoted.double.css}
         '1': {name: punctuation.definition.string.begin.css}
         '2': {name: punctuation.definition.string.end.css}
     - name: invalid.illegal.bad-charset.css
@@ -1441,15 +1442,17 @@ repository:
   string:
     patterns:
     - comment: '"double quoted string"'
-      name: string.quoted.double.css
+      name: meta.string.css
       match: (")(?:(?:[^"\\]|\N)|(?:{{escape}})|\\\n)*?(")
       captures:
+        '0': {name: string.quoted.double.css}
         '1': {name: punctuation.definition.string.begin.css}
         '2': {name: punctuation.definition.string.end.css}
     - comment: '''single quoted string'''
-      name: string.quoted.single.css
+      name: meta.string.css
       match: (')(?:(?:[^"\\]|\N)|{{escape}}|\\\n)*?(\1)
       captures:
+        '0': {name: string.quoted.single.css}
         '1': {name: punctuation.definition.string.begin.css}
         '2': {name: punctuation.definition.string.end.css}
 

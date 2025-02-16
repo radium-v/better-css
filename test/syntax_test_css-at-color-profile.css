@@ -56,7 +56,7 @@
 /*       ^^^^^^^^^^^^^^ meta.function-call.url.css */
 /*       ^^^ support.function.url.css */
 /*          ^ punctuation.definition.group.begin.css */
-/*           ^^^^^^^^^ string.quoted.double.css */
+/*           ^^^^^^^^^ meta.string.css string.quoted.double.css */
 /*           ^ punctuation.definition.string.begin.css */
 /*                   ^ punctuation.definition.string.end.css */
 /*                    ^ punctuation.definition.group.end.css */
@@ -69,7 +69,7 @@
 /*       ^^^^^^^^^^^^^^ meta.function-call.src.css */
 /*       ^^^ support.function.src.css */
 /*          ^ punctuation.definition.group.begin.css */
-/*           ^^^^^^^^^ string.quoted.double.css */
+/*           ^^^^^^^^^ meta.string.css string.quoted.double.css */
 /*           ^ punctuation.definition.string.begin.css */
 /*                   ^ punctuation.definition.string.end.css */
 /*                    ^ punctuation.definition.group.end.css */

@@ -556,11 +556,16 @@
         <array>
           <dict>
             <key>name</key>
-            <string>string.quoted.double.css</string>
+            <string>meta.string.css</string>
             <key>match</key>
             <string>(")[-_+:.0-9a-zA-Z]*(")</string>
             <key>captures</key>
             <dict>
+              <key>0</key>
+              <dict>
+                <key>name</key>
+                <string>string.quoted.double.css</string>
+              </dict>
               <key>1</key>
               <dict>
                 <key>name</key>
@@ -4589,11 +4594,16 @@ optgroup | option | output | picture | portal | pre | progress | p | q | rp
             <key>comment</key>
             <string>"double quoted string"</string>
             <key>name</key>
-            <string>string.quoted.double.css</string>
+            <string>meta.string.css</string>
             <key>match</key>
             <string>(")(?:(?:[^"\\]|\N)|(?:(?:\\(?:\N|[[:^xdigit:]]|[[:xdigit:]]{1,6}[\s\R])))|\\\n)*?(")</string>
             <key>captures</key>
             <dict>
+              <key>0</key>
+              <dict>
+                <key>name</key>
+                <string>string.quoted.double.css</string>
+              </dict>
               <key>1</key>
               <dict>
                 <key>name</key>
@@ -4610,11 +4620,16 @@ optgroup | option | output | picture | portal | pre | progress | p | q | rp
             <key>comment</key>
             <string>'single quoted string'</string>
             <key>name</key>
-            <string>string.quoted.single.css</string>
+            <string>meta.string.css</string>
             <key>match</key>
             <string>(')(?:(?:[^"\\]|\N)|(?:\\(?:\N|[[:^xdigit:]]|[[:xdigit:]]{1,6}[\s\R]))|\\\n)*?(\1)</string>
             <key>captures</key>
             <dict>
+              <key>0</key>
+              <dict>
+                <key>name</key>
+                <string>string.quoted.single.css</string>
+              </dict>
               <key>1</key>
               <dict>
                 <key>name</key>

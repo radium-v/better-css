@@ -7,7 +7,7 @@
 /*        ^^^^^^^^^^^^^^^^^^^^ meta.function-call.url.css */
 /*        ^^^ support.function.url.css */
 /*           ^ punctuation.definition.group.begin.css */
-/*            ^^^^^^^^^^^^^^^ string.quoted.double.css */
+/*            ^^^^^^^^^^^^^^^ meta.string.css string.quoted.double.css */
 /*            ^ punctuation.definition.string.begin.css */
 /*                          ^ punctuation.definition.string.end.css */
 /*                           ^ punctuation.definition.group.end.css */
@@ -20,7 +20,7 @@
 /*        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.function-call.url.css */
 /*        ^^^ support.function.url.css */
 /*           ^ punctuation.definition.group.begin.css */
-/*            ^^^^^^^^^^^^^^^ string.quoted.double.css */
+/*            ^^^^^^^^^^^^^^^ meta.string.css string.quoted.double.css */
 /*            ^ punctuation.definition.string.begin.css */
 /*                          ^ punctuation.definition.string.end.css */
 /*                            ^^^^^^^^ variable.parameter.url-modifier.css */
@@ -34,7 +34,7 @@
 /*        ^^^^^^^^^^^^^^^ meta.function-call.url.css */
 /*        ^^^ support.function.url.css */
 /*           ^ punctuation.definition.group.begin.css */
-/*            ^^^^^^^^^^ string.quoted.double.css */
+/*            ^^^^^^^^^^ meta.string.css string.quoted.double.css */
 /*            ^ punctuation.definition.string.begin.css */
 /*                     ^ punctuation.definition.string.end.css */
 /*                      ^ punctuation.definition.group.end.css */
@@ -48,7 +48,7 @@
 /*        ^^^^^^^^^^^^^^^ meta.function-call.url.css */
 /*        ^^^ support.function.url.css */
 /*           ^ punctuation.definition.group.begin.css */
-/*            ^^^^^^^^^^ string.quoted.double.css */
+/*            ^^^^^^^^^^ meta.string.css string.quoted.double.css */
 /*            ^ punctuation.definition.string.begin.css */
 /*                     ^ punctuation.definition.string.end.css */
 /*                      ^ punctuation.definition.group.end.css */
@@ -66,7 +66,7 @@
 /*        ^^^^^^^^^^^^^^^ meta.function-call.url.css */
 /*        ^^^ support.function.url.css */
 /*           ^ punctuation.definition.group.begin.css */
-/*            ^^^^^^^^^^ string.quoted.double.css */
+/*            ^^^^^^^^^^ meta.string.css string.quoted.double.css */
 /*            ^ punctuation.definition.string.begin.css */
 /*                     ^ punctuation.definition.string.end.css */
 /*                      ^ punctuation.definition.group.end.css */
@@ -82,7 +82,7 @@
 /*^^^^^^^^^^^^^^^^^^^^^^^ meta.at-rule.import.css */
 /*^ punctuation.definition.keyword.css */
 /* ^^^^^^ keyword.control.at-rule.import.css */
-/*        ^^^^^^^^^^^^^^ string.quoted.double.css */
+/*        ^^^^^^^^^^^^^^ meta.string.css string.quoted.double.css */
 /*        ^ punctuation.definition.string.begin.css */
 /*                     ^ punctuation.definition.string.end.css */
 /*                      ^ punctuation.terminator.statement.css */
@@ -91,7 +91,7 @@
 /*^^^^^^^^^^^^^^^^^^^^^^^^^ meta.at-rule.import.css */
 /*^ punctuation.definition.keyword.css */
 /* ^^^^^^ keyword.control.at-rule.import.css */
-/*        ^^^^^^^^^^ string.quoted.double.css */
+/*        ^^^^^^^^^^ meta.string.css string.quoted.double.css */
 /*        ^ punctuation.definition.string.begin.css */
 /*                 ^ punctuation.definition.string.end.css */
 /*                   ^^^^^ keyword.context.resource.css */
@@ -101,7 +101,7 @@
 /*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.at-rule.import.css */
 /*^ punctuation.definition.keyword.css */
 /* ^^^^^^ keyword.control.at-rule.import.css */
-/*        ^^^^^^^^^^ string.quoted.double.css */
+/*        ^^^^^^^^^^ meta.string.css string.quoted.double.css */
 /*        ^ punctuation.definition.string.begin.css */
 /*                 ^ punctuation.definition.string.end.css */
 /*                   ^^^^^^^^^^^^^^^^ meta.function-call.layer.css */
@@ -115,7 +115,7 @@
 /*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.at-rule.import.css */
 /*^ punctuation.definition.keyword.css */
 /* ^^^^^^ keyword.control.at-rule.import.css */
-/*        ^^^^^^^^^^ string.quoted.double.css */
+/*        ^^^^^^^^^^ meta.string.css string.quoted.double.css */
 /*        ^ punctuation.definition.string.begin.css */
 /*                 ^ punctuation.definition.string.end.css */
 /*                   ^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.function-call.layer.css */

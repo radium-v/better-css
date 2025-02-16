@@ -7,12 +7,12 @@
 /*           ^^^^^^^^^^ meta.function-call.url.css */
 /*           ^^^ support.function.url.css */
 /*              ^ punctuation.definition.group.begin.css */
-/*               ^^^^^ string.quoted.double.css */
+/*               ^^^^^ meta.string.css string.quoted.double.css */
 /*               ^ punctuation.definition.string.begin.css */
 /*                   ^ punctuation.definition.string.end.css */
 /*                    ^ punctuation.definition.group.end.css */
 /*                     ^ punctuation.terminator.statement.css */
-  
+
   @namespace src("url");
 /*^^^^^^^^^^^^^^^^^^^^^^ meta.at-rule.namespace.css */
 /*^ punctuation.definition.keyword.css */
@@ -20,7 +20,7 @@
 /*           ^^^^^^^^^^ meta.function-call.src.css */
 /*           ^^^ support.function.src.css */
 /*              ^ punctuation.definition.group.begin.css */
-/*               ^^^^^ string.quoted.double.css */
+/*               ^^^^^ meta.string.css string.quoted.double.css */
 /*               ^ punctuation.definition.string.begin.css */
 /*                   ^ punctuation.definition.string.end.css */
 /*                    ^ punctuation.definition.group.end.css */
@@ -34,12 +34,12 @@
 /*                  ^^^^^^^^^^ meta.function-call.url.css */
 /*                  ^^^ support.function.url.css */
 /*                     ^ punctuation.definition.group.begin.css */
-/*                      ^^^^^ string.quoted.double.css */
+/*                      ^^^^^ meta.string.css string.quoted.double.css */
 /*                      ^ punctuation.definition.string.begin.css */
 /*                          ^ punctuation.definition.string.end.css */
 /*                           ^ punctuation.definition.group.end.css */
 /*                            ^ punctuation.terminator.statement.css */
-  
+
   @namespace prefix src("url");
 /*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.at-rule.namespace.css */
 /*^ punctuation.definition.keyword.css */
@@ -48,7 +48,7 @@
 /*                  ^^^^^^^^^^ meta.function-call.src.css */
 /*                  ^^^ support.function.src.css */
 /*                     ^ punctuation.definition.group.begin.css */
-/*                      ^^^^^ string.quoted.double.css */
+/*                      ^^^^^ meta.string.css string.quoted.double.css */
 /*                      ^ punctuation.definition.string.begin.css */
 /*                          ^ punctuation.definition.string.end.css */
 /*                           ^ punctuation.definition.group.end.css */
@@ -58,18 +58,17 @@
 /*^^^^^^^^^^^^^^^^^ meta.at-rule.namespace.css */
 /*^ punctuation.definition.keyword.css */
 /* ^^^^^^^^^ keyword.control.at-rule.css */
-/*           ^^^^^ string.quoted.double.css */
+/*           ^^^^^ meta.string.css string.quoted.double.css */
 /*           ^ punctuation.definition.string.begin.css */
 /*               ^ punctuation.definition.string.end.css */
 /*                ^ punctuation.terminator.statement.css */
-  
+
   @namespace prefix "url";
 /*^^^^^^^^^^^^^^^^^^^^^^^^ meta.at-rule.namespace.css */
 /*^ punctuation.definition.keyword.css */
 /* ^^^^^^^^^ keyword.control.at-rule.css */
 /*           ^^^^^^ variable.parameter.namespace-prefix.css */
-/*                  ^^^^^ string.quoted.double.css */
+/*                  ^^^^^ meta.string.css string.quoted.double.css */
 /*                  ^ punctuation.definition.string.begin.css */
 /*                      ^ punctuation.definition.string.end.css */
 /*                       ^ punctuation.terminator.statement.css */
-  

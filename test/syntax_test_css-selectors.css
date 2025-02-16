@@ -745,7 +745,7 @@
 /*^ punctuation.definition.attribute-selector.begin.css */
 /* ^^^^ entity.other.attribute-name.attribute.css */
 /*     ^ keyword.operator.attribute-match.css */
-/*      ^^^^^^^ string.quoted.double.css */
+/*      ^^^^^^^ meta.string.css string.quoted.double.css */
 /*      ^ punctuation.definition.string.begin.css */
 /*            ^ punctuation.definition.string.end.css */
 /*             ^ punctuation.definition.attribute-selector.end.css */
@@ -756,7 +756,7 @@
 /*^ punctuation.definition.attribute-selector.begin.css */
 /* ^^^^ entity.other.attribute-name.attribute.css */
 /*     ^^ keyword.operator.attribute-match.css */
-/*       ^^^^^^^ string.quoted.double.css */
+/*       ^^^^^^^ meta.string.css string.quoted.double.css */
 /*       ^ punctuation.definition.string.begin.css */
 /*             ^ punctuation.definition.string.end.css */
 /*              ^ punctuation.definition.attribute-selector.end.css */
@@ -767,7 +767,7 @@
 /*^ punctuation.definition.attribute-selector.begin.css */
 /* ^^^^ entity.other.attribute-name.attribute.css */
 /*     ^^ keyword.operator.attribute-match.css */
-/*       ^^^^^^^ string.quoted.double.css */
+/*       ^^^^^^^ meta.string.css string.quoted.double.css */
 /*       ^ punctuation.definition.string.begin.css */
 /*             ^ punctuation.definition.string.end.css */
 /*              ^ punctuation.definition.attribute-selector.end.css */
@@ -778,7 +778,7 @@
 /*^ punctuation.definition.attribute-selector.begin.css */
 /* ^^^^ entity.other.attribute-name.attribute.css */
 /*     ^^ keyword.operator.attribute-match.css */
-/*       ^^^^^^^ string.quoted.double.css */
+/*       ^^^^^^^ meta.string.css string.quoted.double.css */
 /*       ^ punctuation.definition.string.begin.css */
 /*             ^ punctuation.definition.string.end.css */
 /*              ^ punctuation.definition.attribute-selector.end.css */
@@ -789,7 +789,7 @@
 /*^ punctuation.definition.attribute-selector.begin.css */
 /* ^^^^ entity.other.attribute-name.attribute.css */
 /*     ^^ keyword.operator.attribute-match.css */
-/*       ^^^^^^^ string.quoted.double.css */
+/*       ^^^^^^^ meta.string.css string.quoted.double.css */
 /*       ^ punctuation.definition.string.begin.css */
 /*             ^ punctuation.definition.string.end.css */
 /*              ^ punctuation.definition.attribute-selector.end.css */
@@ -800,7 +800,7 @@
 /*^ punctuation.definition.attribute-selector.begin.css */
 /* ^^^^ entity.other.attribute-name.attribute.css */
 /*     ^^ keyword.operator.attribute-match.css */
-/*       ^^^^^^^ string.quoted.double.css */
+/*       ^^^^^^^ meta.string.css string.quoted.double.css */
 /*       ^ punctuation.definition.string.begin.css */
 /*             ^ punctuation.definition.string.end.css */
 /*              ^ punctuation.definition.attribute-selector.end.css */
@@ -811,7 +811,7 @@
 /*^ punctuation.definition.attribute-selector.begin.css */
 /* ^^^^ entity.other.attribute-name.attribute.css */
 /*     ^ keyword.operator.attribute-match.css */
-/*      ^^^^^^^ string.quoted.double.css */
+/*      ^^^^^^^ meta.string.css string.quoted.double.css */
 /*      ^ punctuation.definition.string.begin.css */
 /*            ^ punctuation.definition.string.end.css */
 /*             ^ string.unquoted.attribute-value.css */
@@ -824,7 +824,7 @@
 /*^ punctuation.definition.attribute-selector.begin.css */
 /* ^^^^ entity.other.attribute-name.attribute.css */
 /*     ^^ keyword.operator.attribute-match.css */
-/*       ^^^^^^^ string.quoted.double.css */
+/*       ^^^^^^^ meta.string.css string.quoted.double.css */
 /*       ^ punctuation.definition.string.begin.css */
 /*             ^ punctuation.definition.string.end.css */
 /*              ^ string.unquoted.attribute-value.css */
@@ -837,7 +837,7 @@
 /*^ punctuation.definition.attribute-selector.begin.css */
 /* ^^^^ entity.other.attribute-name.attribute.css */
 /*     ^^ keyword.operator.attribute-match.css */
-/*       ^^^^^^^ string.quoted.double.css */
+/*       ^^^^^^^ meta.string.css string.quoted.double.css */
 /*       ^ punctuation.definition.string.begin.css */
 /*             ^ punctuation.definition.string.end.css */
 /*              ^ string.unquoted.attribute-value.css */
@@ -850,7 +850,7 @@
 /*^ punctuation.definition.attribute-selector.begin.css */
 /* ^^^^ entity.other.attribute-name.attribute.css */
 /*     ^ keyword.operator.attribute-match.css */
-/*      ^^^^^^^ string.quoted.double.css */
+/*      ^^^^^^^ meta.string.css string.quoted.double.css */
 /*      ^ punctuation.definition.string.begin.css */
 /*            ^ punctuation.definition.string.end.css */
 /*             ^ string.unquoted.attribute-value.css */
@@ -863,7 +863,7 @@
 /*^ punctuation.definition.attribute-selector.begin.css */
 /* ^^^^ entity.other.attribute-name.attribute.css */
 /*     ^^ keyword.operator.attribute-match.css */
-/*       ^^^^^^^ string.quoted.double.css */
+/*       ^^^^^^^ meta.string.css string.quoted.double.css */
 /*       ^ punctuation.definition.string.begin.css */
 /*             ^ punctuation.definition.string.end.css */
 /*              ^ string.unquoted.attribute-value.css */
@@ -876,7 +876,7 @@
 /*^ punctuation.definition.attribute-selector.begin.css */
 /* ^^^^ entity.other.attribute-name.attribute.css */
 /*     ^^ keyword.operator.attribute-match.css */
-/*       ^^^^^^^ string.quoted.double.css */
+/*       ^^^^^^^ meta.string.css string.quoted.double.css */
 /*       ^ punctuation.definition.string.begin.css */
 /*             ^ punctuation.definition.string.end.css */
 /*              ^ string.unquoted.attribute-value.css */
@@ -889,7 +889,7 @@
 /*^ punctuation.definition.attribute-selector.begin.css */
 /* ^^^^ entity.other.attribute-name.attribute.css */
 /*     ^^ keyword.operator.attribute-match.css */
-/*       ^^^^^^^ string.quoted.double.css */
+/*       ^^^^^^^ meta.string.css string.quoted.double.css */
 /*       ^ punctuation.definition.string.begin.css */
 /*             ^ punctuation.definition.string.end.css */
 /*              ^ string.unquoted.attribute-value.css */
@@ -902,7 +902,7 @@
 /*^ punctuation.definition.attribute-selector.begin.css */
 /* ^^^^ entity.other.attribute-name.attribute.css */
 /*     ^ keyword.operator.attribute-match.css */
-/*      ^^^^^^^ string.quoted.double.css */
+/*      ^^^^^^^ meta.string.css string.quoted.double.css */
 /*      ^ punctuation.definition.string.begin.css */
 /*            ^ punctuation.definition.string.end.css */
 /*             ^ string.unquoted.attribute-value.css */
@@ -915,7 +915,7 @@
 /*^ punctuation.definition.attribute-selector.begin.css */
 /* ^^^^ entity.other.attribute-name.attribute.css */
 /*     ^^ keyword.operator.attribute-match.css */
-/*       ^^^^^^^ string.quoted.double.css */
+/*       ^^^^^^^ meta.string.css string.quoted.double.css */
 /*       ^ punctuation.definition.string.begin.css */
 /*             ^ punctuation.definition.string.end.css */
 /*              ^ string.unquoted.attribute-value.css */
@@ -928,7 +928,7 @@
 /*^ punctuation.definition.attribute-selector.begin.css */
 /* ^^^^ entity.other.attribute-name.attribute.css */
 /*     ^^ keyword.operator.attribute-match.css */
-/*       ^^^^^^^ string.quoted.double.css */
+/*       ^^^^^^^ meta.string.css string.quoted.double.css */
 /*       ^ punctuation.definition.string.begin.css */
 /*             ^ punctuation.definition.string.end.css */
 /*              ^ string.unquoted.attribute-value.css */
@@ -941,7 +941,7 @@
 /*^ punctuation.definition.attribute-selector.begin.css */
 /* ^^^^ entity.other.attribute-name.attribute.css */
 /*     ^ keyword.operator.attribute-match.css */
-/*      ^^^^^^^ string.quoted.double.css */
+/*      ^^^^^^^ meta.string.css string.quoted.double.css */
 /*      ^ punctuation.definition.string.begin.css */
 /*            ^ punctuation.definition.string.end.css */
 /*             ^ string.unquoted.attribute-value.css */
@@ -954,7 +954,7 @@
 /*^ punctuation.definition.attribute-selector.begin.css */
 /* ^^^^ entity.other.attribute-name.attribute.css */
 /*     ^^ keyword.operator.attribute-match.css */
-/*       ^^^^^^^ string.quoted.double.css */
+/*       ^^^^^^^ meta.string.css string.quoted.double.css */
 /*       ^ punctuation.definition.string.begin.css */
 /*             ^ punctuation.definition.string.end.css */
 /*              ^ string.unquoted.attribute-value.css */
@@ -967,7 +967,7 @@
 /*^ punctuation.definition.attribute-selector.begin.css */
 /* ^^^^ entity.other.attribute-name.attribute.css */
 /*     ^^ keyword.operator.attribute-match.css */
-/*       ^^^^^^^ string.quoted.double.css */
+/*       ^^^^^^^ meta.string.css string.quoted.double.css */
 /*       ^ punctuation.definition.string.begin.css */
 /*             ^ punctuation.definition.string.end.css */
 /*              ^ string.unquoted.attribute-value.css */
@@ -980,7 +980,7 @@
 /*^ punctuation.definition.attribute-selector.begin.css */
 /* ^^^^ entity.other.attribute-name.attribute.css */
 /*     ^^ keyword.operator.attribute-match.css */
-/*       ^^^^^^^ string.quoted.double.css */
+/*       ^^^^^^^ meta.string.css string.quoted.double.css */
 /*       ^ punctuation.definition.string.begin.css */
 /*             ^ punctuation.definition.string.end.css */
 /*              ^ string.unquoted.attribute-value.css */

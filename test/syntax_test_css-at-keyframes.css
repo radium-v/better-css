@@ -2,16 +2,16 @@
 
   @keyframes test {}
 /*^^^^^^^^^^^^^^^^^^ meta.at-rule.keyframes.css */
-/*^^^^^^^^^^ keyword.control.at-rule.keyframe.css */
+/*^^^^^^^^^^ keyword.control.at-rule.keyframes.css */
 /*^ punctuation.definition.keyword.css */
 /*           ^^^^ variable.parameter.animation-name.css */
 /*                ^ punctuation.definition.block.begin.css */
 /*                 ^ punctuation.definition.block.end.css */
   @keyframes "test" {}
 /*^^^^^^^^^^^^^^^^^^^^ meta.at-rule.keyframes.css */
-/*^^^^^^^^^^ keyword.control.at-rule.keyframe.css */
+/*^^^^^^^^^^ keyword.control.at-rule.keyframes.css */
 /*^ punctuation.definition.keyword.css */
-/*           ^^^^^^ string.quoted.double.css */
+/*           ^^^^^^ meta.string.css string.quoted.double.css */
 /*           ^ punctuation.definition.string.begin.css */
 /*                ^ punctuation.definition.string.end.css */
 /*                  ^ punctuation.definition.block.begin.css */
@@ -19,7 +19,7 @@
 
   @keyframes /* comment */ animation-name /* comment */ {}
 /*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.at-rule.keyframes.css */
-/*^^^^^^^^^^ keyword.control.at-rule.keyframe.css */
+/*^^^^^^^^^^ keyword.control.at-rule.keyframes.css */
 /*^ punctuation.definition.keyword.css */
 /*           ^^^^^^^^^^^^^ comment.block.css */
 /*                         ^^^^^^^^^^^^^^ variable.parameter.animation-name.css */
@@ -27,11 +27,12 @@
 /*                                                      ^ punctuation.definition.block.begin.css */
 /*                                                       ^ punctuation.definition.block.end.css */
 
-@keyframes asdf {
-/*^^^^^^^^^^^^^^^ meta.at-rule.keyframes.css */
-/*^^^^^^^^ keyword.control.at-rule.keyframe.css */
-/*         ^^^^ variable.parameter.animation-name.css */
-/*              ^ punctuation.definition.block.begin.css */
+  @keyframes asdf {
+/*^^^^^^^^^^^^^^^^^ meta.at-rule.keyframes.css */
+/*^^^^^^^^^^ keyword.control.at-rule.keyframes.css */
+/*^ punctuation.definition.keyword.css */
+/*           ^^^^ variable.parameter.animation-name.css */
+/*                ^ punctuation.definition.block.begin.css */
   from {}
 /*^^^^^^^ meta.at-rule.keyframes.css */
 /*^^^^ entity.other.keyframe-offset.css keyword.other.keyframe-selector.css */
