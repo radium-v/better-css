@@ -1375,6 +1375,7 @@ repository:
       - include: '#filter-property'
       - include: '#font-properties'
       - include: '#text-wrap-mode-property'
+      - include: '#text-wrap-style-property'
       - include: '#transition-properties'
       - include: '#visibility-property'
       - include: '#white-space-collapse-property'
@@ -1531,6 +1532,26 @@ repository:
       patterns:
       - name: support.constant.property-value.css
         match: wrap|nowrap
+      - include: '#global-property-values'
+
+  text-wrap-style-property:
+    name: meta.property-name.css
+    begin: \btext-wrap-style\b
+    beginCaptures:
+      '0': {name: support.type.property-name.css}
+    end: '{{property_value_terminator}}'
+    endCaptures:
+      '1': {name: punctuation.terminator.rule.css}
+    patterns:
+    - include: '#comment-block'
+    - contentName: meta.property-value.css
+      begin: (:)(?={{ws}})
+      beginCaptures:
+        '1': {name: punctuation.separator.key-value.css}
+      end: (?={{property_value_terminator}})
+      patterns:
+      - name: support.constant.property-value.css
+        match: auto|balance|stable|pretty|avoid-orphans
       - include: '#global-property-values'
 
   transition-properties:
