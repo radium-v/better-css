@@ -1,0 +1,193 @@
+/* SYNTAX TEST "Packages/better-css/Syntaxes/Better CSS.tmLanguage" */
+
+.text-transform {
+    text-transform: none;
+/*^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*                ^ punctuation.separator.key-value.css */
+/*                 ^^^^^ meta.property-value.css */
+/*                  ^^^^ support.constant.property-value.css */
+/*                      ^ punctuation.terminator.rule.css */
+    text-transform: capitalize;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*                ^ punctuation.separator.key-value.css */
+/*                 ^^^^^^^^^^^ meta.property-value.css */
+/*                  ^^^^^^^^^^ support.constant.property-value.css */
+/*                            ^ punctuation.terminator.rule.css */
+    text-transform: capitalize full-width;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*                ^ punctuation.separator.key-value.css */
+/*                 ^^^^^^^^^^^^^^^^^^^^^^ meta.property-value.css */
+/*                  ^^^^^^^^^^ support.constant.property-value.css */
+/*                             ^^^^^^^^^^ support.constant.property-value.css */
+/*                                       ^ punctuation.terminator.rule.css */
+    text-transform: capitalize full-size-kana;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*                ^ punctuation.separator.key-value.css */
+/*                 ^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-value.css */
+/*                  ^^^^^^^^^^ support.constant.property-value.css */
+/*                             ^^^^^^^^^^^^^^ support.constant.property-value.css */
+/*                                           ^ punctuation.terminator.rule.css */
+    text-transform: uppercase;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*                ^ punctuation.separator.key-value.css */
+/*                 ^^^^^^^^^^ meta.property-value.css */
+/*                  ^^^^^^^^^ support.constant.property-value.css */
+/*                           ^ punctuation.terminator.rule.css */
+    text-transform: uppercase full-width;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*                ^ punctuation.separator.key-value.css */
+/*                 ^^^^^^^^^^^^^^^^^^^^^ meta.property-value.css */
+/*                  ^^^^^^^^^ support.constant.property-value.css */
+/*                            ^^^^^^^^^^ support.constant.property-value.css */
+/*                                      ^ punctuation.terminator.rule.css */
+    text-transform: uppercase full-size-kana;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*                ^ punctuation.separator.key-value.css */
+/*                 ^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-value.css */
+/*                  ^^^^^^^^^ support.constant.property-value.css */
+/*                            ^^^^^^^^^^^^^^ support.constant.property-value.css */
+/*                                          ^ punctuation.terminator.rule.css */
+    text-transform: lowercase;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*                ^ punctuation.separator.key-value.css */
+/*                 ^^^^^^^^^^ meta.property-value.css */
+/*                  ^^^^^^^^^ support.constant.property-value.css */
+/*                           ^ punctuation.terminator.rule.css */
+    text-transform: lowercase full-width;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*                ^ punctuation.separator.key-value.css */
+/*                 ^^^^^^^^^^^^^^^^^^^^^ meta.property-value.css */
+/*                  ^^^^^^^^^ support.constant.property-value.css */
+/*                            ^^^^^^^^^^ support.constant.property-value.css */
+/*                                      ^ punctuation.terminator.rule.css */
+    text-transform: lowercase full-size-kana;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*                ^ punctuation.separator.key-value.css */
+/*                 ^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-value.css */
+/*                  ^^^^^^^^^ support.constant.property-value.css */
+/*                            ^^^^^^^^^^^^^^ support.constant.property-value.css */
+/*                                          ^ punctuation.terminator.rule.css */
+    text-transform: full-width;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*                ^ punctuation.separator.key-value.css */
+/*                 ^^^^^^^^^^^ meta.property-value.css */
+/*                  ^^^^^^^^^^ support.constant.property-value.css */
+/*                            ^ punctuation.terminator.rule.css */
+    text-transform: full-width capitalize;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*                ^ punctuation.separator.key-value.css */
+/*                 ^^^^^^^^^^^^^^^^^^^^^^ meta.property-value.css */
+/*                  ^^^^^^^^^^ support.constant.property-value.css */
+/*                             ^^^^^^^^^^ support.constant.property-value.css */
+/*                                       ^ punctuation.terminator.rule.css */
+    text-transform: full-width uppercase;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*                ^ punctuation.separator.key-value.css */
+/*                 ^^^^^^^^^^^^^^^^^^^^^ meta.property-value.css */
+/*                  ^^^^^^^^^^ support.constant.property-value.css */
+/*                             ^^^^^^^^^ support.constant.property-value.css */
+/*                                      ^ punctuation.terminator.rule.css */
+    text-transform: full-width lowercase;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*                ^ punctuation.separator.key-value.css */
+/*                 ^^^^^^^^^^^^^^^^^^^^^ meta.property-value.css */
+/*                  ^^^^^^^^^^ support.constant.property-value.css */
+/*                             ^^^^^^^^^ support.constant.property-value.css */
+/*                                      ^ punctuation.terminator.rule.css */
+    text-transform: full-width full-size-kana;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*                ^ punctuation.separator.key-value.css */
+/*                 ^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-value.css */
+/*                  ^^^^^^^^^^ support.constant.property-value.css */
+/*                             ^^^^^^^^^^^^^^ support.constant.property-value.css */
+/*                                           ^ punctuation.terminator.rule.css */
+    text-transform: full-size-kana;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*                ^ punctuation.separator.key-value.css */
+/*                 ^^^^^^^^^^^^^^^ meta.property-value.css */
+/*                  ^^^^^^^^^^^^^^ support.constant.property-value.css */
+/*                                ^ punctuation.terminator.rule.css */
+    text-transform: full-size-kana capitalize;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*                ^ punctuation.separator.key-value.css */
+/*                 ^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-value.css */
+/*                  ^^^^^^^^^^^^^^ support.constant.property-value.css */
+/*                                 ^^^^^^^^^^ support.constant.property-value.css */
+/*                                           ^ punctuation.terminator.rule.css */
+    text-transform: full-size-kana uppercase;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*                ^ punctuation.separator.key-value.css */
+/*                 ^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-value.css */
+/*                  ^^^^^^^^^^^^^^ support.constant.property-value.css */
+/*                                 ^^^^^^^^^ support.constant.property-value.css */
+/*                                          ^ punctuation.terminator.rule.css */
+    text-transform: full-size-kana lowercase;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*                ^ punctuation.separator.key-value.css */
+/*                 ^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-value.css */
+/*                  ^^^^^^^^^^^^^^ support.constant.property-value.css */
+/*                                 ^^^^^^^^^ support.constant.property-value.css */
+/*                                          ^ punctuation.terminator.rule.css */
+    text-transform: full-size-kana full-width;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*                ^ punctuation.separator.key-value.css */
+/*                 ^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-value.css */
+/*                  ^^^^^^^^^^^^^^ support.constant.property-value.css */
+/*                                 ^^^^^^^^^^ support.constant.property-value.css */
+/*                                           ^ punctuation.terminator.rule.css */
+    text-transform: inherit;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*                ^ punctuation.separator.key-value.css */
+/*                 ^^^^^^^^ meta.property-value.css */
+/*                  ^^^^^^^ support.constant.property-value.css */
+/*                         ^ punctuation.terminator.rule.css */
+    text-transform: initial;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*                ^ punctuation.separator.key-value.css */
+/*                 ^^^^^^^^ meta.property-value.css */
+/*                  ^^^^^^^ support.constant.property-value.css */
+/*                         ^ punctuation.terminator.rule.css */
+    text-transform: revert;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*                ^ punctuation.separator.key-value.css */
+/*                 ^^^^^^^ meta.property-value.css */
+/*                  ^^^^^^ support.constant.property-value.css */
+/*                        ^ punctuation.terminator.rule.css */
+    text-transform: revert-layer;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*                ^ punctuation.separator.key-value.css */
+/*                 ^^^^^^^^^^^^^ meta.property-value.css */
+/*                  ^^^^^^^^^^^^ support.constant.property-value.css */
+/*                              ^ punctuation.terminator.rule.css */
+    text-transform: unset;
+/*^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*                ^ punctuation.separator.key-value.css */
+/*                 ^^^^^^ meta.property-value.css */
+/*                  ^^^^^ support.constant.property-value.css */
+/*                       ^ punctuation.terminator.rule.css */
+}
