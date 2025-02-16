@@ -4370,6 +4370,10 @@ optgroup | option | output | picture | portal | pre | progress | p | q | rp
               </dict>
               <dict>
                 <key>include</key>
+                <string>#text-wrap-property</string>
+              </dict>
+              <dict>
+                <key>include</key>
                 <string>#transition-properties</string>
               </dict>
               <dict>
@@ -4814,6 +4818,69 @@ optgroup | option | output | picture | portal | pre | progress | p | q | rp
           </dict>
         </array>
       </dict>
+      <key>text-wrap-property</key>
+      <dict>
+        <key>name</key>
+        <string>meta.property-name.css</string>
+        <key>begin</key>
+        <string>\btext-wrap\b</string>
+        <key>beginCaptures</key>
+        <dict>
+          <key>0</key>
+          <dict>
+            <key>name</key>
+            <string>support.type.property-name.css</string>
+          </dict>
+        </dict>
+        <key>end</key>
+        <string>\s*(;)|(?=[})])</string>
+        <key>endCaptures</key>
+        <dict>
+          <key>1</key>
+          <dict>
+            <key>name</key>
+            <string>punctuation.terminator.rule.css</string>
+          </dict>
+        </dict>
+        <key>patterns</key>
+        <array>
+          <dict>
+            <key>include</key>
+            <string>#comment-block</string>
+          </dict>
+          <dict>
+            <key>contentName</key>
+            <string>meta.property-value.css</string>
+            <key>begin</key>
+            <string>(:)(?=(?:(?:[\s\R]+)*?))</string>
+            <key>beginCaptures</key>
+            <dict>
+              <key>1</key>
+              <dict>
+                <key>name</key>
+                <string>punctuation.separator.key-value.css</string>
+              </dict>
+            </dict>
+            <key>end</key>
+            <string>(?=\s*(;)|(?=[})]))</string>
+            <key>patterns</key>
+            <array>
+              <dict>
+                <key>include</key>
+                <string>#text-wrap-mode-values</string>
+              </dict>
+              <dict>
+                <key>include</key>
+                <string>#text-wrap-style-values</string>
+              </dict>
+              <dict>
+                <key>include</key>
+                <string>#global-property-values</string>
+              </dict>
+            </array>
+          </dict>
+        </array>
+      </dict>
       <key>text-wrap-mode-property</key>
       <dict>
         <key>name</key>
@@ -4862,10 +4929,8 @@ optgroup | option | output | picture | portal | pre | progress | p | q | rp
             <key>patterns</key>
             <array>
               <dict>
-                <key>name</key>
-                <string>support.constant.property-value.css</string>
-                <key>match</key>
-                <string>wrap|nowrap</string>
+                <key>include</key>
+                <string>#text-wrap-mode-values</string>
               </dict>
               <dict>
                 <key>include</key>
@@ -4874,6 +4939,13 @@ optgroup | option | output | picture | portal | pre | progress | p | q | rp
             </array>
           </dict>
         </array>
+      </dict>
+      <key>text-wrap-mode-values</key>
+      <dict>
+        <key>name</key>
+        <string>support.constant.property-value.css</string>
+        <key>match</key>
+        <string>wrap|nowrap</string>
       </dict>
       <key>text-wrap-style-property</key>
       <dict>
@@ -4923,10 +4995,8 @@ optgroup | option | output | picture | portal | pre | progress | p | q | rp
             <key>patterns</key>
             <array>
               <dict>
-                <key>name</key>
-                <string>support.constant.property-value.css</string>
-                <key>match</key>
-                <string>auto|balance|stable|pretty|avoid-orphans</string>
+                <key>include</key>
+                <string>#text-wrap-style-values</string>
               </dict>
               <dict>
                 <key>include</key>
@@ -4935,6 +5005,13 @@ optgroup | option | output | picture | portal | pre | progress | p | q | rp
             </array>
           </dict>
         </array>
+      </dict>
+      <key>text-wrap-style-values</key>
+      <dict>
+        <key>name</key>
+        <string>support.constant.property-value.css</string>
+        <key>match</key>
+        <string>auto|balance|stable|pretty|avoid-orphans</string>
       </dict>
       <key>transition-properties</key>
       <dict>

@@ -125,6 +125,253 @@
 /*                       ^ punctuation.terminator.rule.css */
 }
 
+.text-wrap {
+    text-wrap: wrap;
+/*^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*           ^ punctuation.separator.key-value.css */
+/*            ^^^^^ meta.property-value.css */
+/*             ^^^^ support.constant.property-value.css */
+/*                 ^ punctuation.terminator.rule.css */
+    text-wrap: wrap auto;
+/*^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*           ^ punctuation.separator.key-value.css */
+/*            ^^^^^^^^^^ meta.property-value.css */
+/*             ^^^^ support.constant.property-value.css */
+/*                  ^^^^ support.constant.property-value.css */
+/*                      ^ punctuation.terminator.rule.css */
+    text-wrap: wrap balance;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*           ^ punctuation.separator.key-value.css */
+/*            ^^^^^^^^^^^^^ meta.property-value.css */
+/*             ^^^^ support.constant.property-value.css */
+/*                  ^^^^^^^ support.constant.property-value.css */
+/*                         ^ punctuation.terminator.rule.css */
+    text-wrap: wrap stable;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*           ^ punctuation.separator.key-value.css */
+/*            ^^^^^^^^^^^^ meta.property-value.css */
+/*             ^^^^ support.constant.property-value.css */
+/*                  ^^^^^^ support.constant.property-value.css */
+/*                        ^ punctuation.terminator.rule.css */
+    text-wrap: wrap pretty;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*           ^ punctuation.separator.key-value.css */
+/*            ^^^^^^^^^^^^ meta.property-value.css */
+/*             ^^^^ support.constant.property-value.css */
+/*                  ^^^^^^ support.constant.property-value.css */
+/*                        ^ punctuation.terminator.rule.css */
+    text-wrap: wrap avoid-orphans;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*           ^ punctuation.separator.key-value.css */
+/*            ^^^^^^^^^^^^^^^^^^^ meta.property-value.css */
+/*             ^^^^ support.constant.property-value.css */
+/*                  ^^^^^^^^^^^^^ support.constant.property-value.css */
+/*                               ^ punctuation.terminator.rule.css */
+    text-wrap: nowrap;
+/*^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*           ^ punctuation.separator.key-value.css */
+/*            ^^^^^^^ meta.property-value.css */
+/*             ^^^^^^ support.constant.property-value.css */
+/*                   ^ punctuation.terminator.rule.css */
+    text-wrap: nowrap auto;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*           ^ punctuation.separator.key-value.css */
+/*            ^^^^^^^^^^^^ meta.property-value.css */
+/*             ^^^^^^ support.constant.property-value.css */
+/*                    ^^^^ support.constant.property-value.css */
+/*                        ^ punctuation.terminator.rule.css */
+    text-wrap: nowrap balance;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*           ^ punctuation.separator.key-value.css */
+/*            ^^^^^^^^^^^^^^^ meta.property-value.css */
+/*             ^^^^^^ support.constant.property-value.css */
+/*                    ^^^^^^^ support.constant.property-value.css */
+/*                           ^ punctuation.terminator.rule.css */
+    text-wrap: nowrap stable;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*           ^ punctuation.separator.key-value.css */
+/*            ^^^^^^^^^^^^^^ meta.property-value.css */
+/*             ^^^^^^ support.constant.property-value.css */
+/*                    ^^^^^^ support.constant.property-value.css */
+/*                          ^ punctuation.terminator.rule.css */
+    text-wrap: nowrap pretty;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*           ^ punctuation.separator.key-value.css */
+/*            ^^^^^^^^^^^^^^ meta.property-value.css */
+/*             ^^^^^^ support.constant.property-value.css */
+/*                    ^^^^^^ support.constant.property-value.css */
+/*                          ^ punctuation.terminator.rule.css */
+    text-wrap: nowrap avoid-orphans;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*           ^ punctuation.separator.key-value.css */
+/*            ^^^^^^^^^^^^^^^^^^^^^ meta.property-value.css */
+/*             ^^^^^^ support.constant.property-value.css */
+/*                    ^^^^^^^^^^^^^ support.constant.property-value.css */
+/*                                 ^ punctuation.terminator.rule.css */
+    text-wrap: auto;
+/*^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*           ^ punctuation.separator.key-value.css */
+/*            ^^^^^ meta.property-value.css */
+/*             ^^^^ support.constant.property-value.css */
+/*                 ^ punctuation.terminator.rule.css */
+    text-wrap: auto wrap;
+/*^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*           ^ punctuation.separator.key-value.css */
+/*            ^^^^^^^^^^ meta.property-value.css */
+/*             ^^^^ support.constant.property-value.css */
+/*                  ^^^^ support.constant.property-value.css */
+/*                      ^ punctuation.terminator.rule.css */
+    text-wrap: auto nowrap;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*           ^ punctuation.separator.key-value.css */
+/*            ^^^^^^^^^^^^ meta.property-value.css */
+/*             ^^^^ support.constant.property-value.css */
+/*                  ^^^^^^ support.constant.property-value.css */
+/*                        ^ punctuation.terminator.rule.css */
+    text-wrap: balance;
+/*^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*           ^ punctuation.separator.key-value.css */
+/*            ^^^^^^^^ meta.property-value.css */
+/*             ^^^^^^^ support.constant.property-value.css */
+/*                    ^ punctuation.terminator.rule.css */
+    text-wrap: balance wrap;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*           ^ punctuation.separator.key-value.css */
+/*            ^^^^^^^^^^^^^ meta.property-value.css */
+/*             ^^^^^^^ support.constant.property-value.css */
+/*                     ^^^^ support.constant.property-value.css */
+/*                         ^ punctuation.terminator.rule.css */
+    text-wrap: balance nowrap;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*           ^ punctuation.separator.key-value.css */
+/*            ^^^^^^^^^^^^^^^ meta.property-value.css */
+/*             ^^^^^^^ support.constant.property-value.css */
+/*                     ^^^^^^ support.constant.property-value.css */
+/*                           ^ punctuation.terminator.rule.css */
+    text-wrap: stable;
+/*^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*           ^ punctuation.separator.key-value.css */
+/*            ^^^^^^^ meta.property-value.css */
+/*             ^^^^^^ support.constant.property-value.css */
+/*                   ^ punctuation.terminator.rule.css */
+    text-wrap: stable wrap;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*           ^ punctuation.separator.key-value.css */
+/*            ^^^^^^^^^^^^ meta.property-value.css */
+/*             ^^^^^^ support.constant.property-value.css */
+/*                    ^^^^ support.constant.property-value.css */
+/*                        ^ punctuation.terminator.rule.css */
+    text-wrap: stable nowrap;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*           ^ punctuation.separator.key-value.css */
+/*            ^^^^^^^^^^^^^^ meta.property-value.css */
+/*             ^^^^^^ support.constant.property-value.css */
+/*                    ^^^^^^ support.constant.property-value.css */
+/*                          ^ punctuation.terminator.rule.css */
+    text-wrap: pretty;
+/*^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*           ^ punctuation.separator.key-value.css */
+/*            ^^^^^^^ meta.property-value.css */
+/*             ^^^^^^ support.constant.property-value.css */
+/*                   ^ punctuation.terminator.rule.css */
+    text-wrap: pretty wrap;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*           ^ punctuation.separator.key-value.css */
+/*            ^^^^^^^^^^^^ meta.property-value.css */
+/*             ^^^^^^ support.constant.property-value.css */
+/*                    ^^^^ support.constant.property-value.css */
+/*                        ^ punctuation.terminator.rule.css */
+    text-wrap: pretty nowrap;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*           ^ punctuation.separator.key-value.css */
+/*            ^^^^^^^^^^^^^^ meta.property-value.css */
+/*             ^^^^^^ support.constant.property-value.css */
+/*                    ^^^^^^ support.constant.property-value.css */
+/*                          ^ punctuation.terminator.rule.css */
+    text-wrap: avoid-orphans;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*           ^ punctuation.separator.key-value.css */
+/*            ^^^^^^^^^^^^^^ meta.property-value.css */
+/*             ^^^^^^^^^^^^^ support.constant.property-value.css */
+/*                          ^ punctuation.terminator.rule.css */
+    text-wrap: avoid-orphans wrap;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*           ^ punctuation.separator.key-value.css */
+/*            ^^^^^^^^^^^^^^^^^^^ meta.property-value.css */
+/*             ^^^^^^^^^^^^^ support.constant.property-value.css */
+/*                           ^^^^ support.constant.property-value.css */
+/*                               ^ punctuation.terminator.rule.css */
+    text-wrap: avoid-orphans nowrap;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*           ^ punctuation.separator.key-value.css */
+/*            ^^^^^^^^^^^^^^^^^^^^^ meta.property-value.css */
+/*             ^^^^^^^^^^^^^ support.constant.property-value.css */
+/*                           ^^^^^^ support.constant.property-value.css */
+/*                                 ^ punctuation.terminator.rule.css */
+    text-wrap: inherit;
+/*^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*           ^ punctuation.separator.key-value.css */
+/*            ^^^^^^^^ meta.property-value.css */
+/*             ^^^^^^^ support.constant.property-value.css */
+/*                    ^ punctuation.terminator.rule.css */
+    text-wrap: initial;
+/*^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*           ^ punctuation.separator.key-value.css */
+/*            ^^^^^^^^ meta.property-value.css */
+/*             ^^^^^^^ support.constant.property-value.css */
+/*                    ^ punctuation.terminator.rule.css */
+    text-wrap: revert;
+/*^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*           ^ punctuation.separator.key-value.css */
+/*            ^^^^^^^ meta.property-value.css */
+/*             ^^^^^^ support.constant.property-value.css */
+/*                   ^ punctuation.terminator.rule.css */
+    text-wrap: revert-layer;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*           ^ punctuation.separator.key-value.css */
+/*            ^^^^^^^^^^^^^ meta.property-value.css */
+/*             ^^^^^^^^^^^^ support.constant.property-value.css */
+/*                         ^ punctuation.terminator.rule.css */
+    text-wrap: unset;
+/*^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*           ^ punctuation.separator.key-value.css */
+/*            ^^^^^^ meta.property-value.css */
+/*             ^^^^^ support.constant.property-value.css */
+/*                  ^ punctuation.terminator.rule.css */
+}
+
 .white-space-collapse {
     white-space-collapse: collapse;
 /*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
