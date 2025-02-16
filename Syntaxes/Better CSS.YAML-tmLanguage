@@ -1127,6 +1127,7 @@ repository:
       end: (?={{property_value_terminator}})
       patterns:
       - include: '#property-value'
+      - include: '#global-property-values'
 
   integer-type:
     name: meta.number.integer.decimal.css

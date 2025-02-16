@@ -3525,6 +3525,10 @@ optgroup | option | output | picture | portal | pre | progress | p | q | rp
                 <key>include</key>
                 <string>#property-value</string>
               </dict>
+              <dict>
+                <key>include</key>
+                <string>#global-property-values</string>
+              </dict>
             </array>
           </dict>
         </array>
