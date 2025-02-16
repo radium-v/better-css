@@ -1374,6 +1374,7 @@ repository:
       - include: '#counter-properties'
       - include: '#filter-property'
       - include: '#font-properties'
+      - include: '#text-rendering-property'
       - include: '#text-transform-property'
       - include: '#text-underline-position-property'
       - include: '#text-wrap-mode-property'
@@ -1516,6 +1517,26 @@ repository:
         match: cyclic|numeric|alphabetic|symbolic|additive|fixed|extends
       - name: variable.parameter.style-name.css
         match: '{{ident_token}}'
+
+  text-rendering-property:
+    name: meta.property-name.css
+    begin: \btext-rendering\b
+    beginCaptures:
+      '0': {name: support.type.property-name.css}
+    end: '{{property_value_terminator}}'
+    endCaptures:
+      '1': {name: punctuation.terminator.rule.css}
+    patterns:
+    - include: '#comment-block'
+    - contentName: meta.property-value.css
+      begin: (:)(?={{ws}})
+      beginCaptures:
+        '1': {name: punctuation.separator.key-value.css}
+      end: (?={{property_value_terminator}})
+      patterns:
+      - name: support.constant.property-value.css
+        match: auto|optimizeSpeed|optimizeLegibility|geometricPrecision
+      - include: '#global-property-values'
 
   text-transform-property:
     name: meta.property-name.css

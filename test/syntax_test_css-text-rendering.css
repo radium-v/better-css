@@ -1,0 +1,67 @@
+/* SYNTAX TEST "Packages/better-css/Syntaxes/Better CSS.tmLanguage" */
+
+.text-rendering {
+    text-rendering: auto;
+/*^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*                ^ punctuation.separator.key-value.css */
+/*                 ^^^^^ meta.property-value.css */
+/*                  ^^^^ support.constant.property-value.css */
+/*                      ^ punctuation.terminator.rule.css */
+    text-rendering: optimizeSpeed;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*                ^ punctuation.separator.key-value.css */
+/*                 ^^^^^^^^^^^^^^ meta.property-value.css */
+/*                  ^^^^^^^^^^^^^ support.constant.property-value.css */
+/*                               ^ punctuation.terminator.rule.css */
+    text-rendering: optimizeLegibility;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*                ^ punctuation.separator.key-value.css */
+/*                 ^^^^^^^^^^^^^^^^^^^ meta.property-value.css */
+/*                  ^^^^^^^^^^^^^^^^^^ support.constant.property-value.css */
+/*                                    ^ punctuation.terminator.rule.css */
+    text-rendering: geometricPrecision;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*                ^ punctuation.separator.key-value.css */
+/*                 ^^^^^^^^^^^^^^^^^^^ meta.property-value.css */
+/*                  ^^^^^^^^^^^^^^^^^^ support.constant.property-value.css */
+/*                                    ^ punctuation.terminator.rule.css */
+    text-rendering: inherit;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*                ^ punctuation.separator.key-value.css */
+/*                 ^^^^^^^^ meta.property-value.css */
+/*                  ^^^^^^^ support.constant.property-value.css */
+/*                         ^ punctuation.terminator.rule.css */
+    text-rendering: initial;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*                ^ punctuation.separator.key-value.css */
+/*                 ^^^^^^^^ meta.property-value.css */
+/*                  ^^^^^^^ support.constant.property-value.css */
+/*                         ^ punctuation.terminator.rule.css */
+    text-rendering: revert;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*                ^ punctuation.separator.key-value.css */
+/*                 ^^^^^^^ meta.property-value.css */
+/*                  ^^^^^^ support.constant.property-value.css */
+/*                        ^ punctuation.terminator.rule.css */
+    text-rendering: revert-layer;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*                ^ punctuation.separator.key-value.css */
+/*                 ^^^^^^^^^^^^^ meta.property-value.css */
+/*                  ^^^^^^^^^^^^ support.constant.property-value.css */
+/*                              ^ punctuation.terminator.rule.css */
+    text-rendering: unset;
+/*^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*                ^ punctuation.separator.key-value.css */
+/*                 ^^^^^^ meta.property-value.css */
+/*                  ^^^^^ support.constant.property-value.css */
+/*                       ^ punctuation.terminator.rule.css */
+}
