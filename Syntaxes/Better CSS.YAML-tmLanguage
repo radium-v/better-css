@@ -97,49 +97,30 @@ repository:
         '4': {name: keyword.other.unit.angle.rad.css}
         '5': {name: keyword.other.unit.angle.turn.css}
 
+  animation-composition-property:
+    name: meta.property-name.css
+    begin: \banimation-composition\b
+    beginCaptures:
+      '0': {name: support.type.property-name.css}
+    end: '{{property_value_terminator}}'
+    endCaptures:
+      '1': {name: punctuation.terminator.rule.css}
+    patterns:
+    - include: '#comment-block'
+    - contentName: meta.property-value.css
+      begin: (:)(?={{ws}})
+      beginCaptures:
+        '1': {name: punctuation.separator.key-value.css}
+      end: (?={{property_value_terminator}})
+      patterns:
+      - name: support.constant.property-value.css
+        match: accumulate|add|replace
+      - include: '#arbitrary-repetition'
+      - include: '#global-property-values'
+
   animation-properties:
     patterns:
-    - begin: \banimation-timeline\b
-      beginCaptures:
-        '0': {name: support.type.property-name.css}
-      end: '{{property_value_terminator}}'
-      endCaptures:
-        '1': {name: punctuation.terminator.rule.css}
-      patterns:
-      - contentName: meta.property-value.css
-        begin: (:)(?={{ws}})
-        beginCaptures:
-          '1': {name: punctuation.separator.key-value.css}
-        end: (?={{property_value_terminator}})
-        patterns:
-        - include: '#comment-block'
-        - include: '#custom-property-name'
-        - include: '#scroll-function'
-        - include: '#view-function'
-        - include: '#property-values'
-        - include: '#arbitrary-repetition'
-        - include: '#important'
-    - begin: \banimation(?:-name)?(?=(?:\+_?)?:)\b
-      beginCaptures:
-        '0': {name: support.type.property-name.css}
-      end: '{{property_value_terminator}}'
-      endCaptures:
-        '1': {name: punctuation.terminator.rule.css}
-      patterns:
-      - contentName: meta.property-value.css
-        begin: (:)(?={{ws}})
-        beginCaptures:
-          '1': {name: punctuation.separator.key-value.css}
-        end: (?={{property_value_terminator}})
-        patterns:
-        - include: '#comment-block'
-        - include: '#builtin-functions'
-        - include: '#numeric-values'
-        - include: '#property-value-constants'
-        - name: variable.other.constant.animation-name.css string.unquoted.css
-          match: '{{string_unquoted}}'
-        - include: '#arbitrary-repetition'
-        - include: '#important'
+    - include: '#animation-composition-property'
 
   appearance-property:
     name: meta.property-name.css
