@@ -352,6 +352,75 @@
           </dict>
         </array>
       </dict>
+      <key>animation-direction-property</key>
+      <dict>
+        <key>name</key>
+        <string>meta.property-name.css</string>
+        <key>begin</key>
+        <string>\banimation-direction\b</string>
+        <key>beginCaptures</key>
+        <dict>
+          <key>0</key>
+          <dict>
+            <key>name</key>
+            <string>support.type.property-name.css</string>
+          </dict>
+        </dict>
+        <key>end</key>
+        <string>\s*(;)|(?=[})])</string>
+        <key>endCaptures</key>
+        <dict>
+          <key>1</key>
+          <dict>
+            <key>name</key>
+            <string>punctuation.terminator.rule.css</string>
+          </dict>
+        </dict>
+        <key>patterns</key>
+        <array>
+          <dict>
+            <key>include</key>
+            <string>#comment-block</string>
+          </dict>
+          <dict>
+            <key>contentName</key>
+            <string>meta.property-value.css</string>
+            <key>begin</key>
+            <string>(:)(?=(?:(?:[\s\R]+)*?))</string>
+            <key>beginCaptures</key>
+            <dict>
+              <key>1</key>
+              <dict>
+                <key>name</key>
+                <string>punctuation.separator.key-value.css</string>
+              </dict>
+            </dict>
+            <key>end</key>
+            <string>(?=\s*(;)|(?=[})]))</string>
+            <key>patterns</key>
+            <array>
+              <dict>
+                <key>include</key>
+                <string>#comment-block</string>
+              </dict>
+              <dict>
+                <key>name</key>
+                <string>support.constant.property-value.css</string>
+                <key>match</key>
+                <string>normal|alternate-reverse|alternate|reverse</string>
+              </dict>
+              <dict>
+                <key>include</key>
+                <string>#arbitrary-repetition</string>
+              </dict>
+              <dict>
+                <key>include</key>
+                <string>#global-property-values</string>
+              </dict>
+            </array>
+          </dict>
+        </array>
+      </dict>
       <key>animation-properties</key>
       <dict>
         <key>patterns</key>
@@ -359,6 +428,10 @@
           <dict>
             <key>include</key>
             <string>#animation-composition-property</string>
+          </dict>
+          <dict>
+            <key>include</key>
+            <string>#animation-direction-property</string>
           </dict>
         </array>
       </dict>

@@ -118,9 +118,32 @@ repository:
       - include: '#arbitrary-repetition'
       - include: '#global-property-values'
 
+  animation-direction-property:
+    name: meta.property-name.css
+    begin: \banimation-direction\b
+    beginCaptures:
+      '0': {name: support.type.property-name.css}
+    end: '{{property_value_terminator}}'
+    endCaptures:
+      '1': {name: punctuation.terminator.rule.css}
+    patterns:
+    - include: '#comment-block'
+    - contentName: meta.property-value.css
+      begin: (:)(?={{ws}})
+      beginCaptures:
+        '1': {name: punctuation.separator.key-value.css}
+      end: (?={{property_value_terminator}})
+      patterns:
+      - include: '#comment-block'
+      - name: support.constant.property-value.css
+        match: normal|alternate-reverse|alternate|reverse
+      - include: '#arbitrary-repetition'
+      - include: '#global-property-values'
+
   animation-properties:
     patterns:
     - include: '#animation-composition-property'
+    - include: '#animation-direction-property'
 
   appearance-property:
     name: meta.property-name.css
