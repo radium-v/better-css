@@ -576,6 +576,26 @@ repository:
       match: \b(inherit|initial|unset|none)\b
     - include: '#filter-functions'
 
+  backface-visibility-property:
+    name: meta.property-name.css
+    begin: \bbackface-visibility\b
+    beginCaptures:
+      '0': {name: support.type.property-name.css}
+    end: '{{property_value_terminator}}'
+    endCaptures:
+      '1': {name: punctuation.terminator.rule.css}
+    patterns:
+    - include: '#comment-block'
+    - contentName: meta.property-value.css
+      begin: (:)(?={{ws}})
+      beginCaptures:
+        '1': {name: punctuation.separator.key-value.css}
+      end: (?={{property_value_terminator}})
+      patterns:
+      - name: support.constant.property-value.css
+        match: \b(?:visible|hidden)\b
+      - include: '#global-property-values'
+
   blend-mode-type:
     patterns:
     - name: support.constant.blend-mode.css
@@ -1413,6 +1433,7 @@ repository:
       - include: '#animation-properties'
       - include: '#appearance-property'
       - include: '#backdrop-filter-property'
+      - include: '#backface-visibility-property'
       - include: '#border-properties'
       - include: '#clear-property'
       - include: '#clip-rule-property'

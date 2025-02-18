@@ -66,6 +66,65 @@
 /*                   ^ punctuation.terminator.rule.css */
 }
 
+.backface-visibility {
+    backface-visibility: hidden;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-name.css */
+/*  ^^^^^^^^^^^^^^^^^^^ support.type.property-name.css */
+/*                     ^ punctuation.separator.key-value.css */
+/*                      ^^^^^^^ meta.property-value.css */
+/*                       ^^^^^^ support.constant.property-value.css */
+/*                             ^ punctuation.terminator.rule.css */
+    backface-visibility: visible;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-name.css */
+/*  ^^^^^^^^^^^^^^^^^^^ support.type.property-name.css */
+/*                     ^ punctuation.separator.key-value.css */
+/*                      ^^^^^^^^ meta.property-value.css */
+/*                       ^^^^^^^ support.constant.property-value.css */
+/*                              ^ punctuation.terminator.rule.css */
+    backface-visibility: inherit;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-name.css */
+/*  ^^^^^^^^^^^^^^^^^^^ support.type.property-name.css */
+/*                     ^ punctuation.separator.key-value.css */
+/*                      ^^^^^^^^ meta.property-value.css */
+/*                       ^^^^^^^ support.constant.property-value.css */
+/*                              ^ punctuation.terminator.rule.css */
+    backface-visibility: initial;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-name.css */
+/*  ^^^^^^^^^^^^^^^^^^^ support.type.property-name.css */
+/*                     ^ punctuation.separator.key-value.css */
+/*                      ^^^^^^^^ meta.property-value.css */
+/*                       ^^^^^^^ support.constant.property-value.css */
+/*                              ^ punctuation.terminator.rule.css */
+    backface-visibility: revert;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-name.css */
+/*  ^^^^^^^^^^^^^^^^^^^ support.type.property-name.css */
+/*                     ^ punctuation.separator.key-value.css */
+/*                      ^^^^^^^ meta.property-value.css */
+/*                       ^^^^^^ support.constant.property-value.css */
+/*                             ^ punctuation.terminator.rule.css */
+    backface-visibility: revert-layer;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-name.css */
+/*  ^^^^^^^^^^^^^^^^^^^ support.type.property-name.css */
+/*                     ^ punctuation.separator.key-value.css */
+/*                      ^^^^^^^^^^^^^ meta.property-value.css */
+/*                       ^^^^^^^^^^^^ support.constant.property-value.css */
+/*                                   ^ punctuation.terminator.rule.css */
+    backface-visibility: unset;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-name.css */
+/*  ^^^^^^^^^^^^^^^^^^^ support.type.property-name.css */
+/*                     ^ punctuation.separator.key-value.css */
+/*                      ^^^^^^ meta.property-value.css */
+/*                       ^^^^^ support.constant.property-value.css */
+/*                            ^ punctuation.terminator.rule.css */
+}
+
 .content-visibility {
     content-visibility: auto;
 /*^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
