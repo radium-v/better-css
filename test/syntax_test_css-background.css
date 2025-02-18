@@ -363,3 +363,239 @@
 /*                     ^^^^^ support.constant.property-value.css */
 /*                          ^ punctuation.terminator.rule.css */
 }
+
+.background-repeat {
+    background-repeat: repeat-x;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*                   ^ punctuation.separator.key-value.css */
+/*                    ^^^^^^^^^ meta.property-value.css */
+/*                     ^^^^^^^^ support.constant.property-value.css */
+/*                             ^ punctuation.terminator.rule.css */
+    background-repeat: repeat-y;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*                   ^ punctuation.separator.key-value.css */
+/*                    ^^^^^^^^^ meta.property-value.css */
+/*                     ^^^^^^^^ support.constant.property-value.css */
+/*                             ^ punctuation.terminator.rule.css */
+    background-repeat: repeat;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*                   ^ punctuation.separator.key-value.css */
+/*                    ^^^^^^^ meta.property-value.css */
+/*                     ^^^^^^ support.constant.property-value.css */
+/*                           ^ punctuation.terminator.rule.css */
+    background-repeat: repeat repeat;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*                   ^ punctuation.separator.key-value.css */
+/*                    ^^^^^^^^^^^^^^ meta.property-value.css */
+/*                     ^^^^^^ support.constant.property-value.css */
+/*                            ^^^^^^ support.constant.property-value.css */
+/*                                  ^ punctuation.terminator.rule.css */
+    background-repeat: repeat space;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*                   ^ punctuation.separator.key-value.css */
+/*                    ^^^^^^^^^^^^^ meta.property-value.css */
+/*                     ^^^^^^ support.constant.property-value.css */
+/*                            ^^^^^ support.constant.property-value.css */
+/*                                 ^ punctuation.terminator.rule.css */
+    background-repeat: repeat round;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*                   ^ punctuation.separator.key-value.css */
+/*                    ^^^^^^^^^^^^^ meta.property-value.css */
+/*                     ^^^^^^ support.constant.property-value.css */
+/*                            ^^^^^ support.constant.property-value.css */
+/*                                 ^ punctuation.terminator.rule.css */
+    background-repeat: repeat no-repeat;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*                   ^ punctuation.separator.key-value.css */
+/*                    ^^^^^^^^^^^^^^^^^ meta.property-value.css */
+/*                     ^^^^^^ support.constant.property-value.css */
+/*                            ^^^^^^^^^ support.constant.property-value.css */
+/*                                     ^ punctuation.terminator.rule.css */
+    background-repeat: space;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*                   ^ punctuation.separator.key-value.css */
+/*                    ^^^^^^ meta.property-value.css */
+/*                     ^^^^^ support.constant.property-value.css */
+/*                          ^ punctuation.terminator.rule.css */
+    background-repeat: space repeat;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*                   ^ punctuation.separator.key-value.css */
+/*                    ^^^^^^^^^^^^^ meta.property-value.css */
+/*                     ^^^^^ support.constant.property-value.css */
+/*                           ^^^^^^ support.constant.property-value.css */
+/*                                 ^ punctuation.terminator.rule.css */
+    background-repeat: space space;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*                   ^ punctuation.separator.key-value.css */
+/*                    ^^^^^^^^^^^^ meta.property-value.css */
+/*                     ^^^^^ support.constant.property-value.css */
+/*                           ^^^^^ support.constant.property-value.css */
+/*                                ^ punctuation.terminator.rule.css */
+    background-repeat: space round;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*                   ^ punctuation.separator.key-value.css */
+/*                    ^^^^^^^^^^^^ meta.property-value.css */
+/*                     ^^^^^ support.constant.property-value.css */
+/*                           ^^^^^ support.constant.property-value.css */
+/*                                ^ punctuation.terminator.rule.css */
+    background-repeat: space no-repeat;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*                   ^ punctuation.separator.key-value.css */
+/*                    ^^^^^^^^^^^^^^^^ meta.property-value.css */
+/*                     ^^^^^ support.constant.property-value.css */
+/*                           ^^^^^^^^^ support.constant.property-value.css */
+/*                                    ^ punctuation.terminator.rule.css */
+    background-repeat: round;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*                   ^ punctuation.separator.key-value.css */
+/*                    ^^^^^^ meta.property-value.css */
+/*                     ^^^^^ support.constant.property-value.css */
+/*                          ^ punctuation.terminator.rule.css */
+    background-repeat: round repeat;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*                   ^ punctuation.separator.key-value.css */
+/*                    ^^^^^^^^^^^^^ meta.property-value.css */
+/*                     ^^^^^ support.constant.property-value.css */
+/*                           ^^^^^^ support.constant.property-value.css */
+/*                                 ^ punctuation.terminator.rule.css */
+    background-repeat: round space;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*                   ^ punctuation.separator.key-value.css */
+/*                    ^^^^^^^^^^^^ meta.property-value.css */
+/*                     ^^^^^ support.constant.property-value.css */
+/*                           ^^^^^ support.constant.property-value.css */
+/*                                ^ punctuation.terminator.rule.css */
+    background-repeat: round round;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*                   ^ punctuation.separator.key-value.css */
+/*                    ^^^^^^^^^^^^ meta.property-value.css */
+/*                     ^^^^^ support.constant.property-value.css */
+/*                           ^^^^^ support.constant.property-value.css */
+/*                                ^ punctuation.terminator.rule.css */
+    background-repeat: round no-repeat;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*                   ^ punctuation.separator.key-value.css */
+/*                    ^^^^^^^^^^^^^^^^ meta.property-value.css */
+/*                     ^^^^^ support.constant.property-value.css */
+/*                           ^^^^^^^^^ support.constant.property-value.css */
+/*                                    ^ punctuation.terminator.rule.css */
+    background-repeat: no-repeat;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*                   ^ punctuation.separator.key-value.css */
+/*                    ^^^^^^^^^^ meta.property-value.css */
+/*                     ^^^^^^^^^ support.constant.property-value.css */
+/*                              ^ punctuation.terminator.rule.css */
+    background-repeat: no-repeat repeat;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*                   ^ punctuation.separator.key-value.css */
+/*                    ^^^^^^^^^^^^^^^^^ meta.property-value.css */
+/*                     ^^^^^^^^^ support.constant.property-value.css */
+/*                               ^^^^^^ support.constant.property-value.css */
+/*                                     ^ punctuation.terminator.rule.css */
+    background-repeat: no-repeat space;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*                   ^ punctuation.separator.key-value.css */
+/*                    ^^^^^^^^^^^^^^^^ meta.property-value.css */
+/*                     ^^^^^^^^^ support.constant.property-value.css */
+/*                               ^^^^^ support.constant.property-value.css */
+/*                                    ^ punctuation.terminator.rule.css */
+    background-repeat: no-repeat round;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*                   ^ punctuation.separator.key-value.css */
+/*                    ^^^^^^^^^^^^^^^^ meta.property-value.css */
+/*                     ^^^^^^^^^ support.constant.property-value.css */
+/*                               ^^^^^ support.constant.property-value.css */
+/*                                    ^ punctuation.terminator.rule.css */
+    background-repeat: no-repeat no-repeat;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*                   ^ punctuation.separator.key-value.css */
+/*                    ^^^^^^^^^^^^^^^^^^^^ meta.property-value.css */
+/*                     ^^^^^^^^^ support.constant.property-value.css */
+/*                               ^^^^^^^^^ support.constant.property-value.css */
+/*                                        ^ punctuation.terminator.rule.css */
+    background-repeat: repeat-x, repeat-y, repeat, repeat repeat, repeat space, repeat round, repeat no-repeat, space, space repeat;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*                   ^ punctuation.separator.key-value.css */
+/*                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-value.css */
+/*                     ^^^^^^^^ support.constant.property-value.css */
+/*                             ^ punctuation.definition.arbitrary-repetition.css */
+/*                               ^^^^^^^^ support.constant.property-value.css */
+/*                                       ^ punctuation.definition.arbitrary-repetition.css */
+/*                                         ^^^^^^ support.constant.property-value.css */
+/*                                               ^ punctuation.definition.arbitrary-repetition.css */
+/*                                                 ^^^^^^ support.constant.property-value.css */
+/*                                                        ^^^^^^ support.constant.property-value.css */
+/*                                                              ^ punctuation.definition.arbitrary-repetition.css */
+/*                                                                ^^^^^^ support.constant.property-value.css */
+/*                                                                       ^^^^^ support.constant.property-value.css */
+/*                                                                            ^ punctuation.definition.arbitrary-repetition.css */
+/*                                                                              ^^^^^^ support.constant.property-value.css */
+/*                                                                                     ^^^^^ support.constant.property-value.css */
+/*                                                                                          ^ punctuation.definition.arbitrary-repetition.css */
+/*                                                                                            ^^^^^^ support.constant.property-value.css */
+/*                                                                                                   ^^^^^^^^^ support.constant.property-value.css */
+/*                                                                                                            ^ punctuation.definition.arbitrary-repetition.css */
+/*                                                                                                              ^^^^^ support.constant.property-value.css */
+/*                                                                                                                   ^ punctuation.definition.arbitrary-repetition.css */
+/*                                                                                                                     ^^^^^ support.constant.property-value.css */
+/*                                                                                                                           ^^^^^^ support.constant.property-value.css */
+/*                                                                                                                                 ^ punctuation.terminator.rule.css */
+    background-repeat: inherit;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*                   ^ punctuation.separator.key-value.css */
+/*                    ^^^^^^^^ meta.property-value.css */
+/*                     ^^^^^^^ support.constant.property-value.css */
+/*                            ^ punctuation.terminator.rule.css */
+    background-repeat: initial;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*                   ^ punctuation.separator.key-value.css */
+/*                    ^^^^^^^^ meta.property-value.css */
+/*                     ^^^^^^^ support.constant.property-value.css */
+/*                            ^ punctuation.terminator.rule.css */
+    background-repeat: revert;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*                   ^ punctuation.separator.key-value.css */
+/*                    ^^^^^^^ meta.property-value.css */
+/*                     ^^^^^^ support.constant.property-value.css */
+/*                           ^ punctuation.terminator.rule.css */
+    background-repeat: revert-layer;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*                   ^ punctuation.separator.key-value.css */
+/*                    ^^^^^^^^^^^^^ meta.property-value.css */
+/*                     ^^^^^^^^^^^^ support.constant.property-value.css */
+/*                                 ^ punctuation.terminator.rule.css */
+    background-repeat: unset;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*                   ^ punctuation.separator.key-value.css */
+/*                    ^^^^^^ meta.property-value.css */
+/*                     ^^^^^ support.constant.property-value.css */
+/*                          ^ punctuation.terminator.rule.css */
+}
