@@ -57,23 +57,22 @@ repository:
       - include: '#property-values'
 
   all-property:
+    begin: \ball\b
+    beginCaptures:
+      '0': {name: meta.property-name.css support.type.property-name.css}
+    end: '{{property_value_terminator}}'
+    endCaptures:
+      '1': {name: punctuation.terminator.rule.css}
     patterns:
-    - begin: \ball\b
+    - contentName: meta.property-value.css
+      begin: (:)(?={{ws}})
       beginCaptures:
-        '0': {name: support.type.property-name.css}
-      end: '{{property_value_terminator}}'
-      endCaptures:
-        '1': {name: punctuation.terminator.rule.css}
+        '1': {name: punctuation.separator.key-value.css}
+      end: (?={{property_value_terminator}})
       patterns:
-      - contentName: meta.property-value.css
-        begin: (:)(?={{ws}})
-        beginCaptures:
-          '1': {name: punctuation.separator.key-value.css}
-        end: (?={{property_value_terminator}})
-        patterns:
-        - include: '#comment-block'
-        - include: '#global-property-values'
-        - include: '#var-function'
+      - include: '#comment-block'
+      - include: '#global-property-values'
+      - include: '#var-function'
 
   alpha-value-type:
     patterns:
@@ -98,10 +97,9 @@ repository:
         '5': {name: keyword.other.unit.angle.turn.css}
 
   animation-composition-property:
-    name: meta.property-name.css
     begin: \banimation-composition\b
     beginCaptures:
-      '0': {name: support.type.property-name.css}
+      '0': {name: meta.property-name.css support.type.property-name.css}
     end: '{{property_value_terminator}}'
     endCaptures:
       '1': {name: punctuation.terminator.rule.css}
@@ -119,10 +117,9 @@ repository:
       - include: '#global-property-values'
 
   animation-direction-property:
-    name: meta.property-name.css
     begin: \banimation-direction\b
     beginCaptures:
-      '0': {name: support.type.property-name.css}
+      '0': {name: meta.property-name.css support.type.property-name.css}
     end: '{{property_value_terminator}}'
     endCaptures:
       '1': {name: punctuation.terminator.rule.css}
@@ -141,10 +138,9 @@ repository:
       - include: '#global-property-values'
 
   animation-fill-mode-property:
-    name: meta.property-name.css
     begin: \banimation-fill-mode\b
     beginCaptures:
-      '0': {name: support.type.property-name.css}
+      '0': {name: meta.property-name.css support.type.property-name.css}
     end: '{{property_value_terminator}}'
     endCaptures:
       '1': {name: punctuation.terminator.rule.css}
@@ -163,10 +159,9 @@ repository:
       - include: '#global-property-values'
 
   animation-play-state-property:
-    name: meta.property-name.css
     begin: \banimation-play-state\b
     beginCaptures:
-      '0': {name: support.type.property-name.css}
+      '0': {name: meta.property-name.css support.type.property-name.css}
     end: '{{property_value_terminator}}'
     endCaptures:
       '1': {name: punctuation.terminator.rule.css}
@@ -192,10 +187,9 @@ repository:
     - include: '#animation-play-state-property'
 
   appearance-property:
-    name: meta.property-name.css
     begin: \bappearance\b
     beginCaptures:
-      '0': {name: support.type.property-name.css}
+      '0': {name: meta.property-name.css support.type.property-name.css}
     end: '{{property_value_terminator}}'
     endCaptures:
       '1': {name: punctuation.terminator.rule.css}
@@ -560,10 +554,9 @@ repository:
         match: '{{string_unquoted}}'
 
   backdrop-filter-property:
-    name: meta.property-name.css
     begin: \bbackdrop-filter\b
     beginCaptures:
-      '0': {name: support.type.property-name.css}
+      '0': {name: meta.property-name.css support.type.property-name.css}
     end: '{{property_value_terminator}}'
     endCaptures:
       '1': {name: punctuation.terminator.rule.css}
@@ -577,10 +570,9 @@ repository:
     - include: '#filter-functions'
 
   backface-visibility-property:
-    name: meta.property-name.css
     begin: \bbackface-visibility\b
     beginCaptures:
-      '0': {name: support.type.property-name.css}
+      '0': {name: meta.property-name.css support.type.property-name.css}
     end: '{{property_value_terminator}}'
     endCaptures:
       '1': {name: punctuation.terminator.rule.css}
@@ -597,10 +589,9 @@ repository:
       - include: '#global-property-values'
 
   background-attachment-property:
-    name: meta.property-name.css
     begin: \bbackground-attachment\b
     beginCaptures:
-      '0': {name: support.type.property-name.css}
+      '0': {name: meta.property-name.css support.type.property-name.css}
     end: '{{property_value_terminator}}'
     endCaptures:
       '1': {name: punctuation.terminator.rule.css}
@@ -618,10 +609,9 @@ repository:
       - include: '#global-property-values'
 
   background-blend-mode-property:
-    name: meta.property-name.css
     begin: \bbackground-blend-mode\b
     beginCaptures:
-      '0': {name: support.type.property-name.css}
+      '0': {name: meta.property-name.css support.type.property-name.css}
     end: '{{property_value_terminator}}'
     endCaptures:
       '1': {name: punctuation.terminator.rule.css}
@@ -710,10 +700,9 @@ repository:
       '1': {name: punctuation.definition.entity.css}
 
   clear-property:
-    name: meta.property-name.css
     begin: \bclear\b
     beginCaptures:
-      '0': {name: support.type.property-name.css}
+      '0': {name: meta.property-name.css support.type.property-name.css}
     end: '{{property_value_terminator}}'
     endCaptures:
       '1': {name: punctuation.terminator.rule.css}
@@ -730,10 +719,9 @@ repository:
       - include: '#global-property-values'
 
   clip-rule-property:
-    name: meta.property-name.css
     begin: \bclip-rule\b
     beginCaptures:
-      '0': {name: support.type.property-name.css}
+      '0': {name: meta.property-name.css support.type.property-name.css}
     end: '{{property_value_terminator}}'
     endCaptures:
       '1': {name: punctuation.terminator.rule.css}
@@ -776,10 +764,9 @@ repository:
       '1': {name: punctuation.definition.constant.css}
 
   color-interpolation-property:
-    name: meta.property-name.css
     begin: \bcolor-interpolation(?:-filters)?\b
     beginCaptures:
-      '0': {name: support.type.property-name.css}
+      '0': {name: meta.property-name.css support.type.property-name.css}
     end: '{{property_value_terminator}}'
     endCaptures:
       '1': {name: punctuation.terminator.rule.css}
@@ -809,10 +796,9 @@ repository:
     - include: '#color-xyz'
 
   column-count-property:
-    name: meta.property-name.css
     begin: \bcolumn-count\b
     beginCaptures:
-      '0': {name: support.type.property-name.css}
+      '0': {name: meta.property-name.css support.type.property-name.css}
     end: '{{property_value_terminator}}'
     endCaptures:
       '1': {name: punctuation.terminator.rule.css}
@@ -830,10 +816,9 @@ repository:
       - include: '#global-property-values'
 
   column-fill-property:
-    name: meta.property-name.css
     begin: \bcolumn-fill\b
     beginCaptures:
-      '0': {name: support.type.property-name.css}
+      '0': {name: meta.property-name.css support.type.property-name.css}
     end: '{{property_value_terminator}}'
     endCaptures:
       '1': {name: punctuation.terminator.rule.css}
@@ -850,10 +835,9 @@ repository:
       - include: '#global-property-values'
 
   column-span-property:
-    name: meta.property-name.css
     begin: \bcolumn-span\b
     beginCaptures:
-      '0': {name: support.type.property-name.css}
+      '0': {name: meta.property-name.css support.type.property-name.css}
     end: '{{property_value_terminator}}'
     endCaptures:
       '1': {name: punctuation.terminator.rule.css}
@@ -882,10 +866,9 @@ repository:
     match: <=?|>=?|=
 
   contain-property:
-    name: meta.property-name.css
     begin: \bcontain\b
     beginCaptures:
-      '0': {name: support.type.property-name.css}
+      '0': {name: meta.property-name.css support.type.property-name.css}
     end: '{{property_value_terminator}}'
     endCaptures:
       '1': {name: punctuation.terminator.rule.css}
@@ -924,10 +907,9 @@ repository:
       - include: '#property-values'
 
   content-visibility-property:
-    name: meta.property-name.css
     begin: \bcontent-visibility\b
     beginCaptures:
-      '0': {name: support.type.property-name.css}
+      '0': {name: meta.property-name.css support.type.property-name.css}
     end: '{{property_value_terminator}}'
     endCaptures:
       '1': {name: punctuation.terminator.rule.css}
@@ -1001,10 +983,9 @@ repository:
         '1': {name: invalid.deprecated.css}
 
   filter-property:
-    name: meta.property-name.css
     begin: \bfilter\b
     beginCaptures:
-      '0': {name: support.type.property-name.css}
+      '0': {name: meta.property-name.css support.type.property-name.css}
     end: '{{property_value_terminator}}'
     endCaptures:
       '1': {name: punctuation.terminator.rule.css}
@@ -1018,10 +999,9 @@ repository:
     - include: '#filter-functions'
 
   font-family-property:
-    name: meta.property-name.css
     begin: \bfont(-family)?(?!-)\b
     beginCaptures:
-      '0': {name: support.type.property-name.css}
+      '0': {name: meta.property-name.css support.type.property-name.css}
     end: '{{property_value_terminator}}'
     endCaptures:
       '1': {name: punctuation.terminator.rule.css}
@@ -1043,10 +1023,9 @@ repository:
     - include: '#font-size-property'
 
   font-size-adjust-property:
-    name: meta.property-name.css
     begin: \bfont-size-adjust\b
     beginCaptures:
-      '0': {name: support.type.property-name.css}
+      '0': {name: meta.property-name.css support.type.property-name.css}
     end: '{{property_value_terminator}}'
     endCaptures:
       '1': {name: punctuation.terminator.rule.css}
@@ -1412,7 +1391,7 @@ repository:
   rendering-intent-descriptor:
     begin: \brendering-intent\b
     beginCaptures:
-      '0': {name: support.type.property-name.css}
+      '0': {name: meta.property-name.css support.type.property-name.css}
     end: \s*(;)|(?=\})
     endCaptures:
       '1': {name: punctuation.terminator.rule.css}
@@ -1541,7 +1520,7 @@ repository:
   src-descriptor:
     begin: \bsrc\b
     beginCaptures:
-      '0': {name: support.type.property-name.css}
+      '0': {name: meta.property-name.css support.type.property-name.css}
     end: \s*(;)|(?=\})
     endCaptures:
       '1': {name: punctuation.terminator.rule.css}
@@ -1641,10 +1620,9 @@ repository:
         match: '{{ident_token}}'
 
   text-overflow-property:
-    name: meta.property-name.css
     begin: \btext-overflow\b
     beginCaptures:
-      '0': {name: support.type.property-name.css}
+      '0': {name: meta.property-name.css support.type.property-name.css}
     end: '{{property_value_terminator}}'
     endCaptures:
       '1': {name: punctuation.terminator.rule.css}
@@ -1662,10 +1640,9 @@ repository:
       - include: '#global-property-values'
 
   text-rendering-property:
-    name: meta.property-name.css
     begin: \btext-rendering\b
     beginCaptures:
-      '0': {name: support.type.property-name.css}
+      '0': {name: meta.property-name.css support.type.property-name.css}
     end: '{{property_value_terminator}}'
     endCaptures:
       '1': {name: punctuation.terminator.rule.css}
@@ -1682,10 +1659,9 @@ repository:
       - include: '#global-property-values'
 
   text-transform-property:
-    name: meta.property-name.css
     begin: \btext-transform\b
     beginCaptures:
-      '0': {name: support.type.property-name.css}
+      '0': {name: meta.property-name.css support.type.property-name.css}
     end: '{{property_value_terminator}}'
     endCaptures:
       '1': {name: punctuation.terminator.rule.css}
@@ -1702,10 +1678,9 @@ repository:
       - include: '#global-property-values'
 
   text-underline-position-property:
-    name: meta.property-name.css
     begin: \btext-underline-position\b
     beginCaptures:
-      '0': {name: support.type.property-name.css}
+      '0': {name: meta.property-name.css support.type.property-name.css}
     end: '{{property_value_terminator}}'
     endCaptures:
       '1': {name: punctuation.terminator.rule.css}
@@ -1722,10 +1697,9 @@ repository:
       - include: '#global-property-values'
 
   text-wrap-property:
-    name: meta.property-name.css
     begin: \btext-wrap\b
     beginCaptures:
-      '0': {name: support.type.property-name.css}
+      '0': {name: meta.property-name.css support.type.property-name.css}
     end: '{{property_value_terminator}}'
     endCaptures:
       '1': {name: punctuation.terminator.rule.css}
@@ -1742,10 +1716,9 @@ repository:
       - include: '#global-property-values'
 
   text-wrap-mode-property:
-    name: meta.property-name.css
     begin: \btext-wrap-mode\b
     beginCaptures:
-      '0': {name: support.type.property-name.css}
+      '0': {name: meta.property-name.css support.type.property-name.css}
     end: '{{property_value_terminator}}'
     endCaptures:
       '1': {name: punctuation.terminator.rule.css}
@@ -1765,10 +1738,9 @@ repository:
     match: wrap|nowrap
 
   text-wrap-style-property:
-    name: meta.property-name.css
     begin: \btext-wrap-style\b
     beginCaptures:
-      '0': {name: support.type.property-name.css}
+      '0': {name: meta.property-name.css support.type.property-name.css}
     end: '{{property_value_terminator}}'
     endCaptures:
       '1': {name: punctuation.terminator.rule.css}
@@ -1838,10 +1810,9 @@ repository:
         match: '[\w-]+'
 
   visibility-property:
-    name: meta.property-name.css
     begin: \bvisibility\b
     beginCaptures:
-      '0': {name: support.type.property-name.css}
+      '0': {name: meta.property-name.css support.type.property-name.css}
     end: '{{property_value_terminator}}'
     endCaptures:
       '1': {name: punctuation.terminator.rule.css}
@@ -1903,10 +1874,9 @@ repository:
       - include: '#arbitrary-repetition'
 
   white-space-collapse-property:
-    name: meta.property-name.css
     begin: \bwhite-space-collapse\b
     beginCaptures:
-      '0': {name: support.type.property-name.css}
+      '0': {name: meta.property-name.css support.type.property-name.css}
     end: '{{property_value_terminator}}'
     endCaptures:
       '1': {name: punctuation.terminator.rule.css}
@@ -1923,10 +1893,9 @@ repository:
       - include: '#global-property-values'
 
   widows-property:
-    name: meta.property-name.css
     begin: \bwidows\b
     beginCaptures:
-      '0': {name: support.type.property-name.css}
+      '0': {name: meta.property-name.css support.type.property-name.css}
     end: '{{property_value_terminator}}'
     endCaptures:
       '1': {name: punctuation.terminator.rule.css}
@@ -1942,10 +1911,9 @@ repository:
       - include: '#global-property-values'
 
   writing-mode-property:
-    name: meta.property-name.css
     begin: \bwriting-mode\b
     beginCaptures:
-      '0': {name: support.type.property-name.css}
+      '0': {name: meta.property-name.css support.type.property-name.css}
     end: '{{property_value_terminator}}'
     endCaptures:
       '1': {name: punctuation.terminator.rule.css}

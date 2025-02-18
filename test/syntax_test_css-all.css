@@ -2,38 +2,38 @@
 
 .all {
     all: initial;
-/*^^^^^^^^^^^^^^^ meta.property-list.css*/
-/*  ^^^ support.type.property-name.css*/
-/*     ^ punctuation.separator.key-value.css*/
-/*      ^^^^^^^^ meta.property-value.css*/
-/*       ^^^^^^^ support.constant.property-value.css*/
-/*              ^ punctuation.terminator.rule.css*/
+/*^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^ meta.property-name.css support.type.property-name.css */
+/*     ^ punctuation.separator.key-value.css */
+/*      ^^^^^^^^ meta.property-value.css */
+/*       ^^^^^^^ support.constant.property-value.css */
+/*              ^ punctuation.terminator.rule.css */
     all: inherit;
-/*^^^^^^^^^^^^^^^ meta.property-list.css*/
-/*  ^^^ support.type.property-name.css*/
-/*     ^ punctuation.separator.key-value.css*/
-/*      ^^^^^^^^ meta.property-value.css*/
-/*       ^^^^^^^ support.constant.property-value.css*/
-/*              ^ punctuation.terminator.rule.css*/
+/*^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^ meta.property-name.css support.type.property-name.css */
+/*     ^ punctuation.separator.key-value.css */
+/*      ^^^^^^^^ meta.property-value.css */
+/*       ^^^^^^^ support.constant.property-value.css */
+/*              ^ punctuation.terminator.rule.css */
     all: unset;
-/*^^^^^^^^^^^^^ meta.property-list.css*/
-/*  ^^^ support.type.property-name.css*/
-/*     ^ punctuation.separator.key-value.css*/
-/*      ^^^^^^ meta.property-value.css*/
-/*       ^^^^^ support.constant.property-value.css*/
-/*            ^ punctuation.terminator.rule.css*/
+/*^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^ meta.property-name.css support.type.property-name.css */
+/*     ^ punctuation.separator.key-value.css */
+/*      ^^^^^^ meta.property-value.css */
+/*       ^^^^^ support.constant.property-value.css */
+/*            ^ punctuation.terminator.rule.css */
     all: revert;
-/*^^^^^^^^^^^^^^ meta.property-list.css*/
-/*  ^^^ support.type.property-name.css*/
-/*     ^ punctuation.separator.key-value.css*/
-/*      ^^^^^^^ meta.property-value.css*/
-/*       ^^^^^^ support.constant.property-value.css*/
-/*             ^ punctuation.terminator.rule.css*/
+/*^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^ meta.property-name.css support.type.property-name.css */
+/*     ^ punctuation.separator.key-value.css */
+/*      ^^^^^^^ meta.property-value.css */
+/*       ^^^^^^ support.constant.property-value.css */
+/*             ^ punctuation.terminator.rule.css */
     all: revert-layer;
-/*^^^^^^^^^^^^^^^^^^^^ meta.property-list.css*/
-/*  ^^^ support.type.property-name.css*/
-/*     ^ punctuation.separator.key-value.css*/
-/*      ^^^^^^^^^^^^^ meta.property-value.css*/
-/*       ^^^^^^^^^^^^ support.constant.property-value.css*/
-/*                   ^ punctuation.terminator.rule.css*/
+/*^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^ meta.property-name.css support.type.property-name.css */
+/*     ^ punctuation.separator.key-value.css */
+/*      ^^^^^^^^^^^^^ meta.property-value.css */
+/*       ^^^^^^^^^^^^ support.constant.property-value.css */
+/*                   ^ punctuation.terminator.rule.css */
 }

@@ -3,32 +3,28 @@
 .animation-composition {
     animation-composition: add;
 /*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
-/*  ^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-name.css */
-/*  ^^^^^^^^^^^^^^^^^^^^^ support.type.property-name.css */
+/*  ^^^^^^^^^^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
 /*                       ^ punctuation.separator.key-value.css */
 /*                        ^^^^ meta.property-value.css */
 /*                         ^^^ support.constant.property-value.css */
 /*                            ^ punctuation.terminator.rule.css */
     animation-composition: accumulate;
 /*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
-/*  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-name.css */
-/*  ^^^^^^^^^^^^^^^^^^^^^ support.type.property-name.css */
+/*  ^^^^^^^^^^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
 /*                       ^ punctuation.separator.key-value.css */
 /*                        ^^^^^^^^^^^ meta.property-value.css */
 /*                         ^^^^^^^^^^ support.constant.property-value.css */
 /*                                   ^ punctuation.terminator.rule.css */
     animation-composition: replace;
 /*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
-/*  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-name.css */
-/*  ^^^^^^^^^^^^^^^^^^^^^ support.type.property-name.css */
+/*  ^^^^^^^^^^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
 /*                       ^ punctuation.separator.key-value.css */
 /*                        ^^^^^^^^ meta.property-value.css */
 /*                         ^^^^^^^ support.constant.property-value.css */
 /*                                ^ punctuation.terminator.rule.css */
     animation-composition: add, add, replace, accumulate, replace, add;
 /*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
-/*  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-name.css */
-/*  ^^^^^^^^^^^^^^^^^^^^^ support.type.property-name.css */
+/*  ^^^^^^^^^^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
 /*                       ^ punctuation.separator.key-value.css */
 /*                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-value.css */
 /*                         ^^^ support.constant.property-value.css */
@@ -45,40 +41,35 @@
 /*                                                                    ^ punctuation.terminator.rule.css */
     animation-composition: initial;
 /*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
-/*  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-name.css */
-/*  ^^^^^^^^^^^^^^^^^^^^^ support.type.property-name.css */
+/*  ^^^^^^^^^^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
 /*                       ^ punctuation.separator.key-value.css */
 /*                        ^^^^^^^^ meta.property-value.css */
 /*                         ^^^^^^^ support.constant.property-value.css */
 /*                                ^ punctuation.terminator.rule.css */
     animation-composition: inherit;
 /*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
-/*  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-name.css */
-/*  ^^^^^^^^^^^^^^^^^^^^^ support.type.property-name.css */
+/*  ^^^^^^^^^^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
 /*                       ^ punctuation.separator.key-value.css */
 /*                        ^^^^^^^^ meta.property-value.css */
 /*                         ^^^^^^^ support.constant.property-value.css */
 /*                                ^ punctuation.terminator.rule.css */
     animation-composition: unset;
 /*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
-/*  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-name.css */
-/*  ^^^^^^^^^^^^^^^^^^^^^ support.type.property-name.css */
+/*  ^^^^^^^^^^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
 /*                       ^ punctuation.separator.key-value.css */
 /*                        ^^^^^^ meta.property-value.css */
 /*                         ^^^^^ support.constant.property-value.css */
 /*                              ^ punctuation.terminator.rule.css */
     animation-composition: revert;
 /*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
-/*  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-name.css */
-/*  ^^^^^^^^^^^^^^^^^^^^^ support.type.property-name.css */
+/*  ^^^^^^^^^^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
 /*                       ^ punctuation.separator.key-value.css */
 /*                        ^^^^^^^ meta.property-value.css */
 /*                         ^^^^^^ support.constant.property-value.css */
 /*                               ^ punctuation.terminator.rule.css */
     animation-composition: revert-layer;
 /*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
-/*  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-name.css */
-/*  ^^^^^^^^^^^^^^^^^^^^^ support.type.property-name.css */
+/*  ^^^^^^^^^^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
 /*                       ^ punctuation.separator.key-value.css */
 /*                        ^^^^^^^^^^^^^ meta.property-value.css */
 /*                         ^^^^^^^^^^^^ support.constant.property-value.css */
@@ -88,40 +79,35 @@
 .animation-direction {
     animation-direction: normal;
 /*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
-/*  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-name.css */
-/*  ^^^^^^^^^^^^^^^^^^^ support.type.property-name.css */
+/*  ^^^^^^^^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
 /*                     ^ punctuation.separator.key-value.css */
 /*                      ^^^^^^^ meta.property-value.css */
 /*                       ^^^^^^ support.constant.property-value.css */
 /*                             ^ punctuation.terminator.rule.css */
     animation-direction: reverse;
 /*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
-/*  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-name.css */
-/*  ^^^^^^^^^^^^^^^^^^^ support.type.property-name.css */
+/*  ^^^^^^^^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
 /*                     ^ punctuation.separator.key-value.css */
 /*                      ^^^^^^^^ meta.property-value.css */
 /*                       ^^^^^^^ support.constant.property-value.css */
 /*                              ^ punctuation.terminator.rule.css */
     animation-direction: alternate;
 /*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
-/*  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-name.css */
-/*  ^^^^^^^^^^^^^^^^^^^ support.type.property-name.css */
+/*  ^^^^^^^^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
 /*                     ^ punctuation.separator.key-value.css */
 /*                      ^^^^^^^^^^ meta.property-value.css */
 /*                       ^^^^^^^^^ support.constant.property-value.css */
 /*                                ^ punctuation.terminator.rule.css */
     animation-direction: alternate-reverse;
 /*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
-/*  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-name.css */
-/*  ^^^^^^^^^^^^^^^^^^^ support.type.property-name.css */
+/*  ^^^^^^^^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
 /*                     ^ punctuation.separator.key-value.css */
 /*                      ^^^^^^^^^^^^^^^^^^ meta.property-value.css */
 /*                       ^^^^^^^^^^^^^^^^^ support.constant.property-value.css */
 /*                                        ^ punctuation.terminator.rule.css */
     animation-direction: normal, reverse, alternate, alternate-reverse;
 /*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
-/*  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-name.css */
-/*  ^^^^^^^^^^^^^^^^^^^ support.type.property-name.css */
+/*  ^^^^^^^^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
 /*                     ^ punctuation.separator.key-value.css */
 /*                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-value.css */
 /*                       ^^^^^^ support.constant.property-value.css */
@@ -134,40 +120,35 @@
 /*                                                                    ^ punctuation.terminator.rule.css */
     animation-direction: initial;
 /*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
-/*  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-name.css */
-/*  ^^^^^^^^^^^^^^^^^^^ support.type.property-name.css */
+/*  ^^^^^^^^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
 /*                     ^ punctuation.separator.key-value.css */
 /*                      ^^^^^^^^ meta.property-value.css */
 /*                       ^^^^^^^ support.constant.property-value.css */
 /*                              ^ punctuation.terminator.rule.css */
     animation-direction: inherit;
 /*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
-/*  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-name.css */
-/*  ^^^^^^^^^^^^^^^^^^^ support.type.property-name.css */
+/*  ^^^^^^^^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
 /*                     ^ punctuation.separator.key-value.css */
 /*                      ^^^^^^^^ meta.property-value.css */
 /*                       ^^^^^^^ support.constant.property-value.css */
 /*                              ^ punctuation.terminator.rule.css */
     animation-direction: revert;
 /*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
-/*  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-name.css */
-/*  ^^^^^^^^^^^^^^^^^^^ support.type.property-name.css */
+/*  ^^^^^^^^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
 /*                     ^ punctuation.separator.key-value.css */
 /*                      ^^^^^^^ meta.property-value.css */
 /*                       ^^^^^^ support.constant.property-value.css */
 /*                             ^ punctuation.terminator.rule.css */
     animation-direction: revert-layer;
 /*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
-/*  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-name.css */
-/*  ^^^^^^^^^^^^^^^^^^^ support.type.property-name.css */
+/*  ^^^^^^^^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
 /*                     ^ punctuation.separator.key-value.css */
 /*                      ^^^^^^^^^^^^^ meta.property-value.css */
 /*                       ^^^^^^^^^^^^ support.constant.property-value.css */
 /*                                   ^ punctuation.terminator.rule.css */
     animation-direction: unset;
 /*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
-/*  ^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-name.css */
-/*  ^^^^^^^^^^^^^^^^^^^ support.type.property-name.css */
+/*  ^^^^^^^^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
 /*                     ^ punctuation.separator.key-value.css */
 /*                      ^^^^^^ meta.property-value.css */
 /*                       ^^^^^ support.constant.property-value.css */
@@ -177,40 +158,35 @@
 .animation-fill-mode {
     animation-fill-mode: none;
 /*^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
-/*  ^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-name.css */
-/*  ^^^^^^^^^^^^^^^^^^^ support.type.property-name.css */
+/*  ^^^^^^^^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
 /*                     ^ punctuation.separator.key-value.css */
 /*                      ^^^^^ meta.property-value.css */
 /*                       ^^^^ support.constant.property-value.css */
 /*                           ^ punctuation.terminator.rule.css */
     animation-fill-mode: forwards;
 /*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
-/*  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-name.css */
-/*  ^^^^^^^^^^^^^^^^^^^ support.type.property-name.css */
+/*  ^^^^^^^^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
 /*                     ^ punctuation.separator.key-value.css */
 /*                      ^^^^^^^^^ meta.property-value.css */
 /*                       ^^^^^^^^ support.constant.property-value.css */
 /*                               ^ punctuation.terminator.rule.css */
     animation-fill-mode: backwards;
 /*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
-/*  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-name.css */
-/*  ^^^^^^^^^^^^^^^^^^^ support.type.property-name.css */
+/*  ^^^^^^^^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
 /*                     ^ punctuation.separator.key-value.css */
 /*                      ^^^^^^^^^^ meta.property-value.css */
 /*                       ^^^^^^^^^ support.constant.property-value.css */
 /*                                ^ punctuation.terminator.rule.css */
     animation-fill-mode: both;
 /*^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
-/*  ^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-name.css */
-/*  ^^^^^^^^^^^^^^^^^^^ support.type.property-name.css */
+/*  ^^^^^^^^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
 /*                     ^ punctuation.separator.key-value.css */
 /*                      ^^^^^ meta.property-value.css */
 /*                       ^^^^ support.constant.property-value.css */
 /*                           ^ punctuation.terminator.rule.css */
     animation-fill-mode: none, forwards, backwards, both;
 /*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
-/*  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-name.css */
-/*  ^^^^^^^^^^^^^^^^^^^ support.type.property-name.css */
+/*  ^^^^^^^^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
 /*                     ^ punctuation.separator.key-value.css */
 /*                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-value.css */
 /*                       ^^^^ support.constant.property-value.css */
@@ -223,40 +199,35 @@
 /*                                                      ^ punctuation.terminator.rule.css */
     animation-fill-mode: initial;
 /*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
-/*  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-name.css */
-/*  ^^^^^^^^^^^^^^^^^^^ support.type.property-name.css */
+/*  ^^^^^^^^^^^^^^^^^^^ meta.property-name.css  support.type.property-name.css */
 /*                     ^ punctuation.separator.key-value.css */
 /*                      ^^^^^^^^ meta.property-value.css */
 /*                       ^^^^^^^ support.constant.property-value.css */
 /*                              ^ punctuation.terminator.rule.css */
     animation-fill-mode: inherit;
 /*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
-/*  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-name.css */
-/*  ^^^^^^^^^^^^^^^^^^^ support.type.property-name.css */
+/*  ^^^^^^^^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
 /*                     ^ punctuation.separator.key-value.css */
 /*                      ^^^^^^^^ meta.property-value.css */
 /*                       ^^^^^^^ support.constant.property-value.css */
 /*                              ^ punctuation.terminator.rule.css */
     animation-fill-mode: revert;
 /*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
-/*  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-name.css */
-/*  ^^^^^^^^^^^^^^^^^^^ support.type.property-name.css */
+/*  ^^^^^^^^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
 /*                     ^ punctuation.separator.key-value.css */
 /*                      ^^^^^^^ meta.property-value.css */
 /*                       ^^^^^^ support.constant.property-value.css */
 /*                             ^ punctuation.terminator.rule.css */
     animation-fill-mode: revert-layer;
 /*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
-/*  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-name.css */
-/*  ^^^^^^^^^^^^^^^^^^^ support.type.property-name.css */
+/*  ^^^^^^^^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
 /*                     ^ punctuation.separator.key-value.css */
 /*                      ^^^^^^^^^^^^^ meta.property-value.css */
 /*                       ^^^^^^^^^^^^ support.constant.property-value.css */
 /*                                   ^ punctuation.terminator.rule.css */
     animation-fill-mode: unset;
 /*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
-/*  ^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-name.css */
-/*  ^^^^^^^^^^^^^^^^^^^ support.type.property-name.css */
+/*  ^^^^^^^^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
 /*                     ^ punctuation.separator.key-value.css */
 /*                      ^^^^^^ meta.property-value.css */
 /*                       ^^^^^ support.constant.property-value.css */
@@ -280,8 +251,7 @@
 /*                              ^ punctuation.terminator.rule.css */
     animation-play-state: running, paused;
 /*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
-/*  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-name.css */
-/*  ^^^^^^^^^^^^^^^^^^^^ support.type.property-name.css */
+/*  ^^^^^^^^^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
 /*                      ^ punctuation.separator.key-value.css */
 /*                       ^^^^^^^^^^^^^^^^ meta.property-value.css */
 /*                        ^^^^^^^ support.constant.property-value.css */

@@ -157,61 +157,56 @@
       </dict>
       <key>all-property</key>
       <dict>
+        <key>begin</key>
+        <string>\ball\b</string>
+        <key>beginCaptures</key>
+        <dict>
+          <key>0</key>
+          <dict>
+            <key>name</key>
+            <string>meta.property-name.css support.type.property-name.css</string>
+          </dict>
+        </dict>
+        <key>end</key>
+        <string>\s*(;)|(?=[})])</string>
+        <key>endCaptures</key>
+        <dict>
+          <key>1</key>
+          <dict>
+            <key>name</key>
+            <string>punctuation.terminator.rule.css</string>
+          </dict>
+        </dict>
         <key>patterns</key>
         <array>
           <dict>
+            <key>contentName</key>
+            <string>meta.property-value.css</string>
             <key>begin</key>
-            <string>\ball\b</string>
+            <string>(:)(?=(?:(?:[\s\R]+)*?))</string>
             <key>beginCaptures</key>
-            <dict>
-              <key>0</key>
-              <dict>
-                <key>name</key>
-                <string>support.type.property-name.css</string>
-              </dict>
-            </dict>
-            <key>end</key>
-            <string>\s*(;)|(?=[})])</string>
-            <key>endCaptures</key>
             <dict>
               <key>1</key>
               <dict>
                 <key>name</key>
-                <string>punctuation.terminator.rule.css</string>
+                <string>punctuation.separator.key-value.css</string>
               </dict>
             </dict>
+            <key>end</key>
+            <string>(?=\s*(;)|(?=[})]))</string>
             <key>patterns</key>
             <array>
               <dict>
-                <key>contentName</key>
-                <string>meta.property-value.css</string>
-                <key>begin</key>
-                <string>(:)(?=(?:(?:[\s\R]+)*?))</string>
-                <key>beginCaptures</key>
-                <dict>
-                  <key>1</key>
-                  <dict>
-                    <key>name</key>
-                    <string>punctuation.separator.key-value.css</string>
-                  </dict>
-                </dict>
-                <key>end</key>
-                <string>(?=\s*(;)|(?=[})]))</string>
-                <key>patterns</key>
-                <array>
-                  <dict>
-                    <key>include</key>
-                    <string>#comment-block</string>
-                  </dict>
-                  <dict>
-                    <key>include</key>
-                    <string>#global-property-values</string>
-                  </dict>
-                  <dict>
-                    <key>include</key>
-                    <string>#var-function</string>
-                  </dict>
-                </array>
+                <key>include</key>
+                <string>#comment-block</string>
+              </dict>
+              <dict>
+                <key>include</key>
+                <string>#global-property-values</string>
+              </dict>
+              <dict>
+                <key>include</key>
+                <string>#var-function</string>
               </dict>
             </array>
           </dict>
@@ -289,8 +284,6 @@
       </dict>
       <key>animation-composition-property</key>
       <dict>
-        <key>name</key>
-        <string>meta.property-name.css</string>
         <key>begin</key>
         <string>\banimation-composition\b</string>
         <key>beginCaptures</key>
@@ -298,7 +291,7 @@
           <key>0</key>
           <dict>
             <key>name</key>
-            <string>support.type.property-name.css</string>
+            <string>meta.property-name.css support.type.property-name.css</string>
           </dict>
         </dict>
         <key>end</key>
@@ -354,8 +347,6 @@
       </dict>
       <key>animation-direction-property</key>
       <dict>
-        <key>name</key>
-        <string>meta.property-name.css</string>
         <key>begin</key>
         <string>\banimation-direction\b</string>
         <key>beginCaptures</key>
@@ -363,7 +354,7 @@
           <key>0</key>
           <dict>
             <key>name</key>
-            <string>support.type.property-name.css</string>
+            <string>meta.property-name.css support.type.property-name.css</string>
           </dict>
         </dict>
         <key>end</key>
@@ -423,8 +414,6 @@
       </dict>
       <key>animation-fill-mode-property</key>
       <dict>
-        <key>name</key>
-        <string>meta.property-name.css</string>
         <key>begin</key>
         <string>\banimation-fill-mode\b</string>
         <key>beginCaptures</key>
@@ -432,7 +421,7 @@
           <key>0</key>
           <dict>
             <key>name</key>
-            <string>support.type.property-name.css</string>
+            <string>meta.property-name.css support.type.property-name.css</string>
           </dict>
         </dict>
         <key>end</key>
@@ -492,8 +481,6 @@
       </dict>
       <key>animation-play-state-property</key>
       <dict>
-        <key>name</key>
-        <string>meta.property-name.css</string>
         <key>begin</key>
         <string>\banimation-play-state\b</string>
         <key>beginCaptures</key>
@@ -501,7 +488,7 @@
           <key>0</key>
           <dict>
             <key>name</key>
-            <string>support.type.property-name.css</string>
+            <string>meta.property-name.css support.type.property-name.css</string>
           </dict>
         </dict>
         <key>end</key>
@@ -583,8 +570,6 @@
       </dict>
       <key>appearance-property</key>
       <dict>
-        <key>name</key>
-        <string>meta.property-name.css</string>
         <key>begin</key>
         <string>\bappearance\b</string>
         <key>beginCaptures</key>
@@ -592,7 +577,7 @@
           <key>0</key>
           <dict>
             <key>name</key>
-            <string>support.type.property-name.css</string>
+            <string>meta.property-name.css support.type.property-name.css</string>
           </dict>
         </dict>
         <key>end</key>
@@ -1805,8 +1790,6 @@
       </dict>
       <key>backdrop-filter-property</key>
       <dict>
-        <key>name</key>
-        <string>meta.property-name.css</string>
         <key>begin</key>
         <string>\bbackdrop-filter\b</string>
         <key>beginCaptures</key>
@@ -1814,7 +1797,7 @@
           <key>0</key>
           <dict>
             <key>name</key>
-            <string>support.type.property-name.css</string>
+            <string>meta.property-name.css support.type.property-name.css</string>
           </dict>
         </dict>
         <key>end</key>
@@ -1860,8 +1843,6 @@
       </dict>
       <key>backface-visibility-property</key>
       <dict>
-        <key>name</key>
-        <string>meta.property-name.css</string>
         <key>begin</key>
         <string>\bbackface-visibility\b</string>
         <key>beginCaptures</key>
@@ -1869,7 +1850,7 @@
           <key>0</key>
           <dict>
             <key>name</key>
-            <string>support.type.property-name.css</string>
+            <string>meta.property-name.css support.type.property-name.css</string>
           </dict>
         </dict>
         <key>end</key>
@@ -1921,8 +1902,6 @@
       </dict>
       <key>background-attachment-property</key>
       <dict>
-        <key>name</key>
-        <string>meta.property-name.css</string>
         <key>begin</key>
         <string>\bbackground-attachment\b</string>
         <key>beginCaptures</key>
@@ -1930,7 +1909,7 @@
           <key>0</key>
           <dict>
             <key>name</key>
-            <string>support.type.property-name.css</string>
+            <string>meta.property-name.css support.type.property-name.css</string>
           </dict>
         </dict>
         <key>end</key>
@@ -1986,8 +1965,6 @@
       </dict>
       <key>background-blend-mode-property</key>
       <dict>
-        <key>name</key>
-        <string>meta.property-name.css</string>
         <key>begin</key>
         <string>\bbackground-blend-mode\b</string>
         <key>beginCaptures</key>
@@ -1995,7 +1972,7 @@
           <key>0</key>
           <dict>
             <key>name</key>
-            <string>support.type.property-name.css</string>
+            <string>meta.property-name.css support.type.property-name.css</string>
           </dict>
         </dict>
         <key>end</key>
@@ -2258,8 +2235,6 @@
       </dict>
       <key>clear-property</key>
       <dict>
-        <key>name</key>
-        <string>meta.property-name.css</string>
         <key>begin</key>
         <string>\bclear\b</string>
         <key>beginCaptures</key>
@@ -2267,7 +2242,7 @@
           <key>0</key>
           <dict>
             <key>name</key>
-            <string>support.type.property-name.css</string>
+            <string>meta.property-name.css support.type.property-name.css</string>
           </dict>
         </dict>
         <key>end</key>
@@ -2319,8 +2294,6 @@
       </dict>
       <key>clip-rule-property</key>
       <dict>
-        <key>name</key>
-        <string>meta.property-name.css</string>
         <key>begin</key>
         <string>\bclip-rule\b</string>
         <key>beginCaptures</key>
@@ -2328,7 +2301,7 @@
           <key>0</key>
           <dict>
             <key>name</key>
-            <string>support.type.property-name.css</string>
+            <string>meta.property-name.css support.type.property-name.css</string>
           </dict>
         </dict>
         <key>end</key>
@@ -2464,8 +2437,6 @@
       </dict>
       <key>color-interpolation-property</key>
       <dict>
-        <key>name</key>
-        <string>meta.property-name.css</string>
         <key>begin</key>
         <string>\bcolor-interpolation(?:-filters)?\b</string>
         <key>beginCaptures</key>
@@ -2473,7 +2444,7 @@
           <key>0</key>
           <dict>
             <key>name</key>
-            <string>support.type.property-name.css</string>
+            <string>meta.property-name.css support.type.property-name.css</string>
           </dict>
         </dict>
         <key>end</key>
@@ -2569,8 +2540,6 @@
       </dict>
       <key>column-count-property</key>
       <dict>
-        <key>name</key>
-        <string>meta.property-name.css</string>
         <key>begin</key>
         <string>\bcolumn-count\b</string>
         <key>beginCaptures</key>
@@ -2578,7 +2547,7 @@
           <key>0</key>
           <dict>
             <key>name</key>
-            <string>support.type.property-name.css</string>
+            <string>meta.property-name.css support.type.property-name.css</string>
           </dict>
         </dict>
         <key>end</key>
@@ -2634,8 +2603,6 @@
       </dict>
       <key>column-fill-property</key>
       <dict>
-        <key>name</key>
-        <string>meta.property-name.css</string>
         <key>begin</key>
         <string>\bcolumn-fill\b</string>
         <key>beginCaptures</key>
@@ -2643,7 +2610,7 @@
           <key>0</key>
           <dict>
             <key>name</key>
-            <string>support.type.property-name.css</string>
+            <string>meta.property-name.css support.type.property-name.css</string>
           </dict>
         </dict>
         <key>end</key>
@@ -2695,8 +2662,6 @@
       </dict>
       <key>column-span-property</key>
       <dict>
-        <key>name</key>
-        <string>meta.property-name.css</string>
         <key>begin</key>
         <string>\bcolumn-span\b</string>
         <key>beginCaptures</key>
@@ -2704,7 +2669,7 @@
           <key>0</key>
           <dict>
             <key>name</key>
-            <string>support.type.property-name.css</string>
+            <string>meta.property-name.css support.type.property-name.css</string>
           </dict>
         </dict>
         <key>end</key>
@@ -2784,8 +2749,6 @@
       </dict>
       <key>contain-property</key>
       <dict>
-        <key>name</key>
-        <string>meta.property-name.css</string>
         <key>begin</key>
         <string>\bcontain\b</string>
         <key>beginCaptures</key>
@@ -2793,7 +2756,7 @@
           <key>0</key>
           <dict>
             <key>name</key>
-            <string>support.type.property-name.css</string>
+            <string>meta.property-name.css support.type.property-name.css</string>
           </dict>
         </dict>
         <key>end</key>
@@ -2912,8 +2875,6 @@
       </dict>
       <key>content-visibility-property</key>
       <dict>
-        <key>name</key>
-        <string>meta.property-name.css</string>
         <key>begin</key>
         <string>\bcontent-visibility\b</string>
         <key>beginCaptures</key>
@@ -2921,7 +2882,7 @@
           <key>0</key>
           <dict>
             <key>name</key>
-            <string>support.type.property-name.css</string>
+            <string>meta.property-name.css support.type.property-name.css</string>
           </dict>
         </dict>
         <key>end</key>
@@ -3112,8 +3073,6 @@ optgroup | option | output | picture | portal | pre | progress | p | q | rp
       </dict>
       <key>filter-property</key>
       <dict>
-        <key>name</key>
-        <string>meta.property-name.css</string>
         <key>begin</key>
         <string>\bfilter\b</string>
         <key>beginCaptures</key>
@@ -3121,7 +3080,7 @@ optgroup | option | output | picture | portal | pre | progress | p | q | rp
           <key>0</key>
           <dict>
             <key>name</key>
-            <string>support.type.property-name.css</string>
+            <string>meta.property-name.css support.type.property-name.css</string>
           </dict>
         </dict>
         <key>end</key>
@@ -3167,8 +3126,6 @@ optgroup | option | output | picture | portal | pre | progress | p | q | rp
       </dict>
       <key>font-family-property</key>
       <dict>
-        <key>name</key>
-        <string>meta.property-name.css</string>
         <key>begin</key>
         <string>\bfont(-family)?(?!-)\b</string>
         <key>beginCaptures</key>
@@ -3176,7 +3133,7 @@ optgroup | option | output | picture | portal | pre | progress | p | q | rp
           <key>0</key>
           <dict>
             <key>name</key>
-            <string>support.type.property-name.css</string>
+            <string>meta.property-name.css support.type.property-name.css</string>
           </dict>
         </dict>
         <key>end</key>
@@ -3246,8 +3203,6 @@ optgroup | option | output | picture | portal | pre | progress | p | q | rp
       </dict>
       <key>font-size-adjust-property</key>
       <dict>
-        <key>name</key>
-        <string>meta.property-name.css</string>
         <key>begin</key>
         <string>\bfont-size-adjust\b</string>
         <key>beginCaptures</key>
@@ -3255,7 +3210,7 @@ optgroup | option | output | picture | portal | pre | progress | p | q | rp
           <key>0</key>
           <dict>
             <key>name</key>
-            <string>support.type.property-name.css</string>
+            <string>meta.property-name.css support.type.property-name.css</string>
           </dict>
         </dict>
         <key>end</key>
@@ -4445,7 +4400,7 @@ optgroup | option | output | picture | portal | pre | progress | p | q | rp
           <key>0</key>
           <dict>
             <key>name</key>
-            <string>support.type.property-name.css</string>
+            <string>meta.property-name.css support.type.property-name.css</string>
           </dict>
         </dict>
         <key>end</key>
@@ -4886,7 +4841,7 @@ optgroup | option | output | picture | portal | pre | progress | p | q | rp
           <key>0</key>
           <dict>
             <key>name</key>
-            <string>support.type.property-name.css</string>
+            <string>meta.property-name.css support.type.property-name.css</string>
           </dict>
         </dict>
         <key>end</key>
@@ -5203,8 +5158,6 @@ optgroup | option | output | picture | portal | pre | progress | p | q | rp
       </dict>
       <key>text-overflow-property</key>
       <dict>
-        <key>name</key>
-        <string>meta.property-name.css</string>
         <key>begin</key>
         <string>\btext-overflow\b</string>
         <key>beginCaptures</key>
@@ -5212,7 +5165,7 @@ optgroup | option | output | picture | portal | pre | progress | p | q | rp
           <key>0</key>
           <dict>
             <key>name</key>
-            <string>support.type.property-name.css</string>
+            <string>meta.property-name.css support.type.property-name.css</string>
           </dict>
         </dict>
         <key>end</key>
@@ -5268,8 +5221,6 @@ optgroup | option | output | picture | portal | pre | progress | p | q | rp
       </dict>
       <key>text-rendering-property</key>
       <dict>
-        <key>name</key>
-        <string>meta.property-name.css</string>
         <key>begin</key>
         <string>\btext-rendering\b</string>
         <key>beginCaptures</key>
@@ -5277,7 +5228,7 @@ optgroup | option | output | picture | portal | pre | progress | p | q | rp
           <key>0</key>
           <dict>
             <key>name</key>
-            <string>support.type.property-name.css</string>
+            <string>meta.property-name.css support.type.property-name.css</string>
           </dict>
         </dict>
         <key>end</key>
@@ -5329,8 +5280,6 @@ optgroup | option | output | picture | portal | pre | progress | p | q | rp
       </dict>
       <key>text-transform-property</key>
       <dict>
-        <key>name</key>
-        <string>meta.property-name.css</string>
         <key>begin</key>
         <string>\btext-transform\b</string>
         <key>beginCaptures</key>
@@ -5338,7 +5287,7 @@ optgroup | option | output | picture | portal | pre | progress | p | q | rp
           <key>0</key>
           <dict>
             <key>name</key>
-            <string>support.type.property-name.css</string>
+            <string>meta.property-name.css support.type.property-name.css</string>
           </dict>
         </dict>
         <key>end</key>
@@ -5390,8 +5339,6 @@ optgroup | option | output | picture | portal | pre | progress | p | q | rp
       </dict>
       <key>text-underline-position-property</key>
       <dict>
-        <key>name</key>
-        <string>meta.property-name.css</string>
         <key>begin</key>
         <string>\btext-underline-position\b</string>
         <key>beginCaptures</key>
@@ -5399,7 +5346,7 @@ optgroup | option | output | picture | portal | pre | progress | p | q | rp
           <key>0</key>
           <dict>
             <key>name</key>
-            <string>support.type.property-name.css</string>
+            <string>meta.property-name.css support.type.property-name.css</string>
           </dict>
         </dict>
         <key>end</key>
@@ -5451,8 +5398,6 @@ optgroup | option | output | picture | portal | pre | progress | p | q | rp
       </dict>
       <key>text-wrap-property</key>
       <dict>
-        <key>name</key>
-        <string>meta.property-name.css</string>
         <key>begin</key>
         <string>\btext-wrap\b</string>
         <key>beginCaptures</key>
@@ -5460,7 +5405,7 @@ optgroup | option | output | picture | portal | pre | progress | p | q | rp
           <key>0</key>
           <dict>
             <key>name</key>
-            <string>support.type.property-name.css</string>
+            <string>meta.property-name.css support.type.property-name.css</string>
           </dict>
         </dict>
         <key>end</key>
@@ -5514,8 +5459,6 @@ optgroup | option | output | picture | portal | pre | progress | p | q | rp
       </dict>
       <key>text-wrap-mode-property</key>
       <dict>
-        <key>name</key>
-        <string>meta.property-name.css</string>
         <key>begin</key>
         <string>\btext-wrap-mode\b</string>
         <key>beginCaptures</key>
@@ -5523,7 +5466,7 @@ optgroup | option | output | picture | portal | pre | progress | p | q | rp
           <key>0</key>
           <dict>
             <key>name</key>
-            <string>support.type.property-name.css</string>
+            <string>meta.property-name.css support.type.property-name.css</string>
           </dict>
         </dict>
         <key>end</key>
@@ -5580,8 +5523,6 @@ optgroup | option | output | picture | portal | pre | progress | p | q | rp
       </dict>
       <key>text-wrap-style-property</key>
       <dict>
-        <key>name</key>
-        <string>meta.property-name.css</string>
         <key>begin</key>
         <string>\btext-wrap-style\b</string>
         <key>beginCaptures</key>
@@ -5589,7 +5530,7 @@ optgroup | option | output | picture | portal | pre | progress | p | q | rp
           <key>0</key>
           <dict>
             <key>name</key>
-            <string>support.type.property-name.css</string>
+            <string>meta.property-name.css support.type.property-name.css</string>
           </dict>
         </dict>
         <key>end</key>
@@ -5800,8 +5741,6 @@ optgroup | option | output | picture | portal | pre | progress | p | q | rp
       </dict>
       <key>visibility-property</key>
       <dict>
-        <key>name</key>
-        <string>meta.property-name.css</string>
         <key>begin</key>
         <string>\bvisibility\b</string>
         <key>beginCaptures</key>
@@ -5809,7 +5748,7 @@ optgroup | option | output | picture | portal | pre | progress | p | q | rp
           <key>0</key>
           <dict>
             <key>name</key>
-            <string>support.type.property-name.css</string>
+            <string>meta.property-name.css support.type.property-name.css</string>
           </dict>
         </dict>
         <key>end</key>
@@ -6004,8 +5943,6 @@ optgroup | option | output | picture | portal | pre | progress | p | q | rp
       </dict>
       <key>white-space-collapse-property</key>
       <dict>
-        <key>name</key>
-        <string>meta.property-name.css</string>
         <key>begin</key>
         <string>\bwhite-space-collapse\b</string>
         <key>beginCaptures</key>
@@ -6013,7 +5950,7 @@ optgroup | option | output | picture | portal | pre | progress | p | q | rp
           <key>0</key>
           <dict>
             <key>name</key>
-            <string>support.type.property-name.css</string>
+            <string>meta.property-name.css support.type.property-name.css</string>
           </dict>
         </dict>
         <key>end</key>
@@ -6065,8 +6002,6 @@ optgroup | option | output | picture | portal | pre | progress | p | q | rp
       </dict>
       <key>widows-property</key>
       <dict>
-        <key>name</key>
-        <string>meta.property-name.css</string>
         <key>begin</key>
         <string>\bwidows\b</string>
         <key>beginCaptures</key>
@@ -6074,7 +6009,7 @@ optgroup | option | output | picture | portal | pre | progress | p | q | rp
           <key>0</key>
           <dict>
             <key>name</key>
-            <string>support.type.property-name.css</string>
+            <string>meta.property-name.css support.type.property-name.css</string>
           </dict>
         </dict>
         <key>end</key>
@@ -6124,8 +6059,6 @@ optgroup | option | output | picture | portal | pre | progress | p | q | rp
       </dict>
       <key>writing-mode-property</key>
       <dict>
-        <key>name</key>
-        <string>meta.property-name.css</string>
         <key>begin</key>
         <string>\bwriting-mode\b</string>
         <key>beginCaptures</key>
@@ -6133,7 +6066,7 @@ optgroup | option | output | picture | portal | pre | progress | p | q | rp
           <key>0</key>
           <dict>
             <key>name</key>
-            <string>support.type.property-name.css</string>
+            <string>meta.property-name.css support.type.property-name.css</string>
           </dict>
         </dict>
         <key>end</key>
