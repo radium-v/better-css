@@ -186,3 +186,65 @@
     animation-fill-mode: revert-layer;
     animation-fill-mode: unset;
 }
+
+.animation-play-state {
+    animation-play-state: running;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*                      ^ punctuation.separator.key-value.css */
+/*                       ^^^^^^^^ meta.property-value.css */
+/*                        ^^^^^^^ support.constant.property-value.css */
+/*                               ^ punctuation.terminator.rule.css */
+    animation-play-state: paused;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*                      ^ punctuation.separator.key-value.css */
+/*                       ^^^^^^^ meta.property-value.css */
+/*                        ^^^^^^ support.constant.property-value.css */
+/*                              ^ punctuation.terminator.rule.css */
+    animation-play-state: running, paused;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-name.css */
+/*  ^^^^^^^^^^^^^^^^^^^^ support.type.property-name.css */
+/*                      ^ punctuation.separator.key-value.css */
+/*                       ^^^^^^^^^^^^^^^^ meta.property-value.css */
+/*                        ^^^^^^^ support.constant.property-value.css */
+/*                               ^ punctuation.definition.arbitrary-repetition.css */
+/*                                 ^^^^^^ support.constant.property-value.css */
+/*                                       ^ punctuation.terminator.rule.css */
+    animation-play-state: initial;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*                      ^ punctuation.separator.key-value.css */
+/*                       ^^^^^^^^ meta.property-value.css */
+/*                        ^^^^^^^ support.constant.property-value.css */
+/*                               ^ punctuation.terminator.rule.css */
+    animation-play-state: inherit;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*                      ^ punctuation.separator.key-value.css */
+/*                       ^^^^^^^^ meta.property-value.css */
+/*                        ^^^^^^^ support.constant.property-value.css */
+/*                               ^ punctuation.terminator.rule.css */
+    animation-play-state: revert;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*                      ^ punctuation.separator.key-value.css */
+/*                       ^^^^^^^ meta.property-value.css */
+/*                        ^^^^^^ support.constant.property-value.css */
+/*                              ^ punctuation.terminator.rule.css */
+    animation-play-state: revert-layer;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*                      ^ punctuation.separator.key-value.css */
+/*                       ^^^^^^^^^^^^^ meta.property-value.css */
+/*                        ^^^^^^^^^^^^ support.constant.property-value.css */
+/*                                    ^ punctuation.terminator.rule.css */
+    animation-play-state: unset;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*                      ^ punctuation.separator.key-value.css */
+/*                       ^^^^^^ meta.property-value.css */
+/*                        ^^^^^ support.constant.property-value.css */
+/*                             ^ punctuation.terminator.rule.css */
+}
