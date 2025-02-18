@@ -596,6 +596,31 @@ repository:
         match: \b(?:visible|hidden)\b
       - include: '#global-property-values'
 
+  background-attachment-property:
+    name: meta.property-name.css
+    begin: \bbackground-attachment\b
+    beginCaptures:
+      '0': {name: support.type.property-name.css}
+    end: '{{property_value_terminator}}'
+    endCaptures:
+      '1': {name: punctuation.terminator.rule.css}
+    patterns:
+    - include: '#comment-block'
+    - contentName: meta.property-value.css
+      begin: (:)(?={{ws}})
+      beginCaptures:
+        '1': {name: punctuation.separator.key-value.css}
+      end: (?={{property_value_terminator}})
+      patterns:
+      - name: support.constant.property-value.css
+        match: \b(?:scroll|fixed|local)\b
+      - include: '#arbitrary-repetition'
+      - include: '#global-property-values'
+
+  background-properties:
+    patterns:
+    - include: '#background-attachment-property'
+
   blend-mode-type:
     patterns:
     - name: support.constant.blend-mode.css
@@ -1434,6 +1459,7 @@ repository:
       - include: '#appearance-property'
       - include: '#backdrop-filter-property'
       - include: '#backface-visibility-property'
+      - include: '#background-properties'
       - include: '#border-properties'
       - include: '#clear-property'
       - include: '#clip-rule-property'

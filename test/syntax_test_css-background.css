@@ -1,0 +1,60 @@
+/* SYNTAX TEST "Packages/better-css/Syntaxes/Better CSS.tmLanguage" */
+
+.background-attachment {
+    background-attachment: scroll;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*                       ^ punctuation.separator.key-value.css */
+/*                        ^^^^^^^ meta.property-value.css */
+/*                         ^^^^^^ support.constant.property-value.css */
+/*                               ^ punctuation.terminator.rule.css */
+    background-attachment: local;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*                       ^ punctuation.separator.key-value.css */
+/*                        ^^^^^^ meta.property-value.css */
+/*                         ^^^^^ support.constant.property-value.css */
+/*                              ^ punctuation.terminator.rule.css */
+    background-attachment: fixed;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*                       ^ punctuation.separator.key-value.css */
+/*                        ^^^^^^ meta.property-value.css */
+/*                         ^^^^^ support.constant.property-value.css */
+/*                              ^ punctuation.terminator.rule.css */
+    background-attachment: inherit;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*                       ^ punctuation.separator.key-value.css */
+/*                        ^^^^^^^^ meta.property-value.css */
+/*                         ^^^^^^^ support.constant.property-value.css */
+/*                                ^ punctuation.terminator.rule.css */
+    background-attachment: initial;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*                       ^ punctuation.separator.key-value.css */
+/*                        ^^^^^^^^ meta.property-value.css */
+/*                         ^^^^^^^ support.constant.property-value.css */
+/*                                ^ punctuation.terminator.rule.css */
+    background-attachment: revert;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*                       ^ punctuation.separator.key-value.css */
+/*                        ^^^^^^^ meta.property-value.css */
+/*                         ^^^^^^ support.constant.property-value.css */
+/*                               ^ punctuation.terminator.rule.css */
+    background-attachment: revert-layer;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*                       ^ punctuation.separator.key-value.css */
+/*                        ^^^^^^^^^^^^^ meta.property-value.css */
+/*                         ^^^^^^^^^^^^ support.constant.property-value.css */
+/*                                     ^ punctuation.terminator.rule.css */
+    background-attachment: unset;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*                       ^ punctuation.separator.key-value.css */
+/*                        ^^^^^^ meta.property-value.css */
+/*                         ^^^^^ support.constant.property-value.css */
+/*                              ^ punctuation.terminator.rule.css */
+}
