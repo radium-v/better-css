@@ -176,15 +176,91 @@
 
 .animation-fill-mode {
     animation-fill-mode: none;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-name.css */
+/*  ^^^^^^^^^^^^^^^^^^^ support.type.property-name.css */
+/*                     ^ punctuation.separator.key-value.css */
+/*                      ^^^^^ meta.property-value.css */
+/*                       ^^^^ support.constant.property-value.css */
+/*                           ^ punctuation.terminator.rule.css */
     animation-fill-mode: forwards;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-name.css */
+/*  ^^^^^^^^^^^^^^^^^^^ support.type.property-name.css */
+/*                     ^ punctuation.separator.key-value.css */
+/*                      ^^^^^^^^^ meta.property-value.css */
+/*                       ^^^^^^^^ support.constant.property-value.css */
+/*                               ^ punctuation.terminator.rule.css */
     animation-fill-mode: backwards;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-name.css */
+/*  ^^^^^^^^^^^^^^^^^^^ support.type.property-name.css */
+/*                     ^ punctuation.separator.key-value.css */
+/*                      ^^^^^^^^^^ meta.property-value.css */
+/*                       ^^^^^^^^^ support.constant.property-value.css */
+/*                                ^ punctuation.terminator.rule.css */
     animation-fill-mode: both;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-name.css */
+/*  ^^^^^^^^^^^^^^^^^^^ support.type.property-name.css */
+/*                     ^ punctuation.separator.key-value.css */
+/*                      ^^^^^ meta.property-value.css */
+/*                       ^^^^ support.constant.property-value.css */
+/*                           ^ punctuation.terminator.rule.css */
     animation-fill-mode: none, forwards, backwards, both;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-name.css */
+/*  ^^^^^^^^^^^^^^^^^^^ support.type.property-name.css */
+/*                     ^ punctuation.separator.key-value.css */
+/*                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-value.css */
+/*                       ^^^^ support.constant.property-value.css */
+/*                           ^ punctuation.definition.arbitrary-repetition.css */
+/*                             ^^^^^^^^ support.constant.property-value.css */
+/*                                     ^ punctuation.definition.arbitrary-repetition.css */
+/*                                       ^^^^^^^^^ support.constant.property-value.css */
+/*                                                ^ punctuation.definition.arbitrary-repetition.css */
+/*                                                  ^^^^ support.constant.property-value.css */
+/*                                                      ^ punctuation.terminator.rule.css */
     animation-fill-mode: initial;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-name.css */
+/*  ^^^^^^^^^^^^^^^^^^^ support.type.property-name.css */
+/*                     ^ punctuation.separator.key-value.css */
+/*                      ^^^^^^^^ meta.property-value.css */
+/*                       ^^^^^^^ support.constant.property-value.css */
+/*                              ^ punctuation.terminator.rule.css */
     animation-fill-mode: inherit;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-name.css */
+/*  ^^^^^^^^^^^^^^^^^^^ support.type.property-name.css */
+/*                     ^ punctuation.separator.key-value.css */
+/*                      ^^^^^^^^ meta.property-value.css */
+/*                       ^^^^^^^ support.constant.property-value.css */
+/*                              ^ punctuation.terminator.rule.css */
     animation-fill-mode: revert;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-name.css */
+/*  ^^^^^^^^^^^^^^^^^^^ support.type.property-name.css */
+/*                     ^ punctuation.separator.key-value.css */
+/*                      ^^^^^^^ meta.property-value.css */
+/*                       ^^^^^^ support.constant.property-value.css */
+/*                             ^ punctuation.terminator.rule.css */
     animation-fill-mode: revert-layer;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-name.css */
+/*  ^^^^^^^^^^^^^^^^^^^ support.type.property-name.css */
+/*                     ^ punctuation.separator.key-value.css */
+/*                      ^^^^^^^^^^^^^ meta.property-value.css */
+/*                       ^^^^^^^^^^^^ support.constant.property-value.css */
+/*                                   ^ punctuation.terminator.rule.css */
     animation-fill-mode: unset;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-name.css */
+/*  ^^^^^^^^^^^^^^^^^^^ support.type.property-name.css */
+/*                     ^ punctuation.separator.key-value.css */
+/*                      ^^^^^^ meta.property-value.css */
+/*                       ^^^^^ support.constant.property-value.css */
+/*                            ^ punctuation.terminator.rule.css */
 }
 
 .animation-play-state {
