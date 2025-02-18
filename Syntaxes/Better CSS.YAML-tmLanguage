@@ -627,10 +627,30 @@ repository:
       - include: '#arbitrary-repetition'
       - include: '#global-property-values'
 
+  background-clip-property:
+    begin: \bbackground-clip\b
+    beginCaptures:
+      '0': {name: meta.property-name.css support.type.property-name.css}
+    end: '{{property_value_terminator}}'
+    endCaptures:
+      '1': {name: punctuation.terminator.rule.css}
+    patterns:
+    - include: '#comment-block'
+    - contentName: meta.property-value.css
+      begin: (:)(?={{ws}})
+      beginCaptures:
+        '1': {name: punctuation.separator.key-value.css}
+      end: (?={{property_value_terminator}})
+      patterns:
+      - include: '#visual-box-type'
+      - include: '#arbitrary-repetition'
+      - include: '#global-property-values'
+
   background-properties:
     patterns:
     - include: '#background-attachment-property'
     - include: '#background-blend-mode-property'
+    - include: '#background-clip-property'
 
   blend-mode-type:
     name: support.constant.property-value.css
