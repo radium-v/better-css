@@ -304,3 +304,62 @@
 /*                   ^^^^^ support.constant.property-value.css */
 /*                        ^ punctuation.terminator.rule.css */
 }
+
+.background-origin {
+    background-origin: border-box;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*                   ^ punctuation.separator.key-value.css */
+/*                    ^^^^^^^^^^^ meta.property-value.css */
+/*                     ^^^^^^^^^^ support.constant.property-value.css */
+/*                               ^ punctuation.terminator.rule.css */
+    background-origin: content-box;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*                   ^ punctuation.separator.key-value.css */
+/*                    ^^^^^^^^^^^^ meta.property-value.css */
+/*                     ^^^^^^^^^^^ support.constant.property-value.css */
+/*                                ^ punctuation.terminator.rule.css */
+    background-origin: padding-box;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*                   ^ punctuation.separator.key-value.css */
+/*                    ^^^^^^^^^^^^ meta.property-value.css */
+/*                     ^^^^^^^^^^^ support.constant.property-value.css */
+/*                                ^ punctuation.terminator.rule.css */
+    background-origin: inherit;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*                   ^ punctuation.separator.key-value.css */
+/*                    ^^^^^^^^ meta.property-value.css */
+/*                     ^^^^^^^ support.constant.property-value.css */
+/*                            ^ punctuation.terminator.rule.css */
+    background-origin: initial;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*                   ^ punctuation.separator.key-value.css */
+/*                    ^^^^^^^^ meta.property-value.css */
+/*                     ^^^^^^^ support.constant.property-value.css */
+/*                            ^ punctuation.terminator.rule.css */
+    background-origin: revert;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*                   ^ punctuation.separator.key-value.css */
+/*                    ^^^^^^^ meta.property-value.css */
+/*                     ^^^^^^ support.constant.property-value.css */
+/*                           ^ punctuation.terminator.rule.css */
+    background-origin: revert-layer;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*                   ^ punctuation.separator.key-value.css */
+/*                    ^^^^^^^^^^^^^ meta.property-value.css */
+/*                     ^^^^^^^^^^^^ support.constant.property-value.css */
+/*                                 ^ punctuation.terminator.rule.css */
+    background-origin: unset;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*                   ^ punctuation.separator.key-value.css */
+/*                    ^^^^^^ meta.property-value.css */
+/*                     ^^^^^ support.constant.property-value.css */
+/*                          ^ punctuation.terminator.rule.css */
+}
