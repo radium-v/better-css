@@ -173,3 +173,16 @@
 /*                       ^^^^^ support.constant.property-value.css */
 /*                            ^ punctuation.terminator.rule.css */
 }
+
+.animation-fill-mode {
+    animation-fill-mode: none;
+    animation-fill-mode: forwards;
+    animation-fill-mode: backwards;
+    animation-fill-mode: both;
+    animation-fill-mode: none, forwards, backwards, both;
+    animation-fill-mode: initial;
+    animation-fill-mode: inherit;
+    animation-fill-mode: revert;
+    animation-fill-mode: revert-layer;
+    animation-fill-mode: unset;
+}
