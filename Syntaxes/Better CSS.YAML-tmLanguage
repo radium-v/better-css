@@ -617,14 +617,34 @@ repository:
       - include: '#arbitrary-repetition'
       - include: '#global-property-values'
 
+  background-blend-mode-property:
+    name: meta.property-name.css
+    begin: \bbackground-blend-mode\b
+    beginCaptures:
+      '0': {name: support.type.property-name.css}
+    end: '{{property_value_terminator}}'
+    endCaptures:
+      '1': {name: punctuation.terminator.rule.css}
+    patterns:
+    - include: '#comment-block'
+    - contentName: meta.property-value.css
+      begin: (:)(?={{ws}})
+      beginCaptures:
+        '1': {name: punctuation.separator.key-value.css}
+      end: (?={{property_value_terminator}})
+      patterns:
+      - include: '#blend-mode-type'
+      - include: '#arbitrary-repetition'
+      - include: '#global-property-values'
+
   background-properties:
     patterns:
     - include: '#background-attachment-property'
+    - include: '#background-blend-mode-property'
 
   blend-mode-type:
-    patterns:
-    - name: support.constant.blend-mode.css
-      match: \b(?:normal|multiply|screen|overlay|darken|lighten|color-dodge|color-burn|hard-light|soft-light|difference|exclusion|hue|saturation|color|luminosity)\b
+    name: support.constant.property-value.css
+    match: \b(?:normal|multiply|screen|overlay|darken|lighten|color-dodge|color-burn|hard-light|soft-light|difference|exclusion|hue|saturation|color|luminosity)\b
 
   border-properties:
     begin: \b(border((-(bottom|top)-(left|right))|((-(start|end)){2}))?-radius|(border-image(?!-)))\b
