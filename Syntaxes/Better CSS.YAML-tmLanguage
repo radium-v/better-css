@@ -698,9 +698,13 @@ repository:
     match: \b(?:normal|multiply|screen|overlay|darken|lighten|color-dodge|color-burn|hard-light|soft-light|difference|exclusion|hue|saturation|color|luminosity)\b
 
   border-properties:
-    begin: \b(border((-(bottom|top)-(left|right))|((-(start|end)){2}))?-radius|(border-image(?!-)))\b
+    patterns:
+    - include: '#border-style-properties'
+
+  border-style-properties:
+    begin: \bborder(?:-(?:(?:(?:block|inline)(?:-(?:end|start))?)|bottom|left|right|top))?-style\b
     beginCaptures:
-      '0': {name: support.type.property-name.css}
+      '0': {name: meta.property-name.css support.type.property-name.css}
     end: '{{property_value_terminator}}'
     endCaptures:
       '1': {name: punctuation.terminator.rule.css}
@@ -712,8 +716,10 @@ repository:
         '1': {name: punctuation.separator.key-value.css}
       end: (?={{property_value_terminator}})
       patterns:
-      - include: '#value-separator'
-      - include: '#property-values'
+      - name: support.constant.property-value.css
+        match: \b(?:none|hidden|dotted|dashed|solid|double|groove|ridge|inset|outset)\b
+      - include: '#arbitrary-repetition'
+      - include: '#global-property-values'
 
   box-edge-type:
     patterns:

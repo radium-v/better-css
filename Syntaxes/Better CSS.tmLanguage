@@ -2244,14 +2244,24 @@
       </dict>
       <key>border-properties</key>
       <dict>
+        <key>patterns</key>
+        <array>
+          <dict>
+            <key>include</key>
+            <string>#border-style-properties</string>
+          </dict>
+        </array>
+      </dict>
+      <key>border-style-properties</key>
+      <dict>
         <key>begin</key>
-        <string>\b(border((-(bottom|top)-(left|right))|((-(start|end)){2}))?-radius|(border-image(?!-)))\b</string>
+        <string>\bborder(?:-(?:(?:(?:block|inline)(?:-(?:end|start))?)|bottom|left|right|top))?-style\b</string>
         <key>beginCaptures</key>
         <dict>
           <key>0</key>
           <dict>
             <key>name</key>
-            <string>support.type.property-name.css</string>
+            <string>meta.property-name.css support.type.property-name.css</string>
           </dict>
         </dict>
         <key>end</key>
@@ -2288,12 +2298,18 @@
             <key>patterns</key>
             <array>
               <dict>
-                <key>include</key>
-                <string>#value-separator</string>
+                <key>name</key>
+                <string>support.constant.property-value.css</string>
+                <key>match</key>
+                <string>\b(?:none|hidden|dotted|dashed|solid|double|groove|ridge|inset|outset)\b</string>
               </dict>
               <dict>
                 <key>include</key>
-                <string>#property-values</string>
+                <string>#arbitrary-repetition</string>
+              </dict>
+              <dict>
+                <key>include</key>
+                <string>#global-property-values</string>
               </dict>
             </array>
           </dict>
