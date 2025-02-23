@@ -655,15 +655,23 @@ repository:
       '1': {name: punctuation.terminator.rule.css}
     patterns:
     - include: '#comment-block'
-    - contentName: meta.property-value.css
-      begin: (:)(?={{ws}})
+    - begin: (:)(?={{ws}})
       beginCaptures:
         '1': {name: punctuation.separator.key-value.css}
+      contentName: meta.property-value.css
       end: (?={{property_value_terminator}})
       patterns:
       - include: '#visual-box-type'
       - include: '#arbitrary-repetition'
       - include: '#global-property-values'
+
+  background-properties:
+    patterns:
+    - include: '#background-attachment-property'
+    - include: '#background-blend-mode-property'
+    - include: '#background-clip-property'
+    - include: '#background-origin-property'
+    - include: '#background-repeat-property'
 
   background-repeat-property:
     begin: \bbackground-repeat\b
@@ -684,14 +692,6 @@ repository:
         match: \b(?:repeat-x|repeat-y|no-repeat|repeat|round|space)\b
       - include: '#arbitrary-repetition'
       - include: '#global-property-values'
-
-  background-properties:
-    patterns:
-    - include: '#background-attachment-property'
-    - include: '#background-blend-mode-property'
-    - include: '#background-clip-property'
-    - include: '#background-origin-property'
-    - include: '#background-repeat-property'
 
   blend-mode-type:
     name: support.constant.property-value.css
@@ -1763,25 +1763,6 @@ repository:
         match: auto|from-font|under|left|right
       - include: '#global-property-values'
 
-  text-wrap-property:
-    begin: \btext-wrap\b
-    beginCaptures:
-      '0': {name: meta.property-name.css support.type.property-name.css}
-    end: '{{property_value_terminator}}'
-    endCaptures:
-      '1': {name: punctuation.terminator.rule.css}
-    patterns:
-    - include: '#comment-block'
-    - contentName: meta.property-value.css
-      begin: (:)(?={{ws}})
-      beginCaptures:
-        '1': {name: punctuation.separator.key-value.css}
-      end: (?={{property_value_terminator}})
-      patterns:
-      - include: '#text-wrap-mode-values'
-      - include: '#text-wrap-style-values'
-      - include: '#global-property-values'
-
   text-wrap-mode-property:
     begin: \btext-wrap-mode\b
     beginCaptures:
@@ -1803,6 +1784,25 @@ repository:
   text-wrap-mode-values:
     name: support.constant.property-value.css
     match: wrap|nowrap
+
+  text-wrap-property:
+    begin: \btext-wrap\b
+    beginCaptures:
+      '0': {name: meta.property-name.css support.type.property-name.css}
+    end: '{{property_value_terminator}}'
+    endCaptures:
+      '1': {name: punctuation.terminator.rule.css}
+    patterns:
+    - include: '#comment-block'
+    - contentName: meta.property-value.css
+      begin: (:)(?={{ws}})
+      beginCaptures:
+        '1': {name: punctuation.separator.key-value.css}
+      end: (?={{property_value_terminator}})
+      patterns:
+      - include: '#text-wrap-mode-values'
+      - include: '#text-wrap-style-values'
+      - include: '#global-property-values'
 
   text-wrap-style-property:
     begin: \btext-wrap-style\b
@@ -1901,6 +1901,43 @@ repository:
     captures:
       '1': {name: support.constant.property-value.css}
 
+  white-space-collapse-property:
+    begin: \bwhite-space-collapse\b
+    beginCaptures:
+      '0': {name: meta.property-name.css support.type.property-name.css}
+    end: '{{property_value_terminator}}'
+    endCaptures:
+      '1': {name: punctuation.terminator.rule.css}
+    patterns:
+    - include: '#comment-block'
+    - contentName: meta.property-value.css
+      begin: (:)(?={{ws}})
+      beginCaptures:
+        '1': {name: punctuation.separator.key-value.css}
+      end: (?={{property_value_terminator}})
+      patterns:
+      - name: support.constant.property-value.css
+        match: collapse|discard|preserve-breaks|preserve-spaces|preserve|break-spaces
+      - include: '#global-property-values'
+
+  widows-property:
+    begin: \bwidows\b
+    beginCaptures:
+      '0': {name: meta.property-name.css support.type.property-name.css}
+    end: '{{property_value_terminator}}'
+    endCaptures:
+      '1': {name: punctuation.terminator.rule.css}
+    patterns:
+    - include: '#comment-block'
+    - contentName: meta.property-value.css
+      begin: (:)(?={{ws}})
+      beginCaptures:
+        '1': {name: punctuation.separator.key-value.css}
+      end: (?={{property_value_terminator}})
+      patterns:
+      - include: '#integer-type'
+      - include: '#global-property-values'
+
   width-properties:
     patterns:
     - name: meta.property-name.css
@@ -1940,43 +1977,6 @@ repository:
         match: '{{dashed_ident}}'
       - include: '#arbitrary-repetition'
 
-  white-space-collapse-property:
-    begin: \bwhite-space-collapse\b
-    beginCaptures:
-      '0': {name: meta.property-name.css support.type.property-name.css}
-    end: '{{property_value_terminator}}'
-    endCaptures:
-      '1': {name: punctuation.terminator.rule.css}
-    patterns:
-    - include: '#comment-block'
-    - contentName: meta.property-value.css
-      begin: (:)(?={{ws}})
-      beginCaptures:
-        '1': {name: punctuation.separator.key-value.css}
-      end: (?={{property_value_terminator}})
-      patterns:
-      - name: support.constant.property-value.css
-        match: collapse|discard|preserve-breaks|preserve-spaces|preserve|break-spaces
-      - include: '#global-property-values'
-
-  widows-property:
-    begin: \bwidows\b
-    beginCaptures:
-      '0': {name: meta.property-name.css support.type.property-name.css}
-    end: '{{property_value_terminator}}'
-    endCaptures:
-      '1': {name: punctuation.terminator.rule.css}
-    patterns:
-    - include: '#comment-block'
-    - contentName: meta.property-value.css
-      begin: (:)(?={{ws}})
-      beginCaptures:
-        '1': {name: punctuation.separator.key-value.css}
-      end: (?={{property_value_terminator}})
-      patterns:
-      - include: '#integer-type'
-      - include: '#global-property-values'
-
   writing-mode-property:
     begin: \bwriting-mode\b
     beginCaptures:
@@ -1995,7 +1995,6 @@ repository:
       - name: support.constant.property-value.css
         match: horizontal-tb|vertical-rl|vertical-lr|sideways-rl|sideways-lr
       - include: '#global-property-values'
-
 foldingStartMarker: /\*\*(?!\*)|\{\s*($|/\*(?!.*?\*/.*\S))
 foldingStopMarker: (?<!\*)\*\*/|^\s*\}
 keyEquivalent: ^~L

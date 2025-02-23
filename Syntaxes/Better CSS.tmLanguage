@@ -2114,8 +2114,6 @@
             <string>#comment-block</string>
           </dict>
           <dict>
-            <key>contentName</key>
-            <string>meta.property-value.css</string>
             <key>begin</key>
             <string>(:)(?=(?:(?:[\s\R]+)*?))</string>
             <key>beginCaptures</key>
@@ -2126,6 +2124,8 @@
                 <string>punctuation.separator.key-value.css</string>
               </dict>
             </dict>
+            <key>contentName</key>
+            <string>meta.property-value.css</string>
             <key>end</key>
             <string>(?=\s*(;)|(?=[})]))</string>
             <key>patterns</key>
@@ -2143,6 +2143,32 @@
                 <string>#global-property-values</string>
               </dict>
             </array>
+          </dict>
+        </array>
+      </dict>
+      <key>background-properties</key>
+      <dict>
+        <key>patterns</key>
+        <array>
+          <dict>
+            <key>include</key>
+            <string>#background-attachment-property</string>
+          </dict>
+          <dict>
+            <key>include</key>
+            <string>#background-blend-mode-property</string>
+          </dict>
+          <dict>
+            <key>include</key>
+            <string>#background-clip-property</string>
+          </dict>
+          <dict>
+            <key>include</key>
+            <string>#background-origin-property</string>
+          </dict>
+          <dict>
+            <key>include</key>
+            <string>#background-repeat-property</string>
           </dict>
         </array>
       </dict>
@@ -2206,32 +2232,6 @@
                 <string>#global-property-values</string>
               </dict>
             </array>
-          </dict>
-        </array>
-      </dict>
-      <key>background-properties</key>
-      <dict>
-        <key>patterns</key>
-        <array>
-          <dict>
-            <key>include</key>
-            <string>#background-attachment-property</string>
-          </dict>
-          <dict>
-            <key>include</key>
-            <string>#background-blend-mode-property</string>
-          </dict>
-          <dict>
-            <key>include</key>
-            <string>#background-clip-property</string>
-          </dict>
-          <dict>
-            <key>include</key>
-            <string>#background-origin-property</string>
-          </dict>
-          <dict>
-            <key>include</key>
-            <string>#background-repeat-property</string>
           </dict>
         </array>
       </dict>
@@ -5609,67 +5609,6 @@ optgroup | option | output | picture | portal | pre | progress | p | q | rp
           </dict>
         </array>
       </dict>
-      <key>text-wrap-property</key>
-      <dict>
-        <key>begin</key>
-        <string>\btext-wrap\b</string>
-        <key>beginCaptures</key>
-        <dict>
-          <key>0</key>
-          <dict>
-            <key>name</key>
-            <string>meta.property-name.css support.type.property-name.css</string>
-          </dict>
-        </dict>
-        <key>end</key>
-        <string>\s*(;)|(?=[})])</string>
-        <key>endCaptures</key>
-        <dict>
-          <key>1</key>
-          <dict>
-            <key>name</key>
-            <string>punctuation.terminator.rule.css</string>
-          </dict>
-        </dict>
-        <key>patterns</key>
-        <array>
-          <dict>
-            <key>include</key>
-            <string>#comment-block</string>
-          </dict>
-          <dict>
-            <key>contentName</key>
-            <string>meta.property-value.css</string>
-            <key>begin</key>
-            <string>(:)(?=(?:(?:[\s\R]+)*?))</string>
-            <key>beginCaptures</key>
-            <dict>
-              <key>1</key>
-              <dict>
-                <key>name</key>
-                <string>punctuation.separator.key-value.css</string>
-              </dict>
-            </dict>
-            <key>end</key>
-            <string>(?=\s*(;)|(?=[})]))</string>
-            <key>patterns</key>
-            <array>
-              <dict>
-                <key>include</key>
-                <string>#text-wrap-mode-values</string>
-              </dict>
-              <dict>
-                <key>include</key>
-                <string>#text-wrap-style-values</string>
-              </dict>
-              <dict>
-                <key>include</key>
-                <string>#global-property-values</string>
-              </dict>
-            </array>
-          </dict>
-        </array>
-      </dict>
       <key>text-wrap-mode-property</key>
       <dict>
         <key>begin</key>
@@ -5733,6 +5672,67 @@ optgroup | option | output | picture | portal | pre | progress | p | q | rp
         <string>support.constant.property-value.css</string>
         <key>match</key>
         <string>wrap|nowrap</string>
+      </dict>
+      <key>text-wrap-property</key>
+      <dict>
+        <key>begin</key>
+        <string>\btext-wrap\b</string>
+        <key>beginCaptures</key>
+        <dict>
+          <key>0</key>
+          <dict>
+            <key>name</key>
+            <string>meta.property-name.css support.type.property-name.css</string>
+          </dict>
+        </dict>
+        <key>end</key>
+        <string>\s*(;)|(?=[})])</string>
+        <key>endCaptures</key>
+        <dict>
+          <key>1</key>
+          <dict>
+            <key>name</key>
+            <string>punctuation.terminator.rule.css</string>
+          </dict>
+        </dict>
+        <key>patterns</key>
+        <array>
+          <dict>
+            <key>include</key>
+            <string>#comment-block</string>
+          </dict>
+          <dict>
+            <key>contentName</key>
+            <string>meta.property-value.css</string>
+            <key>begin</key>
+            <string>(:)(?=(?:(?:[\s\R]+)*?))</string>
+            <key>beginCaptures</key>
+            <dict>
+              <key>1</key>
+              <dict>
+                <key>name</key>
+                <string>punctuation.separator.key-value.css</string>
+              </dict>
+            </dict>
+            <key>end</key>
+            <string>(?=\s*(;)|(?=[})]))</string>
+            <key>patterns</key>
+            <array>
+              <dict>
+                <key>include</key>
+                <string>#text-wrap-mode-values</string>
+              </dict>
+              <dict>
+                <key>include</key>
+                <string>#text-wrap-style-values</string>
+              </dict>
+              <dict>
+                <key>include</key>
+                <string>#global-property-values</string>
+              </dict>
+            </array>
+          </dict>
+        </array>
       </dict>
       <key>text-wrap-style-property</key>
       <dict>
@@ -6026,6 +6026,122 @@ optgroup | option | output | picture | portal | pre | progress | p | q | rp
           </dict>
         </dict>
       </dict>
+      <key>white-space-collapse-property</key>
+      <dict>
+        <key>begin</key>
+        <string>\bwhite-space-collapse\b</string>
+        <key>beginCaptures</key>
+        <dict>
+          <key>0</key>
+          <dict>
+            <key>name</key>
+            <string>meta.property-name.css support.type.property-name.css</string>
+          </dict>
+        </dict>
+        <key>end</key>
+        <string>\s*(;)|(?=[})])</string>
+        <key>endCaptures</key>
+        <dict>
+          <key>1</key>
+          <dict>
+            <key>name</key>
+            <string>punctuation.terminator.rule.css</string>
+          </dict>
+        </dict>
+        <key>patterns</key>
+        <array>
+          <dict>
+            <key>include</key>
+            <string>#comment-block</string>
+          </dict>
+          <dict>
+            <key>contentName</key>
+            <string>meta.property-value.css</string>
+            <key>begin</key>
+            <string>(:)(?=(?:(?:[\s\R]+)*?))</string>
+            <key>beginCaptures</key>
+            <dict>
+              <key>1</key>
+              <dict>
+                <key>name</key>
+                <string>punctuation.separator.key-value.css</string>
+              </dict>
+            </dict>
+            <key>end</key>
+            <string>(?=\s*(;)|(?=[})]))</string>
+            <key>patterns</key>
+            <array>
+              <dict>
+                <key>name</key>
+                <string>support.constant.property-value.css</string>
+                <key>match</key>
+                <string>collapse|discard|preserve-breaks|preserve-spaces|preserve|break-spaces</string>
+              </dict>
+              <dict>
+                <key>include</key>
+                <string>#global-property-values</string>
+              </dict>
+            </array>
+          </dict>
+        </array>
+      </dict>
+      <key>widows-property</key>
+      <dict>
+        <key>begin</key>
+        <string>\bwidows\b</string>
+        <key>beginCaptures</key>
+        <dict>
+          <key>0</key>
+          <dict>
+            <key>name</key>
+            <string>meta.property-name.css support.type.property-name.css</string>
+          </dict>
+        </dict>
+        <key>end</key>
+        <string>\s*(;)|(?=[})])</string>
+        <key>endCaptures</key>
+        <dict>
+          <key>1</key>
+          <dict>
+            <key>name</key>
+            <string>punctuation.terminator.rule.css</string>
+          </dict>
+        </dict>
+        <key>patterns</key>
+        <array>
+          <dict>
+            <key>include</key>
+            <string>#comment-block</string>
+          </dict>
+          <dict>
+            <key>contentName</key>
+            <string>meta.property-value.css</string>
+            <key>begin</key>
+            <string>(:)(?=(?:(?:[\s\R]+)*?))</string>
+            <key>beginCaptures</key>
+            <dict>
+              <key>1</key>
+              <dict>
+                <key>name</key>
+                <string>punctuation.separator.key-value.css</string>
+              </dict>
+            </dict>
+            <key>end</key>
+            <string>(?=\s*(;)|(?=[})]))</string>
+            <key>patterns</key>
+            <array>
+              <dict>
+                <key>include</key>
+                <string>#integer-type</string>
+              </dict>
+              <dict>
+                <key>include</key>
+                <string>#global-property-values</string>
+              </dict>
+            </array>
+          </dict>
+        </array>
+      </dict>
       <key>width-properties</key>
       <dict>
         <key>patterns</key>
@@ -6149,122 +6265,6 @@ optgroup | option | output | picture | portal | pre | progress | p | q | rp
               <dict>
                 <key>include</key>
                 <string>#arbitrary-repetition</string>
-              </dict>
-            </array>
-          </dict>
-        </array>
-      </dict>
-      <key>white-space-collapse-property</key>
-      <dict>
-        <key>begin</key>
-        <string>\bwhite-space-collapse\b</string>
-        <key>beginCaptures</key>
-        <dict>
-          <key>0</key>
-          <dict>
-            <key>name</key>
-            <string>meta.property-name.css support.type.property-name.css</string>
-          </dict>
-        </dict>
-        <key>end</key>
-        <string>\s*(;)|(?=[})])</string>
-        <key>endCaptures</key>
-        <dict>
-          <key>1</key>
-          <dict>
-            <key>name</key>
-            <string>punctuation.terminator.rule.css</string>
-          </dict>
-        </dict>
-        <key>patterns</key>
-        <array>
-          <dict>
-            <key>include</key>
-            <string>#comment-block</string>
-          </dict>
-          <dict>
-            <key>contentName</key>
-            <string>meta.property-value.css</string>
-            <key>begin</key>
-            <string>(:)(?=(?:(?:[\s\R]+)*?))</string>
-            <key>beginCaptures</key>
-            <dict>
-              <key>1</key>
-              <dict>
-                <key>name</key>
-                <string>punctuation.separator.key-value.css</string>
-              </dict>
-            </dict>
-            <key>end</key>
-            <string>(?=\s*(;)|(?=[})]))</string>
-            <key>patterns</key>
-            <array>
-              <dict>
-                <key>name</key>
-                <string>support.constant.property-value.css</string>
-                <key>match</key>
-                <string>collapse|discard|preserve-breaks|preserve-spaces|preserve|break-spaces</string>
-              </dict>
-              <dict>
-                <key>include</key>
-                <string>#global-property-values</string>
-              </dict>
-            </array>
-          </dict>
-        </array>
-      </dict>
-      <key>widows-property</key>
-      <dict>
-        <key>begin</key>
-        <string>\bwidows\b</string>
-        <key>beginCaptures</key>
-        <dict>
-          <key>0</key>
-          <dict>
-            <key>name</key>
-            <string>meta.property-name.css support.type.property-name.css</string>
-          </dict>
-        </dict>
-        <key>end</key>
-        <string>\s*(;)|(?=[})])</string>
-        <key>endCaptures</key>
-        <dict>
-          <key>1</key>
-          <dict>
-            <key>name</key>
-            <string>punctuation.terminator.rule.css</string>
-          </dict>
-        </dict>
-        <key>patterns</key>
-        <array>
-          <dict>
-            <key>include</key>
-            <string>#comment-block</string>
-          </dict>
-          <dict>
-            <key>contentName</key>
-            <string>meta.property-value.css</string>
-            <key>begin</key>
-            <string>(:)(?=(?:(?:[\s\R]+)*?))</string>
-            <key>beginCaptures</key>
-            <dict>
-              <key>1</key>
-              <dict>
-                <key>name</key>
-                <string>punctuation.separator.key-value.css</string>
-              </dict>
-            </dict>
-            <key>end</key>
-            <string>(?=\s*(;)|(?=[})]))</string>
-            <key>patterns</key>
-            <array>
-              <dict>
-                <key>include</key>
-                <string>#integer-type</string>
-              </dict>
-              <dict>
-                <key>include</key>
-                <string>#global-property-values</string>
               </dict>
             </array>
           </dict>
