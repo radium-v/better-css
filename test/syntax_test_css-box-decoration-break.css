@@ -1,0 +1,53 @@
+/* SYNTAX TEST "Packages/better-css/Syntaxes/Better CSS.tmLanguage" */
+
+.box-decoration-break {
+    box-decoration-break: clone;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*                      ^ punctuation.separator.key-value.css */
+/*                       ^^^^^^ meta.property-value.css */
+/*                        ^^^^^ support.constant.property-value.css */
+/*                             ^ punctuation.terminator.rule.css */
+    box-decoration-break: slice;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*                      ^ punctuation.separator.key-value.css */
+/*                       ^^^^^^ meta.property-value.css */
+/*                        ^^^^^ support.constant.property-value.css */
+/*                             ^ punctuation.terminator.rule.css */
+    box-decoration-break: inherit;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*                      ^ punctuation.separator.key-value.css */
+/*                       ^^^^^^^^ meta.property-value.css */
+/*                        ^^^^^^^ support.constant.property-value.css */
+/*                               ^ punctuation.terminator.rule.css */
+    box-decoration-break: initial;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*                      ^ punctuation.separator.key-value.css */
+/*                       ^^^^^^^^ meta.property-value.css */
+/*                        ^^^^^^^ support.constant.property-value.css */
+/*                               ^ punctuation.terminator.rule.css */
+    box-decoration-break: revert;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*                      ^ punctuation.separator.key-value.css */
+/*                       ^^^^^^^ meta.property-value.css */
+/*                        ^^^^^^ support.constant.property-value.css */
+/*                              ^ punctuation.terminator.rule.css */
+    box-decoration-break: revert-layer;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*                      ^ punctuation.separator.key-value.css */
+/*                       ^^^^^^^^^^^^^ meta.property-value.css */
+/*                        ^^^^^^^^^^^^ support.constant.property-value.css */
+/*                                    ^ punctuation.terminator.rule.css */
+    box-decoration-break: unset;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*                      ^ punctuation.separator.key-value.css */
+/*                       ^^^^^^ meta.property-value.css */
+/*                        ^^^^^ support.constant.property-value.css */
+/*                             ^ punctuation.terminator.rule.css */
+}
