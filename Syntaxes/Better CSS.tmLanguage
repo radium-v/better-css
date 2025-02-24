@@ -2459,6 +2459,128 @@
           </dict>
         </array>
       </dict>
+      <key>break-properties</key>
+      <dict>
+        <key>patterns</key>
+        <array>
+          <dict>
+            <key>begin</key>
+            <string>\bbreak-(?:after|before)\b</string>
+            <key>beginCaptures</key>
+            <dict>
+              <key>0</key>
+              <dict>
+                <key>name</key>
+                <string>meta.property-name.css support.type.property-name.css</string>
+              </dict>
+            </dict>
+            <key>end</key>
+            <string>\s*(;)|(?=[})])</string>
+            <key>endCaptures</key>
+            <dict>
+              <key>1</key>
+              <dict>
+                <key>name</key>
+                <string>punctuation.terminator.rule.css</string>
+              </dict>
+            </dict>
+            <key>patterns</key>
+            <array>
+              <dict>
+                <key>include</key>
+                <string>#comment-block</string>
+              </dict>
+              <dict>
+                <key>contentName</key>
+                <string>meta.property-value.css</string>
+                <key>begin</key>
+                <string>(:)(?=(?:(?:[\s\R]+)*?))</string>
+                <key>beginCaptures</key>
+                <dict>
+                  <key>1</key>
+                  <dict>
+                    <key>name</key>
+                    <string>punctuation.separator.key-value.css</string>
+                  </dict>
+                </dict>
+                <key>end</key>
+                <string>(?=\s*(;)|(?=[})]))</string>
+                <key>patterns</key>
+                <array>
+                  <dict>
+                    <key>name</key>
+                    <string>support.constant.property-value.css</string>
+                    <key>match</key>
+                    <string>\b(?:all|always|auto|avoid-column|avoid-page|avoid-region|avoid|column|left|page|recto|region|right|verso)\b</string>
+                  </dict>
+                  <dict>
+                    <key>include</key>
+                    <string>#global-property-values</string>
+                  </dict>
+                </array>
+              </dict>
+            </array>
+          </dict>
+          <dict>
+            <key>begin</key>
+            <string>\bbreak-inside\b</string>
+            <key>beginCaptures</key>
+            <dict>
+              <key>0</key>
+              <dict>
+                <key>name</key>
+                <string>meta.property-name.css support.type.property-name.css</string>
+              </dict>
+            </dict>
+            <key>end</key>
+            <string>\s*(;)|(?=[})])</string>
+            <key>endCaptures</key>
+            <dict>
+              <key>1</key>
+              <dict>
+                <key>name</key>
+                <string>punctuation.terminator.rule.css</string>
+              </dict>
+            </dict>
+            <key>patterns</key>
+            <array>
+              <dict>
+                <key>include</key>
+                <string>#comment-block</string>
+              </dict>
+              <dict>
+                <key>contentName</key>
+                <string>meta.property-value.css</string>
+                <key>begin</key>
+                <string>(:)(?=(?:(?:[\s\R]+)*?))</string>
+                <key>beginCaptures</key>
+                <dict>
+                  <key>1</key>
+                  <dict>
+                    <key>name</key>
+                    <string>punctuation.separator.key-value.css</string>
+                  </dict>
+                </dict>
+                <key>end</key>
+                <string>(?=\s*(;)|(?=[})]))</string>
+                <key>patterns</key>
+                <array>
+                  <dict>
+                    <key>name</key>
+                    <string>support.constant.property-value.css</string>
+                    <key>match</key>
+                    <string>\b(?:auto|avoid-column|avoid-page|avoid-region|avoid)\b</string>
+                  </dict>
+                  <dict>
+                    <key>include</key>
+                    <string>#global-property-values</string>
+                  </dict>
+                </array>
+              </dict>
+            </array>
+          </dict>
+        </array>
+      </dict>
       <key>calc-keyword-type</key>
       <dict>
         <key>name</key>
@@ -4962,6 +5084,10 @@ optgroup | option | output | picture | portal | pre | progress | p | q | rp
               <dict>
                 <key>include</key>
                 <string>#box-sizing-property</string>
+              </dict>
+              <dict>
+                <key>include</key>
+                <string>#break-properties</string>
               </dict>
               <dict>
                 <key>include</key>

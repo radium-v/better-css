@@ -1,0 +1,346 @@
+/* SYNTAX TEST "Packages/better-css/Syntaxes/Better CSS.tmLanguage" */
+
+.break-after {
+    break-after: all;
+/*^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*             ^ punctuation.separator.key-value.css */
+/*              ^^^^ meta.property-value.css */
+/*               ^^^ support.constant.property-value.css */
+/*                  ^ punctuation.terminator.rule.css */
+    break-after: always;
+/*^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*             ^ punctuation.separator.key-value.css */
+/*              ^^^^^^^ meta.property-value.css */
+/*               ^^^^^^ support.constant.property-value.css */
+/*                     ^ punctuation.terminator.rule.css */
+    break-after: auto;
+/*^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*             ^ punctuation.separator.key-value.css */
+/*              ^^^^^ meta.property-value.css */
+/*               ^^^^ support.constant.property-value.css */
+/*                   ^ punctuation.terminator.rule.css */
+    break-after: avoid-column;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*             ^ punctuation.separator.key-value.css */
+/*              ^^^^^^^^^^^^^ meta.property-value.css */
+/*               ^^^^^^^^^^^^ support.constant.property-value.css */
+/*                           ^ punctuation.terminator.rule.css */
+    break-after: avoid-page;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*             ^ punctuation.separator.key-value.css */
+/*              ^^^^^^^^^^^ meta.property-value.css */
+/*               ^^^^^^^^^^ support.constant.property-value.css */
+/*                         ^ punctuation.terminator.rule.css */
+    break-after: avoid-region;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*             ^ punctuation.separator.key-value.css */
+/*              ^^^^^^^^^^^^^ meta.property-value.css */
+/*               ^^^^^^^^^^^^ support.constant.property-value.css */
+/*                           ^ punctuation.terminator.rule.css */
+    break-after: avoid;
+/*^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*             ^ punctuation.separator.key-value.css */
+/*              ^^^^^^ meta.property-value.css */
+/*               ^^^^^ support.constant.property-value.css */
+/*                    ^ punctuation.terminator.rule.css */
+    break-after: column;
+/*^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*             ^ punctuation.separator.key-value.css */
+/*              ^^^^^^^ meta.property-value.css */
+/*               ^^^^^^ support.constant.property-value.css */
+/*                     ^ punctuation.terminator.rule.css */
+    break-after: left;
+/*^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*             ^ punctuation.separator.key-value.css */
+/*              ^^^^^ meta.property-value.css */
+/*               ^^^^ support.constant.property-value.css */
+/*                   ^ punctuation.terminator.rule.css */
+    break-after: page;
+/*^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*             ^ punctuation.separator.key-value.css */
+/*              ^^^^^ meta.property-value.css */
+/*               ^^^^ support.constant.property-value.css */
+/*                   ^ punctuation.terminator.rule.css */
+    break-after: recto;
+/*^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*             ^ punctuation.separator.key-value.css */
+/*              ^^^^^^ meta.property-value.css */
+/*               ^^^^^ support.constant.property-value.css */
+/*                    ^ punctuation.terminator.rule.css */
+    break-after: region;
+/*^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*             ^ punctuation.separator.key-value.css */
+/*              ^^^^^^^ meta.property-value.css */
+/*               ^^^^^^ support.constant.property-value.css */
+/*                     ^ punctuation.terminator.rule.css */
+    break-after: right;
+/*^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*             ^ punctuation.separator.key-value.css */
+/*              ^^^^^^ meta.property-value.css */
+/*               ^^^^^ support.constant.property-value.css */
+/*                    ^ punctuation.terminator.rule.css */
+    break-after: verso;
+/*^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*             ^ punctuation.separator.key-value.css */
+/*              ^^^^^^ meta.property-value.css */
+/*               ^^^^^ support.constant.property-value.css */
+/*                    ^ punctuation.terminator.rule.css */
+    break-after: inherit;
+/*^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*             ^ punctuation.separator.key-value.css */
+/*              ^^^^^^^^ meta.property-value.css */
+/*               ^^^^^^^ support.constant.property-value.css */
+/*                      ^ punctuation.terminator.rule.css */
+    break-after: initial;
+/*^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*             ^ punctuation.separator.key-value.css */
+/*              ^^^^^^^^ meta.property-value.css */
+/*               ^^^^^^^ support.constant.property-value.css */
+/*                      ^ punctuation.terminator.rule.css */
+    break-after: revert;
+/*^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*             ^ punctuation.separator.key-value.css */
+/*              ^^^^^^^ meta.property-value.css */
+/*               ^^^^^^ support.constant.property-value.css */
+/*                     ^ punctuation.terminator.rule.css */
+    break-after: revert-layer;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*             ^ punctuation.separator.key-value.css */
+/*              ^^^^^^^^^^^^^ meta.property-value.css */
+/*               ^^^^^^^^^^^^ support.constant.property-value.css */
+/*                           ^ punctuation.terminator.rule.css */
+    break-after: unset;
+/*^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*             ^ punctuation.separator.key-value.css */
+/*              ^^^^^^ meta.property-value.css */
+/*               ^^^^^ support.constant.property-value.css */
+/*                    ^ punctuation.terminator.rule.css */
+}
+
+.break-before {
+    break-before: all;
+/*^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*              ^ punctuation.separator.key-value.css */
+/*               ^^^^ meta.property-value.css */
+/*                ^^^ support.constant.property-value.css */
+/*                   ^ punctuation.terminator.rule.css */
+    break-before: always;
+/*^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*              ^ punctuation.separator.key-value.css */
+/*               ^^^^^^^ meta.property-value.css */
+/*                ^^^^^^ support.constant.property-value.css */
+/*                      ^ punctuation.terminator.rule.css */
+    break-before: auto;
+/*^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*              ^ punctuation.separator.key-value.css */
+/*               ^^^^^ meta.property-value.css */
+/*                ^^^^ support.constant.property-value.css */
+/*                    ^ punctuation.terminator.rule.css */
+    break-before: avoid-column;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*              ^ punctuation.separator.key-value.css */
+/*               ^^^^^^^^^^^^^ meta.property-value.css */
+/*                ^^^^^^^^^^^^ support.constant.property-value.css */
+/*                            ^ punctuation.terminator.rule.css */
+    break-before: avoid-page;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*              ^ punctuation.separator.key-value.css */
+/*               ^^^^^^^^^^^ meta.property-value.css */
+/*                ^^^^^^^^^^ support.constant.property-value.css */
+/*                          ^ punctuation.terminator.rule.css */
+    break-before: avoid-region;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*              ^ punctuation.separator.key-value.css */
+/*               ^^^^^^^^^^^^^ meta.property-value.css */
+/*                ^^^^^^^^^^^^ support.constant.property-value.css */
+/*                            ^ punctuation.terminator.rule.css */
+    break-before: avoid;
+/*^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*              ^ punctuation.separator.key-value.css */
+/*               ^^^^^^ meta.property-value.css */
+/*                ^^^^^ support.constant.property-value.css */
+/*                     ^ punctuation.terminator.rule.css */
+    break-before: column;
+/*^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*              ^ punctuation.separator.key-value.css */
+/*               ^^^^^^^ meta.property-value.css */
+/*                ^^^^^^ support.constant.property-value.css */
+/*                      ^ punctuation.terminator.rule.css */
+    break-before: left;
+/*^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*              ^ punctuation.separator.key-value.css */
+/*               ^^^^^ meta.property-value.css */
+/*                ^^^^ support.constant.property-value.css */
+/*                    ^ punctuation.terminator.rule.css */
+    break-before: page;
+/*^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*              ^ punctuation.separator.key-value.css */
+/*               ^^^^^ meta.property-value.css */
+/*                ^^^^ support.constant.property-value.css */
+/*                    ^ punctuation.terminator.rule.css */
+    break-before: recto;
+/*^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*              ^ punctuation.separator.key-value.css */
+/*               ^^^^^^ meta.property-value.css */
+/*                ^^^^^ support.constant.property-value.css */
+/*                     ^ punctuation.terminator.rule.css */
+    break-before: region;
+/*^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*              ^ punctuation.separator.key-value.css */
+/*               ^^^^^^^ meta.property-value.css */
+/*                ^^^^^^ support.constant.property-value.css */
+/*                      ^ punctuation.terminator.rule.css */
+    break-before: right;
+/*^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*              ^ punctuation.separator.key-value.css */
+/*               ^^^^^^ meta.property-value.css */
+/*                ^^^^^ support.constant.property-value.css */
+/*                     ^ punctuation.terminator.rule.css */
+    break-before: verso;
+/*^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*              ^ punctuation.separator.key-value.css */
+/*               ^^^^^^ meta.property-value.css */
+/*                ^^^^^ support.constant.property-value.css */
+/*                     ^ punctuation.terminator.rule.css */
+    break-before: inherit;
+/*^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*              ^ punctuation.separator.key-value.css */
+/*               ^^^^^^^^ meta.property-value.css */
+/*                ^^^^^^^ support.constant.property-value.css */
+/*                       ^ punctuation.terminator.rule.css */
+    break-before: initial;
+/*^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*              ^ punctuation.separator.key-value.css */
+/*               ^^^^^^^^ meta.property-value.css */
+/*                ^^^^^^^ support.constant.property-value.css */
+/*                       ^ punctuation.terminator.rule.css */
+    break-before: revert;
+/*^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*              ^ punctuation.separator.key-value.css */
+/*               ^^^^^^^ meta.property-value.css */
+/*                ^^^^^^ support.constant.property-value.css */
+/*                      ^ punctuation.terminator.rule.css */
+    break-before: revert-layer;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*              ^ punctuation.separator.key-value.css */
+/*               ^^^^^^^^^^^^^ meta.property-value.css */
+/*                ^^^^^^^^^^^^ support.constant.property-value.css */
+/*                            ^ punctuation.terminator.rule.css */
+    break-before: unset;
+/*^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*              ^ punctuation.separator.key-value.css */
+/*               ^^^^^^ meta.property-value.css */
+/*                ^^^^^ support.constant.property-value.css */
+/*                     ^ punctuation.terminator.rule.css */
+}
+
+.break-inside {
+    break-inside: avoid;
+/*^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*              ^ punctuation.separator.key-value.css */
+/*               ^^^^^^ meta.property-value.css */
+/*                ^^^^^ support.constant.property-value.css */
+/*                     ^ punctuation.terminator.rule.css */
+    break-inside: avoid-column;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*              ^ punctuation.separator.key-value.css */
+/*               ^^^^^^^^^^^^^ meta.property-value.css */
+/*                ^^^^^^^^^^^^ support.constant.property-value.css */
+/*                            ^ punctuation.terminator.rule.css */
+    break-inside: avoid-page;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*              ^ punctuation.separator.key-value.css */
+/*               ^^^^^^^^^^^ meta.property-value.css */
+/*                ^^^^^^^^^^ support.constant.property-value.css */
+/*                          ^ punctuation.terminator.rule.css */
+    break-inside: avoid-region;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*              ^ punctuation.separator.key-value.css */
+/*               ^^^^^^^^^^^^^ meta.property-value.css */
+/*                ^^^^^^^^^^^^ support.constant.property-value.css */
+/*                            ^ punctuation.terminator.rule.css */
+    break-inside: auto;
+/*^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*              ^ punctuation.separator.key-value.css */
+/*               ^^^^^ meta.property-value.css */
+/*                ^^^^ support.constant.property-value.css */
+/*                    ^ punctuation.terminator.rule.css */
+    break-inside: inherit;
+/*^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*              ^ punctuation.separator.key-value.css */
+/*               ^^^^^^^^ meta.property-value.css */
+/*                ^^^^^^^ support.constant.property-value.css */
+/*                       ^ punctuation.terminator.rule.css */
+    break-inside: initial;
+/*^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*              ^ punctuation.separator.key-value.css */
+/*               ^^^^^^^^ meta.property-value.css */
+/*                ^^^^^^^ support.constant.property-value.css */
+/*                       ^ punctuation.terminator.rule.css */
+    break-inside: revert;
+/*^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*              ^ punctuation.separator.key-value.css */
+/*               ^^^^^^^ meta.property-value.css */
+/*                ^^^^^^ support.constant.property-value.css */
+/*                      ^ punctuation.terminator.rule.css */
+    break-inside: revert-layer;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*              ^ punctuation.separator.key-value.css */
+/*               ^^^^^^^^^^^^^ meta.property-value.css */
+/*                ^^^^^^^^^^^^ support.constant.property-value.css */
+/*                            ^ punctuation.terminator.rule.css */
+    break-inside: unset;
+/*^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*              ^ punctuation.separator.key-value.css */
+/*               ^^^^^^ meta.property-value.css */
+/*                ^^^^^ support.constant.property-value.css */
+/*                     ^ punctuation.terminator.rule.css */
+}
