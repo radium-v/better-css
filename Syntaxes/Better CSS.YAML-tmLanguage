@@ -748,6 +748,25 @@ repository:
     - include: '#coord-box-type'
     - include: '#geometry-box-type'
 
+  box-sizing-property:
+    begin: \bbox-sizing\b
+    beginCaptures:
+      '0': {name: meta.property-name.css support.type.property-name.css}
+    end: '{{property_value_terminator}}'
+    endCaptures:
+      '1': {name: punctuation.terminator.rule.css}
+    patterns:
+    - include: '#comment-block'
+    - contentName: meta.property-value.css
+      begin: (:)(?={{ws}})
+      beginCaptures:
+        '1': {name: punctuation.separator.key-value.css}
+      end: (?={{property_value_terminator}})
+      patterns:
+      - name: support.constant.property-value.css
+        match: \b(?:content-box|border-box)\b
+      - include: '#global-property-values'
+
   calc-keyword-type:
     name: constant.numeric.calc.css
     match: \b(e|pi|-?infinity|NaN)\b
@@ -1547,6 +1566,7 @@ repository:
       - include: '#background-properties'
       - include: '#border-properties'
       - include: '#box-decoration-break-property'
+      - include: '#box-sizing-property'
       - include: '#clear-property'
       - include: '#clip-rule-property'
       - include: '#color-interpolation-property'
