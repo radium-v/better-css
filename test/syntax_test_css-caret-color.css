@@ -1,0 +1,239 @@
+/* SYNTAX TEST "Packages/better-css/Syntaxes/Better CSS.tmLanguage" */
+
+.caret-color {
+    caret-color: auto;
+/*^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*             ^ punctuation.separator.key-value.css */
+/*              ^^^^^ meta.property-value.css */
+/*               ^^^^ support.constant.property-value.css */
+/*                   ^ punctuation.terminator.rule.css */
+    caret-color: AccentColor;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*             ^ punctuation.separator.key-value.css */
+/*              ^^^^^^^^^^^^ meta.property-value.css */
+/*               ^^^^^^^^^^^ support.constant.property-value.css */
+/*                          ^ punctuation.terminator.rule.css */
+    caret-color: AccentColorText;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*             ^ punctuation.separator.key-value.css */
+/*              ^^^^^^^^^^^^^^^^ meta.property-value.css */
+/*               ^^^^^^^^^^^^^^^ support.constant.property-value.css */
+/*                              ^ punctuation.terminator.rule.css */
+    caret-color: ActiveText;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*             ^ punctuation.separator.key-value.css */
+/*              ^^^^^^^^^^^ meta.property-value.css */
+/*               ^^^^^^^^^^ support.constant.property-value.css */
+/*                         ^ punctuation.terminator.rule.css */
+    caret-color: ButtonBorder;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*             ^ punctuation.separator.key-value.css */
+/*              ^^^^^^^^^^^^^ meta.property-value.css */
+/*               ^^^^^^^^^^^^ support.constant.property-value.css */
+/*                           ^ punctuation.terminator.rule.css */
+    caret-color: ButtonFace;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*             ^ punctuation.separator.key-value.css */
+/*              ^^^^^^^^^^^ meta.property-value.css */
+/*               ^^^^^^^^^^ support.constant.property-value.css */
+/*                         ^ punctuation.terminator.rule.css */
+    caret-color: ButtonText;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*             ^ punctuation.separator.key-value.css */
+/*              ^^^^^^^^^^^ meta.property-value.css */
+/*               ^^^^^^^^^^ support.constant.property-value.css */
+/*                         ^ punctuation.terminator.rule.css */
+    caret-color: Canvas;
+/*^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*             ^ punctuation.separator.key-value.css */
+/*              ^^^^^^^ meta.property-value.css */
+/*               ^^^^^^ support.constant.property-value.css */
+/*                     ^ punctuation.terminator.rule.css */
+    caret-color: CanvasText;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*             ^ punctuation.separator.key-value.css */
+/*              ^^^^^^^^^^^ meta.property-value.css */
+/*               ^^^^^^^^^^ support.constant.property-value.css */
+/*                         ^ punctuation.terminator.rule.css */
+    caret-color: Field;
+/*^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*             ^ punctuation.separator.key-value.css */
+/*              ^^^^^^ meta.property-value.css */
+/*               ^^^^^ support.constant.property-value.css */
+/*                    ^ punctuation.terminator.rule.css */
+    caret-color: FieldText;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*             ^ punctuation.separator.key-value.css */
+/*              ^^^^^^^^^^ meta.property-value.css */
+/*               ^^^^^^^^^ support.constant.property-value.css */
+/*                        ^ punctuation.terminator.rule.css */
+    caret-color: GrayText;
+/*^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*             ^ punctuation.separator.key-value.css */
+/*              ^^^^^^^^^ meta.property-value.css */
+/*               ^^^^^^^^ support.constant.property-value.css */
+/*                       ^ punctuation.terminator.rule.css */
+    caret-color: Highlight;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*             ^ punctuation.separator.key-value.css */
+/*              ^^^^^^^^^^ meta.property-value.css */
+/*               ^^^^^^^^^ support.constant.property-value.css */
+/*                        ^ punctuation.terminator.rule.css */
+    caret-color: HighlightText;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*             ^ punctuation.separator.key-value.css */
+/*              ^^^^^^^^^^^^^^ meta.property-value.css */
+/*               ^^^^^^^^^^^^^ support.constant.property-value.css */
+/*                            ^ punctuation.terminator.rule.css */
+    caret-color: LinkText;
+/*^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*             ^ punctuation.separator.key-value.css */
+/*              ^^^^^^^^^ meta.property-value.css */
+/*               ^^^^^^^^ support.constant.property-value.css */
+/*                       ^ punctuation.terminator.rule.css */
+    caret-color: Mark;
+/*^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*             ^ punctuation.separator.key-value.css */
+/*              ^^^^^ meta.property-value.css */
+/*               ^^^^ support.constant.property-value.css */
+/*                   ^ punctuation.terminator.rule.css */
+    caret-color: MarkText;
+/*^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*             ^ punctuation.separator.key-value.css */
+/*              ^^^^^^^^^ meta.property-value.css */
+/*               ^^^^^^^^ support.constant.property-value.css */
+/*                       ^ punctuation.terminator.rule.css */
+    caret-color: SelectedItem;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*             ^ punctuation.separator.key-value.css */
+/*              ^^^^^^^^^^^^^ meta.property-value.css */
+/*               ^^^^^^^^^^^^ support.constant.property-value.css */
+/*                           ^ punctuation.terminator.rule.css */
+    caret-color: SelectedItemText;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*             ^ punctuation.separator.key-value.css */
+/*              ^^^^^^^^^^^^^^^^^ meta.property-value.css */
+/*               ^^^^^^^^^^^^^^^^ support.constant.property-value.css */
+/*                               ^ punctuation.terminator.rule.css */
+    caret-color: VisitedText;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*             ^ punctuation.separator.key-value.css */
+/*              ^^^^^^^^^^^^ meta.property-value.css */
+/*               ^^^^^^^^^^^ support.constant.property-value.css */
+/*                          ^ punctuation.terminator.rule.css */
+    caret-color: rgb(255, 0, 0);
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*             ^ punctuation.separator.key-value.css */
+/*              ^^^^^^^^^^^^^^^ meta.property-value.css */
+/*               ^^^^^^^^^^^^^^ meta.function-call.rgb.css */
+/*               ^^^ support.function.rgb.css */
+/*                  ^ punctuation.definition.group.begin.css */
+/*                   ^^^^^^^^^ meta.function-call.arguments.css meta.group.css */
+/*                   ^^^ constant.numeric.css */
+/*                        ^ constant.numeric.css */
+/*                           ^ constant.numeric.css */
+/*                            ^ punctuation.definition.group.end.css */
+/*                             ^ punctuation.terminator.rule.css */
+    caret-color: rgb(255 0 0);
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*             ^ punctuation.separator.key-value.css */
+/*              ^^^^^^^^^^^^^ meta.property-value.css */
+/*               ^^^^^^^^^^^^ meta.function-call.rgb.css */
+/*               ^^^ support.function.rgb.css */
+/*                  ^ punctuation.definition.group.begin.css */
+/*                   ^^^^^^^ meta.function-call.arguments.css meta.group.css */
+/*                   ^^^ constant.numeric.css */
+/*                       ^ constant.numeric.css */
+/*                         ^ constant.numeric.css */
+/*                          ^ punctuation.definition.group.end.css */
+/*                           ^ punctuation.terminator.rule.css */
+    caret-color: rgba(255, 0, 0, 0.5);
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*             ^ punctuation.separator.key-value.css */
+/*              ^^^^^^^^^^^^^^^^^^^^^ meta.property-value.css */
+/*               ^^^^^^^^^^^^^^^^^^^^ meta.function-call.rgb.css */
+/*               ^^^^ support.function.rgb.css */
+/*                   ^ punctuation.definition.group.begin.css */
+/*                    ^^^^^^^^^^^^^^ meta.function-call.arguments.css meta.group.css */
+/*                    ^^^ constant.numeric.css */
+/*                         ^ constant.numeric.css */
+/*                            ^ constant.numeric.css */
+/*                               ^^^ constant.numeric.css */
+/*                                  ^ punctuation.definition.group.end.css */
+/*                                   ^ punctuation.terminator.rule.css */
+    caret-color: rgba(255 0 0 / 50%);
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*             ^ punctuation.separator.key-value.css */
+/*              ^^^^^^^^^^^^^^^^^^^^ meta.property-value.css */
+/*               ^^^^^^^^^^^^^^^^^^^ meta.function-call.rgb.css */
+/*               ^^^^ support.function.rgb.css */
+/*                   ^ punctuation.definition.group.begin.css */
+/*                    ^^^^^^^^^^^^^ meta.function-call.arguments.css meta.group.css */
+/*                    ^^^ constant.numeric.css */
+/*                        ^ constant.numeric.css */
+/*                          ^ constant.numeric.css */
+/*                            ^ punctuation.separator.css */
+/*                              ^^^ constant.numeric.css */
+/*                                ^ keyword.other.unit.percentage.css */
+/*                                 ^ punctuation.definition.group.end.css */
+/*                                  ^ punctuation.terminator.rule.css */
+    caret-color: inherit;
+/*^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*             ^ punctuation.separator.key-value.css */
+/*              ^^^^^^^^ meta.property-value.css */
+/*               ^^^^^^^ support.constant.property-value.css */
+/*                      ^ punctuation.terminator.rule.css */
+    caret-color: initial;
+/*^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*             ^ punctuation.separator.key-value.css */
+/*              ^^^^^^^^ meta.property-value.css */
+/*               ^^^^^^^ support.constant.property-value.css */
+/*                      ^ punctuation.terminator.rule.css */
+    caret-color: revert;
+/*^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*             ^ punctuation.separator.key-value.css */
+/*              ^^^^^^^ meta.property-value.css */
+/*               ^^^^^^ support.constant.property-value.css */
+/*                     ^ punctuation.terminator.rule.css */
+    caret-color: revert-layer;
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*             ^ punctuation.separator.key-value.css */
+/*              ^^^^^^^^^^^^^ meta.property-value.css */
+/*               ^^^^^^^^^^^^ support.constant.property-value.css */
+/*                           ^ punctuation.terminator.rule.css */
+    caret-color: unset;
+/*^^^^^^^^^^^^^^^^^^^^^ meta.property-list.css meta.block.css */
+/*  ^^^^^^^^^^^ meta.property-name.css support.type.property-name.css */
+/*             ^ punctuation.separator.key-value.css */
+/*              ^^^^^^ meta.property-value.css */
+/*               ^^^^^ support.constant.property-value.css */
+/*                    ^ punctuation.terminator.rule.css */
+}

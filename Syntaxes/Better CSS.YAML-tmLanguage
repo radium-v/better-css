@@ -854,6 +854,26 @@ repository:
         match: \b(?:top-outside|bottom-outside|inline-start|inline-end|top|right|bottom|left)\b
       - include: '#global-property-values'
 
+  caret-color-property:
+    begin: \bcaret-color\b
+    beginCaptures:
+      '0': {name: meta.property-name.css support.type.property-name.css}
+    end: '{{property_value_terminator}}'
+    endCaptures:
+      '1': {name: punctuation.terminator.rule.css}
+    patterns:
+    - include: '#comment-block'
+    - contentName: meta.property-value.css
+      begin: (:)(?={{ws}})
+      beginCaptures:
+        '1': {name: punctuation.separator.key-value.css}
+      end: (?={{property_value_terminator}})
+      patterns:
+      - include: '#color-type'
+      - name: support.constant.property-value.css
+        match: \bauto\b
+      - include: '#global-property-values'
+
   class-selector:
     name: entity.other.attribute-name.class.css
     match: (\.)(?:{{ident_token}})
@@ -1625,6 +1645,7 @@ repository:
       - include: '#box-sizing-property'
       - include: '#break-properties'
       - include: '#caption-side-property'
+      - include: '#caret-color-property'
       - include: '#clear-property'
       - include: '#clip-rule-property'
       - include: '#color-interpolation-property'
