@@ -2863,6 +2863,113 @@
           </dict>
         </array>
       </dict>
+      <key>clip-property</key>
+      <dict>
+        <key>begin</key>
+        <string>\bclip\b</string>
+        <key>beginCaptures</key>
+        <dict>
+          <key>0</key>
+          <dict>
+            <key>name</key>
+            <string>meta.property-name.css support.type.property-name.css invalid.deprecated.css</string>
+          </dict>
+        </dict>
+        <key>end</key>
+        <string>\s*(;)|(?=[})])</string>
+        <key>endCaptures</key>
+        <dict>
+          <key>1</key>
+          <dict>
+            <key>name</key>
+            <string>punctuation.terminator.rule.css</string>
+          </dict>
+        </dict>
+        <key>patterns</key>
+        <array>
+          <dict>
+            <key>include</key>
+            <string>#comment-block</string>
+          </dict>
+          <dict>
+            <key>contentName</key>
+            <string>meta.property-value.css</string>
+            <key>begin</key>
+            <string>(:)(?=(?:(?:[\s\R]+)*?))</string>
+            <key>beginCaptures</key>
+            <dict>
+              <key>1</key>
+              <dict>
+                <key>name</key>
+                <string>punctuation.separator.key-value.css</string>
+              </dict>
+            </dict>
+            <key>end</key>
+            <string>(?=\s*(;)|(?=[})]))</string>
+            <key>patterns</key>
+            <array>
+              <dict>
+                <key>name</key>
+                <string>support.constant.property-value.css</string>
+                <key>match</key>
+                <string>auto</string>
+              </dict>
+              <dict>
+                <key>name</key>
+                <string>meta.function-call.rect.css invalid.deprecated.css</string>
+                <key>comment</key>
+                <string>This function is different from the `rect()` function in the `clip-path` property.</string>
+                <key>contentName</key>
+                <string>meta.function-call.arguments.css meta.group.css</string>
+                <key>begin</key>
+                <string>\b(rect)(\()</string>
+                <key>beginCaptures</key>
+                <dict>
+                  <key>1</key>
+                  <dict>
+                    <key>name</key>
+                    <string>support.function.rect.css</string>
+                  </dict>
+                  <key>2</key>
+                  <dict>
+                    <key>name</key>
+                    <string>punctuation.definition.group.begin.css</string>
+                  </dict>
+                </dict>
+                <key>end</key>
+                <string>\)</string>
+                <key>endCaptures</key>
+                <dict>
+                  <key>0</key>
+                  <dict>
+                    <key>name</key>
+                    <string>punctuation.definition.group.end.css</string>
+                  </dict>
+                </dict>
+                <key>patterns</key>
+                <array>
+                  <dict>
+                    <key>include</key>
+                    <string>#comment-block</string>
+                  </dict>
+                  <dict>
+                    <key>include</key>
+                    <string>#length-percentage-type</string>
+                  </dict>
+                  <dict>
+                    <key>include</key>
+                    <string>#comma-separator</string>
+                  </dict>
+                </array>
+              </dict>
+              <dict>
+                <key>include</key>
+                <string>#global-property-values</string>
+              </dict>
+            </array>
+          </dict>
+        </array>
+      </dict>
       <key>clip-rule-property</key>
       <dict>
         <key>begin</key>
@@ -5227,6 +5334,10 @@ optgroup | option | output | picture | portal | pre | progress | p | q | rp
               <dict>
                 <key>include</key>
                 <string>#clip-rule-property</string>
+              </dict>
+              <dict>
+                <key>include</key>
+                <string>#clip-property</string>
               </dict>
               <dict>
                 <key>include</key>

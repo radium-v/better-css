@@ -897,6 +897,39 @@ repository:
         match: \b((inline|block)-(start|end)|left|right|top|bottom|both(-inline|-block)?|none)\b
       - include: '#global-property-values'
 
+  clip-property:
+    begin: \bclip\b
+    beginCaptures:
+      '0': {name: meta.property-name.css support.type.property-name.css invalid.deprecated.css}
+    end: '{{property_value_terminator}}'
+    endCaptures:
+      '1': {name: punctuation.terminator.rule.css}
+    patterns:
+    - include: '#comment-block'
+    - contentName: meta.property-value.css
+      begin: (:)(?={{ws}})
+      beginCaptures:
+        '1': {name: punctuation.separator.key-value.css}
+      end: (?={{property_value_terminator}})
+      patterns:
+      - name: support.constant.property-value.css
+        match: auto
+      - name: meta.function-call.rect.css invalid.deprecated.css
+        comment: 'This function is different from the `rect()` function in the `clip-path` property.'
+        contentName: meta.function-call.arguments.css meta.group.css
+        begin: \b(rect)(\()
+        beginCaptures:
+          '1': {name: support.function.rect.css}
+          '2': {name: punctuation.definition.group.begin.css}
+        end: \)
+        endCaptures:
+          '0': {name: punctuation.definition.group.end.css}
+        patterns:
+        - include: '#comment-block'
+        - include: '#length-percentage-type'
+        - include: '#comma-separator'
+      - include: '#global-property-values'
+
   clip-rule-property:
     begin: \bclip-rule\b
     beginCaptures:
@@ -1649,6 +1682,7 @@ repository:
       - include: '#caret-color-property'
       - include: '#clear-property'
       - include: '#clip-rule-property'
+      - include: '#clip-property'
       - include: '#color-interpolation-property'
       - include: '#column-count-property'
       - include: '#column-fill-property'
