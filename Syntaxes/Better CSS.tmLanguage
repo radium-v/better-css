@@ -1292,10 +1292,8 @@
                 </dict>
               </dict>
               <dict>
-                <key>name</key>
-                <string>punctuation.separator.css</string>
-                <key>match</key>
-                <string>,</string>
+                <key>include</key>
+                <string>#comma-separator</string>
               </dict>
             </array>
           </dict>
@@ -1355,10 +1353,8 @@
                     <string>support.constant.layer-name.css</string>
                   </dict>
                   <dict>
-                    <key>match</key>
-                    <string>,</string>
-                    <key>name</key>
-                    <string>punctuation.separator.css</string>
+                    <key>include</key>
+                    <string>#comma-separator</string>
                   </dict>
                 </array>
               </dict>
@@ -3298,6 +3294,13 @@
           </dict>
         </array>
       </dict>
+      <key>comma-separator</key>
+      <dict>
+        <key>name</key>
+        <string>punctuation.separator.css</string>
+        <key>match</key>
+        <string>,</string>
+      </dict>
       <key>comment-block</key>
       <dict>
         <key>name</key>
@@ -3751,10 +3754,8 @@ optgroup | option | output | picture | portal | pre | progress | p | q | rp
             <string>(?:(?:[^"'\(\)]|\S|[^\x{0000}-\x{0008}\x{000B}\x{000E}-\x{001F}\x{007F}])|(?:\\(?:\N|[[:^xdigit:]]|[[:xdigit:]]{1,6}[\s\R])))*?</string>
           </dict>
           <dict>
-            <key>name</key>
-            <string>punctuation.separator.css</string>
-            <key>match</key>
-            <string>,</string>
+            <key>include</key>
+            <string>#comma-separator</string>
           </dict>
         </array>
       </dict>
